@@ -1,0 +1,132 @@
+.screens {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
+} 
+
+.screens--inner {
+  position: relative;
+} 
+
+.screen {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(100%);
+  width: 100%;
+  height: 100%;
+  transition: transform .2s;
+} 
+
+.screen.screen--open {
+  transform: translateX(0);
+} 
+
+.keyboard {
+  margin: 70px;
+  text-align: center;
+}
+
+.boards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.board {
+  margin: 5px;
+}
+
+.board--solved .guesses {
+  background-color: tan;
+}
+
+.guess {
+  display: flex;
+  border: 1px solid black;
+}
+
+.guess__letter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  margin: 4px;
+  border: 1px solid black;
+  text-transform: uppercase;
+}
+
+.guess__letter--correct {
+  background-color: green;
+  color: white;
+}
+
+.guess__letter--present {
+  background-color: yellow;
+}
+
+.current-guess--placeholder {
+  visibility: hidden;
+}
+
+.game-end {
+  background-color: #eee;
+  height: 100%;
+  margin-left: 25%;
+}
+
+.options {
+  background-color: #ddd;
+  height: 100%;
+  margin-left: 25%;
+  overflow: auto;
+}
+
+.option {
+  display: block;
+  margin: 4px;
+  border: 1px solid black;
+}
+
+.keyboard-letter {
+  height: 35px;
+  width: 35px;
+  text-transform: uppercase;
+  margin: 3px;
+  position: relative;
+  padding: 0;
+}
+
+.keyboard-letter__letter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.keyboard-letter--complete:not(.keyboard-letter--untouched) {
+  color: #444;
+  background-color: #777;
+}
+
+.keyboard-letter__background {
+  width: 100%; 
+  height: 100%; 
+  display: flex;
+}
+
+.keyboard-letter__background-section {
+  flex: 1;
+}
+
+.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct {
+  background-color: green;
+}
+
+.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present {
+  background-color: yellow;
+}
+
+.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent {
+  background-color: #777;
+}

@@ -1,0 +1,29 @@
+modifiers
+
+- unknown number of letters
+- multiple wordles simultaneously
+- number of letters in word
+- include names
+- include places
+- cookie clicker
+- don't see history? (not fun?)
+
+unlocks (use at start? use anytime? choose?)
+
+- eliminate X random unused letters
+- free one-letter guess
+- free one-letter magic guess (re-choose word to fit guess if possible)
+- anagrams bonus round
+- change "rub" to "back" (lol)
+
+
+
+============
+
+on endgame:
+display points earned, new points
+  - need options + game results
+    - how many guesses it took
+button to continue
+  - close 
+
