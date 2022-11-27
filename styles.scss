@@ -1,14 +1,47 @@
-.screens {
+$green1: #A1E8AF;
+$green2: #94C595;
+$greengrey: #84A194;
+$grey: #747C92;
+$blue: #372772;
+$purple: #3A2449;
+$yellow: #F6BD60;
+$pink: #F5B0CB;
+
+body {
+  margin: 0;
+}
+
+.root {
   position: relative;
+  padding: 10px;
+} 
+
+.modals {
+  position: absolute;
   overflow-x: hidden;
   overflow-y: visible;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 } 
 
-.screens--inner {
-  position: relative;
-} 
+.modals__background {
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color .3s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
-.screen {
+.modals__background--active {
+  background-color: rgba(0, 0, 0, .7);
+  pointer-events: auto;
+}
+
+.modal {
+  display: flex;
   position: absolute;
   left: 0;
   top: 0;
@@ -16,9 +49,26 @@
   width: 100%;
   height: 100%;
   transition: transform .2s;
+  align-items: stretch;
 } 
 
-.screen.screen--open {
+.modal__inner {
+  position: relative;
+  flex:1;
+  background-color: $greengrey;
+  margin: 30px 0 30px 40px;
+  padding: 35px;
+  border-radius: 50px 0 0 50px;
+  pointer-events: auto;
+} 
+
+.modal__close-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+} 
+
+.modal--open {
   transform: translateX(0);
 } 
 
@@ -30,6 +80,7 @@
 .boards {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .board {
@@ -37,7 +88,7 @@
 }
 
 .board--solved .guesses {
-  background-color: tan;
+  background-color: $pink;
 }
 
 .guess {
@@ -57,28 +108,19 @@
 }
 
 .guess__letter--correct {
-  background-color: green;
-  color: white;
+  background-color: $green1;
 }
 
 .guess__letter--present {
-  background-color: yellow;
+  background-color: $yellow;
 }
 
 .current-guess--placeholder {
   visibility: hidden;
 }
 
-.game-end {
-  background-color: #eee;
-  height: 100%;
-  margin-left: 25%;
-}
-
-.options {
-  background-color: #ddd;
-  height: 100%;
-  margin-left: 25%;
+.rules {
+  flex: 1;
   overflow: auto;
 }
 
@@ -86,6 +128,36 @@
   display: block;
   margin: 4px;
   border: 1px solid black;
+}
+
+.option__values {
+  display: flex;
+}
+
+.option__value--selected {
+  background-color: green;
+}
+
+.option__value--unlocked {
+  background-color: lightBlue;
+}
+
+.option__value--unlockable {
+  background-color: yellow;
+}
+
+.option__value {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  padding: 0;
+}
+
+.option__value-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%)
 }
 
 .keyboard-letter {
@@ -105,8 +177,7 @@
 }
 
 .keyboard-letter--complete:not(.keyboard-letter--untouched) {
-  color: #444;
-  background-color: #777;
+  background-color: $grey;
 }
 
 .keyboard-letter__background {
@@ -120,13 +191,13 @@
 }
 
 .keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct {
-  background-color: green;
+  background-color: $green1;
 }
 
 .keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present {
-  background-color: yellow;
+  background-color: $yellow;
 }
 
 .keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent {
-  background-color: #777;
+  background-color: $grey;
 }

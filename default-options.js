@@ -1,25 +1,32 @@
 export default {
   boardsCount: {
+    name: 'Number of Boards',
+    type: 'numeric',
     value: 1,
-    range: [1, 10],
+    min: 1,
+    max: 10,
+    unlockedValues: [1],
     multiplierCurve: (value) => {
       return value
     },
-    unlocked: false,
-    cost: 1
+    unlocked: false
   },
   reverse: {
-    value: 0,
-    range: [0, 1],
+    name: 'All Words are Backwards',
+    type: 'boolean',
+    value: false,
+    unlockedValues: [false],
     multiplierCurve: (value) => {
       return value ? 1.5 : 1
-    },
-    unlocked: false,
-    cost: 1
+    }
   },
   maxGuesses: {
+    name: 'Number of Guesses',
+    type: 'numeric',
     value: 10,
-    range: [1, 10],
+    min: 1,
+    max: 10,
+    unlockedValues: [10],
     multiplierCurve: (value, options) => {
       const effectiveValue = value - options.boardsCount.value + 1
       if (effectiveValue === 1) {
@@ -37,13 +44,15 @@ export default {
       } else if (effectiveValue > 6) {
         return 1
       }
-    },
-    unlocked: false,
-    cost: 1
+    }
   },
   wordLength: {
+    name: 'Word Length',
+    type: 'numeric',
     value: 5,
-    range: [1, 10],
+    min: 1,
+    max: 8,
+    unlockedValues: [5],
     multiplierCurve: (value) => {
       if (value < 4) {
         return -1
@@ -54,8 +63,6 @@ export default {
       } else if (value > 5) {
         return 3
       }
-    },
-    unlocked: false,
-    cost: 1
+    }
   }
 }

@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function Options ({ handleClose, options }) {
+export default function Rules ({ options }) {
   const unlockedOptionEntries = Object.entries(options).filter(([, { unlocked }]) => unlocked)
   return (
-    <div className='options'>
+    <div className='rules'>
       {!unlockedOptionEntries.length && (
         <div>
           No special rules unlocked. 6 guesses.
@@ -22,7 +22,6 @@ export default function Options ({ handleClose, options }) {
   )
 }
 
-Options.propTypes = {
-  handleClose: PropTypes.func,
+Rules.propTypes = {
   options: PropTypes.object
 }

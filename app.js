@@ -1,16 +1,18 @@
 import React, { useReducer, useState, useEffect } from 'react'
 import MainGame from './main-game.js'
-import Options from './options.js'
+import Rules from './rules.js'
 import GameEnd from './game-end.js'
+import Modal from './modal.js'
 import defaultOptions from './default-options.js'
 import optionsReducer from './options-reducer.js'
 import calculatePointsEarned from './calculate-points-earned.js'
 
 export default function App () {
   const [options, optionsDispatch] = useReducer(optionsReducer, defaultOptions)
-  const [uiState, setUiState] = useState('game')
+  const [uiState, setUiState] = useState('game_end')
   const [gameId, setGameId] = useState(Date.now() + Math.random())
   const [lastPointsEarned, setLastPointsEarned] = useState(0)
+  const [wonLastGame, setWonLastGame] = useState(false)
   const [points, setPoints] = useState(0)
 
   const handleGameEnd = (endState) => {
@@ -20,29 +22,27 @@ export default function App () {
     const pointsEarned = calculatePointsEarned(options, endState)
     setPoints(points + pointsEarned)
     setLastPointsEarned(pointsEarned)
+    setWonLastGame(endState.won)
   }
 
   const handleClose = () => { setUiState('game') }
 
-  const handleSetOption = (optionName, value) => {
-    if (options[optionName].unlocked) {
-      optionsDispatch({
-        type: 'SET_OPTION',
-        optionName,
-        value
-      })
-    }
+  const handleSetOption = (optionId, value) => {
+    optionsDispatch({
+      type: 'SET_OPTION',
+      optionId,
+      value
+    })
   }
 
-  const handleUnlockOption = (optionName) => {
-    const cost = options[optionName].cost
-    if (!options[optionName].unlocked && points >= cost) {
+  const handleUnlockOption = (optionId, value) => {
+    if (points >= 1) {
       optionsDispatch({
         type: 'UNLOCK_OPTION',
-        optionName,
-        unlocked: true
+        optionId,
+        value
       })
-      setPoints(points - cost)
+      setPoints(points - 1)
     }
   }
 
@@ -66,52 +66,65 @@ export default function App () {
   }, [])
 
   useEffect(() => {
-    const optionsEntriesToSave = Object.entries(options).map(([key, { unlocked, value }]) => [key, { unlocked, value }])
+    const optionsEntriesToSave = Object.entries(options).map(([key, { unlockedValues, value }]) => [key, { unlockedValues, value }])
     localStorage.setItem('word-mind_options', JSON.stringify(Object.fromEntries(optionsEntriesToSave)))
     localStorage.setItem('word-mind_points', JSON.stringify(points))
   }, [options, points])
 
-  // localStorage.removeItem('word-mind_options')
-  // localStorage.removeItem('word-mind_points')
+  const handleClearAll = () => {
+    localStorage.removeItem('word-mind_options')
+    localStorage.removeItem('word-mind_points')
+    optionsDispatch({ type: 'LOAD_INITIAL', savedOptions: defaultOptions })
+    setPoints(100)
+  }
 
   return (
     <div className='root'>
-      <button onClick={() => setUiState(uiState === 'options' ? 'game' : 'options')}>
-        Options
+      <button onClick={() => { setUiState(uiState === 'rules' ? 'game' : 'rules') }}>
+        Rules
+      </button>
+      <button onClick={handleClearAll}>
+        Clear All
       </button>
       <div className='points'>
         {points} Points
       </div>
-      <div className='screens'>
-        <div className='screens--inner'>
-          <MainGame
-            key={gameId}
+      <MainGame
+        key={gameId}
+        options={options}
+        handleGameEnd={handleGameEnd}
+      />
+      <div className='modals'>
+        <a
+          className={[
+            'modals__background',
+            uiState !== 'game' && 'modals__background--active'
+          ].filter(Boolean).join(' ')}
+          onClick={handleClose}
+        >
+        </a>
+        <Modal
+          open={uiState === 'rules'}
+          handleClose={handleClose}
+        >
+          <Rules
             options={options}
-            handleGameEnd={handleGameEnd}
           />
-          <div className={[
-            'screen',
-            uiState === 'options' && 'screen--open'
-          ].filter(Boolean).join(' ')}>
-            <Options
-              options={options}
-              handleClose={handleClose}
-            />
-          </div>
-          <div className={[
-            'screen',
-            uiState === 'game_end' && 'screen--open'
-          ].filter(Boolean).join(' ')}>
-            <GameEnd
-              options={options}
-              points={points}
-              lastPointsEarned={lastPointsEarned}
-              handleClose={handleClose}
-              handleSetOption={handleSetOption}
-              handleUnlockOption={handleUnlockOption}
-            />
-          </div>
-        </div>
+        </Modal>
+        <Modal
+          open={uiState === 'game_end'}
+          handleClose={handleClose}
+        >
+          <GameEnd
+            options={options}
+            points={points}
+            lastPointsEarned={lastPointsEarned}
+            handleClose={handleClose}
+            handleSetOption={handleSetOption}
+            handleUnlockOption={handleUnlockOption}
+            wonLastGame={wonLastGame}
+          />
+        </Modal>
       </div>
     </div>
   )

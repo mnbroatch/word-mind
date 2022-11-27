@@ -70,14 +70,10 @@ export default function MainGame ({ options, handleGameEnd }) {
   }, [handleSubmit, handleAddLetter])
 
   useEffect(() => {
-    if (
-      answers.length
-      && (
-        answers.every(answer => guesses.includes(answer))
-        || guesses.length >= options.maxGuesses.value
-      )
-    ) {
-      handleGameEnd({ answers, guesses })
+    const won = answers.length && answers.every(answer => guesses.includes(answer))
+    const lost = guesses.length >= options.maxGuesses.value
+    if (won || lost) {
+      handleGameEnd({ answers, guesses, won })
     }
   }, [guesses])
 
@@ -94,7 +90,7 @@ export default function MainGame ({ options, handleGameEnd }) {
   }, [options])
 
   return (
-    <div>
+    <div className='main-game'>
       <div style={{ color: 'white' }}>
         {answers}
       </div>
