@@ -87,7 +87,7 @@ export default function App () {
         Rules
       </button>
       <button onClick={handleClearAll}>
-        Clear All
+        Give 100 pts
       </button>
       <div className='points'>
         {points} Points

@@ -123,7 +123,7 @@ const MainGame = forwardRef(({ options, handleGameEnd }, ref) => {
         ))}
       </div>
       <button onClick={() => { currentGuessDispatch({ type: 'rub' }) }}>
-        RUB
+        DEL
       </button>
       <button onClick={handleSubmit}>
         GUESS
