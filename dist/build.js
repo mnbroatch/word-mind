@@ -17,7 +17,7 @@
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0}.root{position:relative;padding:10px}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch}.modal__inner{position:relative;flex:1;background-color:#84a194;margin:5% 0 5% 10%;padding:35px;border-radius:50px 0 0 50px;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.keyboard{margin:70px;text-align:center}.boards{display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px}.board--solved .guesses{background-color:#f5b0cb}.guess{display:flex;border:1px solid #000}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.option{display:block;margin:4px;border:1px solid #000}.keyboard-letter{height:35px;width:35px;text-transform:uppercase;margin:3px;position:relative;padding:0}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0}.root{position:relative;padding:10px}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch}.modal__inner{position:relative;flex:1;background-color:#84a194;margin:30px 0 30px 40px;padding:35px;border-radius:50px 0 0 50px;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.keyboard{margin:70px;text-align:center}.boards{display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px}.board--solved .guesses{background-color:#f5b0cb}.guess{display:flex;border:1px solid #000}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.option{display:block;margin:4px;border:1px solid #000}.option__values{display:flex}.option__value--selected{background-color:green}.option__value--unlocked{background-color:#add8e6}.option__value--unlockable{background-color:#ff0}.option__value{height:30px;width:30px;position:relative;padding:0}.option__value-inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter{height:35px;width:35px;text-transform:uppercase;margin:3px;position:relative;padding:0}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4469,7 +4469,7 @@ function getAnswers(options) {
   }) : answers;
 }
 
-function MainGame(_ref) {
+var MainGame = /*#__PURE__*/(0,react.forwardRef)(function (_ref, ref) {
   var options = _ref.options,
       handleGameEnd = _ref.handleGameEnd;
 
@@ -4530,12 +4530,16 @@ function MainGame(_ref) {
     };
   }, [handleSubmit, handleAddLetter]);
   (0,react.useEffect)(function () {
-    if (answers.length && (answers.every(function (answer) {
+    var won = answers.length && answers.every(function (answer) {
       return guesses.includes(answer);
-    }) || guesses.length >= options.maxGuesses.value)) {
+    });
+    var lost = guesses.length >= options.maxGuesses.value;
+
+    if (won || lost) {
       handleGameEnd({
         answers: answers,
-        guesses: guesses
+        guesses: guesses,
+        won: won
       });
     }
   }, [guesses]); // Update game when rules change, but don't
@@ -4550,6 +4554,16 @@ function MainGame(_ref) {
       didMount.current = true;
     }
   }, [options]);
+  (0,react.useImperativeHandle)(ref, function () {
+    return {
+      clear: function clear() {
+        setGuesses([]);
+        currentGuessDispatch({
+          type: 'clear'
+        });
+      }
+    };
+  });
   return /*#__PURE__*/react.createElement("div", {
     className: "main-game"
   }, /*#__PURE__*/react.createElement("div", {
@@ -4583,14 +4597,16 @@ function MainGame(_ref) {
         type: 'rub'
       });
     }
-  }, "RUB"), /*#__PURE__*/react.createElement("button", {
+  }, "DEL"), /*#__PURE__*/react.createElement("button", {
     onClick: handleSubmit
   }, "GUESS"));
-}
+});
+MainGame.displayName = 'MainGame';
 MainGame.propTypes = {
   options: (prop_types_default()).object,
   handleGameEnd: (prop_types_default()).func
 };
+/* harmony default export */ const main_game = (MainGame);
 ;// CONCATENATED MODULE: ./rules.js
 function rules_slicedToArray(arr, i) { return rules_arrayWithHoles(arr) || rules_iterableToArrayLimit(arr, i) || rules_unsupportedIterableToArray(arr, i) || rules_nonIterableRest(); }
 
@@ -4630,6 +4646,77 @@ function Rules(_ref) {
 Rules.propTypes = {
   options: (prop_types_default()).object
 };
+;// CONCATENATED MODULE: ./option-setting.js
+
+
+function OptionSetting(_ref) {
+  var id = _ref.id,
+      value = _ref.value,
+      unlockedValues = _ref.unlockedValues,
+      min = _ref.min,
+      max = _ref.max,
+      points = _ref.points,
+      name = _ref.name,
+      unlocked = _ref.unlocked,
+      type = _ref.type,
+      handleSetOption = _ref.handleSetOption,
+      handleUnlockOption = _ref.handleUnlockOption;
+  var possibleValues = type === 'numeric' ? Array.from(new Array(max - min + 1), function (_, i) {
+    return i + min;
+  }) : [false, true];
+  return /*#__PURE__*/react.createElement("div", {
+    className: "option"
+  }, /*#__PURE__*/react.createElement("div", {
+    className: "option__name"
+  }, name), /*#__PURE__*/react.createElement("div", {
+    className: "option__values"
+  }, possibleValues.map(function (val, index) {
+    var status;
+
+    if (val === value) {
+      status = 'selected';
+    } else if (unlockedValues.includes(val)) {
+      status = 'unlocked';
+    } else if (possibleValues.some(function (v, i) {
+      return unlockedValues.includes(v) && Math.abs(i - index) === 1;
+    })) {
+      status = 'unlockable';
+    } else {
+      status = 'locked';
+    }
+
+    var clickHandler = {
+      unlocked: function unlocked(val) {
+        handleSetOption(id, val);
+      },
+      unlockable: function unlockable(val) {
+        handleUnlockOption(id, val);
+      }
+    }[status];
+    return /*#__PURE__*/react.createElement("button", {
+      className: "option__value option__value--".concat(status),
+      key: val,
+      onClick: function onClick() {
+        clickHandler && clickHandler(val);
+      }
+    }, /*#__PURE__*/react.createElement("div", {
+      className: "option__value-inner"
+    }, type === 'numeric' ? val : val && 'On' || 'Off'));
+  })));
+}
+OptionSetting.propTypes = {
+  id: (prop_types_default()).string,
+  value: prop_types_default().oneOfType([(prop_types_default()).number, (prop_types_default()).bool]),
+  unlockedValues: prop_types_default().arrayOf(prop_types_default().oneOfType([(prop_types_default()).number, (prop_types_default()).bool])),
+  min: (prop_types_default()).number,
+  max: (prop_types_default()).number,
+  points: (prop_types_default()).number,
+  name: (prop_types_default()).string,
+  type: (prop_types_default()).string,
+  unlocked: (prop_types_default()).bool,
+  handleSetOption: (prop_types_default()).func,
+  handleUnlockOption: (prop_types_default()).func
+};
 ;// CONCATENATED MODULE: ./game-end.js
 function game_end_slicedToArray(arr, i) { return game_end_arrayWithHoles(arr) || game_end_iterableToArrayLimit(arr, i) || game_end_unsupportedIterableToArray(arr, i) || game_end_nonIterableRest(); }
 
@@ -4645,75 +4732,42 @@ function game_end_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function GameEnd(_ref) {
   var options = _ref.options,
       points = _ref.points,
       lastPointsEarned = _ref.lastPointsEarned,
       handleSetOption = _ref.handleSetOption,
-      handleUnlockOption = _ref.handleUnlockOption;
-  var optionEntries = Object.entries(options);
-  var unlockedOptionEntries = optionEntries.filter(function (_ref2) {
-    var _ref3 = game_end_slicedToArray(_ref2, 2),
-        unlocked = _ref3[1].unlocked;
-
-    return unlocked;
-  });
-  var unlockableOptionEntries = optionEntries.filter(function (_ref4) {
-    var _ref5 = game_end_slicedToArray(_ref4, 2),
-        _ref5$ = _ref5[1],
-        unlocked = _ref5$.unlocked,
-        cost = _ref5$.cost;
-
-    return !unlocked && points >= cost;
-  });
-  var lockedOptionEntries = optionEntries.filter(function (_ref6) {
-    var _ref7 = game_end_slicedToArray(_ref6, 2),
-        _ref7$ = _ref7[1],
-        unlocked = _ref7$.unlocked,
-        cost = _ref7$.cost;
-
-    return !unlocked && points < cost;
-  });
+      handleUnlockOption = _ref.handleUnlockOption,
+      wonLastGame = _ref.wonLastGame;
   return /*#__PURE__*/react.createElement("div", {
     className: "options"
   }, /*#__PURE__*/react.createElement("div", {
     className: "results"
-  }, /*#__PURE__*/react.createElement("div", null, points, " Points"), /*#__PURE__*/react.createElement("div", null, lastPointsEarned, " gained this round")), unlockedOptionEntries.map(function (_ref8) {
-    var _ref9 = game_end_slicedToArray(_ref8, 2),
-        key = _ref9[0],
-        option = _ref9[1];
+  }, /*#__PURE__*/react.createElement("div", null, points, " Points"), /*#__PURE__*/react.createElement("div", null, lastPointsEarned, " gained this round")), Object.entries(options).map(function (_ref2) {
+    var _ref3 = game_end_slicedToArray(_ref2, 2),
+        key = _ref3[0],
+        _ref3$ = _ref3[1],
+        value = _ref3$.value,
+        unlockedValues = _ref3$.unlockedValues,
+        min = _ref3$.min,
+        max = _ref3$.max,
+        name = _ref3$.name,
+        type = _ref3$.type;
 
-    return /*#__PURE__*/react.createElement("div", {
-      className: "option",
-      key: key
-    }, key, /*#__PURE__*/react.createElement("input", {
-      type: "number",
-      value: option.value,
-      onChange: function onChange(e) {
-        handleSetOption(key, e.target.valueAsNumber || e.target.value);
-      }
-    }));
-  }), unlockableOptionEntries.map(function (_ref10) {
-    var _ref11 = game_end_slicedToArray(_ref10, 2),
-        key = _ref11[0],
-        option = _ref11[1];
-
-    return /*#__PURE__*/react.createElement("a", {
-      className: "option option--unlockable",
-      onClick: function onClick() {
-        handleUnlockOption(key);
-      },
-      key: key
-    }, key, "Unlock for ", option.cost, " points");
-  }), lockedOptionEntries.map(function (_ref12) {
-    var _ref13 = game_end_slicedToArray(_ref12, 2),
-        key = _ref13[0],
-        option = _ref13[1];
-
-    return /*#__PURE__*/react.createElement("a", {
-      className: "option option--locked",
-      key: key
-    }, key);
+    return /*#__PURE__*/react.createElement(OptionSetting, {
+      key: key,
+      id: key,
+      name: name,
+      type: type,
+      unlockedValues: unlockedValues,
+      min: min,
+      max: max,
+      points: points,
+      value: value,
+      handleUnlockOption: handleUnlockOption,
+      handleSetOption: handleSetOption
+    });
   }));
 }
 GameEnd.propTypes = {
@@ -4721,7 +4775,8 @@ GameEnd.propTypes = {
   points: (prop_types_default()).number,
   lastPointsEarned: (prop_types_default()).number,
   handleSetOption: (prop_types_default()).func,
-  handleUnlockOption: (prop_types_default()).func
+  handleUnlockOption: (prop_types_default()).func,
+  wonLastGame: (prop_types_default()).bool
 };
 ;// CONCATENATED MODULE: ./modal.js
 
@@ -4747,26 +4802,33 @@ Modal.propTypes = {
 ;// CONCATENATED MODULE: ./default-options.js
 /* harmony default export */ const default_options = ({
   boardsCount: {
+    name: 'Number of Boards',
+    type: 'numeric',
     value: 1,
-    range: [1, 10],
+    min: 1,
+    max: 10,
+    unlockedValues: [1],
     multiplierCurve: function multiplierCurve(value) {
       return value;
     },
-    unlocked: false,
-    cost: 1
+    unlocked: false
   },
   reverse: {
-    value: 0,
-    range: [0, 1],
+    name: 'All Words are Backwards',
+    type: 'boolean',
+    value: false,
+    unlockedValues: [false],
     multiplierCurve: function multiplierCurve(value) {
       return value ? 1.5 : 1;
-    },
-    unlocked: false,
-    cost: 1
+    }
   },
   maxGuesses: {
+    name: 'Number of Guesses',
+    type: 'numeric',
     value: 10,
-    range: [1, 10],
+    min: 1,
+    max: 10,
+    unlockedValues: [10],
     multiplierCurve: function multiplierCurve(value, options) {
       var effectiveValue = value - options.boardsCount.value + 1;
 
@@ -4785,13 +4847,15 @@ Modal.propTypes = {
       } else if (effectiveValue > 6) {
         return 1;
       }
-    },
-    unlocked: false,
-    cost: 1
+    }
   },
   wordLength: {
+    name: 'Word Length',
+    type: 'numeric',
     value: 5,
-    range: [1, 8],
+    min: 1,
+    max: 8,
+    unlockedValues: [5],
     multiplierCurve: function multiplierCurve(value) {
       if (value < 4) {
         return -1;
@@ -4802,15 +4866,25 @@ Modal.propTypes = {
       } else if (value > 5) {
         return 3;
       }
-    },
-    unlocked: false,
-    cost: 1
+    }
   }
 });
 // EXTERNAL MODULE: ./node_modules/lodash/merge.js
 var merge = __webpack_require__(2492);
 var merge_default = /*#__PURE__*/__webpack_require__.n(merge);
 ;// CONCATENATED MODULE: ./options-reducer.js
+function options_reducer_toConsumableArray(arr) { return options_reducer_arrayWithoutHoles(arr) || options_reducer_iterableToArray(arr) || options_reducer_unsupportedIterableToArray(arr) || options_reducer_nonIterableSpread(); }
+
+function options_reducer_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function options_reducer_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return options_reducer_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return options_reducer_arrayLikeToArray(o, minLen); }
+
+function options_reducer_iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function options_reducer_arrayWithoutHoles(arr) { if (Array.isArray(arr)) return options_reducer_arrayLikeToArray(arr); }
+
+function options_reducer_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
@@ -4820,24 +4894,28 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 function optionsReducer(prev, _ref) {
   var type = _ref.type,
-      optionName = _ref.optionName,
+      optionId = _ref.optionId,
       value = _ref.value,
       savedOptions = _ref.savedOptions;
 
   if (type === 'SET_OPTION') {
-    return _objectSpread(_objectSpread({}, prev), {}, _defineProperty({}, optionName, _objectSpread(_objectSpread({}, prev[optionName]), {}, {
+    return _objectSpread(_objectSpread({}, prev), {}, _defineProperty({}, optionId, _objectSpread(_objectSpread({}, prev[optionId]), {}, {
       value: value
     })));
   } else if (type === 'UNLOCK_OPTION') {
-    return _objectSpread(_objectSpread({}, prev), {}, _defineProperty({}, optionName, _objectSpread(_objectSpread({}, prev[optionName]), {}, {
-      unlocked: true
+    return _objectSpread(_objectSpread({}, prev), {}, _defineProperty({}, optionId, _objectSpread(_objectSpread({}, prev[optionId]), {}, {
+      unlockedValues: Array.from(new Set([].concat(options_reducer_toConsumableArray(prev[optionId].unlockedValues), [value])))
     })));
   } else if (type === 'LOAD_INITIAL') {
     return merge_default()({}, prev, savedOptions);
+  } else {
+    return prev;
   }
 }
 ;// CONCATENATED MODULE: ./calculate-points-earned.js
 function getPointsEarned(options, endState) {
+  if (!endState.won) return 0;
+
   if (!endState.answers.every(function (answer) {
     return endState.guesses.includes(answer);
   })) {
@@ -4893,10 +4971,17 @@ function App() {
       lastPointsEarned = _useState6[0],
       setLastPointsEarned = _useState6[1];
 
-  var _useState7 = (0,react.useState)(0),
+  var _useState7 = (0,react.useState)(false),
       _useState8 = app_slicedToArray(_useState7, 2),
-      points = _useState8[0],
-      setPoints = _useState8[1];
+      wonLastGame = _useState8[0],
+      setWonLastGame = _useState8[1];
+
+  var _useState9 = (0,react.useState)(0),
+      _useState10 = app_slicedToArray(_useState9, 2),
+      points = _useState10[0],
+      setPoints = _useState10[1];
+
+  var mainGameRef = (0,react.useRef)();
 
   var handleGameEnd = function handleGameEnd(endState) {
     setUiState('game_end');
@@ -4904,32 +4989,29 @@ function App() {
     var pointsEarned = getPointsEarned(options, endState);
     setPoints(points + pointsEarned);
     setLastPointsEarned(pointsEarned);
+    setWonLastGame(endState.won);
   };
 
   var handleClose = function handleClose() {
     setUiState('game');
   };
 
-  var handleSetOption = function handleSetOption(optionName, value) {
-    if (options[optionName].unlocked) {
-      optionsDispatch({
-        type: 'SET_OPTION',
-        optionName: optionName,
-        value: value
-      });
-    }
+  var handleSetOption = function handleSetOption(optionId, value) {
+    optionsDispatch({
+      type: 'SET_OPTION',
+      optionId: optionId,
+      value: value
+    });
   };
 
-  var handleUnlockOption = function handleUnlockOption(optionName) {
-    var cost = options[optionName].cost;
-
-    if (!options[optionName].unlocked && points >= cost) {
+  var handleUnlockOption = function handleUnlockOption(optionId, value) {
+    if (points >= 1) {
       optionsDispatch({
         type: 'UNLOCK_OPTION',
-        optionName: optionName,
-        unlocked: true
+        optionId: optionId,
+        value: value
       });
-      setPoints(points - cost);
+      setPoints(points - 1);
     }
   };
 
@@ -4962,11 +5044,11 @@ function App() {
       var _ref2 = app_slicedToArray(_ref, 2),
           key = _ref2[0],
           _ref2$ = _ref2[1],
-          unlocked = _ref2$.unlocked,
+          unlockedValues = _ref2$.unlockedValues,
           value = _ref2$.value;
 
       return [key, {
-        unlocked: unlocked,
+        unlockedValues: unlockedValues,
         value: value
       }];
     });
@@ -4981,7 +5063,9 @@ function App() {
       type: 'LOAD_INITIAL',
       savedOptions: default_options
     });
-    setPoints(0);
+    setUiState('game');
+    setPoints(100);
+    mainGameRef.current.clear();
   };
 
   return /*#__PURE__*/react.createElement("div", {
@@ -4992,9 +5076,10 @@ function App() {
     }
   }, "Rules"), /*#__PURE__*/react.createElement("button", {
     onClick: handleClearAll
-  }, "Clear All"), /*#__PURE__*/react.createElement("div", {
+  }, "Give 100 pts"), /*#__PURE__*/react.createElement("div", {
     className: "points"
-  }, points, " Points"), /*#__PURE__*/react.createElement(MainGame, {
+  }, points, " Points"), /*#__PURE__*/react.createElement(main_game, {
+    ref: mainGameRef,
     key: gameId,
     options: options,
     handleGameEnd: handleGameEnd
@@ -5017,7 +5102,8 @@ function App() {
     lastPointsEarned: lastPointsEarned,
     handleClose: handleClose,
     handleSetOption: handleSetOption,
-    handleUnlockOption: handleUnlockOption
+    handleUnlockOption: handleUnlockOption,
+    wonLastGame: wonLastGame
   }))));
 }
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js

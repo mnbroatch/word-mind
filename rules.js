@@ -7,7 +7,7 @@ export default function Rules ({ options }) {
     <div className='rules'>
       {!unlockedOptionEntries.length && (
         <div>
-          No special rules unlocked. 6 guesses.
+          No special rules unlocked.
         </div>
       )}
       {unlockedOptionEntries.map(([key, option]) => (
