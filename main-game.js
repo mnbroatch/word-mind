@@ -1,4 +1,4 @@
-import React, { useState, useReducer, useEffect, useRef } from 'react'
+import React, { useState, useReducer, useEffect, useRef, forwardRef, useImperativeHandle } from 'react'
 import PropTypes from 'prop-types'
 import allWords from './all-words.json'
 import gameWords from './game-words.json'
@@ -18,7 +18,7 @@ function getAnswers (options) {
   return options.reverse.value ? answers.map(answer => answer.split('').reverse().join('')) : answers
 }
 
-export default function MainGame ({ options, handleGameEnd }) {
+const MainGame = forwardRef(({ options, handleGameEnd }, ref) => {
   const [answers, setAnswers] = useState(getAnswers(options))
   const [guesses, setGuesses] = useState([])
   const [currentGuess, currentGuessDispatch] = useReducer(currentGuessReducer, '')
@@ -89,6 +89,13 @@ export default function MainGame ({ options, handleGameEnd }) {
     }
   }, [options])
 
+  useImperativeHandle(ref, () => ({
+    clear () {
+      setGuesses([])
+      currentGuessDispatch({ type: 'clear' })
+    }
+  }))
+
   return (
     <div className='main-game'>
       <div style={{ color: 'white' }}>
@@ -123,9 +130,13 @@ export default function MainGame ({ options, handleGameEnd }) {
       </button>
     </div>
   )
-}
+})
+
+MainGame.displayName = 'MainGame'
 
 MainGame.propTypes = {
   options: PropTypes.object,
   handleGameEnd: PropTypes.func
 }
+
+export default MainGame

@@ -13,5 +13,7 @@ export default function optionsReducer (prev, { type, optionId, value, savedOpti
     }
   } else if (type === 'LOAD_INITIAL') {
     return merge({}, prev, savedOptions)
+  } else {
+    return prev
   }
 }

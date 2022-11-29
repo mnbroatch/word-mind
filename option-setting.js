@@ -17,7 +17,6 @@ export default function OptionSetting ({
   const possibleValues = type === 'numeric'
     ? Array.from(new Array(max - min + 1), (_, i) => i + min)
     : [false, true]
-  console.log('possibleValues', possibleValues)
 
   return (
     <div className='option'>

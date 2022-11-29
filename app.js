@@ -1,4 +1,4 @@
-import React, { useReducer, useState, useEffect } from 'react'
+import React, { useReducer, useState, useEffect, useRef } from 'react'
 import MainGame from './main-game.js'
 import Rules from './rules.js'
 import GameEnd from './game-end.js'
@@ -9,11 +9,12 @@ import calculatePointsEarned from './calculate-points-earned.js'
 
 export default function App () {
   const [options, optionsDispatch] = useReducer(optionsReducer, defaultOptions)
-  const [uiState, setUiState] = useState('game_end')
+  const [uiState, setUiState] = useState('game')
   const [gameId, setGameId] = useState(Date.now() + Math.random())
   const [lastPointsEarned, setLastPointsEarned] = useState(0)
   const [wonLastGame, setWonLastGame] = useState(false)
   const [points, setPoints] = useState(0)
+  const mainGameRef = useRef()
 
   const handleGameEnd = (endState) => {
     setUiState('game_end')
@@ -75,7 +76,9 @@ export default function App () {
     localStorage.removeItem('word-mind_options')
     localStorage.removeItem('word-mind_points')
     optionsDispatch({ type: 'LOAD_INITIAL', savedOptions: defaultOptions })
+    setUiState('game')
     setPoints(100)
+    mainGameRef.current.clear()
   }
 
   return (
@@ -90,6 +93,7 @@ export default function App () {
         {points} Points
       </div>
       <MainGame
+        ref={mainGameRef}
         key={gameId}
         options={options}
         handleGameEnd={handleGameEnd}
