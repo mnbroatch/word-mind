@@ -1,4 +1,5 @@
 import React, { useReducer, useState, useEffect, useRef } from 'react'
+import cloneDeep from 'lodash/cloneDeep'
 import MainGame from './main-game.js'
 import Rules from './rules.js'
 import GameEnd from './game-end.js'
@@ -6,6 +7,9 @@ import Modal from './modal.js'
 import defaultOptions from './default-options.js'
 import optionsReducer from './options-reducer.js'
 import calculatePointsEarned from './calculate-points-earned.js'
+import useCountdown from './use-countdown'
+
+const INFINITY_REPLACEMENT = '_MNB_Infinity876'
 
 export default function App () {
   const [options, optionsDispatch] = useReducer(optionsReducer, defaultOptions)
@@ -15,6 +19,15 @@ export default function App () {
   const [wonLastGame, setWonLastGame] = useState(false)
   const [points, setPoints] = useState(0)
   const mainGameRef = useRef()
+
+  const { remaining: timeRemaining } = useCountdown({
+    duration: options.timeLimit.value * 1000,
+    onCountdownEnd: () => {
+      handleGameEnd({ won: false })
+    }
+  })
+
+  const secondsRemaining = Math.floor(timeRemaining / 1000)
 
   const handleGameEnd = (endState) => {
     setUiState('game_end')
@@ -58,26 +71,58 @@ export default function App () {
   }, [])
 
   useEffect(() => {
-    const savedOptions = localStorage.getItem('word-mind_options')
+    const savedOptions = JSON.parse(localStorage.getItem('word-mind_options'))
+
+    if (savedOptions) {
+      Object.values(savedOptions).forEach(option => {
+        if (option.value === INFINITY_REPLACEMENT) {
+          option.value = Infinity
+        }
+
+        option.unlockedValues.forEach((value, i) => {
+          if (value === INFINITY_REPLACEMENT) {
+            option.unlockedValues[i] = Infinity
+          }
+        })
+      })
+    }
+
     const savedPoints = localStorage.getItem('word-mind_points')
-    if (savedOptions && savedPoints !== null) {
-      optionsDispatch({ type: 'LOAD_INITIAL', savedOptions: JSON.parse(savedOptions) })
+    if (savedOptions) {
+      optionsDispatch({ type: 'LOAD_INITIAL', savedOptions })
+    }
+    if (savedPoints !== null) {
       setPoints(JSON.parse(savedPoints))
     }
   }, [])
 
   useEffect(() => {
-    const optionsEntriesToSave = Object.entries(options).map(([key, { unlockedValues, value }]) => [key, { unlockedValues, value }])
+    const optionsClone = cloneDeep(options)
+    if (optionsClone) {
+      Object.values(optionsClone).forEach(option => {
+        if (option.value === Infinity) {
+          option.value = INFINITY_REPLACEMENT
+        }
+
+        option.unlockedValues.forEach((value, i) => {
+          if (value === Infinity) {
+            option.unlockedValues[i] = INFINITY_REPLACEMENT
+          }
+        })
+      })
+    }
+
+    const optionsEntriesToSave = Object.entries(optionsClone).map(([key, { unlockedValues, value }]) => [key, { unlockedValues, value }])
+
     localStorage.setItem('word-mind_options', JSON.stringify(Object.fromEntries(optionsEntriesToSave)))
     localStorage.setItem('word-mind_points', JSON.stringify(points))
   }, [options, points])
 
   const handleClearAll = () => {
-    localStorage.removeItem('word-mind_options')
-    localStorage.removeItem('word-mind_points')
+    localStorage.clear()
     optionsDispatch({ type: 'LOAD_INITIAL', savedOptions: defaultOptions })
     setUiState('game')
-    setPoints(100)
+    setPoints(0)
     mainGameRef.current.clear()
   }
 
@@ -86,12 +131,18 @@ export default function App () {
       <button onClick={() => { setUiState(uiState === 'rules' ? 'game' : 'rules') }}>
         Rules
       </button>
+      <button onClick={() => setPoints(points => points + 100)}>
+        Debug: Free 100 pts
+      </button>
       <button onClick={handleClearAll}>
-        Give 100 pts
+        Debug: Clear all
       </button>
       <div className='points'>
         {points} Points
       </div>
+      {options.timeLimit.value !== Infinity && <div className='time-remaining'>
+        Time Remaining: {secondsRemaining}
+      </div>}
       <MainGame
         ref={mainGameRef}
         key={gameId}

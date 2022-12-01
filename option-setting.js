@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import chunk from 'lodash/chunk'
 
 export default function OptionSetting ({
   id,
@@ -7,6 +8,7 @@ export default function OptionSetting ({
   unlockedValues,
   min,
   max,
+  step = 1,
   points,
   name,
   unlocked,
@@ -15,8 +17,12 @@ export default function OptionSetting ({
   handleUnlockOption
 }) {
   const possibleValues = type === 'numeric'
-    ? Array.from(new Array(max - min + 1), (_, i) => i + min)
+    ? chunk(Array.from(new Array(max - min + 1)), step).map((_, i) => (i + 1) * step)
     : [false, true]
+
+  if (unlockedValues.includes(Infinity)) {
+    possibleValues.unshift(Infinity)
+  }
 
   return (
     <div className='option'>
@@ -64,6 +70,7 @@ OptionSetting.propTypes = {
   unlockedValues: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.bool])),
   min: PropTypes.number,
   max: PropTypes.number,
+  step: PropTypes.number,
   points: PropTypes.number,
   name: PropTypes.string,
   type: PropTypes.string,

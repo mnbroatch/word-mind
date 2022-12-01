@@ -75,7 +75,7 @@ const MainGame = forwardRef(({ options, handleGameEnd }, ref) => {
     if (won || lost) {
       handleGameEnd({ answers, guesses, won })
     }
-  }, [guesses])
+  }, [guesses, answers, options, handleGameEnd])
 
   // Update game when rules change, but don't
   // clobber initial set of answers on first mount.

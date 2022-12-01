@@ -25,6 +25,7 @@ export default function GameEnd ({
         unlockedValues,
         min,
         max,
+        step,
         name,
         type
       }]) => (
@@ -36,6 +37,7 @@ export default function GameEnd ({
           unlockedValues={unlockedValues}
           min={min}
           max={max}
+          step={step}
           points={points}
           value={value}
           handleUnlockOption={handleUnlockOption}

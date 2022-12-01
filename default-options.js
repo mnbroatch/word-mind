@@ -1,4 +1,25 @@
 export default {
+  timeLimit: {
+    name: 'Time Limit',
+    type: 'numeric',
+    value: Infinity,
+    min: 0,
+    max: 1000,
+    unlockedValues: [Infinity],
+    unlockable: [300],
+    step: 30,
+    multiplierCurve: (value) => {
+      if (value >= 300) {
+        return 1
+      } else if (value < 300 && value > 120) {
+        return 2
+      } else if (value < 120 && value > 30) {
+        return 4
+      } else if (value < 30) {
+        return 8
+      }
+    }
+  },
   boardsCount: {
     name: 'Number of Boards',
     type: 'numeric',
@@ -23,10 +44,11 @@ export default {
   maxGuesses: {
     name: 'Number of Guesses',
     type: 'numeric',
-    value: 10,
+    value: Infinity,
+    unlockable: [6],
     min: 1,
-    max: 10,
-    unlockedValues: [10],
+    max: 6,
+    unlockedValues: [Infinity],
     multiplierCurve: (value, options) => {
       const effectiveValue = value - options.boardsCount.value + 1
       if (effectiveValue === 1) {
@@ -41,7 +63,7 @@ export default {
         return 1.3
       } else if (effectiveValue === 6) {
         return 1.1
-      } else if (effectiveValue > 6) {
+      } else {
         return 1
       }
     }

@@ -1,20 +1,65 @@
+change rules in the middle of a level? (add extra board)
+attach rpg items to modifiers?
+per-turn (!) time limit?
+
+half points
+choose 
+click letter you want to edit
+completed puzzles go first, away from letters
+disable more words than guesses 
+
+disable orange
+disable green
+
+some chosen positive modifiers do not affect score multiplier
+  - resulting in a permanent upgrade
+
+some chosen negative modifiers do not affect score multiplier
+  - resulting in a permanent (or for-a-while?) difficulty up
+    - also maybe 
+
+
+==============
+
+
+bomb that takes out unused letters
+  - eliminate X random unused letters
+randomized and hidden words
+
+
+
+
+==============
+
+
+
 modifiers
 
-- unknown number of letters
-- multiple wordles simultaneously
-- number of letters in word
-- include names
-- include places
-- cookie clicker
-- don't see history? (not fun?)
 
-unlocks (use at start? use anytime? choose?)
-
-- eliminate X random unused letters
 - free one-letter guess
 - free one-letter magic guess (re-choose word to fit guess if possible)
+
 - anagrams bonus round
-- change "rub" to "back" (lol)
+- secret word mechanic
+
+- off-by-one tolerance
+
+- ending
+
+- limited lives mode
+
+- vowel swap
+  - no vowel hits ? fill in all vowels
+
+- spear pillar randomly turn everything upside down / sidewars
+
+- keys are swapped
+
+- grouping some of the more annoying ones into a separate upgrade
+
+
+
+
 
 
 

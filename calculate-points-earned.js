@@ -5,7 +5,7 @@ export default function getPointsEarned (options, endState) {
     return 0
   } else {
     const basePoints = 1
-    return Object.values(options).reduce((acc, { multiplierCurve, value }) => {
+    return Object.values(options).reduce((acc, { name, multiplierCurve, value }) => {
       return acc + basePoints * multiplierCurve(value, options) - 1
     }, basePoints)
   }

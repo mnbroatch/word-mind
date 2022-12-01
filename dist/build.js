@@ -4632,7 +4632,7 @@ function Rules(_ref) {
   });
   return /*#__PURE__*/react.createElement("div", {
     className: "rules"
-  }, !unlockedOptionEntries.length && /*#__PURE__*/react.createElement("div", null, "No special rules unlocked. 6 guesses."), unlockedOptionEntries.map(function (_ref4) {
+  }, !unlockedOptionEntries.length && /*#__PURE__*/react.createElement("div", null, "No special rules unlocked."), unlockedOptionEntries.map(function (_ref4) {
     var _ref5 = rules_slicedToArray(_ref4, 2),
         key = _ref5[0],
         option = _ref5[1];
