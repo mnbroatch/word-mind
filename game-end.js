@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import OptionSetting from './option-setting.js'
+import calculatePointsEarned from './calculate-points-earned.js'
 
 export default function GameEnd ({
   options,
@@ -23,6 +24,7 @@ export default function GameEnd ({
       {Object.entries(options).map(([key, {
         value,
         unlockedValues,
+        unlockable,
         min,
         max,
         step,
@@ -35,6 +37,7 @@ export default function GameEnd ({
           name={name}
           type={type}
           unlockedValues={unlockedValues}
+          unlockable={unlockable}
           min={min}
           max={max}
           step={step}
@@ -44,6 +47,7 @@ export default function GameEnd ({
           handleSetOption={handleSetOption}
         />
       ))}
+      <div>Next Round is worth {calculatePointsEarned(options)} points</div>
     </div>
   )
 }

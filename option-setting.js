@@ -6,6 +6,7 @@ export default function OptionSetting ({
   id,
   value,
   unlockedValues,
+  unlockable = [],
   min,
   max,
   step = 1,
@@ -36,7 +37,7 @@ export default function OptionSetting ({
             status = 'selected'
           } else if (unlockedValues.includes(val)) {
             status = 'unlocked'
-          } else if (possibleValues.some((v, i) => unlockedValues.includes(v) && Math.abs(i - index) === 1)) {
+          } else if (unlockable.includes(val) || possibleValues.some((v, i) => v !== Infinity && unlockedValues.includes(v) && Math.abs(i - index) === 1)) {
             status = 'unlockable'
           } else {
             status = 'locked'
@@ -47,6 +48,13 @@ export default function OptionSetting ({
             unlockable: (val) => { handleUnlockOption(id, val) }
           }[status]
 
+          let label
+          if (type === 'numeric') {
+            label = val === Infinity ? '∞' : val
+          } else {
+            label = val ? 'On' : 'Off'
+          }
+
           return (
             <button
               className={ `option__value option__value--${status}` }
@@ -54,7 +62,7 @@ export default function OptionSetting ({
               onClick={() => { clickHandler && clickHandler(val) }}
             >
               <div className='option__value-inner'>
-                {type === 'numeric' ? val : (val && 'On') || 'Off' }
+                {label}
               </div>
             </button>
           )
@@ -68,6 +76,7 @@ OptionSetting.propTypes = {
   id: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
   unlockedValues: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.bool])),
+  unlockable: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.bool])),
   min: PropTypes.number,
   max: PropTypes.number,
   step: PropTypes.number,

@@ -14,8 +14,8 @@ export default function Modal ({ handleClose, children, open }) {
           className='modal__close-button'
           onClick={handleClose}
         >
-        Close
-      </button>
+          Close
+        </button>
         {children}
       </div>
     </div>

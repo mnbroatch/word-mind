@@ -19,9 +19,9 @@ export default function App () {
   const [wonLastGame, setWonLastGame] = useState(false)
   const [points, setPoints] = useState(0)
   const mainGameRef = useRef()
-
-  const { remaining: timeRemaining } = useCountdown({
+  const { remaining: timeRemaining, reset: resetTime } = useCountdown({
     duration: options.timeLimit.value * 1000,
+    refreshRate: uiState === 'game' ? undefined : null,
     onCountdownEnd: () => {
       handleGameEnd({ won: false })
     }
@@ -33,10 +33,13 @@ export default function App () {
     setUiState('game_end')
     setGameId(Date.now() + Math.random())
 
-    const pointsEarned = calculatePointsEarned(options, endState)
+    const pointsEarned = endState.won
+      ? calculatePointsEarned(options)
+      : 0
     setPoints(points + pointsEarned)
     setLastPointsEarned(pointsEarned)
     setWonLastGame(endState.won)
+    resetTime()
   }
 
   const handleClose = () => { setUiState('game') }
@@ -120,7 +123,7 @@ export default function App () {
 
   const handleClearAll = () => {
     localStorage.clear()
-    optionsDispatch({ type: 'LOAD_INITIAL', savedOptions: defaultOptions })
+    optionsDispatch({ type: 'LOAD_INITIAL' })
     setUiState('game')
     setPoints(0)
     mainGameRef.current.clear()
@@ -128,9 +131,6 @@ export default function App () {
 
   return (
     <div className='root'>
-      <button onClick={() => { setUiState(uiState === 'rules' ? 'game' : 'rules') }}>
-        Rules
-      </button>
       <button onClick={() => setPoints(points => points + 100)}>
         Debug: Free 100 pts
       </button>

@@ -1,35 +1,29 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import useRerender from './use-rerender.js'
 import useInterval from './use-interval.js'
 
-export default function useStopwatch ({ refreshRate = 1000, startActive = false }) {
+export default function useStopwatch ({ refreshRate = 1000 } = {}) {
   const now = Date.now()
-  const [isActive, setIsActive] = useState(startActive)
   const [startTime, setStartTime] = useState(now)
+  const [pauseDuration, setPauseDuration] = useState(0)
   const [pauseTime, setPauseTime] = useState(now)
-
   const rerender = useRerender()
-  useInterval(rerender, isActive ? refreshRate : null)
-
-  const start = () => {
-    setIsActive(true)
-  }
-
-  const pause = () => {
-    setIsActive(false)
-    setPauseTime(Date.now())
-  }
+  useInterval(rerender, refreshRate)
 
   const reset = () => {
-    setIsActive(false)
     setStartTime(now)
+    setPauseDuration(0)
   }
 
-  const pausedDuration = isActive ? 0 : now - pauseTime
+  useEffect(() => {
+    if (refreshRate !== null) {
+      setPauseDuration(pauseDuration => pauseDuration + (Date.now() - pauseTime))
+    }
+    setPauseTime(Date.now())
+  }, [refreshRate])
+
   return {
-    start,
-    pause,
     reset,
-    elapsed: now - startTime - pausedDuration
+    elapsed: now - startTime - pauseDuration
   }
 }

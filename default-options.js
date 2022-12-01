@@ -4,18 +4,18 @@ export default {
     type: 'numeric',
     value: Infinity,
     min: 0,
-    max: 1000,
+    max: 300,
     unlockedValues: [Infinity],
     unlockable: [300],
     step: 30,
     multiplierCurve: (value) => {
-      if (value >= 300) {
+      if (value > 300) {
         return 1
-      } else if (value < 300 && value > 120) {
+      } else if (value <= 300 && value > 120) {
         return 2
-      } else if (value < 120 && value > 30) {
+      } else if (value <= 120 && value > 30) {
         return 4
-      } else if (value < 30) {
+      } else if (value <= 30) {
         return 8
       }
     }
@@ -77,9 +77,9 @@ export default {
     unlockedValues: [5],
     multiplierCurve: (value) => {
       if (value < 4) {
-        return -1
+        return 0.5
       } else if (value === 4) {
-        return -0.5
+        return 0.75
       } else if (value === 5) {
         return 1
       } else if (value > 5) {
