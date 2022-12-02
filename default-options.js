@@ -1,9 +1,32 @@
 export default {
-  timeLimit: {
-    name: 'Time Limit',
+  roundTimeLimit: {
+    name: 'Round Time Limit',
     type: 'numeric',
     value: Infinity,
-    min: 0,
+    min: 10,
+    max: 120,
+    unlockedValues: [Infinity],
+    unlockable: [60],
+    step: 10,
+    multiplierCurve: (value) => {
+      if (value > 100) {
+        return 1
+      } else if (value <= 100 && value > 60) {
+        return 2
+      } else if (value <= 60 && value > 30) {
+        return 3
+      } else if (value <= 30 && value > 10) {
+        return 4
+      } else if (value <= 10) {
+        return 8
+      }
+    }
+  },
+  gameTimeLimit: {
+    name: 'Game Time Limit',
+    type: 'numeric',
+    value: Infinity,
+    min: 30,
     max: 300,
     unlockedValues: [Infinity],
     unlockable: [300],
