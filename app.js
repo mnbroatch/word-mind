@@ -1,4 +1,5 @@
-import React, { useReducer, useState, useEffect, useRef } from 'react'
+import React, { useReducer, useState, useEffect } from 'react'
+
 import cloneDeep from 'lodash/cloneDeep'
 import currentGuessReducer from './current-guess-reducer.js'
 import allWords from './all-words.json'
@@ -30,7 +31,6 @@ function getAnswers (options) {
 export default function App () {
   const [options, optionsDispatch] = useReducer(optionsReducer, defaultOptions)
   const [uiState, setUiState] = useState('game')
-  const [gameId, setGameId] = useState(Date.now() + Math.random())
   const [lastPointsEarned, setLastPointsEarned] = useState(0)
   const [wonLastGame, setWonLastGame] = useState(false)
   const [points, setPoints] = useState(0)
@@ -58,13 +58,14 @@ export default function App () {
     const pointsEarned = endState.won
       ? calculatePointsEarned(options)
       : 0
+    setGuesses([])
     setUiState('game_end')
-    setGameId(Date.now() + Math.random())
     setPoints(points + pointsEarned)
     setLastPointsEarned(pointsEarned)
     setWonLastGame(endState.won)
-    resetGameTime()
+    // resetGameTime()
     resetRoundTime()
+    setAnswers(getAnswers(options))
   }
 
   const handleAddLetter = (letter) => {
@@ -106,28 +107,16 @@ export default function App () {
     }
   }, [guesses, answers, options, handleGameEnd])
 
-  // Update game when rules change, but don't
-  // clobber initial set of answers on first mount.
-  // Maybe not necessary if rules can't change mid-game
-  const didMount = useRef(false)
-  useEffect(() => {
-    if (didMount.current) {
-      setAnswers(getAnswers(options))
-    } else {
-      didMount.current = true
-    }
-  }, [options])
-
-  const { remaining: gameTimeRemaining, reset: resetGameTime } = useCountdown({
-    duration: options.gameTimeLimit.value * 1000,
-    refreshRate: uiState === 'game' ? undefined : null,
-    onCountdownEnd: () => {
-      handleGameEnd({ won: false })
-    }
-  })
+  // const { remaining: gameTimeRemaining, reset: resetGameTime } = useCountdown({
+  //   duration: options.gameTimeLimit.value * 1000,
+  //   refreshRate: uiState === 'game' ? undefined : null,
+  //   onCountdownEnd: () => {
+  //     handleGameEnd({ won: false })
+  //   }
+  // })
 
   const { remaining: roundTimeRemaining, reset: resetRoundTime } = useCountdown({
-    duration: options.gameTimeLimit.value * 1000,
+    duration: options.roundTimeLimit.value * 1000,
     refreshRate: uiState === 'game' ? undefined : null,
     onCountdownEnd: () => {
       setGuesses([...guesses, currentGuess])
@@ -136,8 +125,9 @@ export default function App () {
     }
   })
 
-  const secondsRemainingInGame = Math.floor(gameTimeRemaining / 1000)
-  const secondsRemainingInRound = Math.floor(roundTimeRemaining / 1000)
+  console.log('roundTimeRemaining', roundTimeRemaining)
+  // const secondsRemainingInGame = Math.round(gameTimeRemaining / 1000)
+  const secondsRemainingInRound = Math.round(roundTimeRemaining / 1000)
 
   const handleClose = () => { setUiState('game') }
 
@@ -238,10 +228,10 @@ export default function App () {
       <div className='points'>
         {points} Points
       </div>
-      {options.gameTimeLimit.value !== Infinity && <div className='time-remaining'>
+      {/* options.gameTimeLimit.value !== Infinity && <div className='game-time-remaining'>
         Game Time Remaining: {secondsRemainingInGame}
-      </div>}
-      {options.gameTimeLimit.value !== Infinity && <div className='time-remaining'>
+      </div> */}
+      {options.roundTimeLimit.value !== Infinity && <div className='round-time-remaining'>
         Round Time Remaining: {secondsRemainingInRound}
       </div>}
       <div className='main-game'>

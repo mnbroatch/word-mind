@@ -10,7 +10,9 @@ export default function useCountdown ({ refreshRate, duration, onCountdownEnd })
   const justFinished = remaining <= 0 && prevRemaining > 0
   useEffect(() => {
     if (justFinished) {
-      if (onCountdownEnd) onCountdownEnd()
+      if (onCountdownEnd) {
+        onCountdownEnd()
+      }
     }
   }, [justFinished])
 

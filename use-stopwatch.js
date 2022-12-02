@@ -4,6 +4,7 @@ import useInterval from './use-interval.js'
 
 export default function useStopwatch ({ refreshRate = 1000 } = {}) {
   const now = Date.now()
+  const isPaused = refreshRate === null
   const [startTime, setStartTime] = useState(now)
   const [pauseDuration, setPauseDuration] = useState(0)
   const [pauseTime, setPauseTime] = useState(now)
@@ -16,14 +17,16 @@ export default function useStopwatch ({ refreshRate = 1000 } = {}) {
   }
 
   useEffect(() => {
-    if (refreshRate !== null) {
+    setPauseTime(Date.now())
+    if (!isPaused) {
       setPauseDuration(pauseDuration => pauseDuration + (Date.now() - pauseTime))
     }
-    setPauseTime(Date.now())
   }, [refreshRate])
+
+  const _pauseDuration = isPaused ? pauseDuration + Date.now() - pauseTime : pauseDuration
 
   return {
     reset,
-    elapsed: now - startTime - pauseDuration
+    elapsed: now - startTime - _pauseDuration
   }
 }

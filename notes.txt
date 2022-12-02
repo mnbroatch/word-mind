@@ -18,6 +18,21 @@ some chosen negative modifiers do not affect score multiplier
   - resulting in a permanent (or for-a-while?) difficulty up
     - also maybe 
 
+remove solved puzzle's letter hints
+
+switch words and guesses
+
+ui - flag letters as unusable
+  - icon top right? 
+  - right click / long press
+
+keyboard scramble
+
+keyboard blind
+
+
+
+
 
 ==============
 
