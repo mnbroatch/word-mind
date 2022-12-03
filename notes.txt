@@ -1,24 +1,17 @@
-change rules in the middle of a level? (add extra board)
-attach rpg items to modifiers?
-per-turn (!) time limit?
+ux:
 
-half points
-choose 
+remove solved puzzle's letter hints (turn pink)
+completed puzzles are moved to the top so letters at bottom can be closer to active puzzles
+disable impossible option combinations
 click letter you want to edit
-completed puzzles go first, away from letters
-disable more words than guesses 
 
+---------------
+
+modifiers:
+
+strict mode
 disable orange
 disable green
-
-some chosen positive modifiers do not affect score multiplier
-  - resulting in a permanent upgrade
-
-some chosen negative modifiers do not affect score multiplier
-  - resulting in a permanent (or for-a-while?) difficulty up
-    - also maybe 
-
-remove solved puzzle's letter hints
 
 switch words and guesses
 
@@ -76,14 +69,21 @@ modifiers
 
 
 
+================
 
+bugs:
 
-============
+can use keyboard to enter guess even on game end options menu
+tab can zoom around inactive modal buttons
 
-on endgame:
-display points earned, new points
-  - need options + game results
-    - how many guesses it took
-button to continue
-  - close 
+================
+
+higher-level:
+
+change rules in the middle of a game?
+attach rpg items to modifiers?
+
+some chosen modifiers do not affect score multiplier
+  - if positive permanent upgrade
+  - if negative, permanent (or for-a-while?) difficulty up?
 

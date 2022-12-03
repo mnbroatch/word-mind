@@ -12,41 +12,51 @@ export default function GameEnd ({
   wonLastGame
 }) {
   return (
-    <div className='options'>
+    <div className='game-end'>
       <div className='results'>
         <div>
           { points } Points
         </div>
-        <div>
-          { lastPointsEarned } gained this round
-        </div>
+        {wonLastGame && (
+          <div className="result-title result-title--won">
+            Won! { lastPointsEarned } point{ lastPointsEarned !== 1 ? 's' : ''} gained this round
+          </div>
+        )}
+        {!wonLastGame && (
+          <div className="result-title result-title--lost">
+            Lost! No Points!
+          </div>
+        )}
       </div>
-      {Object.entries(options).map(([key, {
-        value,
-        unlockedValues,
-        unlockable,
-        min,
-        max,
-        step,
-        name,
-        type
-      }]) => (
-        <OptionSetting
-          key={key}
-          id={key}
-          name={name}
-          type={type}
-          unlockedValues={unlockedValues}
-          unlockable={unlockable}
-          min={min}
-          max={max}
-          step={step}
-          points={points}
-          value={value}
-          handleUnlockOption={handleUnlockOption}
-          handleSetOption={handleSetOption}
-        />
-      ))}
+      <div className='options'>
+        {Object.entries(options).map(([key, {
+          value,
+          unlockedValues,
+          unlockable,
+          min,
+          max,
+          step,
+          name,
+          type
+        }]) => (
+          <OptionSetting
+            key={key}
+            id={key}
+            name={name}
+            type={type}
+            unlockedValues={unlockedValues}
+            unlockable={unlockable}
+            min={min}
+            max={max}
+            step={step}
+            points={points}
+            value={value}
+            handleUnlockOption={handleUnlockOption}
+            handleSetOption={handleSetOption}
+          />
+        )).slice(0, -1)}
+        {Object.keys(options).map((key) => <div key={key} className="option-spacer" />)}
+      </div>
       <div>Next Round is worth {calculatePointsEarned(options)} points</div>
     </div>
   )

@@ -5,6 +5,7 @@ $grey: #747C92;
 $blue: #372772;
 $purple: #3A2449;
 $yellow: #F6BD60;
+$lightYellow: #FFD;
 $pink: #F5B0CB;
 
 body {
@@ -122,22 +123,57 @@ body {
   overflow: auto;
 }
 
-.options {
+.game-end {
   box-sizing: border-box;
   padding: 25px;
-  display: inline-block;
   min-width: 100%;
 }
 
+.result-title {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.result-title--won {
+  color: white;
+}
+
+.result-title--lost {
+  color: red;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px;
+}
+
 .option {
-  display: block;
+  background-color: $lightYellow;
+  border-radius: 20px;
+  box-sizing: border-box;
+  width: 175px;
   margin: 4px;
   border: 1px solid black;
-  padding: 5px;
+  padding: 25px;
+}
+
+.option-spacer {
+  width: 175px;
+  margin: 0 4px 0 4px;
+  height: 0;
+}
+
+.option__name {
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .option__values {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .option__value--selected {

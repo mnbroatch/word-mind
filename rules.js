@@ -2,20 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export default function Rules ({ options }) {
-  const unlockedOptionEntries = Object.entries(options).filter(([, { unlocked }]) => unlocked)
+  const modifiedOptionEntries = Object.entries(options).filter(([_, { value, initialValue }]) => value !== initialValue)
   return (
     <div className='rules'>
-      {!unlockedOptionEntries.length && (
+      {!modifiedOptionEntries.length && (
         <div>
           No special rules unlocked.
         </div>
       )}
-      {unlockedOptionEntries.map(([key, option]) => (
+      {modifiedOptionEntries.map(([key, option]) => (
         <div
           className='option'
           key={key}
         >
-          {key}{option.value}
+          {key}: {option.value}
         </div>
       ))}
     </div>

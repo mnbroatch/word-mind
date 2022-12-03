@@ -1,5 +1,6 @@
 import React, { useReducer, useState, useEffect } from 'react'
 
+import merge from 'lodash/merge.js'
 import cloneDeep from 'lodash/cloneDeep'
 import currentGuessReducer from './current-guess-reducer.js'
 import allWords from './all-words.json'
@@ -10,10 +11,10 @@ import GameEnd from './game-end.js'
 import Modal from './modal.js'
 import Board from './board.js'
 import KeyboardLetter from './keyboard-letter.js'
-import defaultOptions from './default-options.js'
 import optionsReducer from './options-reducer.js'
 import calculatePointsEarned from './calculate-points-earned.js'
 import useCountdown from './use-countdown'
+import defaultOptions from './default-options.js'
 
 // TODO: qwerty
 const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
@@ -28,12 +29,34 @@ function getAnswers (options) {
   return options.reverse.value ? answers.map(answer => answer.split('').reverse().join('')) : answers
 }
 
+const savedOptions = JSON.parse(localStorage.getItem('word-mind_options'))
+if (savedOptions) {
+  Object.values(savedOptions).forEach(option => {
+    if (option.value === INFINITY_REPLACEMENT) {
+      option.value = Infinity
+    }
+
+    option.unlockedValues.forEach((value, i) => {
+      if (value === INFINITY_REPLACEMENT) {
+        option.unlockedValues[i] = Infinity
+      }
+    })
+  })
+}
+const initialOptions = merge({}, defaultOptions, savedOptions)
+
+let initialPoints = 0
+const savedPoints = localStorage.getItem('word-mind_points')
+if (savedPoints) {
+  initialPoints = JSON.parse(savedPoints)
+}
+
 export default function App () {
-  const [options, optionsDispatch] = useReducer(optionsReducer, defaultOptions)
+  const [options, optionsDispatch] = useReducer(optionsReducer, initialOptions)
   const [uiState, setUiState] = useState('game')
   const [lastPointsEarned, setLastPointsEarned] = useState(0)
   const [wonLastGame, setWonLastGame] = useState(false)
-  const [points, setPoints] = useState(0)
+  const [points, setPoints] = useState(initialPoints)
   const [answers, setAnswers] = useState(getAnswers(options))
   const [guesses, setGuesses] = useState([])
   const [currentGuess, currentGuessDispatch] = useReducer(currentGuessReducer, '')
@@ -55,16 +78,16 @@ export default function App () {
   }
 
   const handleGameEnd = (endState) => {
+    console.log('endState', endState)
+    console.log('uiState', uiState)
     const pointsEarned = endState.won
       ? calculatePointsEarned(options)
       : 0
-    setGuesses([])
     setUiState('game_end')
     setPoints(points + pointsEarned)
     setLastPointsEarned(pointsEarned)
     setWonLastGame(endState.won)
-    // resetGameTime()
-    resetRoundTime()
+    setGuesses([])
     setAnswers(getAnswers(options))
   }
 
@@ -75,6 +98,14 @@ export default function App () {
     ) {
       currentGuessDispatch({ type: 'add_letter', letter })
     }
+  }
+
+  const handleGameStart = (endState) => {
+    resetGameTime()
+    resetRoundTime()
+    setGuesses([])
+    setUiState('game')
+    setAnswers(getAnswers(options))
   }
 
   useEffect(() => {
@@ -107,29 +138,27 @@ export default function App () {
     }
   }, [guesses, answers, options, handleGameEnd])
 
-  // const { remaining: gameTimeRemaining, reset: resetGameTime } = useCountdown({
-  //   duration: options.gameTimeLimit.value * 1000,
-  //   refreshRate: uiState === 'game' ? undefined : null,
-  //   onCountdownEnd: () => {
-  //     handleGameEnd({ won: false })
-  //   }
-  // })
+  const { remaining: gameTimeRemaining, reset: resetGameTime } = useCountdown({
+    duration: options.gameTimeLimit.value * 1000,
+    refreshRate: uiState === 'game' ? undefined : null,
+    onCountdownEnd: () => {
+      handleGameEnd({ won: false })
+    }
+  })
 
   const { remaining: roundTimeRemaining, reset: resetRoundTime } = useCountdown({
     duration: options.roundTimeLimit.value * 1000,
     refreshRate: uiState === 'game' ? undefined : null,
     onCountdownEnd: () => {
-      setGuesses([...guesses, currentGuess])
+      setGuesses([...guesses, ''])
       currentGuessDispatch({ type: 'clear' })
       resetRoundTime()
     }
   })
 
-  console.log('roundTimeRemaining', roundTimeRemaining)
-  // const secondsRemainingInGame = Math.round(gameTimeRemaining / 1000)
+  const secondsRemainingInGame = Math.round(gameTimeRemaining / 1000)
   const secondsRemainingInRound = Math.round(roundTimeRemaining / 1000)
-
-  const handleClose = () => { setUiState('game') }
+  console.log('secondsRemainingInGame', secondsRemainingInGame)
 
   const handleSetOption = (optionId, value) => {
     optionsDispatch({
@@ -146,45 +175,20 @@ export default function App () {
         optionId,
         value
       })
+      handleSetOption(optionId, value)
       setPoints(points - 1)
     }
   }
 
   useEffect(() => {
     const addKey = (e) => {
-      if (e.keyCode === 27) {
-        handleClose(String.fromCharCode(e.keyCode))
+      if (e.keyCode === 27 && uiState !== 'game') {
+        handleGameStart()
       }
     }
     document.addEventListener('keydown', addKey)
     return () => { document.removeEventListener('keydown', addKey) }
-  }, [])
-
-  useEffect(() => {
-    const savedOptions = JSON.parse(localStorage.getItem('word-mind_options'))
-
-    if (savedOptions) {
-      Object.values(savedOptions).forEach(option => {
-        if (option.value === INFINITY_REPLACEMENT) {
-          option.value = Infinity
-        }
-
-        option.unlockedValues.forEach((value, i) => {
-          if (value === INFINITY_REPLACEMENT) {
-            option.unlockedValues[i] = Infinity
-          }
-        })
-      })
-    }
-
-    const savedPoints = localStorage.getItem('word-mind_points')
-    if (savedOptions) {
-      optionsDispatch({ type: 'LOAD_INITIAL', savedOptions })
-    }
-    if (savedPoints !== null) {
-      setPoints(JSON.parse(savedPoints))
-    }
-  }, [])
+  }, [uiState])
 
   useEffect(() => {
     const optionsClone = cloneDeep(options)
@@ -228,9 +232,9 @@ export default function App () {
       <div className='points'>
         {points} Points
       </div>
-      {/* options.gameTimeLimit.value !== Infinity && <div className='game-time-remaining'>
+      {options.gameTimeLimit.value !== Infinity && <div className='game-time-remaining'>
         Game Time Remaining: {secondsRemainingInGame}
-      </div> */}
+      </div>}
       {options.roundTimeLimit.value !== Infinity && <div className='round-time-remaining'>
         Round Time Remaining: {secondsRemainingInRound}
       </div>}
@@ -272,12 +276,12 @@ export default function App () {
             'modals__background',
             uiState !== 'game' && 'modals__background--active'
           ].filter(Boolean).join(' ')}
-          onClick={handleClose}
+          onClick={handleGameStart}
         >
         </a>
         <Modal
           open={uiState === 'rules'}
-          handleClose={handleClose}
+          handleClose={handleGameStart}
         >
           <Rules
             options={options}
@@ -285,13 +289,16 @@ export default function App () {
         </Modal>
         <Modal
           open={uiState === 'game_end'}
-          handleClose={handleClose}
+          handleClose={() => {
+            if (uiState === 'game_end') {
+              handleGameStart()
+            }
+          }}
         >
           <GameEnd
             options={options}
             points={points}
             lastPointsEarned={lastPointsEarned}
-            handleClose={handleClose}
             handleSetOption={handleSetOption}
             handleUnlockOption={handleUnlockOption}
             wonLastGame={wonLastGame}

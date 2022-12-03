@@ -48,11 +48,9 @@ export default {
     type: 'numeric',
     value: 1,
     min: 1,
-    max: 10,
+    max: 6,
     unlockedValues: [1],
-    multiplierCurve: (value) => {
-      return value
-    },
+    multiplierCurve: value => value,
     unlocked: false
   },
   reverse: {
@@ -70,7 +68,7 @@ export default {
     value: Infinity,
     unlockable: [6],
     min: 1,
-    max: 6,
+    max: 8,
     unlockedValues: [Infinity],
     multiplierCurve: (value, options) => {
       const effectiveValue = value - options.boardsCount.value + 1
@@ -79,12 +77,14 @@ export default {
       } else if (effectiveValue === 2) {
         return 50
       } else if (effectiveValue === 3) {
-        return 5
+        return 10
       } else if (effectiveValue === 4) {
-        return 2
+        return 4
       } else if (effectiveValue === 5) {
-        return 1.3
+        return 1.8
       } else if (effectiveValue === 6) {
+        return 1.5
+      } else if (effectiveValue === 7) {
         return 1.1
       } else {
         return 1
@@ -99,7 +99,11 @@ export default {
     max: 8,
     unlockedValues: [5],
     multiplierCurve: (value) => {
-      if (value < 4) {
+      if (value === 1) {
+        return 0.05
+      } else if (value === 2) {
+        return 0.25
+      } else if (value === 3) {
         return 0.5
       } else if (value === 4) {
         return 0.75
