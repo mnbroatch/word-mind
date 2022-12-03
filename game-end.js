@@ -54,7 +54,7 @@ export default function GameEnd ({
             handleUnlockOption={handleUnlockOption}
             handleSetOption={handleSetOption}
           />
-        )).slice(0, -1)}
+        ))}
         {Object.keys(options).map((key) => <div key={key} className="option-spacer" />)}
       </div>
       <div>Next Round is worth {calculatePointsEarned(options)} points</div>
