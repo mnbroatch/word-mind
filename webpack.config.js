@@ -10,7 +10,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      title: 'React Template',
+      title: 'Word Mind',
       template: './index.html'
     })
   ],

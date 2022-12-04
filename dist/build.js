@@ -6531,6 +6531,11 @@ if (savedOptions) {
 }
 
 var initialOptions = merge_default()({}, default_options, savedOptions);
+Object.keys(initialOptions).forEach(function (key) {
+  if (!default_options[key]) {
+    delete initialOptions[key];
+  }
+});
 var initialPoints = 0;
 var savedPoints = localStorage.getItem('word-mind_points');
 
