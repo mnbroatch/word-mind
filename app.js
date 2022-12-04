@@ -108,7 +108,13 @@ if (savedOptions) {
     })
   })
 }
+
 const initialOptions = merge({}, defaultOptions, savedOptions)
+Object.keys(initialOptions).forEach((key) => {
+  if (!defaultOptions[key]) {
+    delete initialOptions[key]
+  }
+})
 
 let initialPoints = 0
 const savedPoints = localStorage.getItem('word-mind_points')
