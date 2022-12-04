@@ -1,48 +1,4 @@
 export default {
-  roundTimeLimit: {
-    name: 'Round Time Limit',
-    type: 'numeric',
-    value: Infinity,
-    min: 10,
-    max: 120,
-    unlockedValues: [Infinity],
-    unlockable: [60],
-    step: 10,
-    multiplierCurve: (value) => {
-      if (value > 100) {
-        return 1
-      } else if (value <= 100 && value > 60) {
-        return 2
-      } else if (value <= 60 && value > 30) {
-        return 3
-      } else if (value <= 30 && value > 10) {
-        return 4
-      } else if (value <= 10) {
-        return 8
-      }
-    }
-  },
-  gameTimeLimit: {
-    name: 'Game Time Limit',
-    type: 'numeric',
-    value: Infinity,
-    min: 30,
-    max: 300,
-    unlockedValues: [Infinity],
-    unlockable: [300],
-    step: 30,
-    multiplierCurve: (value) => {
-      if (value > 300) {
-        return 1
-      } else if (value <= 300 && value > 120) {
-        return 2
-      } else if (value <= 120 && value > 30) {
-        return 4
-      } else if (value <= 30) {
-        return 8
-      }
-    }
-  },
   boardsCount: {
     name: 'Number of Boards',
     type: 'numeric',
@@ -112,6 +68,68 @@ export default {
       } else if (value > 5) {
         return 3
       }
+    }
+  },
+  gameTimeLimit: {
+    name: 'Game Time Limit',
+    type: 'numeric',
+    value: Infinity,
+    min: 30,
+    max: 300,
+    unlockedValues: [Infinity],
+    unlockable: [300],
+    step: 30,
+    multiplierCurve: (value) => {
+      if (value > 300) {
+        return 1
+      } else if (value <= 300 && value > 120) {
+        return 2
+      } else if (value <= 120 && value > 30) {
+        return 4
+      } else if (value <= 30) {
+        return 8
+      }
+    }
+  },
+  roundTimeLimit: {
+    name: 'Round Time Limit',
+    type: 'numeric',
+    value: Infinity,
+    min: 10,
+    max: 120,
+    unlockedValues: [Infinity],
+    unlockable: [60],
+    step: 10,
+    multiplierCurve: (value) => {
+      if (value > 100) {
+        return 1
+      } else if (value <= 100 && value > 60) {
+        return 2
+      } else if (value <= 60 && value > 30) {
+        return 3
+      } else if (value <= 30 && value > 10) {
+        return 4
+      } else if (value <= 10) {
+        return 8
+      }
+    }
+  },
+  strictMode: {
+    name: 'Strict Mode',
+    type: 'boolean',
+    value: false,
+    unlockedValues: [false],
+    multiplierCurve: (value) => {
+      return value ? 1.5 : 1
+    }
+  },
+  showPossibleWords: {
+    name: 'Show Possible Words',
+    type: 'boolean',
+    value: false,
+    unlockedValues: [false],
+    multiplierCurve: (value) => {
+      return value ? 0.1 : 1
     }
   }
 }

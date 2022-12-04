@@ -1,69 +1,57 @@
+slots
+  - add white and yellow to "incorrect"
+  - add green to "correct"
+
+counts
+  - for each guess count
+    - each letter's occurrance
+    - each letter's green + yellow
+  - if letter has more occcurances than green + yellow
+    - min & max are green + yellow
+  - if letter has equal occurrances and green + yellow
+    - min is Math.max(prevMin, green + yellow), max doesn't update
+    - 
+
+
+
+=-==
+
+
+
 ux:
 
 remove solved puzzle's letter hints (turn pink)
 completed puzzles are moved to the top so letters at bottom can be closer to active puzzles
 disable impossible option combinations
 click letter you want to edit
+flag letters as unusable
+  - toggle in cordner? 
+  - right click / long press ?
 
 ---------------
+
 
 modifiers:
 
 strict mode
-disable orange
-disable green
 
-switch words and guesses
-
-ui - flag letters as unusable
-  - icon top right? 
-  - right click / long press
-
+disable orange / green / both
 keyboard scramble
-
-keyboard blind
-
-
-
-
-
-==============
-
-
 bomb that takes out unused letters
   - eliminate X random unused letters
-randomized and hidden words
-
-
-
-
-==============
-
-
-
-modifiers
-
 
 - free one-letter guess
 - free one-letter magic guess (re-choose word to fit guess if possible)
 
-- anagrams bonus round
-- secret word mechanic
-
 - off-by-one tolerance
-
-- ending
-
-- limited lives mode
 
 - vowel swap
   - no vowel hits ? fill in all vowels
 
 - spear pillar randomly turn everything upside down / sidewars
 
-- keys are swapped
-
-- grouping some of the more annoying ones into a separate upgrade
+- ghost mode
+  - have to guess words that don't fit, guesses fill in automatically preferring correctGuesses + 1
 
 
 
@@ -86,4 +74,10 @@ attach rpg items to modifiers?
 some chosen modifiers do not affect score multiplier
   - if positive permanent upgrade
   - if negative, permanent (or for-a-while?) difficulty up?
+
+- ending
+
+- limited lives mode
+
+- anagrams bonus round
 

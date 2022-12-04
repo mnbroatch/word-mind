@@ -55,7 +55,7 @@ export default function GameEnd ({
             handleSetOption={handleSetOption}
           />
         ))}
-        {Object.keys(options).map((key) => <div key={key} className="option-spacer" />)}
+        {Object.keys(options).slice(1).map((key) => <div key={key} className="option-spacer" />)}
       </div>
       <div>Next Round is worth {calculatePointsEarned(options)} points</div>
     </div>

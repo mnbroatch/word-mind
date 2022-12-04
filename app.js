@@ -1,4 +1,4 @@
-import React, { useReducer, useState, useEffect } from 'react'
+import React, { useReducer, useState, useEffect, useMemo } from 'react'
 
 import merge from 'lodash/merge.js'
 import cloneDeep from 'lodash/cloneDeep'
@@ -15,6 +15,71 @@ import optionsReducer from './options-reducer.js'
 import calculatePointsEarned from './calculate-points-earned.js'
 import useCountdown from './use-countdown'
 import defaultOptions from './default-options.js'
+import getLetterStates from './get-letter-states'
+
+// present, absent, correct
+function isGuessStrictlyValid (guess, previousGuesses, answers) {
+  const unsolvedAnswers = answers.filter(answer => !previousGuesses.includes(answer))
+  return unsolvedAnswers.some((answer) => {
+    if (guess.length !== answer.length) return false
+
+    const possibilityRules = {
+      letterCounts: {},
+      slots: Array.from({ length: answer.length }).map(() => ({
+        correct: null,
+        incorrect: new Set()
+      }))
+    }
+
+    previousGuesses.forEach((prevGuess) => {
+      const letterStates = getLetterStates(answer, prevGuess)
+      letterStates.forEach((letterState, i) => {
+        const letter = prevGuess[i]
+        if (letterState === 'correct') {
+          possibilityRules.slots[i].correct = letter
+        } else {
+          possibilityRules.slots[i].incorrect.add(letter)
+        }
+      })
+
+      const uniqueLetters = Array.from(new Set(prevGuess.split('')))
+
+      uniqueLetters.forEach((letter) => {
+        const numOccurrances = prevGuess.split('').filter(l => l === letter).length
+        const numPresentOccurrances = prevGuess.split('').filter((l, i) => l === letter && letterStates[i] !== 'absent').length
+
+        if (!possibilityRules.letterCounts[letter]) {
+          possibilityRules.letterCounts[letter] = {
+            min: 0,
+            max: null
+          }
+        }
+
+        if (numOccurrances > numPresentOccurrances) {
+          possibilityRules.letterCounts[letter].min = numPresentOccurrances
+          possibilityRules.letterCounts[letter].max = numPresentOccurrances
+        } else {
+          possibilityRules.letterCounts[letter].min = Math.max(numPresentOccurrances, possibilityRules.letterCounts[letter].min)
+        }
+      })
+    })
+
+    const letterCountsArePossible = Object.entries(possibilityRules.letterCounts).every(([letter, { min, max }]) => {
+      const numOccurrances = guess.split('').filter(l => l === letter).length
+      return numOccurrances >= min
+        && (max === null || numOccurrances <= max)
+    })
+
+    const letterPositionsArePossible = possibilityRules.slots.every(({ correct, incorrect }, index) => {
+      const letter = guess[index]
+      return correct
+        ? letter === correct
+        : !incorrect.has(letter)
+    })
+
+    return letterCountsArePossible && letterPositionsArePossible
+  })
+}
 
 // TODO: qwerty
 const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
@@ -70,6 +135,7 @@ export default function App () {
             ? currentGuess.split('').reverse().join('')
             : currentGuess
         )
+        && (!options.strictMode.value || isGuessStrictlyValid(currentGuess, guesses, answers))
     ) {
       setGuesses([...guesses, currentGuess])
       currentGuessDispatch({ type: 'clear' })
@@ -78,8 +144,6 @@ export default function App () {
   }
 
   const handleGameEnd = (endState) => {
-    console.log('endState', endState)
-    console.log('uiState', uiState)
     const pointsEarned = endState.won
       ? calculatePointsEarned(options)
       : 0
@@ -100,7 +164,7 @@ export default function App () {
     }
   }
 
-  const handleGameStart = (endState) => {
+  const handleGameStart = () => {
     resetGameTime()
     resetRoundTime()
     setGuesses([])
@@ -158,7 +222,6 @@ export default function App () {
 
   const secondsRemainingInGame = Math.round(gameTimeRemaining / 1000)
   const secondsRemainingInRound = Math.round(roundTimeRemaining / 1000)
-  console.log('secondsRemainingInGame', secondsRemainingInGame)
 
   const handleSetOption = (optionId, value) => {
     optionsDispatch({
@@ -221,6 +284,10 @@ export default function App () {
     currentGuessDispatch({ type: 'clear' })
   }
 
+  const possibleWords = useMemo(() => {
+    return gameWords.filter(word => isGuessStrictlyValid(word, guesses, answers))
+  }, [guesses, answers])
+
   return (
     <div className='root'>
       <button onClick={() => setPoints(points => points + 100)}>
@@ -270,6 +337,14 @@ export default function App () {
           GUESS
         </button>
       </div>
+      {options.showPossibleWords.value && (
+        <div>
+          Possible words:
+          <div>
+            { possibleWords.join(' ') }
+          </div>
+        </div>
+      )}
       <div className='modals'>
         <a
           className={[
