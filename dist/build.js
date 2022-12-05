@@ -17,7 +17,7 @@
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0}.root{position:relative;padding:10px}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#84a194}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.keyboard{margin:70px;text-align:center}.boards{display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px}.board--solved .guesses{background-color:#f5b0cb}.guess{display:flex;border:1px solid #000}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.game-end{box-sizing:border-box;padding:25px;min-width:100%}.result-title{text-align:center;font-size:2.5em;font-weight:bold}.result-title--won{color:#fff}.result-title--lost{color:red}.options{display:flex;flex-wrap:wrap;justify-content:center;margin:30px}.option{background-color:#ffd;border-radius:20px;box-sizing:border-box;width:175px;margin:4px;border:1px solid #000;padding:25px}.option-spacer{width:175px;margin:0 4px 0 4px;height:0}.option__name{margin-bottom:20px;text-align:center}.option__values{display:flex;flex-wrap:wrap}.option__value--selected{background-color:green}.option__value--unlocked{background-color:#add8e6}.option__value--unlockable{background-color:#ff0}.option__value{height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option__value-inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter{height:35px;width:35px;text-transform:uppercase;margin:3px;position:relative;padding:0}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0}.root{position:relative;padding:10px}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#84a194}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.keyboard{margin:70px;text-align:center}.boards{display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px}.board--solved .guesses{background-color:#f5b0cb}.guess{display:flex;border:1px solid #000}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.game-end{box-sizing:border-box;padding:25px;min-width:100%}.result-title{text-align:center;font-size:2.5em;font-weight:bold}.result-title--won{color:#fff}.result-title--lost{color:red}.options{display:flex;flex-wrap:wrap;justify-content:center;margin:30px}.option{background-color:#ffd;border-radius:20px;box-sizing:border-box;width:175px;margin:4px;border:1px solid #000;padding:25px}.option-spacer{width:175px;margin:0 4px 0 4px;height:0}.option__name{margin-bottom:20px;text-align:center}.option__values{display:flex;flex-wrap:wrap}.option__value--selected{background-color:green}.option__value--unlocked{background-color:#add8e6}.option__value--unlockable{background-color:#ff0}.option__value{height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option__value-inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter{height:35px;width:35px;text-transform:uppercase;margin:3px;position:relative;padding:0}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6065,6 +6065,10 @@ function KeyboardLetter(_ref) {
       handleLetterInput = _ref.handleLetterInput;
   var answersLetterStates = answers.map(function (answer) {
     if (guesses.some(function (guess) {
+      return guess === answer;
+    })) {
+      return 'solved';
+    } else if (guesses.some(function (guess) {
       // indexes of letter in guess
       var indexes = guess.split('').reduce(function (acc, l, i) {
         return l === letter ? [].concat(keyboard_letter_toConsumableArray(acc), [i]) : acc;
@@ -6623,8 +6627,7 @@ function App() {
 
   (0,react.useEffect)(function () {
     var addKey = function addKey(e) {
-      // mouseless users don't need onscreen keyboard
-      if ((e.keyCode === 13 || e.keyCode === 32) && app_toConsumableArray(document.activeElement.classList).includes('keyboard-letter')) {
+      if (e.keyCode === 13 || e.keyCode === 32) {
         e.preventDefault();
       }
 
@@ -6767,10 +6770,10 @@ function App() {
   };
 
   var possibleWords = (0,react.useMemo)(function () {
-    return game_words_namespaceObject.filter(function (word) {
+    return options.showPossibleWords.value ? game_words_namespaceObject.filter(function (word) {
       return isGuessStrictlyValid(word, guesses, answers);
-    });
-  }, [guesses, answers]);
+    }) : [];
+  }, [guesses, answers, options]);
   return /*#__PURE__*/react.createElement("div", {
     className: "root"
   }, /*#__PURE__*/react.createElement("button", {
@@ -6795,7 +6798,9 @@ function App() {
     }
   }, answers), /*#__PURE__*/react.createElement("div", {
     className: "boards"
-  }, answers.map(function (answer) {
+  }, answers.sort(function (answer) {
+    return guesses.includes(answer) ? -1 : 1;
+  }).map(function (answer) {
     return /*#__PURE__*/react.createElement(Board, {
       answer: answer,
       guesses: guesses,
