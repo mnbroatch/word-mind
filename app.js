@@ -180,11 +180,7 @@ export default function App () {
 
   useEffect(() => {
     const addKey = (e) => {
-      // mouseless users don't need onscreen keyboard
-      if (
-        (e.keyCode === 13 || e.keyCode === 32)
-        && [...document.activeElement.classList].includes('keyboard-letter')
-      ) {
+      if (e.keyCode === 13 || e.keyCode === 32) {
         e.preventDefault()
       }
 
@@ -291,8 +287,10 @@ export default function App () {
   }
 
   const possibleWords = useMemo(() => {
-    return gameWords.filter(word => isGuessStrictlyValid(word, guesses, answers))
-  }, [guesses, answers])
+    return options.showPossibleWords.value
+      ? gameWords.filter(word => isGuessStrictlyValid(word, guesses, answers))
+      : []
+  }, [guesses, answers, options])
 
   return (
     <div className='root'>
@@ -316,7 +314,7 @@ export default function App () {
           {answers}
         </div>
         <div className='boards'>
-          {answers.map(answer => (
+          {answers.sort((answer) => guesses.includes(answer) ? -1 : 1).map(answer => (
             <Board
               answer={answer}
               guesses={guesses}

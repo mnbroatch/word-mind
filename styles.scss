@@ -233,6 +233,10 @@ body {
   flex: 1;
 }
 
+.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved {
+  background-color: $pink;
+}
+
 .keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct {
   background-color: $green1;
 }

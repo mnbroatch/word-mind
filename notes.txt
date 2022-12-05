@@ -1,27 +1,5 @@
-slots
-  - add white and yellow to "incorrect"
-  - add green to "correct"
-
-counts
-  - for each guess count
-    - each letter's occurrance
-    - each letter's green + yellow
-  - if letter has more occcurances than green + yellow
-    - min & max are green + yellow
-  - if letter has equal occurrances and green + yellow
-    - min is Math.max(prevMin, green + yellow), max doesn't update
-    - 
-
-
-
-=-==
-
-
-
 ux:
 
-remove solved puzzle's letter hints (turn pink)
-completed puzzles are moved to the top so letters at bottom can be closer to active puzzles
 disable impossible option combinations
 click letter you want to edit
 flag letters as unusable
@@ -32,8 +10,6 @@ flag letters as unusable
 
 
 modifiers:
-
-strict mode
 
 disable orange / green / both
 keyboard scramble
@@ -61,8 +37,10 @@ bomb that takes out unused letters
 
 bugs:
 
+close button is being hit on last word submit
 can use keyboard to enter guess even on game end options menu
 tab can zoom around inactive modal buttons
+
 
 ================
 

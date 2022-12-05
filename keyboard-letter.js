@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 
 export default function KeyboardLetter ({ letter, answers, guesses, handleLetterInput }) {
   const answersLetterStates = answers.map((answer) => {
-    if (guesses.some(guess => {
+    if (guesses.some(guess => guess === answer)) {
+      return 'solved'
+    } else if (guesses.some(guess => {
       // indexes of letter in guess
       const indexes = guess.split('').reduce((acc, l, i) => l === letter
         ? [...acc, i]
