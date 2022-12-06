@@ -275,8 +275,9 @@ export default function App () {
           open={uiState === 'cheats'}
           handleClose={() => { setUiState('game') }}
         >
+          DEBUG:
           <button onClick={() => setPoints(points => points + 100)}>
-            Free 100 pts
+            Gain $100
           </button>
           <button onClick={handleClearAll}>
             Clear all
