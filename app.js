@@ -1,7 +1,4 @@
 import React, { useReducer, useState, useEffect, useMemo } from 'react'
-
-import merge from 'lodash/merge.js'
-import cloneDeep from 'lodash/cloneDeep'
 import currentGuessReducer from './current-guess-reducer.js'
 import allWords from './all-words.json'
 import gameWords from './game-words.json'
@@ -13,78 +10,19 @@ import Board from './board.js'
 import KeyboardLetter from './keyboard-letter.js'
 import optionsReducer from './options-reducer.js'
 import calculatePointsEarned from './calculate-points-earned.js'
+import isGuessStrictlyValid from './is-guess-strictly-valid.js'
 import useCountdown from './use-countdown'
-import defaultOptions from './default-options.js'
-import getLetterStates from './get-letter-states'
+import { loadState, saveState } from './local-storage-wrapper'
 
-// present, absent, correct
-function isGuessStrictlyValid (guess, previousGuesses, answers) {
-  const unsolvedAnswers = answers.filter(answer => !previousGuesses.includes(answer))
-  return unsolvedAnswers.some((answer) => {
-    if (guess.length !== answer.length) return false
+const { initialOptions, initialPoints } = loadState()
 
-    const possibilityRules = {
-      letterCounts: {},
-      slots: Array.from({ length: answer.length }).map(() => ({
-        correct: null,
-        incorrect: new Set()
-      }))
-    }
+const alphabet = 'qwertyuiopasdfghjklzxcvbnm'.split('')
 
-    previousGuesses.forEach((prevGuess) => {
-      const letterStates = getLetterStates(answer, prevGuess)
-      letterStates.forEach((letterState, i) => {
-        const letter = prevGuess[i]
-        if (letterState === 'correct') {
-          possibilityRules.slots[i].correct = letter
-        } else {
-          possibilityRules.slots[i].incorrect.add(letter)
-        }
-      })
-
-      const uniqueLetters = Array.from(new Set(prevGuess.split('')))
-
-      uniqueLetters.forEach((letter) => {
-        const numOccurrances = prevGuess.split('').filter(l => l === letter).length
-        const numPresentOccurrances = prevGuess.split('').filter((l, i) => l === letter && letterStates[i] !== 'absent').length
-
-        if (!possibilityRules.letterCounts[letter]) {
-          possibilityRules.letterCounts[letter] = {
-            min: 0,
-            max: null
-          }
-        }
-
-        if (numOccurrances > numPresentOccurrances) {
-          possibilityRules.letterCounts[letter].min = numPresentOccurrances
-          possibilityRules.letterCounts[letter].max = numPresentOccurrances
-        } else {
-          possibilityRules.letterCounts[letter].min = Math.max(numPresentOccurrances, possibilityRules.letterCounts[letter].min)
-        }
-      })
-    })
-
-    const letterCountsArePossible = Object.entries(possibilityRules.letterCounts).every(([letter, { min, max }]) => {
-      const numOccurrances = guess.split('').filter(l => l === letter).length
-      return numOccurrances >= min
-        && (max === null || numOccurrances <= max)
-    })
-
-    const letterPositionsArePossible = possibilityRules.slots.every(({ correct, incorrect }, index) => {
-      const letter = guess[index]
-      return correct
-        ? letter === correct
-        : !incorrect.has(letter)
-    })
-
-    return letterCountsArePossible && letterPositionsArePossible
-  })
-}
-
-// TODO: qwerty
-const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
-
-const INFINITY_REPLACEMENT = '_MNB_Infinity876'
+const alphabetRows = [
+  alphabet.slice(0, 10),
+  alphabet.slice(10, 19),
+  alphabet.slice(19)
+]
 
 function getAnswers (options) {
   const wordLength = options.wordLength.value
@@ -92,34 +30,6 @@ function getAnswers (options) {
   const answers = gameWords.filter(word => word.length === +wordLength && !curseWords.includes(word))
     .sort(() => Math.random() - 0.5).slice(0, boardsCount)
   return options.reverse.value ? answers.map(answer => answer.split('').reverse().join('')) : answers
-}
-
-const savedOptions = JSON.parse(localStorage.getItem('word-mind_options'))
-if (savedOptions) {
-  Object.values(savedOptions).forEach(option => {
-    if (option.value === INFINITY_REPLACEMENT) {
-      option.value = Infinity
-    }
-
-    option.unlockedValues.forEach((value, i) => {
-      if (value === INFINITY_REPLACEMENT) {
-        option.unlockedValues[i] = Infinity
-      }
-    })
-  })
-}
-
-const initialOptions = merge({}, defaultOptions, savedOptions)
-Object.keys(initialOptions).forEach((key) => {
-  if (!defaultOptions[key]) {
-    delete initialOptions[key]
-  }
-})
-
-let initialPoints = 0
-const savedPoints = localStorage.getItem('word-mind_points')
-if (savedPoints) {
-  initialPoints = JSON.parse(savedPoints)
 }
 
 export default function App () {
@@ -256,25 +166,7 @@ export default function App () {
   }, [uiState])
 
   useEffect(() => {
-    const optionsClone = cloneDeep(options)
-    if (optionsClone) {
-      Object.values(optionsClone).forEach(option => {
-        if (option.value === Infinity) {
-          option.value = INFINITY_REPLACEMENT
-        }
-
-        option.unlockedValues.forEach((value, i) => {
-          if (value === Infinity) {
-            option.unlockedValues[i] = INFINITY_REPLACEMENT
-          }
-        })
-      })
-    }
-
-    const optionsEntriesToSave = Object.entries(optionsClone).map(([key, { unlockedValues, value }]) => [key, { unlockedValues, value }])
-
-    localStorage.setItem('word-mind_options', JSON.stringify(Object.fromEntries(optionsEntriesToSave)))
-    localStorage.setItem('word-mind_points', JSON.stringify(points))
+    saveState(options, points)
   }, [options, points])
 
   const handleClearAll = () => {
@@ -291,6 +183,16 @@ export default function App () {
       ? gameWords.filter(word => isGuessStrictlyValid(word, guesses, answers))
       : []
   }, [guesses, answers, options])
+
+  const sortedAnswers = answers.sort((a, b) => {
+    if (guesses.includes(a) && !guesses.includes(b)) {
+      return -1
+    } else if (guesses.includes(b) && !guesses.includes(a)) {
+      return 1
+    } else {
+      return (a).localeCompare(b)
+    }
+  })
 
   return (
     <div className='root'>
@@ -314,7 +216,7 @@ export default function App () {
           {answers}
         </div>
         <div className='boards'>
-          {answers.sort((answer) => guesses.includes(answer) ? -1 : 1).map(answer => (
+          {sortedAnswers.map(answer => (
             <Board
               answer={answer}
               guesses={guesses}
@@ -324,19 +226,31 @@ export default function App () {
           ))}
         </div>
         <div className='keyboard'>
-          {alphabet.map(letter => (
-            <KeyboardLetter
-              letter={letter}
-              answers={answers}
-              guesses={guesses}
-              handleLetterInput={() => { handleAddLetter(letter) }}
-              key={letter}
-            />
+          {alphabetRows.map(row => (
+            <div key={row[0]}>
+              {row.map(letter => (
+                <KeyboardLetter
+                  letter={letter}
+                  answers={answers}
+                  guesses={guesses}
+                  handleLetterInput={() => { handleAddLetter(letter) }}
+                  key={letter}
+                />
+              ))}
+              {row[0] === 'z' && (
+                <button
+                  className="delete-button"
+                  onClick={() => { currentGuessDispatch({ type: 'rub' }) }}
+                >
+                  <span className="delete-button__label">DEL</span>
+                </button>
+              )}
+            </div>
           ))}
+          <button className="guess-button" onClick={handleGuess}>
+            GUESS
+          </button>
         </div>
-        <button onClick={() => { currentGuessDispatch({ type: 'rub' }) }}>
-          DEL
-        </button>
         <button onClick={handleGuess}>
           GUESS
         </button>

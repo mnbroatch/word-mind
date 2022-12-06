@@ -26,8 +26,15 @@ bomb that takes out unused letters
 
 - spear pillar randomly turn everything upside down / sidewars
 
+- antiwordle
+  - have to guess words that fit the clues
+  - difference is that you want to guess more obscure things, etc
+
 - ghost mode
-  - have to guess words that don't fit, guesses fill in automatically preferring correctGuesses + 1
+  - 
+
+all of my best ideas are ruined by the fact that the list of candidate words is so low after a few guesses
+
 
 
 
@@ -46,16 +53,19 @@ tab can zoom around inactive modal buttons
 
 higher-level:
 
-change rules in the middle of a game?
+
+
 attach rpg items to modifiers?
 
-some chosen modifiers do not affect score multiplier
-  - if positive permanent upgrade
-  - if negative, permanent (or for-a-while?) difficulty up?
+inventory
+  - potions change rules for a number of games
+    - adds status effect which can be added other ways too, good or bad
+  - idols open up options
+  - currency
 
-- ending
 
-- limited lives mode
 
-- anagrams bonus round
-
+ending
+limited lives mode
+anagrams bonus round
+change rules in the middle of a game?

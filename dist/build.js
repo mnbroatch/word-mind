@@ -17,7 +17,7 @@
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0}.root{position:relative;padding:10px}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#84a194}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.keyboard{margin:70px;text-align:center}.boards{display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px}.board--solved .guesses{background-color:#f5b0cb}.guess{display:flex;border:1px solid #000}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.game-end{box-sizing:border-box;padding:25px;min-width:100%}.result-title{text-align:center;font-size:2.5em;font-weight:bold}.result-title--won{color:#fff}.result-title--lost{color:red}.options{display:flex;flex-wrap:wrap;justify-content:center;margin:30px}.option{background-color:#ffd;border-radius:20px;box-sizing:border-box;width:175px;margin:4px;border:1px solid #000;padding:25px}.option-spacer{width:175px;margin:0 4px 0 4px;height:0}.option__name{margin-bottom:20px;text-align:center}.option__values{display:flex;flex-wrap:wrap}.option__value--selected{background-color:green}.option__value--unlocked{background-color:#add8e6}.option__value--unlockable{background-color:#ff0}.option__value{height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option__value-inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter{height:35px;width:35px;text-transform:uppercase;margin:3px;position:relative;padding:0}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0}.root{position:relative;padding:10px}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#84a194}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.keyboard{margin:70px;text-align:center}.boards{display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px}.board--solved .guesses{background-color:#f5b0cb}.guess{display:flex;border:1px solid #000}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.game-end{box-sizing:border-box;padding:25px;min-width:100%}.result-title{text-align:center;font-size:2.5em;font-weight:bold}.result-title--won{color:#fff}.result-title--lost{color:red}.options{display:flex;flex-wrap:wrap;justify-content:center;margin:30px}.option{background-color:#ffd;border-radius:20px;box-sizing:border-box;width:175px;margin:4px;border:1px solid #000;padding:25px}.option-spacer{width:175px;margin:0 4px 0 4px;height:0}.option__name{margin-bottom:20px;text-align:center}.option__values{display:flex;flex-wrap:wrap}.option__value--selected{background-color:green}.option__value--unlocked{background-color:#add8e6}.option__value--unlockable{background-color:#ff0}.option__value{height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option__value-inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter,.delete-button{height:35px;width:35px;text-transform:uppercase;margin:3px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.8em}.guess-button{width:400px;height:35px;text-transform:uppercase;margin:3px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5687,12 +5687,6 @@ var __webpack_exports__ = {};
 var react = __webpack_require__(7294);
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
 var react_dom = __webpack_require__(3935);
-// EXTERNAL MODULE: ./node_modules/lodash/merge.js
-var merge = __webpack_require__(2492);
-var merge_default = /*#__PURE__*/__webpack_require__.n(merge);
-// EXTERNAL MODULE: ./node_modules/lodash/cloneDeep.js
-var cloneDeep = __webpack_require__(361);
-var cloneDeep_default = /*#__PURE__*/__webpack_require__.n(cloneDeep);
 ;// CONCATENATED MODULE: ./current-guess-reducer.js
 /* harmony default export */ function current_guess_reducer(prevState, action) {
   if (action.type === 'rub') {
@@ -6289,6 +6283,93 @@ function optionsReducer(prev, _ref) {
     return prev;
   }
 }
+;// CONCATENATED MODULE: ./is-guess-strictly-valid.js
+function is_guess_strictly_valid_slicedToArray(arr, i) { return is_guess_strictly_valid_arrayWithHoles(arr) || is_guess_strictly_valid_iterableToArrayLimit(arr, i) || is_guess_strictly_valid_unsupportedIterableToArray(arr, i) || is_guess_strictly_valid_nonIterableRest(); }
+
+function is_guess_strictly_valid_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function is_guess_strictly_valid_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return is_guess_strictly_valid_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return is_guess_strictly_valid_arrayLikeToArray(o, minLen); }
+
+function is_guess_strictly_valid_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function is_guess_strictly_valid_iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function is_guess_strictly_valid_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+function isGuessStrictlyValid(guess, previousGuesses, answers) {
+  var unsolvedAnswers = answers.filter(function (answer) {
+    return !previousGuesses.includes(answer);
+  });
+  return unsolvedAnswers.some(function (answer) {
+    if (guess.length !== answer.length) return false;
+    var possibilityRules = {
+      letterCounts: {},
+      slots: Array.from({
+        length: answer.length
+      }).map(function () {
+        return {
+          correct: null,
+          incorrect: new Set()
+        };
+      })
+    };
+    previousGuesses.forEach(function (prevGuess) {
+      var letterStates = getLetterStates(answer, prevGuess);
+      letterStates.forEach(function (letterState, i) {
+        var letter = prevGuess[i];
+
+        if (letterState === 'correct') {
+          possibilityRules.slots[i].correct = letter;
+        } else {
+          possibilityRules.slots[i].incorrect.add(letter);
+        }
+      });
+      var uniqueLetters = Array.from(new Set(prevGuess.split('')));
+      uniqueLetters.forEach(function (letter) {
+        var numOccurrances = prevGuess.split('').filter(function (l) {
+          return l === letter;
+        }).length;
+        var numPresentOccurrances = prevGuess.split('').filter(function (l, i) {
+          return l === letter && letterStates[i] !== 'absent';
+        }).length;
+
+        if (!possibilityRules.letterCounts[letter]) {
+          possibilityRules.letterCounts[letter] = {
+            min: 0,
+            max: null
+          };
+        }
+
+        if (numOccurrances > numPresentOccurrances) {
+          possibilityRules.letterCounts[letter].min = numPresentOccurrances;
+          possibilityRules.letterCounts[letter].max = numPresentOccurrances;
+        } else {
+          possibilityRules.letterCounts[letter].min = Math.max(numPresentOccurrances, possibilityRules.letterCounts[letter].min);
+        }
+      });
+    });
+    var letterCountsArePossible = Object.entries(possibilityRules.letterCounts).every(function (_ref) {
+      var _ref2 = is_guess_strictly_valid_slicedToArray(_ref, 2),
+          letter = _ref2[0],
+          _ref2$ = _ref2[1],
+          min = _ref2$.min,
+          max = _ref2$.max;
+
+      var numOccurrances = guess.split('').filter(function (l) {
+        return l === letter;
+      }).length;
+      return numOccurrances >= min && (max === null || numOccurrances <= max);
+    });
+    var letterPositionsArePossible = possibilityRules.slots.every(function (_ref3, index) {
+      var correct = _ref3.correct,
+          incorrect = _ref3.incorrect;
+      var letter = guess[index];
+      return correct ? letter === correct : !incorrect.has(letter);
+    });
+    return letterCountsArePossible && letterPositionsArePossible;
+  });
+}
 ;// CONCATENATED MODULE: ./use-rerender.js
 
 function useRerender() {
@@ -6388,6 +6469,100 @@ function useCountdown(_ref) {
     remaining: remaining < 0 ? 0 : remaining
   };
 }
+// EXTERNAL MODULE: ./node_modules/lodash/cloneDeep.js
+var cloneDeep = __webpack_require__(361);
+var cloneDeep_default = /*#__PURE__*/__webpack_require__.n(cloneDeep);
+// EXTERNAL MODULE: ./node_modules/lodash/merge.js
+var merge = __webpack_require__(2492);
+var merge_default = /*#__PURE__*/__webpack_require__.n(merge);
+;// CONCATENATED MODULE: ./local-storage-wrapper.js
+function local_storage_wrapper_slicedToArray(arr, i) { return local_storage_wrapper_arrayWithHoles(arr) || local_storage_wrapper_iterableToArrayLimit(arr, i) || local_storage_wrapper_unsupportedIterableToArray(arr, i) || local_storage_wrapper_nonIterableRest(); }
+
+function local_storage_wrapper_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function local_storage_wrapper_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return local_storage_wrapper_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return local_storage_wrapper_arrayLikeToArray(o, minLen); }
+
+function local_storage_wrapper_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function local_storage_wrapper_iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function local_storage_wrapper_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+var INFINITY_REPLACEMENT = '_MNB_Infinity876';
+
+function loadState() {
+  var savedOptions = JSON.parse(localStorage.getItem('word-mind_options'));
+
+  if (savedOptions) {
+    Object.values(savedOptions).forEach(function (option) {
+      if (option.value === INFINITY_REPLACEMENT) {
+        option.value = Infinity;
+      }
+
+      option.unlockedValues.forEach(function (value, i) {
+        if (value === INFINITY_REPLACEMENT) {
+          option.unlockedValues[i] = Infinity;
+        }
+      });
+    });
+  }
+
+  var initialOptions = merge_default()({}, default_options, savedOptions);
+  Object.keys(initialOptions).forEach(function (key) {
+    if (!default_options[key]) {
+      delete initialOptions[key];
+    }
+  });
+  var initialPoints = 0;
+  var savedPoints = localStorage.getItem('word-mind_points');
+
+  if (savedPoints) {
+    initialPoints = JSON.parse(savedPoints);
+  }
+
+  return {
+    initialOptions: initialOptions,
+    initialPoints: initialPoints
+  };
+}
+
+function saveState(options, points) {
+  var optionsClone = cloneDeep_default()(options);
+
+  if (optionsClone) {
+    Object.values(optionsClone).forEach(function (option) {
+      if (option.value === Infinity) {
+        option.value = INFINITY_REPLACEMENT;
+      }
+
+      option.unlockedValues.forEach(function (value, i) {
+        if (value === Infinity) {
+          option.unlockedValues[i] = INFINITY_REPLACEMENT;
+        }
+      });
+    });
+  }
+
+  var optionsEntriesToSave = Object.entries(optionsClone).map(function (_ref) {
+    var _ref2 = local_storage_wrapper_slicedToArray(_ref, 2),
+        key = _ref2[0],
+        _ref2$ = _ref2[1],
+        unlockedValues = _ref2$.unlockedValues,
+        value = _ref2$.value;
+
+    return [key, {
+      unlockedValues: unlockedValues,
+      value: value
+    }];
+  });
+  localStorage.setItem('word-mind_options', JSON.stringify(Object.fromEntries(optionsEntriesToSave)));
+  localStorage.setItem('word-mind_points', JSON.stringify(points));
+}
+
+
 ;// CONCATENATED MODULE: ./app.js
 function app_toConsumableArray(arr) { return app_arrayWithoutHoles(arr) || app_iterableToArray(arr) || app_unsupportedIterableToArray(arr) || app_nonIterableSpread(); }
 
@@ -6425,85 +6600,12 @@ function app_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
- // present, absent, correct
+var _loadState = loadState(),
+    initialOptions = _loadState.initialOptions,
+    initialPoints = _loadState.initialPoints;
 
-function isGuessStrictlyValid(guess, previousGuesses, answers) {
-  var unsolvedAnswers = answers.filter(function (answer) {
-    return !previousGuesses.includes(answer);
-  });
-  return unsolvedAnswers.some(function (answer) {
-    if (guess.length !== answer.length) return false;
-    var possibilityRules = {
-      letterCounts: {},
-      slots: Array.from({
-        length: answer.length
-      }).map(function () {
-        return {
-          correct: null,
-          incorrect: new Set()
-        };
-      })
-    };
-    previousGuesses.forEach(function (prevGuess) {
-      var letterStates = getLetterStates(answer, prevGuess);
-      letterStates.forEach(function (letterState, i) {
-        var letter = prevGuess[i];
-
-        if (letterState === 'correct') {
-          possibilityRules.slots[i].correct = letter;
-        } else {
-          possibilityRules.slots[i].incorrect.add(letter);
-        }
-      });
-      var uniqueLetters = Array.from(new Set(prevGuess.split('')));
-      uniqueLetters.forEach(function (letter) {
-        var numOccurrances = prevGuess.split('').filter(function (l) {
-          return l === letter;
-        }).length;
-        var numPresentOccurrances = prevGuess.split('').filter(function (l, i) {
-          return l === letter && letterStates[i] !== 'absent';
-        }).length;
-
-        if (!possibilityRules.letterCounts[letter]) {
-          possibilityRules.letterCounts[letter] = {
-            min: 0,
-            max: null
-          };
-        }
-
-        if (numOccurrances > numPresentOccurrances) {
-          possibilityRules.letterCounts[letter].min = numPresentOccurrances;
-          possibilityRules.letterCounts[letter].max = numPresentOccurrances;
-        } else {
-          possibilityRules.letterCounts[letter].min = Math.max(numPresentOccurrances, possibilityRules.letterCounts[letter].min);
-        }
-      });
-    });
-    var letterCountsArePossible = Object.entries(possibilityRules.letterCounts).every(function (_ref) {
-      var _ref2 = app_slicedToArray(_ref, 2),
-          letter = _ref2[0],
-          _ref2$ = _ref2[1],
-          min = _ref2$.min,
-          max = _ref2$.max;
-
-      var numOccurrances = guess.split('').filter(function (l) {
-        return l === letter;
-      }).length;
-      return numOccurrances >= min && (max === null || numOccurrances <= max);
-    });
-    var letterPositionsArePossible = possibilityRules.slots.every(function (_ref3, index) {
-      var correct = _ref3.correct,
-          incorrect = _ref3.incorrect;
-      var letter = guess[index];
-      return correct ? letter === correct : !incorrect.has(letter);
-    });
-    return letterCountsArePossible && letterPositionsArePossible;
-  });
-} // TODO: qwerty
-
-
-var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
-var INFINITY_REPLACEMENT = '_MNB_Infinity876';
+var alphabet = 'qwertyuiopasdfghjklzxcvbnm'.split('');
+var alphabetRows = [alphabet.slice(0, 10), alphabet.slice(10, 19), alphabet.slice(19)];
 
 function getAnswers(options) {
   var wordLength = options.wordLength.value;
@@ -6516,35 +6618,6 @@ function getAnswers(options) {
   return options.reverse.value ? answers.map(function (answer) {
     return answer.split('').reverse().join('');
   }) : answers;
-}
-
-var savedOptions = JSON.parse(localStorage.getItem('word-mind_options'));
-
-if (savedOptions) {
-  Object.values(savedOptions).forEach(function (option) {
-    if (option.value === INFINITY_REPLACEMENT) {
-      option.value = Infinity;
-    }
-
-    option.unlockedValues.forEach(function (value, i) {
-      if (value === INFINITY_REPLACEMENT) {
-        option.unlockedValues[i] = Infinity;
-      }
-    });
-  });
-}
-
-var initialOptions = merge_default()({}, default_options, savedOptions);
-Object.keys(initialOptions).forEach(function (key) {
-  if (!default_options[key]) {
-    delete initialOptions[key];
-  }
-});
-var initialPoints = 0;
-var savedPoints = localStorage.getItem('word-mind_points');
-
-if (savedPoints) {
-  initialPoints = JSON.parse(savedPoints);
 }
 
 function App() {
@@ -6724,36 +6797,7 @@ function App() {
     };
   }, [uiState]);
   (0,react.useEffect)(function () {
-    var optionsClone = cloneDeep_default()(options);
-
-    if (optionsClone) {
-      Object.values(optionsClone).forEach(function (option) {
-        if (option.value === Infinity) {
-          option.value = INFINITY_REPLACEMENT;
-        }
-
-        option.unlockedValues.forEach(function (value, i) {
-          if (value === Infinity) {
-            option.unlockedValues[i] = INFINITY_REPLACEMENT;
-          }
-        });
-      });
-    }
-
-    var optionsEntriesToSave = Object.entries(optionsClone).map(function (_ref4) {
-      var _ref5 = app_slicedToArray(_ref4, 2),
-          key = _ref5[0],
-          _ref5$ = _ref5[1],
-          unlockedValues = _ref5$.unlockedValues,
-          value = _ref5$.value;
-
-      return [key, {
-        unlockedValues: unlockedValues,
-        value: value
-      }];
-    });
-    localStorage.setItem('word-mind_options', JSON.stringify(Object.fromEntries(optionsEntriesToSave)));
-    localStorage.setItem('word-mind_points', JSON.stringify(points));
+    saveState(options, points);
   }, [options, points]);
 
   var handleClearAll = function handleClearAll() {
@@ -6774,6 +6818,15 @@ function App() {
       return isGuessStrictlyValid(word, guesses, answers);
     }) : [];
   }, [guesses, answers, options]);
+  var sortedAnswers = answers.sort(function (a, b) {
+    if (guesses.includes(a) && !guesses.includes(b)) {
+      return -1;
+    } else if (guesses.includes(b) && !guesses.includes(a)) {
+      return 1;
+    } else {
+      return a.localeCompare(b);
+    }
+  });
   return /*#__PURE__*/react.createElement("div", {
     className: "root"
   }, /*#__PURE__*/react.createElement("button", {
@@ -6798,9 +6851,7 @@ function App() {
     }
   }, answers), /*#__PURE__*/react.createElement("div", {
     className: "boards"
-  }, answers.sort(function (answer) {
-    return guesses.includes(answer) ? -1 : 1;
-  }).map(function (answer) {
+  }, sortedAnswers.map(function (answer) {
     return /*#__PURE__*/react.createElement(Board, {
       answer: answer,
       guesses: guesses,
@@ -6809,23 +6860,33 @@ function App() {
     });
   })), /*#__PURE__*/react.createElement("div", {
     className: "keyboard"
-  }, alphabet.map(function (letter) {
-    return /*#__PURE__*/react.createElement(KeyboardLetter, {
-      letter: letter,
-      answers: answers,
-      guesses: guesses,
-      handleLetterInput: function handleLetterInput() {
-        handleAddLetter(letter);
-      },
-      key: letter
-    });
-  })), /*#__PURE__*/react.createElement("button", {
-    onClick: function onClick() {
-      currentGuessDispatch({
-        type: 'rub'
+  }, alphabetRows.map(function (row) {
+    return /*#__PURE__*/react.createElement("div", {
+      key: row[0]
+    }, row.map(function (letter) {
+      return /*#__PURE__*/react.createElement(KeyboardLetter, {
+        letter: letter,
+        answers: answers,
+        guesses: guesses,
+        handleLetterInput: function handleLetterInput() {
+          handleAddLetter(letter);
+        },
+        key: letter
       });
-    }
-  }, "DEL"), /*#__PURE__*/react.createElement("button", {
+    }), row[0] === 'z' && /*#__PURE__*/react.createElement("button", {
+      className: "delete-button",
+      onClick: function onClick() {
+        currentGuessDispatch({
+          type: 'rub'
+        });
+      }
+    }, /*#__PURE__*/react.createElement("span", {
+      className: "delete-button__label"
+    }, "DEL")));
+  }), /*#__PURE__*/react.createElement("button", {
+    className: "guess-button",
+    onClick: handleGuess
+  }, "GUESS")), /*#__PURE__*/react.createElement("button", {
     onClick: handleGuess
   }, "GUESS")), options.showPossibleWords.value && /*#__PURE__*/react.createElement("div", null, "Possible words:", /*#__PURE__*/react.createElement("div", null, possibleWords.join(' '))), /*#__PURE__*/react.createElement("div", {
     className: "modals"
