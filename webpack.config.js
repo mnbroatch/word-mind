@@ -17,6 +17,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.ttf$/,
+        type: 'asset/resource'
+      },
+      {
         test: /\.jsx?$/,
         exclude: /(node_modules)/,
         use: {

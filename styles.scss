@@ -6,7 +6,9 @@ $blue: #372772;
 $purple: #3A2449;
 $yellow: #F6BD60;
 $lightYellow: #FFD;
+$lightGrey: #E2E2E2;
 $pink: #F5B0CB;
+$red: #f03;
 
 body {
   margin: 0;
@@ -71,11 +73,6 @@ body {
   transform: translateX(0);
 } 
 
-.keyboard {
-  margin: 70px;
-  text-align: center;
-}
-
 .boards {
   display: flex;
   flex-wrap: wrap;
@@ -84,15 +81,16 @@ body {
 
 .board {
   margin: 5px;
+  box-shadow: inset 1px 1px 5px grey;
 }
 
-.board--solved .guesses {
+.board--solved {
   background-color: $pink;
 }
 
 .guess {
+  margin-top: 3px;
   display: flex;
-  border: 1px solid black;
 }
 
 .guess__letter {
@@ -104,6 +102,10 @@ body {
   margin: 4px;
   border: 1px solid black;
   text-transform: uppercase;
+  border: 0;
+  background-color: white;
+  font-family: system-ui;
+  box-shadow: 1px 1px 3px black;
 }
 
 .guess__letter--correct {
@@ -203,11 +205,28 @@ body {
   transform: translate(-50%, -50%)
 }
 
+.keyboard {
+  margin: 40px 0 70px 0;
+  text-align: center;
+}
+
+.keyboard-row {
+  margin: 4px 0 4px 0;
+  text-align: center;
+}
+
+.keyboard-button {
+  border: 0;
+  background-color: white;
+  font-family: system-ui;
+  box-shadow: 1px 1px 3px black;
+}
+
 .keyboard-letter, .delete-button {
-  height: 35px;
-  width: 35px;
+  height: 30px;
+  width: 30px;
   text-transform: uppercase;
-  margin: 3px;
+  margin: 2px;
   position: relative;
   padding: 0;
   vertical-align: middle;
@@ -251,17 +270,50 @@ body {
 }
 
 .delete-button {
-  font-size: .8em;
+  font-size: .7em;
+  background-color: $red;
 }
 
 .guess-button {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 35px;
   text-transform: uppercase;
-  margin: 3px 0 3px 0;
+  margin: 20px 0 3px 0;
   padding: 0;
   position: relative;
   vertical-align: middle;
   font-size: 1.2em;
+  background-color: $green1;
+}
+
+.points {
+  border: 1px solid black;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 2px 3px 2px 3px;
+  background-color: $yellow;
+}
+
+.points__inner {
+  border-radius: 9999px;
+  background-color: black;
+  padding: 5px 10px 5px 10px;
+}
+
+.points__label {
+  color: $yellow;
+  font-family: abril-fatface-regular;
+}
+
+.top-bar {
+  padding: 5px;
+  background-color: $lightGrey;
+  box-shadow: 0px 2px 3px grey;
+}
+
+@font-face {
+  font-family: 'abril-fatface-regular';
+  src: url('./assets/abril-fatface-regular.ttf');
 }
 

@@ -12,12 +12,17 @@
 /* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1667);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(4643), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0}.root{position:relative;padding:10px}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#84a194}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.keyboard{margin:70px;text-align:center}.boards{display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px}.board--solved .guesses{background-color:#f5b0cb}.guess{display:flex;border:1px solid #000}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.game-end{box-sizing:border-box;padding:25px;min-width:100%}.result-title{text-align:center;font-size:2.5em;font-weight:bold}.result-title--won{color:#fff}.result-title--lost{color:red}.options{display:flex;flex-wrap:wrap;justify-content:center;margin:30px}.option{background-color:#ffd;border-radius:20px;box-sizing:border-box;width:175px;margin:4px;border:1px solid #000;padding:25px}.option-spacer{width:175px;margin:0 4px 0 4px;height:0}.option__name{margin-bottom:20px;text-align:center}.option__values{display:flex;flex-wrap:wrap}.option__value--selected{background-color:green}.option__value--unlocked{background-color:#add8e6}.option__value--unlockable{background-color:#ff0}.option__value{height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option__value-inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter,.delete-button{height:35px;width:35px;text-transform:uppercase;margin:3px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.8em}.guess-button{width:400px;height:35px;text-transform:uppercase;margin:3px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0}.root{position:relative;padding:10px}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#84a194}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase;border:0;background-color:#fff;font-family:system-ui;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.game-end{box-sizing:border-box;padding:25px;min-width:100%}.result-title{text-align:center;font-size:2.5em;font-weight:bold}.result-title--won{color:#fff}.result-title--lost{color:red}.options{display:flex;flex-wrap:wrap;justify-content:center;margin:30px}.option{background-color:#ffd;border-radius:20px;box-sizing:border-box;width:175px;margin:4px;border:1px solid #000;padding:25px}.option-spacer{width:175px;margin:0 4px 0 4px;height:0}.option__name{margin-bottom:20px;text-align:center}.option__values{display:flex;flex-wrap:wrap}.option__value--selected{background-color:green}.option__value--unlocked{background-color:#add8e6}.option__value--unlockable{background-color:#ff0}.option__value{height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option__value-inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard{margin:40px 0 70px 0;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff;font-family:system-ui;box-shadow:1px 1px 3px #000}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.points{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.points__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.points__label{color:#f6bd60;font-family:abril-fatface-regular}.top-bar{padding:5px;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -129,6 +134,42 @@ module.exports = function (cssWithMappingToString) {
   };
 
   return list;
+};
+
+/***/ }),
+
+/***/ 1667:
+/***/ ((module) => {
+
+"use strict";
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    options = {};
+  }
+
+  if (!url) {
+    return url;
+  }
+
+  url = String(url.__esModule ? url.default : url); // If url is already wrapped in quotes, remove them
+
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  }
+
+  if (options.hash) {
+    url += options.hash;
+  } // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+
+
+  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+
+  return url;
 };
 
 /***/ }),
@@ -5595,6 +5636,14 @@ function styleTagTransform(css, styleElement) {
 
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ 4643:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "c2459f7f69cb5eb788d8.ttf";
+
 /***/ })
 
 /******/ 	});
@@ -5625,6 +5674,9 @@ module.exports = styleTagTransform;
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
@@ -5675,6 +5727,52 @@ module.exports = styleTagTransform;
 /******/ 			if (!module.children) module.children = [];
 /******/ 			return module;
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			179: 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /************************************************************************/
@@ -6085,7 +6183,7 @@ function KeyboardLetter(_ref) {
     return answersLetterStates[i] === 'absent' || guesses.includes(answer);
   });
   return /*#__PURE__*/react.createElement("button", {
-    className: ['keyboard-letter', isComplete && 'keyboard-letter--complete', !isUsed && 'keyboard-letter--untouched'].filter(Boolean).join(' '),
+    className: ['keyboard-letter keyboard-button', isComplete && 'keyboard-letter--complete', !isUsed && 'keyboard-letter--untouched'].filter(Boolean).join(' '),
     tabIndex: "-1",
     onClick: handleLetterInput
   }, /*#__PURE__*/react.createElement("span", {
@@ -6668,6 +6766,8 @@ function App() {
         type: 'clear'
       });
       resetRoundTime();
+    } else if (currentGuess === 'uuddl') {
+      setUiState('cheats');
     }
   };
 
@@ -6829,17 +6929,15 @@ function App() {
   });
   return /*#__PURE__*/react.createElement("div", {
     className: "root"
-  }, /*#__PURE__*/react.createElement("button", {
-    onClick: function onClick() {
-      return setPoints(function (points) {
-        return points + 100;
-      });
-    }
-  }, "Debug: Free 100 pts"), /*#__PURE__*/react.createElement("button", {
-    onClick: handleClearAll
-  }, "Debug: Clear all"), /*#__PURE__*/react.createElement("div", {
+  }, /*#__PURE__*/react.createElement("div", {
+    className: "top-bar"
+  }, /*#__PURE__*/react.createElement("div", {
     className: "points"
-  }, points, " Points"), options.gameTimeLimit.value !== Infinity && /*#__PURE__*/react.createElement("div", {
+  }, /*#__PURE__*/react.createElement("div", {
+    className: "points__inner"
+  }, /*#__PURE__*/react.createElement("div", {
+    className: "points__label"
+  }, "$", points.toFixed(2))))), options.gameTimeLimit.value !== Infinity && /*#__PURE__*/react.createElement("div", {
     className: "game-time-remaining"
   }, "Game Time Remaining: ", secondsRemainingInGame), options.roundTimeLimit.value !== Infinity && /*#__PURE__*/react.createElement("div", {
     className: "round-time-remaining"
@@ -6862,6 +6960,7 @@ function App() {
     className: "keyboard"
   }, alphabetRows.map(function (row) {
     return /*#__PURE__*/react.createElement("div", {
+      className: "keyboard-row",
       key: row[0]
     }, row.map(function (letter) {
       return /*#__PURE__*/react.createElement(KeyboardLetter, {
@@ -6874,7 +6973,7 @@ function App() {
         key: letter
       });
     }), row[0] === 'z' && /*#__PURE__*/react.createElement("button", {
-      className: "delete-button",
+      className: "keyboard-button delete-button",
       onClick: function onClick() {
         currentGuessDispatch({
           type: 'rub'
@@ -6884,16 +6983,27 @@ function App() {
       className: "delete-button__label"
     }, "DEL")));
   }), /*#__PURE__*/react.createElement("button", {
-    className: "guess-button",
+    className: "keyboard-button guess-button",
     onClick: handleGuess
-  }, "GUESS")), /*#__PURE__*/react.createElement("button", {
-    onClick: handleGuess
-  }, "GUESS")), options.showPossibleWords.value && /*#__PURE__*/react.createElement("div", null, "Possible words:", /*#__PURE__*/react.createElement("div", null, possibleWords.join(' '))), /*#__PURE__*/react.createElement("div", {
+  }, "GUESS"))), options.showPossibleWords.value && /*#__PURE__*/react.createElement("div", null, "Possible words:", /*#__PURE__*/react.createElement("div", null, possibleWords.join(' '))), /*#__PURE__*/react.createElement("div", {
     className: "modals"
   }, /*#__PURE__*/react.createElement("a", {
     className: ['modals__background', uiState !== 'game' && 'modals__background--active'].filter(Boolean).join(' '),
     onClick: handleGameStart
   }), /*#__PURE__*/react.createElement(Modal, {
+    open: uiState === 'cheats',
+    handleClose: function handleClose() {
+      setUiState('game');
+    }
+  }, /*#__PURE__*/react.createElement("button", {
+    onClick: function onClick() {
+      return setPoints(function (points) {
+        return points + 100;
+      });
+    }
+  }, "Free 100 pts"), /*#__PURE__*/react.createElement("button", {
+    onClick: handleClearAll
+  }, "Clear all")), /*#__PURE__*/react.createElement(Modal, {
     open: uiState === 'rules',
     handleClose: handleGameStart
   }, /*#__PURE__*/react.createElement(Rules, {

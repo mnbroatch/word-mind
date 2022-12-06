@@ -56,6 +56,8 @@ export default function App () {
       setGuesses([...guesses, currentGuess])
       currentGuessDispatch({ type: 'clear' })
       resetRoundTime()
+    } else if (currentGuess === 'uuddl') {
+      setUiState('cheats')
     }
   }
 
@@ -196,14 +198,14 @@ export default function App () {
 
   return (
     <div className='root'>
-      <button onClick={() => setPoints(points => points + 100)}>
-        Debug: Free 100 pts
-      </button>
-      <button onClick={handleClearAll}>
-        Debug: Clear all
-      </button>
-      <div className='points'>
-        {points} Points
+      <div className='top-bar'>
+        <div className='points'>
+          <div className='points__inner'>
+            <div className='points__label'>
+              ${points.toFixed(2)}
+            </div>
+          </div>
+        </div>
       </div>
       {options.gameTimeLimit.value !== Infinity && <div className='game-time-remaining'>
         Game Time Remaining: {secondsRemainingInGame}
@@ -227,7 +229,7 @@ export default function App () {
         </div>
         <div className='keyboard'>
           {alphabetRows.map(row => (
-            <div key={row[0]}>
+            <div className="keyboard-row" key={row[0]}>
               {row.map(letter => (
                 <KeyboardLetter
                   letter={letter}
@@ -239,7 +241,7 @@ export default function App () {
               ))}
               {row[0] === 'z' && (
                 <button
-                  className="delete-button"
+                  className="keyboard-button delete-button"
                   onClick={() => { currentGuessDispatch({ type: 'rub' }) }}
                 >
                   <span className="delete-button__label">DEL</span>
@@ -247,13 +249,10 @@ export default function App () {
               )}
             </div>
           ))}
-          <button className="guess-button" onClick={handleGuess}>
+          <button className="keyboard-button guess-button" onClick={handleGuess}>
             GUESS
           </button>
         </div>
-        <button onClick={handleGuess}>
-          GUESS
-        </button>
       </div>
       {options.showPossibleWords.value && (
         <div>
@@ -272,6 +271,17 @@ export default function App () {
           onClick={handleGameStart}
         >
         </a>
+        <Modal
+          open={uiState === 'cheats'}
+          handleClose={() => { setUiState('game') }}
+        >
+          <button onClick={() => setPoints(points => points + 100)}>
+            Free 100 pts
+          </button>
+          <button onClick={handleClearAll}>
+            Clear all
+          </button>
+        </Modal>
         <Modal
           open={uiState === 'rules'}
           handleClose={handleGameStart}

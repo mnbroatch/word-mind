@@ -1,3 +1,5 @@
+
+
 ux:
 
 disable impossible option combinations
@@ -44,6 +46,7 @@ all of my best ideas are ruined by the fact that the list of candidate words is 
 
 bugs:
 
+clear all should do the same as clear all + refresh()
 close button is being hit on last word submit
 can use keyboard to enter guess even on game end options menu
 tab can zoom around inactive modal buttons
@@ -52,6 +55,14 @@ tab can zoom around inactive modal buttons
 ================
 
 higher-level:
+
+
+dark mode
+  - some hints can only be seen light, some dark
+    - how to pull this off without making hints too obvious in light mode
+      - maybe in dark mode, an obvious hint appears that leads to a similar but less conspicuous hint in light mode
+    - hints to what? maybe a cheat code, or an answer to be inputted behind the options screen
+
 
 
 

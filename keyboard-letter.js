@@ -29,7 +29,7 @@ export default function KeyboardLetter ({ letter, answers, guesses, handleLetter
   return (
     <button
       className={[
-        'keyboard-letter',
+        'keyboard-letter keyboard-button',
         isComplete && 'keyboard-letter--complete',
         !isUsed && 'keyboard-letter--untouched'
       ].filter(Boolean).join(' ')}
