@@ -6119,15 +6119,13 @@ function getLetterStates(answer, guess) {
     if (answer[i] === letter) {
       return [].concat(_toConsumableArray(acc), ['correct']);
     } else if (answer.includes(letter)) {
-      // Only color first n instances,
-      // where n === number of unguessed instances in answer
-      var instancesSoFarCount = guess.split('').slice(0, i).filter(function (l) {
+      var instancesInAnswerCount = answer.split('').filter(function (l) {
         return l === letter;
       }).length;
-      var instancesInWordNotGuessedCount = answer.split('').filter(function (l, j) {
-        return l === letter && guess[j] !== letter;
+      var instancesSoFarInGuessCount = guess.split('').slice(0, i).filter(function (l) {
+        return l === letter;
       }).length;
-      return [].concat(_toConsumableArray(acc), [instancesSoFarCount < instancesInWordNotGuessedCount ? 'present' : 'absent']);
+      return [].concat(_toConsumableArray(acc), [instancesSoFarInGuessCount < instancesInAnswerCount ? 'present' : 'absent']);
     } else {
       return [].concat(_toConsumableArray(acc), ['absent']);
     }
