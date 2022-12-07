@@ -3,31 +3,23 @@ import PropTypes from 'prop-types'
 import OptionSetting from './option-setting.js'
 import calculatePointsEarned from './calculate-points-earned.js'
 
-export default function GameEnd ({
+export default function Shop ({
   options,
   points,
   lastPointsEarned,
   handleSetOption,
   handleUnlockOption,
+  handleClose,
   wonLastGame
 }) {
   return (
-    <div className='game-end'>
-      <div className='results'>
-        <div>
-          { points } Points
-        </div>
-        {wonLastGame && (
-          <div className="result-title result-title--won">
-            Won! { lastPointsEarned } point{ lastPointsEarned !== 1 ? 's' : ''} gained this round
-          </div>
-        )}
-        {!wonLastGame && (
-          <div className="result-title result-title--lost">
-            Lost! No Points!
-          </div>
-        )}
-      </div>
+    <div className='shop'>
+      <button
+        className='shop__close-button'
+        onClick={handleClose}
+      >
+        Exit
+      </button>
       <div className='options'>
         {Object.entries(options).map(([key, {
           value,
@@ -62,11 +54,12 @@ export default function GameEnd ({
   )
 }
 
-GameEnd.propTypes = {
+Shop.propTypes = {
   options: PropTypes.object,
   points: PropTypes.number,
   lastPointsEarned: PropTypes.number,
   handleSetOption: PropTypes.func,
   handleUnlockOption: PropTypes.func,
+  handleClose: PropTypes.func,
   wonLastGame: PropTypes.bool
 }

@@ -4,7 +4,8 @@ import allWords from './all-words.json'
 import gameWords from './game-words.json'
 import curseWords from './curse-words.json'
 import Rules from './rules.js'
-import GameEnd from './game-end.js'
+import Shop from './shop.js'
+import Results from './results.js'
 import Modal from './modal.js'
 import Board from './board.js'
 import KeyboardLetter from './keyboard-letter.js'
@@ -12,6 +13,7 @@ import optionsReducer from './options-reducer.js'
 import calculatePointsEarned from './calculate-points-earned.js'
 import isGuessStrictlyValid from './is-guess-strictly-valid.js'
 import useCountdown from './use-countdown'
+import useRollingNumber from './use-rolling-number'
 import { loadState, saveState } from './local-storage-wrapper'
 
 const { initialOptions, initialPoints } = loadState()
@@ -65,7 +67,7 @@ export default function App () {
     const pointsEarned = endState.won
       ? calculatePointsEarned(options)
       : 0
-    setUiState('game_end')
+    setUiState('results')
     setPoints(points + pointsEarned)
     setLastPointsEarned(pointsEarned)
     setWonLastGame(endState.won)
@@ -196,118 +198,156 @@ export default function App () {
     }
   })
 
+  const pointsToDisplay = `$${useRollingNumber(points).toFixed(2)}`
+
+  const pointsDisplay = (
+    <div className='points'>
+      <div className='points__inner'>
+        <div className='points__label'>
+          {pointsToDisplay.split('').map((digit, i) => (
+            <span key={i} className="points__digit">{digit}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+
   return (
     <div className='root'>
       <div className='top-bar'>
-        <div className='points'>
-          <div className='points__inner'>
-            <div className='points__label'>
-              ${points.toFixed(2)}
-            </div>
+        {
+  pointsDisplay
+        }
+      </div>
+      <div className="main-content">
+        {options.gameTimeLimit.value !== Infinity && <div className='game-time-remaining'>
+          Game Time Remaining: {secondsRemainingInGame}
+        </div>}
+        {options.roundTimeLimit.value !== Infinity && <div className='round-time-remaining'>
+          Round Time Remaining: {secondsRemainingInRound}
+        </div>}
+        <div className='main-game'>
+          <div style={{ color: 'white' }}>
+            {answers}
+          </div>
+          <div className='boards'>
+            {sortedAnswers.map(answer => (
+              <Board
+                answer={answer}
+                guesses={guesses}
+                currentGuess={currentGuess}
+                key={answer}
+              />
+            ))}
+          </div>
+          <div className='keyboard'>
+            {alphabetRows.map(row => (
+              <div className="keyboard-row" key={row[0]}>
+                {row.map(letter => (
+                  <KeyboardLetter
+                    letter={letter}
+                    answers={answers}
+                    guesses={guesses}
+                    handleLetterInput={() => { handleAddLetter(letter) }}
+                    key={letter}
+                  />
+                ))}
+                {row[0] === 'z' && (
+                  <button
+                    className="keyboard-button delete-button"
+                    onClick={() => { currentGuessDispatch({ type: 'rub' }) }}
+                  >
+                    <span className="delete-button__label">DEL</span>
+                  </button>
+                )}
+              </div>
+            ))}
+            <button className="keyboard-button guess-button" onClick={handleGuess}>
+              GUESS
+            </button>
           </div>
         </div>
-      </div>
-      {options.gameTimeLimit.value !== Infinity && <div className='game-time-remaining'>
-        Game Time Remaining: {secondsRemainingInGame}
-      </div>}
-      {options.roundTimeLimit.value !== Infinity && <div className='round-time-remaining'>
-        Round Time Remaining: {secondsRemainingInRound}
-      </div>}
-      <div className='main-game'>
-        <div style={{ color: 'white' }}>
-          {answers}
-        </div>
-        <div className='boards'>
-          {sortedAnswers.map(answer => (
-            <Board
-              answer={answer}
-              guesses={guesses}
-              currentGuess={currentGuess}
-              key={answer}
-            />
-          ))}
-        </div>
-        <div className='keyboard'>
-          {alphabetRows.map(row => (
-            <div className="keyboard-row" key={row[0]}>
-              {row.map(letter => (
-                <KeyboardLetter
-                  letter={letter}
-                  answers={answers}
-                  guesses={guesses}
-                  handleLetterInput={() => { handleAddLetter(letter) }}
-                  key={letter}
-                />
-              ))}
-              {row[0] === 'z' && (
-                <button
-                  className="keyboard-button delete-button"
-                  onClick={() => { currentGuessDispatch({ type: 'rub' }) }}
-                >
-                  <span className="delete-button__label">DEL</span>
-                </button>
-              )}
-            </div>
-          ))}
-          <button className="keyboard-button guess-button" onClick={handleGuess}>
-            GUESS
-          </button>
-        </div>
-      </div>
-      {options.showPossibleWords.value && (
-        <div>
-          Possible words:
+        {options.showPossibleWords.value && (
           <div>
-            { possibleWords.join(' ') }
+            Possible words:
+            <div>
+              { possibleWords.join(' ') }
+            </div>
           </div>
+        )}
+        <div className='modals'>
+          <a
+            className={[
+              'modals__background',
+              uiState !== 'game' && 'modals__background--active'
+            ].filter(Boolean).join(' ')}
+            onClick={handleGameStart}
+          >
+          </a>
+          <Modal
+            open={uiState === 'cheats'}
+            handleClose={() => { setUiState('game') }}
+          >
+            DEBUG:
+            <button onClick={() => setPoints(points => points + 100)}>
+              Gain $100
+            </button>
+            <button onClick={handleClearAll}>
+              Clear all
+            </button>
+          </Modal>
+          <Modal
+            open={uiState === 'rules'}
+            handleClose={handleGameStart}
+          >
+            <Rules
+              options={options}
+            />
+          </Modal>
+          <Modal
+            open={uiState === 'rules'}
+            handleClose={handleGameStart}
+          >
+            <Rules
+              options={options}
+            />
+          </Modal>
+          <Modal open={uiState === 'results'}>
+            <Results
+              options={options}
+              points={points}
+              lastPointsEarned={lastPointsEarned}
+              handleSetOption={handleSetOption}
+              handleUnlockOption={handleUnlockOption}
+              handleClose={() => {
+                setUiState('shop')
+              }}
+              wonLastGame={wonLastGame}
+            />
+          </Modal>
+          <Modal
+            open={uiState === 'shop'}
+            handleClose={() => {
+              if (uiState === 'shop') {
+                handleGameStart()
+              }
+            }}
+          >
+            <Shop
+              options={options}
+              points={points}
+              lastPointsEarned={lastPointsEarned}
+              handleSetOption={handleSetOption}
+              handleUnlockOption={handleUnlockOption}
+              handleClose={() => {
+                if (uiState === 'shop') {
+                  handleGameStart()
+                }
+              }}
+              wonLastGame={wonLastGame}
+            />
+          </Modal>
         </div>
-      )}
-      <div className='modals'>
-        <a
-          className={[
-            'modals__background',
-            uiState !== 'game' && 'modals__background--active'
-          ].filter(Boolean).join(' ')}
-          onClick={handleGameStart}
-        >
-        </a>
-        <Modal
-          open={uiState === 'cheats'}
-          handleClose={() => { setUiState('game') }}
-        >
-          DEBUG:
-          <button onClick={() => setPoints(points => points + 100)}>
-            Gain $100
-          </button>
-          <button onClick={handleClearAll}>
-            Clear all
-          </button>
-        </Modal>
-        <Modal
-          open={uiState === 'rules'}
-          handleClose={handleGameStart}
-        >
-          <Rules
-            options={options}
-          />
-        </Modal>
-        <Modal
-          open={uiState === 'game_end'}
-          handleClose={() => {
-            if (uiState === 'game_end') {
-              handleGameStart()
-            }
-          }}
-        >
-          <GameEnd
-            options={options}
-            points={points}
-            lastPointsEarned={lastPointsEarned}
-            handleSetOption={handleSetOption}
-            handleUnlockOption={handleUnlockOption}
-            wonLastGame={wonLastGame}
-          />
-        </Modal>
       </div>
     </div>
   )

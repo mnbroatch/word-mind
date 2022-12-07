@@ -10,12 +10,6 @@ export default function Modal ({ handleClose, children, open }) {
       ].filter(Boolean).join(' ')}
     >
       <div className='modal__inner'>
-        <button
-          className='modal__close-button'
-          onClick={handleClose}
-        >
-          Close
-        </button>
         {children}
       </div>
     </div>

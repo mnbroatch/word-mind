@@ -13,20 +13,21 @@ flag letters as unusable
 
 modifiers:
 
-disable orange / green / both
-keyboard scramble
+cpu makes a free guess for you
+
 bomb that takes out unused letters
   - eliminate X random unused letters
 
+
 - free one-letter guess
-- free one-letter magic guess (re-choose word to fit guess if possible)
 
 - off-by-one tolerance
 
 - vowel swap
   - no vowel hits ? fill in all vowels
 
-- spear pillar randomly turn everything upside down / sidewars
+- spear pillar randomly turn everything upside down / sidewars / invisible
+  - disable orange / green / both
 
 - antiwordle
   - have to guess words that fit the clues
@@ -56,12 +57,20 @@ tab can zoom around inactive modal buttons
 
 higher-level:
 
+story:
+  - guy chokes on scrabble letter
+  - wakes up and discovers he can accomplish anything if he wordles hard enough
+    - blacks out, wordles, wakes up to completed task
 
-dark mode
-  - some hints can only be seen light, some dark
-    - how to pull this off without making hints too obvious in light mode
-      - maybe in dark mode, an obvious hint appears that leads to a similar but less conspicuous hint in light mode
-    - hints to what? maybe a cheat code, or an answer to be inputted behind the options screen
+
+hidden secrets
+  - maybe there's room in the modal background to flash a secret word between modals
+    - Can definitely construct a custom transition that allows it
+  - dark mode
+    - some hints can only be seen light, some dark
+      - how to pull this off without making hints too obvious in light mode
+        - maybe in dark mode, an obvious hint appears that leads to a similar but less conspicuous hint in light mode
+      - hints to what? maybe a cheat code, or an answer to be inputted behind the options screen
 
 
 
