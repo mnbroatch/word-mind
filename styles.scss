@@ -10,6 +10,12 @@ $lightGrey: #E2E2E2;
 $pink: #F5B0CB;
 $red: #f03;
 
+$shadow-button: 1px 1px 3px black;
+$shadow-raised: 0px 2px 3px grey;
+$shadow-hover: inset 1px 1px 2px grey;
+$shadow-active: inset 2px 2px 3px grey;
+$shadow-inset: inset 1px 1px 5px grey;
+
 body {
   margin: 0;
 }
@@ -86,7 +92,7 @@ body {
 
 .board {
   margin: 5px;
-  box-shadow: inset 1px 1px 5px grey;
+  box-shadow: $shadow-inset;
 }
 
 .board--solved {
@@ -110,7 +116,7 @@ body {
   border: 0;
   background-color: white;
   font-family: system-ui;
-  box-shadow: 1px 1px 3px black;
+  box-shadow: $shadow-button;
 }
 
 .guess__letter--correct {
@@ -181,13 +187,12 @@ body {
 }
 
 .option {
-  background-color: $lightYellow;
-  border-radius: 20px;
+  box-shadow: $shadow-raised;
+  border-radius: 4px;
   box-sizing: border-box;
   width: 175px;
   margin: 4px;
-  border: 1px solid black;
-  padding: 25px;
+  padding: 8px;
 }
 
 .option-spacer {
@@ -197,25 +202,12 @@ body {
 }
 
 .option__name {
-  margin-bottom: 20px;
-  text-align: center;
+  margin-bottom: 10px;
 }
 
 .option__values {
   display: flex;
   flex-wrap: wrap;
-}
-
-.option__value--selected {
-  background-color: green;
-}
-
-.option__value--unlocked {
-  background-color: lightBlue;
-}
-
-.option__value--unlockable {
-  background-color: yellow;
 }
 
 .option__value {
@@ -224,6 +216,18 @@ body {
   flex-shrink: 0;
   position: relative;
   padding: 0;
+
+  &--selected {
+    background-color: green;
+  }
+
+  &--unlocked {
+    background-color: lightBlue;
+  }
+
+  &--unlockable {
+    background-color: yellow;
+  }
 }
 
 .option__value-inner {
@@ -247,15 +251,15 @@ body {
   border: 0;
   background-color: white;
   font-family: system-ui;
-  box-shadow: 1px 1px 3px black;
+  box-shadow: $shadow-button;
   transition: box-shadow .1s;
 
   &:hover {
-    box-shadow: inset 1px 1px 2px grey;
+    box-shadow: $shadow-hover;
   }
 
   &:active {
-    box-shadow: inset 2px 2px 3px grey;
+    box-shadow: $shadow-active;
   }
 }
 
@@ -353,7 +357,7 @@ body {
 .top-bar {
   padding: 5px;
   background-color: $lightGrey;
-  box-shadow: 0px 2px 3px grey;
+  box-shadow: $shadow-raised;
 }
 
 @font-face {
