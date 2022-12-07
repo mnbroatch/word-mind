@@ -167,16 +167,31 @@ body {
 }
 
 .results__close-button {
+  font-family: kenia-regular;
+  font-size: 2em;
   align-items: center;
   background-color: brown;
   border:none;
-  color: white;
+  color: #652121;
   display: inline-flex;
   height: 60px;
   justify-content: center;
   transform: rotate(-5deg);
   width: 250px;
   margin-top: 50px;
+  box-shadow: 1px 1px 3px black;
+
+  &:hover {
+    box-shadow: inset 1px 1px 2px #652121;
+  }
+
+  &:active {
+    box-shadow: inset 2px 2px 3px #652121;
+  }
+}
+
+.results__close-button-inner {
+  color: white;
 }
 
 .options {
@@ -251,16 +266,7 @@ body {
   border: 0;
   background-color: white;
   font-family: system-ui;
-  box-shadow: $shadow-button;
   transition: box-shadow .1s;
-
-  &:hover {
-    box-shadow: $shadow-hover;
-  }
-
-  &:active {
-    box-shadow: $shadow-active;
-  }
 }
 
 .keyboard-letter, .delete-button {
@@ -360,8 +366,24 @@ body {
   box-shadow: $shadow-raised;
 }
 
+.button {
+  box-shadow: $shadow-button;
+
+  &:hover {
+    box-shadow: $shadow-hover;
+  }
+
+  &:active {
+    box-shadow: $shadow-active;
+  }
+}
+
+@font-face {
+  font-family: 'kenia-regular';
+  src: url('./assets/kenia-regular.ttf');
+}
+
 @font-face {
   font-family: 'abril-fatface-regular';
   src: url('./assets/abril-fatface-regular.ttf');
 }
-

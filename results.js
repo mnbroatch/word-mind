@@ -24,7 +24,9 @@ export default function Results ({
         className='results__close-button'
         onClick={handleClose}
       >
-        To the shop...
+        <span className="results__close-button-inner">
+          To the shop...
+        </span>
       </button>
     </div>
   )

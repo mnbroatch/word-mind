@@ -254,7 +254,7 @@ export default function App () {
                 ))}
                 {row[0] === 'z' && (
                   <button
-                    className="keyboard-button delete-button"
+                    className="button keyboard-button delete-button"
                     onClick={() => { currentGuessDispatch({ type: 'rub' }) }}
                   >
                     <span className="delete-button__label">DEL</span>
@@ -262,7 +262,7 @@ export default function App () {
                 )}
               </div>
             ))}
-            <button className="keyboard-button guess-button" onClick={handleGuess}>
+            <button className="button keyboard-button guess-button" onClick={handleGuess}>
               GUESS
             </button>
           </div>
