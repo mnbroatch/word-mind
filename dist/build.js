@@ -5859,6 +5859,25 @@ Rules.propTypes = {
 // EXTERNAL MODULE: ./node_modules/lodash/chunk.js
 var chunk = __webpack_require__(8400);
 var chunk_default = /*#__PURE__*/__webpack_require__.n(chunk);
+;// CONCATENATED MODULE: ./get-possible-values.js
+
+function getPossibleValues(_ref) {
+  var type = _ref.type,
+      _ref$step = _ref.step,
+      step = _ref$step === void 0 ? 1 : _ref$step,
+      max = _ref.max,
+      min = _ref.min,
+      unlockedValues = _ref.unlockedValues;
+  var possibleValues = type === 'numeric' ? chunk_default()(Array.from(new Array(max - min + 1)), step).map(function (_, i) {
+    return (i + 1) * step;
+  }) : [false, true];
+
+  if (unlockedValues.includes(Infinity)) {
+    possibleValues.unshift(Infinity);
+  }
+
+  return possibleValues;
+}
 ;// CONCATENATED MODULE: ./option-setting.js
 
 
@@ -5879,14 +5898,13 @@ function OptionSetting(_ref) {
       type = _ref.type,
       handleSetOption = _ref.handleSetOption,
       handleUnlockOption = _ref.handleUnlockOption;
-  var possibleValues = type === 'numeric' ? chunk_default()(Array.from(new Array(max - min + 1)), step).map(function (_, i) {
-    return (i + 1) * step;
-  }) : [false, true];
-
-  if (unlockedValues.includes(Infinity)) {
-    possibleValues.unshift(Infinity);
-  }
-
+  var possibleValues = getPossibleValues({
+    type: type,
+    step: step,
+    max: max,
+    min: min,
+    unlockedValues: unlockedValues
+  });
   return /*#__PURE__*/react.createElement("div", {
     className: "option"
   }, /*#__PURE__*/react.createElement("div", {
@@ -6249,8 +6267,7 @@ KeyboardLetter.propTypes = {
     unlockedValues: [1],
     multiplierCurve: function multiplierCurve(value) {
       return value;
-    },
-    unlocked: false
+    }
   },
   reverse: {
     name: 'All Words are Backwards',
@@ -6378,6 +6395,14 @@ KeyboardLetter.propTypes = {
   }
 });
 ;// CONCATENATED MODULE: ./options-reducer.js
+function options_reducer_slicedToArray(arr, i) { return options_reducer_arrayWithHoles(arr) || options_reducer_iterableToArrayLimit(arr, i) || options_reducer_unsupportedIterableToArray(arr, i) || options_reducer_nonIterableRest(); }
+
+function options_reducer_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function options_reducer_iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function options_reducer_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 function options_reducer_toConsumableArray(arr) { return options_reducer_arrayWithoutHoles(arr) || options_reducer_iterableToArray(arr) || options_reducer_unsupportedIterableToArray(arr) || options_reducer_nonIterableSpread(); }
 
 function options_reducer_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -6397,6 +6422,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
+
 function optionsReducer(prev, _ref) {
   var type = _ref.type,
       optionId = _ref.optionId,
@@ -6412,6 +6438,18 @@ function optionsReducer(prev, _ref) {
     })));
   } else if (type === 'LOAD_INITIAL') {
     return default_options;
+  } else if (type === 'LOAD_FULLY_UNLOCKED') {
+    var x = Object.entries(prev).reduce(function (acc, _ref2) {
+      var _ref3 = options_reducer_slicedToArray(_ref2, 2),
+          key = _ref3[0],
+          option = _ref3[1];
+
+      return _objectSpread(_objectSpread({}, acc), {}, _defineProperty({}, key, _objectSpread(_objectSpread({}, option), {}, {
+        unlockedValues: getPossibleValues(option)
+      })));
+    }, {});
+    console.log('x', x);
+    return x;
   } else {
     return prev;
   }
@@ -6997,6 +7035,12 @@ function App() {
     });
   };
 
+  var handleUnlockAll = function handleUnlockAll() {
+    optionsDispatch({
+      type: 'LOAD_FULLY_UNLOCKED'
+    });
+  };
+
   var possibleWords = (0,react.useMemo)(function () {
     return options.showPossibleWords.value ? game_words_namespaceObject.filter(function (word) {
       return isGuessStrictlyValid(word, guesses, answers);
@@ -7088,15 +7132,11 @@ function App() {
     handleClose: function handleClose() {
       setUiState('game');
     }
-  }, "DEBUG:", /*#__PURE__*/react.createElement("button", {
-    onClick: function onClick() {
-      return setPoints(function (points) {
-        return points + 100;
-      });
-    }
-  }, "Gain $100"), /*#__PURE__*/react.createElement("button", {
+  }, /*#__PURE__*/react.createElement("div", null, "DEBUG:"), /*#__PURE__*/react.createElement("button", {
     onClick: handleClearAll
-  }, "Clear all")), /*#__PURE__*/react.createElement(Modal, {
+  }, "Clear all"), /*#__PURE__*/react.createElement("button", {
+    onClick: handleUnlockAll
+  }, "Unlock All Options")), /*#__PURE__*/react.createElement(Modal, {
     open: uiState === 'rules',
     handleClose: handleGameStart
   }, /*#__PURE__*/react.createElement(Rules, {
