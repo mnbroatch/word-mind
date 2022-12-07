@@ -6,8 +6,7 @@ export default {
     min: 1,
     max: 6,
     unlockedValues: [1],
-    multiplierCurve: value => value,
-    unlocked: false
+    multiplierCurve: value => value
   },
   reverse: {
     name: 'All Words are Backwards',

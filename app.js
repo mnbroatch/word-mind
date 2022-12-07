@@ -293,9 +293,6 @@ export default function App () {
             handleClose={() => { setUiState('game') }}
           >
             <div>DEBUG:</div>
-            <button onClick={() => setPoints(points => points + 100)}>
-              Gain $100
-            </button>
             <button onClick={handleClearAll}>
               Clear all
             </button>
