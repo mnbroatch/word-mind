@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import chunk from 'lodash/chunk'
+import getPossibleValues from './get-possible-values'
 
 export default function OptionSetting ({
   id,
@@ -17,14 +17,7 @@ export default function OptionSetting ({
   handleSetOption,
   handleUnlockOption
 }) {
-  const possibleValues = type === 'numeric'
-    ? chunk(Array.from(new Array(max - min + 1)), step).map((_, i) => (i + 1) * step)
-    : [false, true]
-
-  if (unlockedValues.includes(Infinity)) {
-    possibleValues.unshift(Infinity)
-  }
-
+  const possibleValues = getPossibleValues({ type, step, max, min, unlockedValues })
   return (
     <div className='option'>
       <div className='option__name'>

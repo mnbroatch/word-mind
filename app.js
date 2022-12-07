@@ -182,6 +182,10 @@ export default function App () {
     currentGuessDispatch({ type: 'clear' })
   }
 
+  const handleUnlockAll = () => {
+    optionsDispatch({ type: 'LOAD_FULLY_UNLOCKED' })
+  }
+
   const possibleWords = useMemo(() => {
     return options.showPossibleWords.value
       ? gameWords.filter(word => isGuessStrictlyValid(word, guesses, answers))
@@ -288,12 +292,15 @@ export default function App () {
             open={uiState === 'cheats'}
             handleClose={() => { setUiState('game') }}
           >
-            DEBUG:
+            <div>DEBUG:</div>
             <button onClick={() => setPoints(points => points + 100)}>
               Gain $100
             </button>
             <button onClick={handleClearAll}>
               Clear all
+            </button>
+            <button onClick={handleUnlockAll}>
+              Unlock All Options
             </button>
           </Modal>
           <Modal
