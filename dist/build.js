@@ -24,7 +24,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0}.root{position:relative;padding:10px}.main-content{margin-top:5px;position:relative}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase;border:0;background-color:#fff;font-family:system-ui;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:20px;font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;transform:rotate(-5deg);width:250px;margin-top:50px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.options{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.option{box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:4px;padding:8px}.option-spacer{width:175px;margin:0 4px 0 4px;height:0}.option__name{margin-bottom:10px}.option__values{display:flex;flex-wrap:wrap}.option__value{height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option__value--selected{background-color:green}.option__value--unlocked{background-color:#add8e6}.option__value--unlockable{background-color:#ff0}.option__value-inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard{margin:40px 0 70px 0;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff;font-family:system-ui;transition:box-shadow .1s}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.points{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.points__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.points__label{font-variant-numeric:tabular-nums;color:#f6bd60;font-family:abril-fatface-regular}.points__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0}.root{position:relative;padding:10px}.main-content{margin-top:5px;position:relative}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase;border:0;background-color:#fff;font-family:system-ui;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:20px;font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;transform:rotate(-5deg);width:250px;margin-top:50px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.options{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.option{box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:4px;padding:8px}.option-spacer{width:175px;margin:0 4px 0 4px;height:0}.option__name{margin-bottom:10px}.option__values{display:flex;flex-wrap:wrap}.option__value{height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option__value--selected{background-color:green}.option__value--unlocked{background-color:#add8e6}.option__value--unlockable{background-color:#ff0}.option__value-inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard{margin:40px 0 70px 0;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff;font-family:system-ui;transition:box-shadow .1s}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.points{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.points__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.points__label{font-variant-numeric:tabular-nums;color:#f6bd60;font-family:abril-fatface-regular}.results .points__label{font-size:3em}.points__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6054,7 +6054,175 @@ Shop.propTypes = {
   handleClose: (prop_types_default()).func,
   wonLastGame: (prop_types_default()).bool
 };
+;// CONCATENATED MODULE: ./use-previous.js
+
+function usePrevious(value) {
+  var ref = (0,react.useRef)();
+  (0,react.useEffect)(function () {
+    ref.current = value;
+  }, [value]);
+  return ref.current;
+}
+;// CONCATENATED MODULE: ./use-rerender.js
+
+function useRerender() {
+  var set = (0,react.useState)(true)[1];
+  return function () {
+    set(function (prev) {
+      return !prev;
+    });
+  };
+}
+;// CONCATENATED MODULE: ./use-interval.js
+
+function useInterval(callback, delay) {
+  var savedCallbackRef = (0,react.useRef)();
+  (0,react.useEffect)(function () {
+    savedCallbackRef.current = callback;
+  }, [callback]);
+  (0,react.useEffect)(function () {
+    if (delay !== null) {
+      var id = setInterval(savedCallbackRef.current, delay);
+      return function () {
+        return clearInterval(id);
+      };
+    }
+  }, [delay]);
+}
+;// CONCATENATED MODULE: ./use-stopwatch.js
+
+
+
+function useStopwatch() {
+  var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+      _ref$refreshRate = _ref.refreshRate,
+      refreshRate = _ref$refreshRate === void 0 ? 1000 : _ref$refreshRate;
+
+  var isPaused = refreshRate === null;
+  var startTimeRef = (0,react.useRef)(Date.now());
+  var pauseTimeRef = (0,react.useRef)(Date.now());
+  var rerender = useRerender();
+  useInterval(rerender, refreshRate);
+
+  var reset = function reset() {
+    startTimeRef.current = Date.now();
+    pauseTimeRef.current = Date.now();
+    rerender();
+  };
+
+  (0,react.useEffect)(function () {
+    if (!isPaused) {
+      startTimeRef.current -= Date.now() - pauseTimeRef.current;
+    }
+
+    pauseTimeRef.current = Date.now();
+  }, [isPaused]);
+  var pauseDuration = isPaused ? Date.now() - pauseTimeRef.current : 0;
+  return {
+    reset: reset,
+    elapsed: Date.now() - startTimeRef.current - pauseDuration
+  };
+}
+;// CONCATENATED MODULE: ./use-countdown.js
+
+
+
+function useCountdown(_ref) {
+  var refreshRate = _ref.refreshRate,
+      duration = _ref.duration,
+      onCountdownEnd = _ref.onCountdownEnd;
+
+  var _useStopwatch = useStopwatch({
+    refreshRate: refreshRate
+  }),
+      elapsed = _useStopwatch.elapsed,
+      reset = _useStopwatch.reset;
+
+  var remaining = duration - elapsed;
+  var prevRemaining = usePrevious(remaining);
+  var justFinished = remaining <= 0 && prevRemaining > 0;
+  (0,react.useEffect)(function () {
+    if (justFinished) {
+      if (onCountdownEnd) {
+        onCountdownEnd();
+      }
+    }
+  }, [justFinished]);
+  return {
+    reset: reset,
+    remaining: remaining < 0 ? 0 : remaining
+  };
+}
+;// CONCATENATED MODULE: ./use-rolling-number.js
+function use_rolling_number_slicedToArray(arr, i) { return use_rolling_number_arrayWithHoles(arr) || use_rolling_number_iterableToArrayLimit(arr, i) || use_rolling_number_unsupportedIterableToArray(arr, i) || use_rolling_number_nonIterableRest(); }
+
+function use_rolling_number_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function use_rolling_number_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return use_rolling_number_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return use_rolling_number_arrayLikeToArray(o, minLen); }
+
+function use_rolling_number_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function use_rolling_number_iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function use_rolling_number_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+function useRollingNumber(num) {
+  var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1000;
+  var refreshRate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 10;
+
+  var _useState = (0,react.useState)(null),
+      _useState2 = use_rolling_number_slicedToArray(_useState, 2),
+      startNum = _useState2[0],
+      setStartNum = _useState2[1];
+
+  var prevNum = usePrevious(num);
+
+  var _useCountdown = useCountdown({
+    refreshRate: startNum === null ? null : refreshRate,
+    duration: duration,
+    onCountdownEnd: function onCountdownEnd() {
+      setStartNum(null);
+    }
+  }),
+      remaining = _useCountdown.remaining,
+      reset = _useCountdown.reset;
+
+  (0,react.useEffect)(function () {
+    reset();
+
+    if (prevNum !== undefined) {
+      setStartNum(prevNum);
+    }
+  }, [num]);
+  var percentDone = (duration - remaining) / duration;
+  return startNum ? startNum + percentDone * (num - startNum) : num;
+}
+;// CONCATENATED MODULE: ./money-display.js
+
+
+function MoneyDisplay(_ref) {
+  var amount = _ref.amount;
+  var numberToDisplay = useRollingNumber(amount);
+  console.log('numberToDisplay', numberToDisplay);
+  var moneyToDisplay = "$".concat(numberToDisplay.toFixed(2));
+  return /*#__PURE__*/react.createElement("div", {
+    className: "points"
+  }, /*#__PURE__*/react.createElement("div", {
+    className: "points__inner"
+  }, /*#__PURE__*/react.createElement("div", {
+    className: "points__label"
+  }, moneyToDisplay.split('').map(function (digit, i) {
+    return /*#__PURE__*/react.createElement("span", {
+      key: i,
+      className: "points__digit"
+    }, digit);
+  }))));
+}
 ;// CONCATENATED MODULE: ./results.js
+
 
 
 function Results(_ref) {
@@ -6069,7 +6237,9 @@ function Results(_ref) {
     className: "results-title results-title--won"
   }, "Won!"), !wonLastGame && /*#__PURE__*/react.createElement("div", {
     className: "results-title results-title--lost"
-  }, "Lost!"), /*#__PURE__*/react.createElement("button", {
+  }, "Lost!"), /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement(MoneyDisplay, {
+    amount: points
+  })), /*#__PURE__*/react.createElement("button", {
     className: "results__close-button",
     onClick: handleClose
   }, /*#__PURE__*/react.createElement("span", {
@@ -6539,152 +6709,6 @@ function isGuessStrictlyValid(guess, previousGuesses, answers) {
     return letterCountsArePossible && letterPositionsArePossible;
   });
 }
-;// CONCATENATED MODULE: ./use-rerender.js
-
-function useRerender() {
-  var set = (0,react.useState)(true)[1];
-  return function () {
-    set(function (prev) {
-      return !prev;
-    });
-  };
-}
-;// CONCATENATED MODULE: ./use-interval.js
-
-function useInterval(callback, delay) {
-  var savedCallbackRef = (0,react.useRef)();
-  (0,react.useEffect)(function () {
-    savedCallbackRef.current = callback;
-  }, [callback]);
-  (0,react.useEffect)(function () {
-    if (delay !== null) {
-      var id = setInterval(savedCallbackRef.current, delay);
-      return function () {
-        return clearInterval(id);
-      };
-    }
-  }, [delay]);
-}
-;// CONCATENATED MODULE: ./use-stopwatch.js
-
-
-
-function useStopwatch() {
-  var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-      _ref$refreshRate = _ref.refreshRate,
-      refreshRate = _ref$refreshRate === void 0 ? 1000 : _ref$refreshRate;
-
-  var isPaused = refreshRate === null;
-  var startTimeRef = (0,react.useRef)(Date.now());
-  var pauseTimeRef = (0,react.useRef)(Date.now());
-  var rerender = useRerender();
-  useInterval(rerender, refreshRate);
-
-  var reset = function reset() {
-    startTimeRef.current = Date.now();
-    pauseTimeRef.current = Date.now();
-    rerender();
-  };
-
-  (0,react.useEffect)(function () {
-    if (!isPaused) {
-      startTimeRef.current -= Date.now() - pauseTimeRef.current;
-    }
-
-    pauseTimeRef.current = Date.now();
-  }, [isPaused]);
-  var pauseDuration = isPaused ? Date.now() - pauseTimeRef.current : 0;
-  return {
-    reset: reset,
-    elapsed: Date.now() - startTimeRef.current - pauseDuration
-  };
-}
-;// CONCATENATED MODULE: ./use-previous.js
-
-function usePrevious(value) {
-  var ref = (0,react.useRef)();
-  (0,react.useEffect)(function () {
-    ref.current = value;
-  }, [value]);
-  return ref.current;
-}
-;// CONCATENATED MODULE: ./use-countdown.js
-
-
-
-function useCountdown(_ref) {
-  var refreshRate = _ref.refreshRate,
-      duration = _ref.duration,
-      onCountdownEnd = _ref.onCountdownEnd;
-
-  var _useStopwatch = useStopwatch({
-    refreshRate: refreshRate
-  }),
-      elapsed = _useStopwatch.elapsed,
-      reset = _useStopwatch.reset;
-
-  var remaining = duration - elapsed;
-  var prevRemaining = usePrevious(remaining);
-  var justFinished = remaining <= 0 && prevRemaining > 0;
-  (0,react.useEffect)(function () {
-    if (justFinished) {
-      if (onCountdownEnd) {
-        onCountdownEnd();
-      }
-    }
-  }, [justFinished]);
-  return {
-    reset: reset,
-    remaining: remaining < 0 ? 0 : remaining
-  };
-}
-;// CONCATENATED MODULE: ./use-rolling-number.js
-function use_rolling_number_slicedToArray(arr, i) { return use_rolling_number_arrayWithHoles(arr) || use_rolling_number_iterableToArrayLimit(arr, i) || use_rolling_number_unsupportedIterableToArray(arr, i) || use_rolling_number_nonIterableRest(); }
-
-function use_rolling_number_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function use_rolling_number_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return use_rolling_number_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return use_rolling_number_arrayLikeToArray(o, minLen); }
-
-function use_rolling_number_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function use_rolling_number_iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function use_rolling_number_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-function useRollingNumber(num) {
-  var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1000;
-  var refreshRate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 10;
-
-  var _useState = (0,react.useState)(null),
-      _useState2 = use_rolling_number_slicedToArray(_useState, 2),
-      startNum = _useState2[0],
-      setStartNum = _useState2[1];
-
-  var prevNum = usePrevious(num);
-
-  var _useCountdown = useCountdown({
-    refreshRate: startNum === null ? null : refreshRate,
-    duration: duration,
-    onCountdownEnd: function onCountdownEnd() {
-      setStartNum(null);
-    }
-  }),
-      remaining = _useCountdown.remaining,
-      reset = _useCountdown.reset;
-
-  (0,react.useEffect)(function () {
-    reset();
-
-    if (prevNum !== undefined) {
-      setStartNum(prevNum);
-    }
-  }, [num]);
-  var percentDone = (duration - remaining) / duration;
-  return startNum ? startNum + percentDone * (num - startNum) : num;
-}
 // EXTERNAL MODULE: ./node_modules/lodash/cloneDeep.js
 var cloneDeep = __webpack_require__(361);
 var cloneDeep_default = /*#__PURE__*/__webpack_require__.n(cloneDeep);
@@ -7053,24 +7077,13 @@ function App() {
       return a.localeCompare(b);
     }
   });
-  var pointsToDisplay = "$".concat(useRollingNumber(points).toFixed(2));
-  var pointsDisplay = /*#__PURE__*/react.createElement("div", {
-    className: "points"
-  }, /*#__PURE__*/react.createElement("div", {
-    className: "points__inner"
-  }, /*#__PURE__*/react.createElement("div", {
-    className: "points__label"
-  }, pointsToDisplay.split('').map(function (digit, i) {
-    return /*#__PURE__*/react.createElement("span", {
-      key: i,
-      className: "points__digit"
-    }, digit);
-  }))));
   return /*#__PURE__*/react.createElement("div", {
     className: "root"
   }, /*#__PURE__*/react.createElement("div", {
     className: "top-bar"
-  }, pointsDisplay), /*#__PURE__*/react.createElement("div", {
+  }, /*#__PURE__*/react.createElement(MoneyDisplay, {
+    amount: points
+  })), /*#__PURE__*/react.createElement("div", {
     className: "main-content"
   }, options.gameTimeLimit.value !== Infinity && /*#__PURE__*/react.createElement("div", {
     className: "game-time-remaining"
