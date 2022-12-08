@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import MoneyDisplay from './money-display.js'
+
 export default function Results ({
   options,
   points,
@@ -20,6 +22,9 @@ export default function Results ({
           Lost!
         </div>
       )}
+      <div>
+        <MoneyDisplay amount={points} />
+      </div>
       <button
         className='results__close-button'
         onClick={handleClose}

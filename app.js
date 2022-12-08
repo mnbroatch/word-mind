@@ -13,7 +13,7 @@ import optionsReducer from './options-reducer.js'
 import calculatePointsEarned from './calculate-points-earned.js'
 import isGuessStrictlyValid from './is-guess-strictly-valid.js'
 import useCountdown from './use-countdown'
-import useRollingNumber from './use-rolling-number'
+import MoneyDisplay from './money-display'
 import { loadState, saveState } from './local-storage-wrapper'
 
 const { initialOptions, initialPoints } = loadState()
@@ -202,26 +202,10 @@ export default function App () {
     }
   })
 
-  const pointsToDisplay = `$${useRollingNumber(points).toFixed(2)}`
-
-  const pointsDisplay = (
-    <div className='points'>
-      <div className='points__inner'>
-        <div className='points__label'>
-          {pointsToDisplay.split('').map((digit, i) => (
-            <span key={i} className="points__digit">{digit}</span>
-          ))}
-        </div>
-      </div>
-    </div>
-  )
-
   return (
     <div className='root'>
       <div className='top-bar'>
-        {
-  pointsDisplay
-        }
+        <MoneyDisplay amount={points} />
       </div>
       <div className="main-content">
         {options.gameTimeLimit.value !== Infinity && <div className='game-time-remaining'>
