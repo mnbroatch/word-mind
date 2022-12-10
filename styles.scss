@@ -21,12 +21,15 @@ body {
   font-family: system-ui;
 }
 
+#root {
+  height: 100vh
+}
+
 .root {
   box-sizing: border-box;
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 10px;
   height: 100vh
 } 
 
@@ -34,6 +37,12 @@ body {
   flex: 1;
   margin-top: 5px;
   position: relative;
+}
+
+.main-game {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .modals {
@@ -91,6 +100,7 @@ body {
 } 
 
 .boards {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -163,7 +173,7 @@ body {
 
 .results-title {
   margin: 45px;
-  font-family: 'abril-fatface-regular';
+  font-family: 'libre-baskerville';
   font-size: 1.25em;
 }
 
@@ -273,6 +283,8 @@ body {
 
 .keyboard {
   margin: 40px 0 70px 0;
+  padding: 10px;
+  box-sizing: border-box;
   text-align: center;
 }
 
@@ -352,7 +364,56 @@ body {
   background-color: $green1;
 }
 
-.points {
+.xp {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: libre-baskerville;
+  position: relative;
+  border-radius: 9999999px;
+  border: 1px dotted white;
+  background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,0));
+  // background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,0));
+  padding: 0 10px 0 10px;
+  box-sizing: border-box;
+}
+
+.xp__background-squiggle {
+  top: -.15em;
+  position: absolute;
+  transform: scale(4.5, 3);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $pink;
+  font-size: 2em;
+  opacity: .3;
+
+  & ~ & {
+    transform: scale(-4.5, 3);
+    color: $blue;
+  }
+}
+
+.xp__label {
+  font-variant-numeric: tabular-nums;
+}
+
+.xp__digit {
+  display: inline-block;
+  width: .65em;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.results .xp {
+  font-size: 3em;
+}
+
+.money {
   border: 1px solid black;
   border-radius: 10px;
   display: inline-block;
@@ -360,23 +421,18 @@ body {
   background-color: $yellow;
 }
 
-.points__inner {
+.money__inner {
   border-radius: 9999px;
   background-color: black;
   padding: 5px 10px 5px 10px;
 }
 
-.points__label {
-  font-variant-numeric: tabular-nums;
+.money__label {
   color: $yellow;
   font-family: abril-fatface-regular;
 }
 
-.results .points__label {
-  font-size: 3em;
-}
-
-.points__digit {
+.money__digit {
   display: inline-block;
   width: .65em;
   text-align: center;
@@ -384,6 +440,9 @@ body {
 
 .top-bar {
   padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: $lightGrey;
   box-shadow: $shadow-raised;
 }
@@ -408,4 +467,9 @@ body {
 @font-face {
   font-family: 'abril-fatface-regular';
   src: url('./assets/abril-fatface-regular.ttf');
+}
+
+@font-face {
+  font-family: 'libre-baskerville';
+  src: url('./assets/libre-baskerville.ttf');
 }

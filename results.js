@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import MoneyDisplay from './money-display.js'
+import XpDisplay from './xp-display.js'
 
 export default function Results ({
   options,
-  points,
-  lastPointsEarned,
+  xp,
+  lastXpEarned,
   handleClose,
   wonLastGame
 }) {
@@ -14,7 +14,7 @@ export default function Results ({
     <div className='results'>
       {wonLastGame && (
         <div className="results-title results-title--won">
-          + ${lastPointsEarned.toFixed(2)}
+          + {lastXpEarned} XP
         </div>
       )}
       {!wonLastGame && (
@@ -23,7 +23,7 @@ export default function Results ({
         </div>
       )}
       <div>
-        <MoneyDisplay amount={points} />
+        <XpDisplay amount={xp} />
       </div>
       <button
         className='results__close-button'
@@ -39,8 +39,8 @@ export default function Results ({
 
 Results.propTypes = {
   options: PropTypes.object,
-  points: PropTypes.number,
-  lastPointsEarned: PropTypes.number,
+  xp: PropTypes.number,
+  lastXpEarned: PropTypes.number,
   handleClose: PropTypes.func,
   wonLastGame: PropTypes.bool
 }

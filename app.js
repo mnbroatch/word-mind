@@ -10,13 +10,14 @@ import Modal from './modal.js'
 import Board from './board.js'
 import KeyboardLetter from './keyboard-letter.js'
 import optionsReducer from './options-reducer.js'
-import calculatePointsEarned from './calculate-points-earned.js'
+import calculateXpEarned from './calculate-xp-earned.js'
 import isGuessStrictlyValid from './is-guess-strictly-valid.js'
 import useCountdown from './use-countdown'
 import MoneyDisplay from './money-display'
+import XpDisplay from './xp-display'
 import { loadState, saveState } from './local-storage-wrapper'
 
-const { initialOptions, initialPoints } = loadState()
+const { initialOptions, initialXp, initialMoney } = loadState()
 
 const alphabet = 'qwertyuiopasdfghjklzxcvbnm'.split('')
 
@@ -38,9 +39,10 @@ function getAnswers (options) {
 export default function App () {
   const [options, optionsDispatch] = useReducer(optionsReducer, initialOptions)
   const [uiState, setUiState] = useState('game')
-  const [lastPointsEarned, setLastPointsEarned] = useState(0)
+  const [lastXpEarned, setLastXpEarned] = useState(0)
   const [wonLastGame, setWonLastGame] = useState(false)
-  const [points, setPoints] = useState(initialPoints)
+  const [xp, setXp] = useState(initialXp)
+  const [money] = useState(initialMoney)
   const [answers, setAnswers] = useState(getAnswers(options))
   const [guesses, setGuesses] = useState([])
   const [currentGuess, currentGuessDispatch] = useReducer(currentGuessReducer, '')
@@ -65,12 +67,12 @@ export default function App () {
   }
 
   const handleGameEnd = (endState) => {
-    const pointsEarned = endState.won
-      ? calculatePointsEarned(options)
+    const xpEarned = endState.won
+      ? calculateXpEarned(options)
       : 0
     setUiState('results')
-    setPoints(points + pointsEarned)
-    setLastPointsEarned(pointsEarned)
+    setXp(xp + xpEarned)
+    setLastXpEarned(xpEarned)
     setWonLastGame(endState.won)
     setGuesses([])
     setAnswers(getAnswers(options))
@@ -149,14 +151,14 @@ export default function App () {
   }
 
   const handleUnlockOption = (optionId, value) => {
-    if (points >= 1) {
+    if (xp >= 1) {
       optionsDispatch({
         type: 'UNLOCK_OPTION',
         optionId,
         value
       })
       handleSetOption(optionId, value)
-      setPoints(points - 1)
+      setXp(xp - 1)
     }
   }
 
@@ -171,14 +173,14 @@ export default function App () {
   }, [uiState])
 
   useEffect(() => {
-    saveState(options, points)
-  }, [options, points])
+    saveState({ options, xp, money })
+  }, [options, xp, money])
 
   const handleClearAll = () => {
     localStorage.clear()
     optionsDispatch({ type: 'LOAD_INITIAL' })
     setUiState('game')
-    setPoints(0)
+    setXp(0)
     setGuesses([])
     currentGuessDispatch({ type: 'clear' })
   }
@@ -206,7 +208,8 @@ export default function App () {
   return (
     <div className='root'>
       <div className='top-bar'>
-        <MoneyDisplay amount={points} />
+        <XpDisplay amount={xp} />
+        <MoneyDisplay amount={money} />
       </div>
       <div className="main-content">
         {options.gameTimeLimit.value !== Infinity && <div className='game-time-remaining'>
@@ -306,8 +309,8 @@ export default function App () {
           <Modal open={uiState === 'results'}>
             <Results
               options={options}
-              points={points}
-              lastPointsEarned={lastPointsEarned}
+              xp={xp}
+              lastXpEarned={lastXpEarned}
               handleSetOption={handleSetOption}
               handleUnlockOption={handleUnlockOption}
               handleClose={() => {
@@ -326,8 +329,8 @@ export default function App () {
           >
             <Shop
               options={options}
-              points={points}
-              lastPointsEarned={lastPointsEarned}
+              xp={xp}
+              lastXpEarned={lastXpEarned}
               handleSetOption={handleSetOption}
               handleUnlockOption={handleUnlockOption}
               handleClose={() => {

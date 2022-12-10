@@ -1,3 +1,13 @@
+Current money becomes XP / levels
+Separate money 
+
+
+================
+
+
+
+
+
 refactor: 
 
 - scss mixin for shadow color

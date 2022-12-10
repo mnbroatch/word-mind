@@ -1,4 +1,5 @@
 import React from 'react'
+import { PropTypes } from 'prop-types'
 import useRollingNumber from './use-rolling-number'
 
 export default function MoneyDisplay ({ amount }) {
@@ -6,14 +7,18 @@ export default function MoneyDisplay ({ amount }) {
   const moneyToDisplay = `$${numberToDisplay.toFixed(2)}`
 
   return (
-    <div className='points'>
-      <div className='points__inner'>
-        <div className='points__label'>
+    <div className='money'>
+      <div className='money__inner'>
+        <div className='money__label'>
           {moneyToDisplay.split('').map((digit, i) => (
-            <span key={i} className="points__digit">{digit}</span>
+            <span key={i} className="money__digit">{digit}</span>
           ))}
         </div>
       </div>
     </div>
   )
+}
+
+MoneyDisplay.propTypes = {
+  amount: PropTypes.number
 }

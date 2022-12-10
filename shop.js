@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import OptionSetting from './option-setting.js'
-import calculatePointsEarned from './calculate-points-earned.js'
+import calculateXpEarned from './calculate-xp-earned.js'
 
 export default function Shop ({
   options,
-  points,
-  lastPointsEarned,
+  xp,
+  lastXpEarned,
   handleSetOption,
   handleUnlockOption,
   handleClose,
@@ -46,15 +46,15 @@ export default function Shop ({
         ))}
         {Object.keys(options).slice(1).map((key) => <div key={key} className="option-spacer" />)}
       </div>
-      <div>Next Round is worth {calculatePointsEarned(options)} points</div>
+      <div>Next Round is worth {calculateXpEarned(options)} xp</div>
     </div>
   )
 }
 
 Shop.propTypes = {
   options: PropTypes.object,
-  points: PropTypes.number,
-  lastPointsEarned: PropTypes.number,
+  xp: PropTypes.number,
+  lastXpEarned: PropTypes.number,
   handleSetOption: PropTypes.func,
   handleUnlockOption: PropTypes.func,
   handleClose: PropTypes.func,

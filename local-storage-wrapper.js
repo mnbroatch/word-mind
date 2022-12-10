@@ -27,16 +27,22 @@ function loadState () {
     }
   })
 
-  let initialPoints = 0
-  const savedPoints = localStorage.getItem('word-mind_points')
-  if (savedPoints) {
-    initialPoints = JSON.parse(savedPoints)
+  let initialXp = 0
+  const savedXp = localStorage.getItem('word-mind_xp')
+  if (savedXp) {
+    initialXp = JSON.parse(savedXp)
   }
 
-  return { initialOptions, initialPoints }
+  let initialMoney = 0
+  const savedMoney = localStorage.getItem('word-mind_money')
+  if (savedMoney) {
+    initialMoney = JSON.parse(savedMoney)
+  }
+
+  return { initialOptions, initialXp, initialMoney }
 }
 
-function saveState (options, points) {
+function saveState ({ options, xp }) {
   const optionsClone = cloneDeep(options)
   if (optionsClone) {
     Object.values(optionsClone).forEach(option => {
@@ -55,7 +61,7 @@ function saveState (options, points) {
   const optionsEntriesToSave = Object.entries(optionsClone).map(([key, { unlockedValues, value }]) => [key, { unlockedValues, value }])
 
   localStorage.setItem('word-mind_options', JSON.stringify(Object.fromEntries(optionsEntriesToSave)))
-  localStorage.setItem('word-mind_points', JSON.stringify(points))
+  localStorage.setItem('word-mind_xp', JSON.stringify(xp))
 }
 
 export { loadState, saveState }
