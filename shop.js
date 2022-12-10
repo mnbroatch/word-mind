@@ -18,30 +18,27 @@ export default function Shop ({
         className='shop__close-button'
         onClick={handleClose}
       >
-        Exit
+        Leave Shop
       </button>
       <div className='options'>
         {Object.entries(options).map(([key, {
           value,
+          possibleValues,
           unlockedValues,
           unlockable,
           min,
           max,
           step,
-          name,
+          description,
           type
         }]) => (
           <OptionSetting
             key={key}
             id={key}
-            name={name}
+            description={description}
             type={type}
+            possibleValues={possibleValues}
             unlockedValues={unlockedValues}
-            unlockable={unlockable}
-            min={min}
-            max={max}
-            step={step}
-            points={points}
             value={value}
             handleUnlockOption={handleUnlockOption}
             handleSetOption={handleSetOption}

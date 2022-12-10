@@ -24,7 +24,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0}.root{box-sizing:border-box;position:relative;display:flex;flex-direction:column;padding:10px;height:100vh}.main-content{flex:1;margin-top:5px;position:relative}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase;border:0;background-color:#fff;font-family:system-ui;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:20px;font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;transform:rotate(-5deg);width:250px;margin-top:50px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.options{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.option{box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:4px;padding:8px}.option-spacer{width:175px;margin:0 4px 0 4px;height:0}.option__name{margin-bottom:10px}.option__values{display:flex;flex-wrap:wrap}.option__value{height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option__value--selected{background-color:green}.option__value--unlocked{background-color:#add8e6}.option__value--unlockable{background-color:#ff0}.option__value-inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard{margin:40px 0 70px 0;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff;font-family:system-ui;transition:box-shadow .1s}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.points{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.points__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.points__label{font-variant-numeric:tabular-nums;color:#f6bd60;font-family:abril-fatface-regular}.results .points__label{font-size:3em}.points__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0;font-family:system-ui}.root{box-sizing:border-box;position:relative;display:flex;flex-direction:column;padding:10px;height:100vh}.main-content{flex:1;margin-top:5px;position:relative}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase;background-color:#fff;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:45px;font-family:\"abril-fatface-regular\";font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;transform:rotate(-5deg);width:300px;margin-top:70px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.options{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.option{position:relative;box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:12px;padding:16px 0 16px 0}.option-spacer{width:175px;margin:0 4px 0 4px;height:0}.option__description{background-color:brown;color:#fff;left:0;padding:6px;position:absolute;text-align:center;top:-17px;left:-3px;transform:rotate(-2deg);white-space:nowrap;width:175px}.option__values{display:flex;justify-content:center}.option__value{border:0;border-radius:3px;margin:2px;height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option__value--selected{background-color:green}.option__value--unlocked{background-color:#add8e6}.option__value--unlockable{background-color:#ff0}.option__value-inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard{margin:40px 0 70px 0;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff;transition:box-shadow .1s}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.points{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.points__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.points__label{font-variant-numeric:tabular-nums;color:#f6bd60;font-family:abril-fatface-regular}.results .points__label{font-size:3em}.points__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1548,44 +1548,6 @@ module.exports = baseSetToString;
 
 /***/ }),
 
-/***/ 4259:
-/***/ ((module) => {
-
-/**
- * The base implementation of `_.slice` without an iteratee call guard.
- *
- * @private
- * @param {Array} array The array to slice.
- * @param {number} [start=0] The start position.
- * @param {number} [end=array.length] The end position.
- * @returns {Array} Returns the slice of `array`.
- */
-function baseSlice(array, start, end) {
-  var index = -1,
-      length = array.length;
-
-  if (start < 0) {
-    start = -start > length ? 0 : (length + start);
-  }
-  end = end > length ? length : end;
-  if (end < 0) {
-    end += length;
-  }
-  length = start > end ? 0 : ((end - start) >>> 0);
-  start >>>= 0;
-
-  var result = Array(length);
-  while (++index < length) {
-    result[index] = array[index + start];
-  }
-  return result;
-}
-
-module.exports = baseSlice;
-
-
-/***/ }),
-
 /***/ 2545:
 /***/ ((module) => {
 
@@ -1609,32 +1571,6 @@ function baseTimes(n, iteratee) {
 }
 
 module.exports = baseTimes;
-
-
-/***/ }),
-
-/***/ 7561:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var trimmedEndIndex = __webpack_require__(7990);
-
-/** Used to match leading whitespace. */
-var reTrimStart = /^\s+/;
-
-/**
- * The base implementation of `_.trim`.
- *
- * @private
- * @param {string} string The string to trim.
- * @returns {string} Returns the trimmed string.
- */
-function baseTrim(string) {
-  return string
-    ? string.slice(0, trimmedEndIndex(string) + 1).replace(reTrimStart, '')
-    : string;
-}
-
-module.exports = baseTrim;
 
 
 /***/ }),
@@ -3532,89 +3468,6 @@ module.exports = toSource;
 
 /***/ }),
 
-/***/ 7990:
-/***/ ((module) => {
-
-/** Used to match a single whitespace character. */
-var reWhitespace = /\s/;
-
-/**
- * Used by `_.trim` and `_.trimEnd` to get the index of the last non-whitespace
- * character of `string`.
- *
- * @private
- * @param {string} string The string to inspect.
- * @returns {number} Returns the index of the last non-whitespace character.
- */
-function trimmedEndIndex(string) {
-  var index = string.length;
-
-  while (index-- && reWhitespace.test(string.charAt(index))) {}
-  return index;
-}
-
-module.exports = trimmedEndIndex;
-
-
-/***/ }),
-
-/***/ 8400:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var baseSlice = __webpack_require__(4259),
-    isIterateeCall = __webpack_require__(6612),
-    toInteger = __webpack_require__(554);
-
-/* Built-in method references for those with the same name as other `lodash` methods. */
-var nativeCeil = Math.ceil,
-    nativeMax = Math.max;
-
-/**
- * Creates an array of elements split into groups the length of `size`.
- * If `array` can't be split evenly, the final chunk will be the remaining
- * elements.
- *
- * @static
- * @memberOf _
- * @since 3.0.0
- * @category Array
- * @param {Array} array The array to process.
- * @param {number} [size=1] The length of each chunk
- * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
- * @returns {Array} Returns the new array of chunks.
- * @example
- *
- * _.chunk(['a', 'b', 'c', 'd'], 2);
- * // => [['a', 'b'], ['c', 'd']]
- *
- * _.chunk(['a', 'b', 'c', 'd'], 3);
- * // => [['a', 'b', 'c'], ['d']]
- */
-function chunk(array, size, guard) {
-  if ((guard ? isIterateeCall(array, size, guard) : size === undefined)) {
-    size = 1;
-  } else {
-    size = nativeMax(toInteger(size), 0);
-  }
-  var length = array == null ? 0 : array.length;
-  if (!length || size < 1) {
-    return [];
-  }
-  var index = 0,
-      resIndex = 0,
-      result = Array(nativeCeil(length / size));
-
-  while (index < length) {
-    result[resIndex++] = baseSlice(array, index, (index += size));
-  }
-  return result;
-}
-
-module.exports = chunk;
-
-
-/***/ }),
-
 /***/ 361:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -4255,42 +4108,6 @@ module.exports = isSet;
 
 /***/ }),
 
-/***/ 3448:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var baseGetTag = __webpack_require__(4239),
-    isObjectLike = __webpack_require__(7005);
-
-/** `Object#toString` result references. */
-var symbolTag = '[object Symbol]';
-
-/**
- * Checks if `value` is classified as a `Symbol` primitive or object.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
- * @example
- *
- * _.isSymbol(Symbol.iterator);
- * // => true
- *
- * _.isSymbol('abc');
- * // => false
- */
-function isSymbol(value) {
-  return typeof value == 'symbol' ||
-    (isObjectLike(value) && baseGetTag(value) == symbolTag);
-}
-
-module.exports = isSymbol;
-
-
-/***/ }),
-
 /***/ 6719:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -4505,169 +4322,6 @@ function stubFalse() {
 }
 
 module.exports = stubFalse;
-
-
-/***/ }),
-
-/***/ 8601:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var toNumber = __webpack_require__(4841);
-
-/** Used as references for various `Number` constants. */
-var INFINITY = 1 / 0,
-    MAX_INTEGER = 1.7976931348623157e+308;
-
-/**
- * Converts `value` to a finite number.
- *
- * @static
- * @memberOf _
- * @since 4.12.0
- * @category Lang
- * @param {*} value The value to convert.
- * @returns {number} Returns the converted number.
- * @example
- *
- * _.toFinite(3.2);
- * // => 3.2
- *
- * _.toFinite(Number.MIN_VALUE);
- * // => 5e-324
- *
- * _.toFinite(Infinity);
- * // => 1.7976931348623157e+308
- *
- * _.toFinite('3.2');
- * // => 3.2
- */
-function toFinite(value) {
-  if (!value) {
-    return value === 0 ? value : 0;
-  }
-  value = toNumber(value);
-  if (value === INFINITY || value === -INFINITY) {
-    var sign = (value < 0 ? -1 : 1);
-    return sign * MAX_INTEGER;
-  }
-  return value === value ? value : 0;
-}
-
-module.exports = toFinite;
-
-
-/***/ }),
-
-/***/ 554:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var toFinite = __webpack_require__(8601);
-
-/**
- * Converts `value` to an integer.
- *
- * **Note:** This method is loosely based on
- * [`ToInteger`](http://www.ecma-international.org/ecma-262/7.0/#sec-tointeger).
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to convert.
- * @returns {number} Returns the converted integer.
- * @example
- *
- * _.toInteger(3.2);
- * // => 3
- *
- * _.toInteger(Number.MIN_VALUE);
- * // => 0
- *
- * _.toInteger(Infinity);
- * // => 1.7976931348623157e+308
- *
- * _.toInteger('3.2');
- * // => 3
- */
-function toInteger(value) {
-  var result = toFinite(value),
-      remainder = result % 1;
-
-  return result === result ? (remainder ? result - remainder : result) : 0;
-}
-
-module.exports = toInteger;
-
-
-/***/ }),
-
-/***/ 4841:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var baseTrim = __webpack_require__(7561),
-    isObject = __webpack_require__(3218),
-    isSymbol = __webpack_require__(3448);
-
-/** Used as references for various `Number` constants. */
-var NAN = 0 / 0;
-
-/** Used to detect bad signed hexadecimal string values. */
-var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
-
-/** Used to detect binary string values. */
-var reIsBinary = /^0b[01]+$/i;
-
-/** Used to detect octal string values. */
-var reIsOctal = /^0o[0-7]+$/i;
-
-/** Built-in method references without a dependency on `root`. */
-var freeParseInt = parseInt;
-
-/**
- * Converts `value` to a number.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to process.
- * @returns {number} Returns the number.
- * @example
- *
- * _.toNumber(3.2);
- * // => 3.2
- *
- * _.toNumber(Number.MIN_VALUE);
- * // => 5e-324
- *
- * _.toNumber(Infinity);
- * // => Infinity
- *
- * _.toNumber('3.2');
- * // => 3.2
- */
-function toNumber(value) {
-  if (typeof value == 'number') {
-    return value;
-  }
-  if (isSymbol(value)) {
-    return NAN;
-  }
-  if (isObject(value)) {
-    var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
-    value = isObject(other) ? (other + '') : other;
-  }
-  if (typeof value != 'string') {
-    return value === 0 ? value : +value;
-  }
-  value = baseTrim(value);
-  var isBinary = reIsBinary.test(value);
-  return (isBinary || reIsOctal.test(value))
-    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
-    : (reIsBadHex.test(value) ? NAN : +value);
-}
-
-module.exports = toNumber;
 
 
 /***/ }),
@@ -5856,60 +5510,24 @@ function Rules(_ref) {
 Rules.propTypes = {
   options: (prop_types_default()).object
 };
-// EXTERNAL MODULE: ./node_modules/lodash/chunk.js
-var chunk = __webpack_require__(8400);
-var chunk_default = /*#__PURE__*/__webpack_require__.n(chunk);
-;// CONCATENATED MODULE: ./get-possible-values.js
-
-function getPossibleValues(_ref) {
-  var type = _ref.type,
-      _ref$step = _ref.step,
-      step = _ref$step === void 0 ? 1 : _ref$step,
-      max = _ref.max,
-      min = _ref.min,
-      unlockedValues = _ref.unlockedValues;
-  var possibleValues = type === 'numeric' ? chunk_default()(Array.from(new Array(max - min + 1)), step).map(function (_, i) {
-    return (i + 1) * step;
-  }) : [false, true];
-
-  if (unlockedValues.includes(Infinity)) {
-    possibleValues.unshift(Infinity);
-  }
-
-  return possibleValues;
-}
 ;// CONCATENATED MODULE: ./option-setting.js
-
 
 
 function OptionSetting(_ref) {
   var id = _ref.id,
       value = _ref.value,
+      possibleValues = _ref.possibleValues,
       unlockedValues = _ref.unlockedValues,
-      _ref$unlockable = _ref.unlockable,
-      unlockable = _ref$unlockable === void 0 ? [] : _ref$unlockable,
-      min = _ref.min,
-      max = _ref.max,
-      _ref$step = _ref.step,
-      step = _ref$step === void 0 ? 1 : _ref$step,
-      points = _ref.points,
-      name = _ref.name,
+      description = _ref.description,
       unlocked = _ref.unlocked,
       type = _ref.type,
       handleSetOption = _ref.handleSetOption,
       handleUnlockOption = _ref.handleUnlockOption;
-  var possibleValues = getPossibleValues({
-    type: type,
-    step: step,
-    max: max,
-    min: min,
-    unlockedValues: unlockedValues
-  });
   return /*#__PURE__*/react.createElement("div", {
     className: "option"
   }, /*#__PURE__*/react.createElement("div", {
-    className: "option__name"
-  }, name), /*#__PURE__*/react.createElement("div", {
+    className: "option__description"
+  }, description), /*#__PURE__*/react.createElement("div", {
     className: "option__values"
   }, possibleValues.map(function (val, index) {
     var status;
@@ -5918,7 +5536,7 @@ function OptionSetting(_ref) {
       status = 'selected';
     } else if (unlockedValues.includes(val)) {
       status = 'unlocked';
-    } else if (unlockable.includes(val) || possibleValues.some(function (v, i) {
+    } else if (possibleValues.some(function (v, i) {
       return v !== Infinity && unlockedValues.includes(v) && Math.abs(i - index) === 1;
     })) {
       status = 'unlockable';
@@ -5934,12 +5552,18 @@ function OptionSetting(_ref) {
         handleUnlockOption(id, val);
       }
     }[status];
-    var label;
+    var displayValue;
 
-    if (type === 'numeric') {
-      label = val === Infinity ? '∞' : val;
+    if (typeof val === 'boolean') {
+      displayValue = val ? 'On' : 'Off';
+    } else if (val === Infinity) {
+      displayValue = /*#__PURE__*/react.createElement("span", {
+        style: {
+          fontSize: '2em'
+        }
+      }, "\u221E");
     } else {
-      label = val ? 'On' : 'Off';
+      displayValue = val.toString();
     }
 
     return /*#__PURE__*/react.createElement("button", {
@@ -5950,7 +5574,7 @@ function OptionSetting(_ref) {
       }
     }, /*#__PURE__*/react.createElement("div", {
       className: "option__value-inner"
-    }, label));
+    }, displayValue));
   })));
 }
 OptionSetting.propTypes = {
@@ -5958,11 +5582,11 @@ OptionSetting.propTypes = {
   value: prop_types_default().oneOfType([(prop_types_default()).number, (prop_types_default()).bool]),
   unlockedValues: prop_types_default().arrayOf(prop_types_default().oneOfType([(prop_types_default()).number, (prop_types_default()).bool])),
   unlockable: prop_types_default().arrayOf(prop_types_default().oneOfType([(prop_types_default()).number, (prop_types_default()).bool])),
+  possibleValues: prop_types_default().arrayOf(prop_types_default().oneOfType([(prop_types_default()).number, (prop_types_default()).bool])),
   min: (prop_types_default()).number,
   max: (prop_types_default()).number,
   step: (prop_types_default()).number,
-  points: (prop_types_default()).number,
-  name: (prop_types_default()).string,
+  description: (prop_types_default()).string,
   type: (prop_types_default()).string,
   unlocked: (prop_types_default()).bool,
   handleSetOption: (prop_types_default()).func,
@@ -5971,12 +5595,7 @@ OptionSetting.propTypes = {
 ;// CONCATENATED MODULE: ./calculate-points-earned.js
 function calculatePointsEarned(options) {
   var basePoints = 1;
-  return Object.values(options).reduce(function (acc, _ref) {
-    var name = _ref.name,
-        multiplierCurve = _ref.multiplierCurve,
-        value = _ref.value;
-    return Math.round((acc + basePoints * multiplierCurve(value, options) - 1) * 100) / 100;
-  }, basePoints);
+  return basePoints;
 }
 ;// CONCATENATED MODULE: ./shop.js
 function shop_slicedToArray(arr, i) { return shop_arrayWithHoles(arr) || shop_iterableToArrayLimit(arr, i) || shop_unsupportedIterableToArray(arr, i) || shop_nonIterableRest(); }
@@ -6008,32 +5627,29 @@ function Shop(_ref) {
   }, /*#__PURE__*/react.createElement("button", {
     className: "shop__close-button",
     onClick: handleClose
-  }, "Exit"), /*#__PURE__*/react.createElement("div", {
+  }, "Leave Shop"), /*#__PURE__*/react.createElement("div", {
     className: "options"
   }, Object.entries(options).map(function (_ref2) {
     var _ref3 = shop_slicedToArray(_ref2, 2),
         key = _ref3[0],
         _ref3$ = _ref3[1],
         value = _ref3$.value,
+        possibleValues = _ref3$.possibleValues,
         unlockedValues = _ref3$.unlockedValues,
         unlockable = _ref3$.unlockable,
         min = _ref3$.min,
         max = _ref3$.max,
         step = _ref3$.step,
-        name = _ref3$.name,
+        description = _ref3$.description,
         type = _ref3$.type;
 
     return /*#__PURE__*/react.createElement(OptionSetting, {
       key: key,
       id: key,
-      name: name,
+      description: description,
       type: type,
+      possibleValues: possibleValues,
       unlockedValues: unlockedValues,
-      unlockable: unlockable,
-      min: min,
-      max: max,
-      step: step,
-      points: points,
       value: value,
       handleUnlockOption: handleUnlockOption,
       handleSetOption: handleSetOption
@@ -6206,7 +5822,6 @@ function useRollingNumber(num) {
 function MoneyDisplay(_ref) {
   var amount = _ref.amount;
   var numberToDisplay = useRollingNumber(amount);
-  console.log('numberToDisplay', numberToDisplay);
   var moneyToDisplay = "$".concat(numberToDisplay.toFixed(2));
   return /*#__PURE__*/react.createElement("div", {
     className: "points"
@@ -6235,9 +5850,9 @@ function Results(_ref) {
     className: "results"
   }, wonLastGame && /*#__PURE__*/react.createElement("div", {
     className: "results-title results-title--won"
-  }, "Won!"), !wonLastGame && /*#__PURE__*/react.createElement("div", {
+  }, "+ $", lastPointsEarned.toFixed(2)), !wonLastGame && /*#__PURE__*/react.createElement("div", {
     className: "results-title results-title--lost"
-  }, "Lost!"), /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement(MoneyDisplay, {
+  }, "FAILED"), /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement(MoneyDisplay, {
     amount: points
   })), /*#__PURE__*/react.createElement("button", {
     className: "results__close-button",
@@ -6292,10 +5907,13 @@ function getLetterStates(answer, guess) {
       var instancesInAnswerCount = answer.split('').filter(function (l) {
         return l === letter;
       }).length;
-      var instancesSoFarInGuessCount = guess.split('').slice(0, i).filter(function (l) {
+      var instancesSoFarInGuessCount = guess.split('').slice(0, i + 1).filter(function (l) {
         return l === letter;
       }).length;
-      return [].concat(_toConsumableArray(acc), [instancesSoFarInGuessCount < instancesInAnswerCount ? 'present' : 'absent']);
+      var laterCorrectInstancesCount = guess.split('').slice(i + 1).filter(function (l, j) {
+        return l === letter && l === answer.split('').slice(i + 1)[j];
+      }).length;
+      return [].concat(_toConsumableArray(acc), [instancesSoFarInGuessCount <= instancesInAnswerCount - laterCorrectInstancesCount ? 'present' : 'absent']);
     } else {
       return [].concat(_toConsumableArray(acc), ['absent']);
     }
@@ -6426,142 +6044,67 @@ KeyboardLetter.propTypes = {
 };
 ;// CONCATENATED MODULE: ./default-options.js
 /* harmony default export */ const default_options = ({
-  boardsCount: {
-    name: 'Number of Boards',
-    type: 'numeric',
-    value: 1,
-    min: 1,
-    max: 6,
-    unlockedValues: [1],
-    multiplierCurve: function multiplierCurve(value) {
-      return value;
-    }
-  },
-  reverse: {
-    name: 'All Words are Backwards',
-    type: 'boolean',
-    value: false,
-    unlockedValues: [false],
-    multiplierCurve: function multiplierCurve(value) {
-      return value ? 1.5 : 1;
-    }
-  },
   maxGuesses: {
-    name: 'Number of Guesses',
-    type: 'numeric',
+    description: 'Number of Guesses',
     value: Infinity,
-    unlockable: [6],
-    min: 1,
-    max: 8,
-    unlockedValues: [Infinity],
-    multiplierCurve: function multiplierCurve(value, options) {
-      var effectiveValue = value - options.boardsCount.value + 1;
-
-      if (effectiveValue === 1) {
-        return 200;
-      } else if (effectiveValue === 2) {
-        return 50;
-      } else if (effectiveValue === 3) {
-        return 10;
-      } else if (effectiveValue === 4) {
-        return 4;
-      } else if (effectiveValue === 5) {
-        return 1.8;
-      } else if (effectiveValue === 6) {
-        return 1.5;
-      } else if (effectiveValue === 7) {
-        return 1.1;
-      } else {
-        return 1;
-      }
-    }
+    possibleValues: [Infinity, 1, 4, 6, 8],
+    unlockedValues: [Infinity, 6]
+  },
+  boardsCount: {
+    description: 'Number of Boards',
+    value: 1,
+    possibleValues: [1, 2, 4, 8],
+    unlockedValues: [1, 2]
   },
   wordLength: {
-    name: 'Word Length',
-    type: 'numeric',
+    description: 'Word Length',
     value: 5,
-    min: 1,
-    max: 8,
-    unlockedValues: [5],
-    multiplierCurve: function multiplierCurve(value) {
-      if (value === 1) {
-        return 0.05;
-      } else if (value === 2) {
-        return 0.25;
-      } else if (value === 3) {
-        return 0.5;
-      } else if (value === 4) {
-        return 0.75;
-      } else if (value === 5) {
-        return 1;
-      } else if (value > 5) {
-        return 3;
-      }
-    }
+    possibleValues: [2, 3, 5, 6, 8],
+    unlockedValues: [5, 6]
   },
   gameTimeLimit: {
-    name: 'Game Time Limit',
-    type: 'numeric',
+    description: 'Game Time Limit',
     value: Infinity,
-    min: 30,
-    max: 300,
-    unlockedValues: [Infinity],
-    unlockable: [300],
-    step: 30,
-    multiplierCurve: function multiplierCurve(value) {
-      if (value > 300) {
-        return 1;
-      } else if (value <= 300 && value > 120) {
-        return 2;
-      } else if (value <= 120 && value > 30) {
-        return 4;
-      } else if (value <= 30) {
-        return 8;
-      }
-    }
+    possibleValues: [Infinity, 30, 120, 300, 600],
+    unlockedValues: [Infinity, 600]
   },
   roundTimeLimit: {
-    name: 'Round Time Limit',
-    type: 'numeric',
+    description: 'Round Time Limit',
     value: Infinity,
-    min: 10,
-    max: 120,
-    unlockedValues: [Infinity],
-    unlockable: [60],
-    step: 10,
-    multiplierCurve: function multiplierCurve(value) {
-      if (value > 100) {
-        return 1;
-      } else if (value <= 100 && value > 60) {
-        return 2;
-      } else if (value <= 60 && value > 30) {
-        return 3;
-      } else if (value <= 30 && value > 10) {
-        return 4;
-      } else if (value <= 10) {
-        return 8;
-      }
-    }
+    possibleValues: [Infinity, 10, 30, 60, 300],
+    unlockedValues: [Infinity, 60]
   },
   strictMode: {
-    name: 'Strict Mode',
-    type: 'boolean',
+    description: 'Strict Mode',
     value: false,
-    unlockedValues: [false],
-    multiplierCurve: function multiplierCurve(value) {
-      return value ? 1.5 : 1;
-    }
+    possibleValues: [false, true],
+    unlockedValues: [false, true]
+  },
+  reverse: {
+    description: 'All Words are Backwards',
+    value: false,
+    possibleValues: [false, true],
+    unlockedValues: [false, true]
   },
   showPossibleWords: {
-    name: 'Show Possible Words',
-    type: 'boolean',
+    description: 'Show Possible Words',
     value: false,
-    unlockedValues: [false],
-    multiplierCurve: function multiplierCurve(value) {
-      return value ? 0.1 : 1;
-    }
+    possibleValues: [false, true],
+    unlockedValues: [false, true]
+  },
+  revealAnswers: {
+    description: 'Reveal Answers',
+    value: false,
+    possibleValues: [false, true],
+    unlockedValues: [false, true]
   }
 });
+;// CONCATENATED MODULE: ./get-possible-values.js
+function getPossibleValues(_ref) {
+  var type = _ref.type,
+      possibleValues = _ref.possibleValues;
+  return possibleValues;
+}
 ;// CONCATENATED MODULE: ./options-reducer.js
 function options_reducer_slicedToArray(arr, i) { return options_reducer_arrayWithHoles(arr) || options_reducer_iterableToArrayLimit(arr, i) || options_reducer_unsupportedIterableToArray(arr, i) || options_reducer_nonIterableRest(); }
 
@@ -7068,7 +6611,8 @@ function App() {
       return isGuessStrictlyValid(word, guesses, answers);
     }) : [];
   }, [guesses, answers, options]);
-  var sortedAnswers = answers.sort(function (a, b) {
+
+  var sortedAnswers = app_toConsumableArray(answers).sort(function (a, b) {
     if (guesses.includes(a) && !guesses.includes(b)) {
       return -1;
     } else if (guesses.includes(b) && !guesses.includes(a)) {
@@ -7077,6 +6621,7 @@ function App() {
       return a.localeCompare(b);
     }
   });
+
   return /*#__PURE__*/react.createElement("div", {
     className: "root"
   }, /*#__PURE__*/react.createElement("div", {
@@ -7091,11 +6636,9 @@ function App() {
     className: "round-time-remaining"
   }, "Round Time Remaining: ", secondsRemainingInRound), /*#__PURE__*/react.createElement("div", {
     className: "main-game"
-  }, /*#__PURE__*/react.createElement("div", {
-    style: {
-      color: 'white'
-    }
-  }, answers), /*#__PURE__*/react.createElement("div", {
+  }, options.revealAnswers.value && /*#__PURE__*/react.createElement("div", {
+    className: "revealed-answers"
+  }, sortedAnswers.join(' ')), /*#__PURE__*/react.createElement("div", {
     className: "boards"
   }, sortedAnswers.map(function (answer) {
     return /*#__PURE__*/react.createElement(Board, {
@@ -7113,7 +6656,7 @@ function App() {
     }, row.map(function (letter) {
       return /*#__PURE__*/react.createElement(KeyboardLetter, {
         letter: letter,
-        answers: answers,
+        answers: sortedAnswers,
         guesses: guesses,
         handleLetterInput: function handleLetterInput() {
           handleAddLetter(letter);

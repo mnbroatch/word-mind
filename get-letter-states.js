@@ -5,11 +5,14 @@ export default function getLetterStates (answer, guess) {
     } else if (answer.includes(letter)) {
       const instancesInAnswerCount = answer.split('')
         .filter(l => l === letter).length
-      const instancesSoFarInGuessCount = guess.split('').slice(0, i)
+      const instancesSoFarInGuessCount = guess.split('').slice(0, i + 1)
         .filter(l => l === letter).length
+      const laterCorrectInstancesCount = guess.split('').slice(i + 1)
+        .filter((l, j) => l === letter && l === answer.split('').slice(i + 1)[j]).length
+
       return [
         ...acc,
-        instancesSoFarInGuessCount < instancesInAnswerCount
+        instancesSoFarInGuessCount <= instancesInAnswerCount - laterCorrectInstancesCount
           ? 'present'
           : 'absent'
       ]

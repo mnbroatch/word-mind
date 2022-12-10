@@ -4,7 +4,11 @@ refactor:
 
 ================
 
-ux:
+UX:
+
+Use item names, hover for description
+Separate screen to upgrade items
+invalid guess wiggle / other feedback
 
 disable impossible option combinations
 click letter you want to edit
@@ -80,6 +84,7 @@ hidden secrets
 
 
 attach rpg items to modifiers?
+  - changing the numeric option is like "upgrading the item"
 
 inventory
   - potions change rules for a number of games
@@ -93,3 +98,15 @@ ending
 limited lives mode
 anagrams bonus round
 change rules in the middle of a game?
+
+
+
+=================
+
+5 letter words:
+
+revealed words
+
+
+
+

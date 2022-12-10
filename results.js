@@ -14,12 +14,12 @@ export default function Results ({
     <div className='results'>
       {wonLastGame && (
         <div className="results-title results-title--won">
-          Won!
+          + ${lastPointsEarned.toFixed(2)}
         </div>
       )}
       {!wonLastGame && (
         <div className="results-title results-title--lost">
-          Lost!
+          FAILED
         </div>
       )}
       <div>

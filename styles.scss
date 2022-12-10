@@ -18,6 +18,7 @@ $shadow-inset: inset 1px 1px 5px grey;
 
 body {
   margin: 0;
+  font-family: system-ui;
 }
 
 .root {
@@ -118,9 +119,7 @@ body {
   margin: 4px;
   border: 1px solid black;
   text-transform: uppercase;
-  border: 0;
   background-color: white;
-  font-family: system-ui;
   box-shadow: $shadow-button;
 }
 
@@ -163,7 +162,8 @@ body {
 }
 
 .results-title {
-  margin: 20px;
+  margin: 45px;
+  font-family: 'abril-fatface-regular';
   font-size: 1.25em;
 }
 
@@ -182,8 +182,8 @@ body {
   height: 60px;
   justify-content: center;
   transform: rotate(-5deg);
-  width: 250px;
-  margin-top: 50px;
+  width: 300px;
+  margin-top: 70px;
   box-shadow: 1px 1px 3px black;
 
   &:hover {
@@ -207,12 +207,13 @@ body {
 }
 
 .option {
+  position: relative;
   box-shadow: $shadow-raised;
   border-radius: 4px;
   box-sizing: border-box;
   width: 175px;
-  margin: 4px;
-  padding: 8px;
+  margin: 12px;
+  padding: 16px 0 16px 0;
 }
 
 .option-spacer {
@@ -221,16 +222,29 @@ body {
   height: 0;
 }
 
-.option__name {
-  margin-bottom: 10px;
+.option__description {
+  background-color: brown;
+  color: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  text-align: center;
+  top: -17px;
+  left: -3px;
+  transform: rotate(-2deg);
+  white-space: nowrap;
+  width: 175px;
 }
 
 .option__values {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .option__value {
+  border: 0;
+  border-radius: 3px;
+  margin: 2px;
   height: 30px;
   width: 30px;
   flex-shrink: 0;
@@ -270,7 +284,6 @@ body {
 .keyboard-button {
   border: 0;
   background-color: white;
-  font-family: system-ui;
   transition: box-shadow .1s;
 }
 

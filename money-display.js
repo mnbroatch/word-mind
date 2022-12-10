@@ -3,7 +3,6 @@ import useRollingNumber from './use-rolling-number'
 
 export default function MoneyDisplay ({ amount }) {
   const numberToDisplay = useRollingNumber(amount)
-  console.log('numberToDisplay', numberToDisplay)
   const moneyToDisplay = `$${numberToDisplay.toFixed(2)}`
 
   return (

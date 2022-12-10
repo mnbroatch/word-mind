@@ -1,27 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import getPossibleValues from './get-possible-values'
 
 export default function OptionSetting ({
   id,
   value,
+  possibleValues,
   unlockedValues,
-  unlockable = [],
-  min,
-  max,
-  step = 1,
-  points,
-  name,
+  description,
   unlocked,
   type,
   handleSetOption,
   handleUnlockOption
 }) {
-  const possibleValues = getPossibleValues({ type, step, max, min, unlockedValues })
   return (
     <div className='option'>
-      <div className='option__name'>
-        {name}
+      <div className='option__description'>
+        {description}
       </div>
       <div className='option__values'>
         {possibleValues.map((val, index) => {
@@ -30,7 +24,7 @@ export default function OptionSetting ({
             status = 'selected'
           } else if (unlockedValues.includes(val)) {
             status = 'unlocked'
-          } else if (unlockable.includes(val) || possibleValues.some((v, i) => v !== Infinity && unlockedValues.includes(v) && Math.abs(i - index) === 1)) {
+          } else if (possibleValues.some((v, i) => v !== Infinity && unlockedValues.includes(v) && Math.abs(i - index) === 1)) {
             status = 'unlockable'
           } else {
             status = 'locked'
@@ -41,11 +35,13 @@ export default function OptionSetting ({
             unlockable: (val) => { handleUnlockOption(id, val) }
           }[status]
 
-          let label
-          if (type === 'numeric') {
-            label = val === Infinity ? '∞' : val
+          let displayValue
+          if (typeof val === 'boolean') {
+            displayValue = val ? 'On' : 'Off'
+          } else if (val === Infinity) {
+            displayValue = <span style={{ fontSize: '2em' }}>∞</span>
           } else {
-            label = val ? 'On' : 'Off'
+            displayValue = val.toString()
           }
 
           return (
@@ -55,7 +51,7 @@ export default function OptionSetting ({
               onClick={() => { clickHandler && clickHandler(val) }}
             >
               <div className='option__value-inner'>
-                {label}
+                {displayValue}
               </div>
             </button>
           )
@@ -70,11 +66,11 @@ OptionSetting.propTypes = {
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
   unlockedValues: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.bool])),
   unlockable: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.bool])),
+  possibleValues: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.bool])),
   min: PropTypes.number,
   max: PropTypes.number,
   step: PropTypes.number,
-  points: PropTypes.number,
-  name: PropTypes.string,
+  description: PropTypes.string,
   type: PropTypes.string,
   unlocked: PropTypes.bool,
   handleSetOption: PropTypes.func,

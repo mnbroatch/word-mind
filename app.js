@@ -31,6 +31,7 @@ function getAnswers (options) {
   const boardsCount = options.boardsCount.value
   const answers = gameWords.filter(word => word.length === +wordLength && !curseWords.includes(word))
     .sort(() => Math.random() - 0.5).slice(0, boardsCount)
+
   return options.reverse.value ? answers.map(answer => answer.split('').reverse().join('')) : answers
 }
 
@@ -192,7 +193,7 @@ export default function App () {
       : []
   }, [guesses, answers, options])
 
-  const sortedAnswers = answers.sort((a, b) => {
+  const sortedAnswers = [...answers].sort((a, b) => {
     if (guesses.includes(a) && !guesses.includes(b)) {
       return -1
     } else if (guesses.includes(b) && !guesses.includes(a)) {
@@ -215,9 +216,11 @@ export default function App () {
           Round Time Remaining: {secondsRemainingInRound}
         </div>}
         <div className='main-game'>
-          <div style={{ color: 'white' }}>
-            {answers}
-          </div>
+          {options.revealAnswers.value && (
+            <div className='revealed-answers'>
+              {sortedAnswers.join(' ')}
+            </div>
+          )}
           <div className='boards'>
             {sortedAnswers.map(answer => (
               <Board
@@ -234,7 +237,7 @@ export default function App () {
                 {row.map(letter => (
                   <KeyboardLetter
                     letter={letter}
-                    answers={answers}
+                    answers={sortedAnswers}
                     guesses={guesses}
                     handleLetterInput={() => { handleAddLetter(letter) }}
                     key={letter}
