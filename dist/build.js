@@ -20,11 +20,13 @@
 
 var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(374), __webpack_require__.b);
 var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(4643), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(7980), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0;font-family:system-ui}.root{box-sizing:border-box;position:relative;display:flex;flex-direction:column;padding:10px;height:100vh}.main-content{flex:1;margin-top:5px;position:relative}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase;background-color:#fff;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:45px;font-family:\"abril-fatface-regular\";font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;transform:rotate(-5deg);width:300px;margin-top:70px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.options{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.option{position:relative;box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:12px;padding:16px 0 16px 0}.option-spacer{width:175px;margin:0 4px 0 4px;height:0}.option__description{background-color:brown;color:#fff;left:0;padding:6px;position:absolute;text-align:center;top:-17px;left:-3px;transform:rotate(-2deg);white-space:nowrap;width:175px}.option__values{display:flex;justify-content:center}.option__value{border:0;border-radius:3px;margin:2px;height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option__value--selected{background-color:green}.option__value--unlocked{background-color:#add8e6}.option__value--unlockable{background-color:#ff0}.option__value-inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard{margin:40px 0 70px 0;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff;transition:box-shadow .1s}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.points{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.points__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.points__label{font-variant-numeric:tabular-nums;color:#f6bd60;font-family:abril-fatface-regular}.results .points__label{font-size:3em}.points__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0;font-family:system-ui}#root{height:100vh}.root{box-sizing:border-box;position:relative;display:flex;flex-direction:column;height:100vh}.main-content{flex:1;margin-top:5px;position:relative}.main-game{height:100%;display:flex;flex-direction:column}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{flex:1;display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase;background-color:#fff;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:45px;font-family:\"libre-baskerville\";font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;transform:rotate(-5deg);width:300px;margin-top:70px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.options{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.option{position:relative;box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:12px;padding:16px 0 16px 0}.option-spacer{width:175px;margin:0 4px 0 4px;height:0}.option__description{background-color:brown;color:#fff;left:0;padding:6px;position:absolute;text-align:center;top:-17px;left:-3px;transform:rotate(-2deg);white-space:nowrap;width:175px}.option__values{display:flex;justify-content:center}.option__value{border:0;border-radius:3px;margin:2px;height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option__value--selected{background-color:green}.option__value--unlocked{background-color:#add8e6}.option__value--unlockable{background-color:#ff0}.option__value-inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard{margin:40px 0 70px 0;padding:10px;box-sizing:border-box;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff;transition:box-shadow .1s}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.xp{display:flex;height:100%;align-items:center;justify-content:center;color:#fff;font-family:libre-baskerville;position:relative;border-radius:9999999px;border:1px dotted #fff;background-image:linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));padding:0 10px 0 10px;box-sizing:border-box}.xp__background-squiggle{top:-0.15em;position:absolute;transform:scale(4.5, 3);height:100%;display:flex;justify-content:center;align-items:center;color:#f5b0cb;font-size:2em;opacity:.3}.xp__background-squiggle~.xp__background-squiggle{transform:scale(-4.5, 3);color:#372772}.xp__label{font-variant-numeric:tabular-nums}.xp__digit{display:inline-block;width:.65em;vertical-align:middle;text-align:center}.results .xp{font-size:3em}.money{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.money__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.money__label{color:#f6bd60;font-family:abril-fatface-regular}.money__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;display:flex;justify-content:space-between;align-items:center;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}@font-face{font-family:\"libre-baskerville\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ")}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5308,6 +5310,14 @@ module.exports = __webpack_require__.p + "c2459f7f69cb5eb788d8.ttf";
 "use strict";
 module.exports = __webpack_require__.p + "2013ccd233e78abb349d.ttf";
 
+/***/ }),
+
+/***/ 7980:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "715e9cea90f54d5a4093.ttf";
+
 /***/ })
 
 /******/ 	});
@@ -5592,10 +5602,10 @@ OptionSetting.propTypes = {
   handleSetOption: (prop_types_default()).func,
   handleUnlockOption: (prop_types_default()).func
 };
-;// CONCATENATED MODULE: ./calculate-points-earned.js
+;// CONCATENATED MODULE: ./calculate-xp-earned.js
 function calculatePointsEarned(options) {
-  var basePoints = 1;
-  return basePoints;
+  var basePoints = 100;
+  return Math.floor(basePoints);
 }
 ;// CONCATENATED MODULE: ./shop.js
 function shop_slicedToArray(arr, i) { return shop_arrayWithHoles(arr) || shop_iterableToArrayLimit(arr, i) || shop_unsupportedIterableToArray(arr, i) || shop_nonIterableRest(); }
@@ -5616,8 +5626,8 @@ function shop_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function Shop(_ref) {
   var options = _ref.options,
-      points = _ref.points,
-      lastPointsEarned = _ref.lastPointsEarned,
+      xp = _ref.xp,
+      lastXpEarned = _ref.lastXpEarned,
       handleSetOption = _ref.handleSetOption,
       handleUnlockOption = _ref.handleUnlockOption,
       handleClose = _ref.handleClose,
@@ -5659,12 +5669,12 @@ function Shop(_ref) {
       key: key,
       className: "option-spacer"
     });
-  })), /*#__PURE__*/react.createElement("div", null, "Next Round is worth ", calculatePointsEarned(options), " points"));
+  })), /*#__PURE__*/react.createElement("div", null, "Next Round is worth ", calculatePointsEarned(options), " xp"));
 }
 Shop.propTypes = {
   options: (prop_types_default()).object,
-  points: (prop_types_default()).number,
-  lastPointsEarned: (prop_types_default()).number,
+  xp: (prop_types_default()).number,
+  lastXpEarned: (prop_types_default()).number,
   handleSetOption: (prop_types_default()).func,
   handleUnlockOption: (prop_types_default()).func,
   handleClose: (prop_types_default()).func,
@@ -5816,44 +5826,50 @@ function useRollingNumber(num) {
   var percentDone = (duration - remaining) / duration;
   return startNum ? startNum + percentDone * (num - startNum) : num;
 }
-;// CONCATENATED MODULE: ./money-display.js
+;// CONCATENATED MODULE: ./xp-display.js
 
 
-function MoneyDisplay(_ref) {
+
+function XpDisplay(_ref) {
   var amount = _ref.amount;
   var numberToDisplay = useRollingNumber(amount);
-  var moneyToDisplay = "$".concat(numberToDisplay.toFixed(2));
+  var xpToDisplay = "".concat(Math.floor(numberToDisplay), " XP");
   return /*#__PURE__*/react.createElement("div", {
-    className: "points"
+    className: "xp"
   }, /*#__PURE__*/react.createElement("div", {
-    className: "points__inner"
-  }, /*#__PURE__*/react.createElement("div", {
-    className: "points__label"
-  }, moneyToDisplay.split('').map(function (digit, i) {
+    className: "xp__label"
+  }, xpToDisplay.split('').map(function (digit, i) {
     return /*#__PURE__*/react.createElement("span", {
       key: i,
-      className: "points__digit"
+      className: "xp__digit"
     }, digit);
-  }))));
+  })), /*#__PURE__*/react.createElement("div", {
+    className: "xp__background-squiggle"
+  }, "\u223F"), /*#__PURE__*/react.createElement("div", {
+    className: "xp__background-squiggle"
+  }, "\u223F"));
 }
+XpDisplay.propTypes = {
+  amount: prop_types.PropTypes.number
+};
 ;// CONCATENATED MODULE: ./results.js
 
 
 
 function Results(_ref) {
   var options = _ref.options,
-      points = _ref.points,
-      lastPointsEarned = _ref.lastPointsEarned,
+      xp = _ref.xp,
+      lastXpEarned = _ref.lastXpEarned,
       handleClose = _ref.handleClose,
       wonLastGame = _ref.wonLastGame;
   return /*#__PURE__*/react.createElement("div", {
     className: "results"
   }, wonLastGame && /*#__PURE__*/react.createElement("div", {
     className: "results-title results-title--won"
-  }, "+ $", lastPointsEarned.toFixed(2)), !wonLastGame && /*#__PURE__*/react.createElement("div", {
+  }, "+ ", lastXpEarned, " XP"), !wonLastGame && /*#__PURE__*/react.createElement("div", {
     className: "results-title results-title--lost"
-  }, "FAILED"), /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement(MoneyDisplay, {
-    amount: points
+  }, "FAILED"), /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement(XpDisplay, {
+    amount: xp
   })), /*#__PURE__*/react.createElement("button", {
     className: "results__close-button",
     onClick: handleClose
@@ -5863,8 +5879,8 @@ function Results(_ref) {
 }
 Results.propTypes = {
   options: (prop_types_default()).object,
-  points: (prop_types_default()).number,
-  lastPointsEarned: (prop_types_default()).number,
+  xp: (prop_types_default()).number,
+  lastXpEarned: (prop_types_default()).number,
   handleClose: (prop_types_default()).func,
   wonLastGame: (prop_types_default()).bool
 };
@@ -6252,6 +6268,30 @@ function isGuessStrictlyValid(guess, previousGuesses, answers) {
     return letterCountsArePossible && letterPositionsArePossible;
   });
 }
+;// CONCATENATED MODULE: ./money-display.js
+
+
+
+function MoneyDisplay(_ref) {
+  var amount = _ref.amount;
+  var numberToDisplay = useRollingNumber(amount);
+  var moneyToDisplay = "$".concat(numberToDisplay.toFixed(2));
+  return /*#__PURE__*/react.createElement("div", {
+    className: "money"
+  }, /*#__PURE__*/react.createElement("div", {
+    className: "money__inner"
+  }, /*#__PURE__*/react.createElement("div", {
+    className: "money__label"
+  }, moneyToDisplay.split('').map(function (digit, i) {
+    return /*#__PURE__*/react.createElement("span", {
+      key: i,
+      className: "money__digit"
+    }, digit);
+  }))));
+}
+MoneyDisplay.propTypes = {
+  amount: prop_types.PropTypes.number
+};
 // EXTERNAL MODULE: ./node_modules/lodash/cloneDeep.js
 var cloneDeep = __webpack_require__(361);
 var cloneDeep_default = /*#__PURE__*/__webpack_require__.n(cloneDeep);
@@ -6299,20 +6339,30 @@ function loadState() {
       delete initialOptions[key];
     }
   });
-  var initialPoints = 0;
-  var savedPoints = localStorage.getItem('word-mind_points');
+  var initialXp = 0;
+  var savedXp = localStorage.getItem('word-mind_xp');
 
-  if (savedPoints) {
-    initialPoints = JSON.parse(savedPoints);
+  if (savedXp) {
+    initialXp = JSON.parse(savedXp);
+  }
+
+  var initialMoney = 0;
+  var savedMoney = localStorage.getItem('word-mind_money');
+
+  if (savedMoney) {
+    initialMoney = JSON.parse(savedMoney);
   }
 
   return {
     initialOptions: initialOptions,
-    initialPoints: initialPoints
+    initialXp: initialXp,
+    initialMoney: initialMoney
   };
 }
 
-function saveState(options, points) {
+function saveState(_ref) {
+  var options = _ref.options,
+      xp = _ref.xp;
   var optionsClone = cloneDeep_default()(options);
 
   if (optionsClone) {
@@ -6329,12 +6379,12 @@ function saveState(options, points) {
     });
   }
 
-  var optionsEntriesToSave = Object.entries(optionsClone).map(function (_ref) {
-    var _ref2 = local_storage_wrapper_slicedToArray(_ref, 2),
-        key = _ref2[0],
-        _ref2$ = _ref2[1],
-        unlockedValues = _ref2$.unlockedValues,
-        value = _ref2$.value;
+  var optionsEntriesToSave = Object.entries(optionsClone).map(function (_ref2) {
+    var _ref3 = local_storage_wrapper_slicedToArray(_ref2, 2),
+        key = _ref3[0],
+        _ref3$ = _ref3[1],
+        unlockedValues = _ref3$.unlockedValues,
+        value = _ref3$.value;
 
     return [key, {
       unlockedValues: unlockedValues,
@@ -6342,7 +6392,7 @@ function saveState(options, points) {
     }];
   });
   localStorage.setItem('word-mind_options', JSON.stringify(Object.fromEntries(optionsEntriesToSave)));
-  localStorage.setItem('word-mind_points', JSON.stringify(points));
+  localStorage.setItem('word-mind_xp', JSON.stringify(xp));
 }
 
 
@@ -6385,9 +6435,11 @@ function app_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var _loadState = loadState(),
     initialOptions = _loadState.initialOptions,
-    initialPoints = _loadState.initialPoints;
+    initialXp = _loadState.initialXp,
+    initialMoney = _loadState.initialMoney;
 
 var alphabet = 'qwertyuiopasdfghjklzxcvbnm'.split('');
 var alphabetRows = [alphabet.slice(0, 10), alphabet.slice(10, 19), alphabet.slice(19)];
@@ -6418,28 +6470,32 @@ function App() {
 
   var _useState3 = (0,react.useState)(0),
       _useState4 = app_slicedToArray(_useState3, 2),
-      lastPointsEarned = _useState4[0],
-      setLastPointsEarned = _useState4[1];
+      lastXpEarned = _useState4[0],
+      setLastXpEarned = _useState4[1];
 
   var _useState5 = (0,react.useState)(false),
       _useState6 = app_slicedToArray(_useState5, 2),
       wonLastGame = _useState6[0],
       setWonLastGame = _useState6[1];
 
-  var _useState7 = (0,react.useState)(initialPoints),
+  var _useState7 = (0,react.useState)(initialXp),
       _useState8 = app_slicedToArray(_useState7, 2),
-      points = _useState8[0],
-      setPoints = _useState8[1];
+      xp = _useState8[0],
+      setXp = _useState8[1];
 
-  var _useState9 = (0,react.useState)(getAnswers(options)),
-      _useState10 = app_slicedToArray(_useState9, 2),
-      answers = _useState10[0],
-      setAnswers = _useState10[1];
+  var _useState9 = (0,react.useState)(initialMoney),
+      _useState10 = app_slicedToArray(_useState9, 1),
+      money = _useState10[0];
 
-  var _useState11 = (0,react.useState)([]),
+  var _useState11 = (0,react.useState)(getAnswers(options)),
       _useState12 = app_slicedToArray(_useState11, 2),
-      guesses = _useState12[0],
-      setGuesses = _useState12[1];
+      answers = _useState12[0],
+      setAnswers = _useState12[1];
+
+  var _useState13 = (0,react.useState)([]),
+      _useState14 = app_slicedToArray(_useState13, 2),
+      guesses = _useState14[0],
+      setGuesses = _useState14[1];
 
   var _useReducer3 = (0,react.useReducer)(current_guess_reducer, ''),
       _useReducer4 = app_slicedToArray(_useReducer3, 2),
@@ -6459,10 +6515,10 @@ function App() {
   };
 
   var handleGameEnd = function handleGameEnd(endState) {
-    var pointsEarned = endState.won ? calculatePointsEarned(options) : 0;
+    var xpEarned = endState.won ? calculatePointsEarned(options) : 0;
     setUiState('results');
-    setPoints(points + pointsEarned);
-    setLastPointsEarned(pointsEarned);
+    setXp(xp + xpEarned);
+    setLastXpEarned(xpEarned);
     setWonLastGame(endState.won);
     setGuesses([]);
     setAnswers(getAnswers(options));
@@ -6560,14 +6616,14 @@ function App() {
   };
 
   var handleUnlockOption = function handleUnlockOption(optionId, value) {
-    if (points >= 1) {
+    if (xp >= 1) {
       optionsDispatch({
         type: 'UNLOCK_OPTION',
         optionId: optionId,
         value: value
       });
       handleSetOption(optionId, value);
-      setPoints(points - 1);
+      setXp(xp - 1);
     }
   };
 
@@ -6584,8 +6640,12 @@ function App() {
     };
   }, [uiState]);
   (0,react.useEffect)(function () {
-    saveState(options, points);
-  }, [options, points]);
+    saveState({
+      options: options,
+      xp: xp,
+      money: money
+    });
+  }, [options, xp, money]);
 
   var handleClearAll = function handleClearAll() {
     localStorage.clear();
@@ -6593,7 +6653,7 @@ function App() {
       type: 'LOAD_INITIAL'
     });
     setUiState('game');
-    setPoints(0);
+    setXp(0);
     setGuesses([]);
     currentGuessDispatch({
       type: 'clear'
@@ -6626,8 +6686,10 @@ function App() {
     className: "root"
   }, /*#__PURE__*/react.createElement("div", {
     className: "top-bar"
-  }, /*#__PURE__*/react.createElement(MoneyDisplay, {
-    amount: points
+  }, /*#__PURE__*/react.createElement(XpDisplay, {
+    amount: xp
+  }), /*#__PURE__*/react.createElement(MoneyDisplay, {
+    amount: money
   })), /*#__PURE__*/react.createElement("div", {
     className: "main-content"
   }, options.gameTimeLimit.value !== Infinity && /*#__PURE__*/react.createElement("div", {
@@ -6704,8 +6766,8 @@ function App() {
     open: uiState === 'results'
   }, /*#__PURE__*/react.createElement(Results, {
     options: options,
-    points: points,
-    lastPointsEarned: lastPointsEarned,
+    xp: xp,
+    lastXpEarned: lastXpEarned,
     handleSetOption: handleSetOption,
     handleUnlockOption: handleUnlockOption,
     handleClose: function handleClose() {
@@ -6721,8 +6783,8 @@ function App() {
     }
   }, /*#__PURE__*/react.createElement(Shop, {
     options: options,
-    points: points,
-    lastPointsEarned: lastPointsEarned,
+    xp: xp,
+    lastXpEarned: lastXpEarned,
     handleSetOption: handleSetOption,
     handleUnlockOption: handleUnlockOption,
     handleClose: function handleClose() {
