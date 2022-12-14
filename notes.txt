@@ -1,5 +1,26 @@
+
+===============
+
+Amulet of uniqueness
+- Stores every starting word you've ever used and doesn't let you use the same one twice
+- just kinda useless for 1 and 2 length words? That's probably ok
+
+===============
+
+
 Current money becomes XP / levels
-Separate money 
+- 1 skill point per level
+
+Skills cost skill points
+  - Each has 5 options
+    - maybe different skills have different # of options
+  - Can be upgraded by earning mastery
+  - Each option stops giving mastery after a certain point
+  - Maxing all options rewards the "use a random option" option that gives a lot of xp
+
+
+Separate money buys consumables
+- backward tonic, for one
 
 
 ================

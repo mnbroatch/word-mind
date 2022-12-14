@@ -1,23 +1,29 @@
 import React, { useReducer, useState, useEffect, useMemo } from 'react'
-import currentGuessReducer from './current-guess-reducer.js'
-import allWords from './all-words.json'
-import gameWords from './game-words.json'
-import curseWords from './curse-words.json'
-import Rules from './rules.js'
-import Shop from './shop.js'
-import Results from './results.js'
-import Modal from './modal.js'
-import Board from './board.js'
-import KeyboardLetter from './keyboard-letter.js'
-import optionsReducer from './options-reducer.js'
-import calculateXpEarned from './calculate-xp-earned.js'
-import isGuessStrictlyValid from './is-guess-strictly-valid.js'
-import useCountdown from './use-countdown'
-import MoneyDisplay from './money-display'
-import XpDisplay from './xp-display'
 import { loadState, saveState } from './local-storage-wrapper'
+import useCountdown from './hooks/use-countdown'
+import currentGuessReducer from './current-guess-reducer.js'
+import skillsReducer from './skills-reducer.js'
+import itemsReducer from './items-reducer.js'
 
-const { initialOptions, initialXp, initialMoney } = loadState()
+import Rules from './components/rules.js'
+import Shop from './components/shop.js'
+import Results from './components/results.js'
+import Skills from './components/skills.js'
+import Hub from './components/hub.js'
+import Modal from './components/modal.js'
+import Board from './components/board.js'
+import KeyboardLetter from './components/keyboard-letter.js'
+import MoneyDisplay from './components/money-display'
+import XpDisplay from './components/xp-display'
+
+import calculateXpEarned from './utils/calculate-xp-earned.js'
+import isGuessStrictlyValid from './utils/is-guess-strictly-valid.js'
+
+import allWords from './data/all-words.json'
+import gameWords from './data/game-words.json'
+import curseWords from './data/curse-words.json'
+
+const { initialSkills, initialItems, initialXp, initialMoney } = loadState()
 
 const alphabet = 'qwertyuiopasdfghjklzxcvbnm'.split('')
 
@@ -27,36 +33,41 @@ const alphabetRows = [
   alphabet.slice(19)
 ]
 
-function getAnswers (options) {
-  const wordLength = options.wordLength.value
-  const boardsCount = options.boardsCount.value
+function getAnswers (skills, items) {
+  const wordLength = skills.wordLength.value
+  const boardsCount = skills.boardsCount.value
   const answers = gameWords.filter(word => word.length === +wordLength && !curseWords.includes(word))
     .sort(() => Math.random() - 0.5).slice(0, boardsCount)
 
-  return options.reverse.value ? answers.map(answer => answer.split('').reverse().join('')) : answers
+  return isItemActive(items.reverse) ? answers.map(answer => answer.split('').reverse().join('')) : answers
+}
+
+function isItemActive (item) {
+  return item.activeUntil > Date.now()
 }
 
 export default function App () {
-  const [options, optionsDispatch] = useReducer(optionsReducer, initialOptions)
+  const [skills, skillsDispatch] = useReducer(skillsReducer, initialSkills)
+  const [items] = useReducer(itemsReducer, initialItems)
   const [uiState, setUiState] = useState('game')
   const [lastXpEarned, setLastXpEarned] = useState(0)
   const [wonLastGame, setWonLastGame] = useState(false)
   const [xp, setXp] = useState(initialXp)
-  const [money] = useState(initialMoney)
-  const [answers, setAnswers] = useState(getAnswers(options))
+  const [money, setMoney] = useState(initialMoney)
+  const [answers, setAnswers] = useState(getAnswers(skills, items))
   const [guesses, setGuesses] = useState([])
   const [currentGuess, currentGuessDispatch] = useReducer(currentGuessReducer, '')
 
   const handleGuess = () => {
     if (
       !guesses.includes(currentGuess)
-        && currentGuess.length === options.wordLength.value
+        && currentGuess.length === skills.wordLength.value
         && allWords.includes(
-          options.reverse.value
+          isItemActive(items.reverse)
             ? currentGuess.split('').reverse().join('')
             : currentGuess
         )
-        && (!options.strictMode.value || isGuessStrictlyValid(currentGuess, guesses, answers))
+        && (!isItemActive(items.strictMode) || isGuessStrictlyValid(currentGuess, guesses, answers))
     ) {
       setGuesses([...guesses, currentGuess])
       currentGuessDispatch({ type: 'clear' })
@@ -68,20 +79,20 @@ export default function App () {
 
   const handleGameEnd = (endState) => {
     const xpEarned = endState.won
-      ? calculateXpEarned(options)
+      ? calculateXpEarned(skills)
       : 0
     setUiState('results')
     setXp(xp + xpEarned)
     setLastXpEarned(xpEarned)
     setWonLastGame(endState.won)
     setGuesses([])
-    setAnswers(getAnswers(options))
+    setAnswers(getAnswers(skills))
   }
 
   const handleAddLetter = (letter) => {
     if (
       alphabet.includes(letter.toLowerCase())
-      && currentGuess.length < options.wordLength.value
+      && currentGuess.length < skills.wordLength.value
     ) {
       currentGuessDispatch({ type: 'add_letter', letter })
     }
@@ -92,7 +103,7 @@ export default function App () {
     resetRoundTime()
     setGuesses([])
     setUiState('game')
-    setAnswers(getAnswers(options))
+    setAnswers(getAnswers(skills))
   }
 
   useEffect(() => {
@@ -115,14 +126,14 @@ export default function App () {
 
   useEffect(() => {
     const won = answers.length && answers.every(answer => guesses.includes(answer))
-    const lost = guesses.length >= options.maxGuesses.value
+    const lost = guesses.length >= skills.maxGuesses.value
     if (won || lost) {
       handleGameEnd({ answers, guesses, won })
     }
-  }, [guesses, answers, options, handleGameEnd])
+  }, [guesses, answers, skills, handleGameEnd])
 
   const { remaining: gameTimeRemaining, reset: resetGameTime } = useCountdown({
-    duration: options.gameTimeLimit.value * 1000,
+    duration: skills.gameTimeLimit.value * 1000,
     refreshRate: uiState === 'game' ? undefined : null,
     onCountdownEnd: () => {
       handleGameEnd({ won: false })
@@ -130,7 +141,7 @@ export default function App () {
   })
 
   const { remaining: roundTimeRemaining, reset: resetRoundTime } = useCountdown({
-    duration: options.roundTimeLimit.value * 1000,
+    duration: skills.roundTimeLimit.value * 1000,
     refreshRate: uiState === 'game' ? undefined : null,
     onCountdownEnd: () => {
       setGuesses([...guesses, ''])
@@ -142,23 +153,34 @@ export default function App () {
   const secondsRemainingInGame = Math.round(gameTimeRemaining / 1000)
   const secondsRemainingInRound = Math.round(roundTimeRemaining / 1000)
 
-  const handleSetOption = (optionId, value) => {
-    optionsDispatch({
-      type: 'SET_OPTION',
-      optionId,
+  const handleSetSkill = (skillId, value) => {
+    skillsDispatch({
+      type: 'SET',
+      skillId,
       value
     })
   }
 
-  const handleUnlockOption = (optionId, value) => {
+  const handleUnlockSkill = (skillId, value) => {
     if (xp >= 1) {
-      optionsDispatch({
-        type: 'UNLOCK_OPTION',
-        optionId,
+      skillsDispatch({
+        type: 'UNLOCK',
+        skillId,
         value
       })
-      handleSetOption(optionId, value)
+      handleSetSkill(skillId, value)
       setXp(xp - 1)
+    }
+  }
+
+  const handleBuyItem = (skillId, value) => {
+    if (money >= skills[skillId].cost) {
+      skillsDispatch({
+        type: 'UNLOCK',
+        skillId,
+        value
+      })
+      setMoney(money - skills[skillId].cost)
     }
   }
 
@@ -173,12 +195,12 @@ export default function App () {
   }, [uiState])
 
   useEffect(() => {
-    saveState({ options, xp, money })
-  }, [options, xp, money])
+    saveState({ skills, xp, money })
+  }, [skills, xp, money])
 
   const handleClearAll = () => {
     localStorage.clear()
-    optionsDispatch({ type: 'LOAD_INITIAL' })
+    skillsDispatch({ type: 'LOAD_INITIAL' })
     setUiState('game')
     setXp(0)
     setGuesses([])
@@ -186,14 +208,14 @@ export default function App () {
   }
 
   const handleUnlockAll = () => {
-    optionsDispatch({ type: 'LOAD_FULLY_UNLOCKED' })
+    skillsDispatch({ type: 'UNLOCK_ALL' })
   }
 
   const possibleWords = useMemo(() => {
-    return options.showPossibleWords.value
+    return isItemActive(items.showPossibleWords)
       ? gameWords.filter(word => isGuessStrictlyValid(word, guesses, answers))
       : []
-  }, [guesses, answers, options])
+  }, [guesses, answers, skills])
 
   const sortedAnswers = [...answers].sort((a, b) => {
     if (guesses.includes(a) && !guesses.includes(b)) {
@@ -212,14 +234,14 @@ export default function App () {
         <MoneyDisplay amount={money} />
       </div>
       <div className="main-content">
-        {options.gameTimeLimit.value !== Infinity && <div className='game-time-remaining'>
+        {skills.gameTimeLimit.value !== Infinity && <div className='game-time-remaining'>
           Game Time Remaining: {secondsRemainingInGame}
         </div>}
-        {options.roundTimeLimit.value !== Infinity && <div className='round-time-remaining'>
+        {skills.roundTimeLimit.value !== Infinity && <div className='round-time-remaining'>
           Round Time Remaining: {secondsRemainingInRound}
         </div>}
         <div className='main-game'>
-          {options.revealAnswers.value && (
+          {isItemActive(items.revealAnswers) && (
             <div className='revealed-answers'>
               {sortedAnswers.join(' ')}
             </div>
@@ -261,7 +283,7 @@ export default function App () {
             </button>
           </div>
         </div>
-        {options.showPossibleWords.value && (
+        {isItemActive(items.showPossibleWords) && (
           <div>
             Possible words:
             <div>
@@ -287,7 +309,7 @@ export default function App () {
               Clear all
             </button>
             <button onClick={handleUnlockAll}>
-              Unlock All Options
+              Unlock All Skills
             </button>
           </Modal>
           <Modal
@@ -295,26 +317,35 @@ export default function App () {
             handleClose={handleGameStart}
           >
             <Rules
-              options={options}
+              skills={skills}
             />
           </Modal>
           <Modal
-            open={uiState === 'rules'}
+            open={uiState === 'hub'}
             handleClose={handleGameStart}
           >
-            <Rules
-              options={options}
+            <Hub />
+          </Modal>
+          <Modal
+            open={uiState === 'skills'}
+            handleClose={handleGameStart}
+          >
+            <Skills
+              skills={skills}
+              xp={xp}
+              handleUnlockSkill={handleUnlockSkill}
+              handleSetSkill={handleSetSkill}
+              handleClose={() => {
+                setUiState('hub')
+              }}
             />
           </Modal>
           <Modal open={uiState === 'results'}>
             <Results
-              options={options}
               xp={xp}
               lastXpEarned={lastXpEarned}
-              handleSetOption={handleSetOption}
-              handleUnlockOption={handleUnlockOption}
               handleClose={() => {
-                setUiState('shop')
+                setUiState('hub')
               }}
               wonLastGame={wonLastGame}
             />
@@ -328,11 +359,9 @@ export default function App () {
             }}
           >
             <Shop
-              options={options}
-              xp={xp}
-              lastXpEarned={lastXpEarned}
-              handleSetOption={handleSetOption}
-              handleUnlockOption={handleUnlockOption}
+              items={items}
+              money={money}
+              handleBuyItem={handleBuyItem}
               handleClose={() => {
                 if (uiState === 'shop') {
                   handleGameStart()

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import getLetterStates from './get-letter-states'
+import getLetterStates from '../utils/get-letter-states'
 
 export default function Guess ({ answer, guess, noColor }) {
   const letterStates = getLetterStates(answer, guess)

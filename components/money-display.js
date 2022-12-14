@@ -1,6 +1,6 @@
 import React from 'react'
 import { PropTypes } from 'prop-types'
-import useRollingNumber from './use-rolling-number'
+import useRollingNumber from '../hooks/use-rolling-number'
 
 export default function MoneyDisplay ({ amount }) {
   const numberToDisplay = useRollingNumber(amount)

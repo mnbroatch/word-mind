@@ -1,30 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function OptionSetting ({
+export default function Skill ({
   id,
+  options,
   value,
-  possibleValues,
-  unlockedValues,
   description,
-  unlocked,
-  type,
+  unlockedOptions,
   handleSetOption,
   handleUnlockOption
 }) {
   return (
-    <div className='option'>
-      <div className='option__description'>
+    <div className='skill'>
+      <div className='skill__description'>
         {description}
       </div>
-      <div className='option__values'>
-        {possibleValues.map((val, index) => {
+      <div className='skill__options'>
+        {options.map((val, index) => {
           let status
           if (val === value) {
             status = 'selected'
-          } else if (unlockedValues.includes(val)) {
+          } else if (unlockedOptions.includes(val)) {
             status = 'unlocked'
-          } else if (possibleValues.some((v, i) => v !== Infinity && unlockedValues.includes(v) && Math.abs(i - index) === 1)) {
+          } else if (options.some((v, i) => v !== Infinity && unlockedOptions.includes(v) && Math.abs(i - index) === 1)) {
             status = 'unlockable'
           } else {
             status = 'locked'
@@ -46,11 +44,11 @@ export default function OptionSetting ({
 
           return (
             <button
-              className={ `option__value option__value--${status}` }
+              className={ `skill__option skill__option--${status}` }
               key={val}
               onClick={() => { clickHandler && clickHandler(val) }}
             >
-              <div className='option__value-inner'>
+              <div className='skill__option-inner'>
                 {displayValue}
               </div>
             </button>
@@ -61,18 +59,12 @@ export default function OptionSetting ({
   )
 }
 
-OptionSetting.propTypes = {
+Skill.propTypes = {
   id: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
-  unlockedValues: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.bool])),
-  unlockable: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.bool])),
-  possibleValues: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.bool])),
-  min: PropTypes.number,
-  max: PropTypes.number,
-  step: PropTypes.number,
+  unlockedOptions: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.bool])),
+  options: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.bool])),
   description: PropTypes.string,
-  type: PropTypes.string,
-  unlocked: PropTypes.bool,
   handleSetOption: PropTypes.func,
   handleUnlockOption: PropTypes.func
 }

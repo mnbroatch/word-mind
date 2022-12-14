@@ -1,10 +1,10 @@
 import React from 'react'
 import { PropTypes } from 'prop-types'
-import useRollingNumber from './use-rolling-number'
+import useRollingNumber from '../hooks/use-rolling-number'
 
 export default function XpDisplay ({ amount }) {
   const numberToDisplay = useRollingNumber(amount)
-  const xpToDisplay = `${Math.floor(numberToDisplay)} XP`
+  const xpToDisplay = Math.floor(numberToDisplay).toString()
 
   return (
     <div className='xp'>

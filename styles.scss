@@ -209,14 +209,14 @@ body {
   color: white;
 }
 
-.options {
+.skills-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 30px 0 30px 0;
 }
 
-.option {
+.skill {
   position: relative;
   box-shadow: $shadow-raised;
   border-radius: 4px;
@@ -226,13 +226,13 @@ body {
   padding: 16px 0 16px 0;
 }
 
-.option-spacer {
+.skill-spacer {
   width: 175px;
   margin: 0 4px 0 4px;
   height: 0;
 }
 
-.option__description {
+.skill__description {
   background-color: brown;
   color: white;
   left: 0;
@@ -246,12 +246,12 @@ body {
   width: 175px;
 }
 
-.option__values {
+.skill__options {
   display: flex;
   justify-content: center;
 }
 
-.option__value {
+.skill__option {
   border: 0;
   border-radius: 3px;
   margin: 2px;
@@ -274,7 +274,7 @@ body {
   }
 }
 
-.option__value-inner {
+.skill__option-inner {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -389,7 +389,7 @@ body {
   justify-content: center;
   align-items: center;
   color: $pink;
-  font-size: 2em;
+  font-size: 1.2em;
   opacity: .3;
 
   & ~ & {
@@ -411,6 +411,10 @@ body {
 
 .results .xp {
   font-size: 3em;
+}
+
+.results .xp__background-squiggle {
+  font-size: 2em;
 }
 
 .money {
