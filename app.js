@@ -182,7 +182,7 @@ export default function App () {
     const totalMastery = skill.options.reduce((acc, opt) => acc + opt.mastery, 0)
     const spentMastery = (skill.unlockedValues.length - 2) * optionCost
     const remainingMastery = totalMastery - spentMastery
-    if (remainingMastery > optionCost) {
+    if (remainingMastery >= optionCost) {
       skillsDispatch({
         type: 'UNLOCK_OPTION',
         skillId,
