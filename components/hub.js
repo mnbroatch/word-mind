@@ -3,10 +3,19 @@ import PropTypes from 'prop-types'
 
 export default function Hub ({
   handleGoToShop,
+  handleGoToSkills,
   handleGoToGame
 }) {
   return (
     <div className='hub'>
+      <button
+        className='hub__close-button'
+        onClick={handleGoToSkills}
+      >
+        <span className="hub__close-button-inner">
+          SKILLS
+        </span>
+      </button>
       <button
         className='hub__close-button'
         onClick={handleGoToShop}
@@ -17,7 +26,7 @@ export default function Hub ({
       </button>
       <button
         className='hub__shop-button'
-        onClick={handleGoToShop}
+        onClick={handleGoToGame}
       >
         <span className="hub__continue button">
           Continue
@@ -29,5 +38,6 @@ export default function Hub ({
 
 Hub.propTypes = {
   handleGoToShop: PropTypes.func,
+  handleGoToSkills: PropTypes.func,
   handleGoToGame: PropTypes.func
 }

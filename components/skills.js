@@ -2,12 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Skill from './skill.js'
 import calculateXpEarned from '../utils/calculate-xp-earned.js'
+import calculateXpCost from '../utils/calculate-xp-cost.js'
+
+const OPTION_COST = 10
 
 export default function Skills ({
   skills,
   xp,
-  handleSetOption,
+  handleUnlockSkill,
   handleUnlockOption,
+  handleSetOption,
   handleClose
 }) {
   return (
@@ -16,13 +20,20 @@ export default function Skills ({
         className='skills__close-button'
         onClick={handleClose}
       >
-        Leave Shop
+        Back to Hub
       </button>
+      <div className='skill__cost'>
+        Skill Cost: {calculateXpCost(skills)}xp
+      </div>
+      <div className='skill__option-cost'>
+        Cost Per Option: {OPTION_COST} Mastery
+      </div>
       <div className='skills-list'>
         {Object.entries(skills).map(([key, {
           value,
           options,
-          unlockedOptions,
+          unlockedValues,
+          unlocked,
           description
         }]) => (
           <Skill
@@ -30,8 +41,11 @@ export default function Skills ({
             id={key}
             description={description}
             options={options}
-            unlockedOptions={unlockedOptions}
+            optionCost={OPTION_COST}
+            unlockedValues={unlockedValues}
+            unlocked={unlocked}
             value={value}
+            handleUnlockSkill={handleUnlockSkill}
             handleUnlockOption={handleUnlockOption}
             handleSetOption={handleSetOption}
           />
@@ -46,7 +60,8 @@ export default function Skills ({
 Skills.propTypes = {
   skills: PropTypes.object,
   xp: PropTypes.number,
-  handleSetOption: PropTypes.func,
+  handleUnlockSkill: PropTypes.func,
   handleUnlockOption: PropTypes.func,
+  handleSetOption: PropTypes.func,
   handleClose: PropTypes.func
 }

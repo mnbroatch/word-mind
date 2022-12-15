@@ -1,3 +1,33 @@
+bug - unlocking and immediately setting word length 6 doesn't update board size
+
+================
+
+round timeout should make you lose
+maybe some options like timeouts should be hidden behind strict mode
+
+================
+
+mini-mode:
+  - Start with 2 guesses
+  - Any newly-present letter grants a bones guess
+
+===============
+
+you will gain a mastery level every 20 games.
+If you spend them immediately, you will gain a skill every 10 games.
+  - if you don't you'll gain a skill level less. let the math decide how much.
+each mastery level gives you x2 xp per game
+gotta work out the math for the xp-per-game curve
+
+
+===============
+
+playing with no modifiers should be a separate "skill" track. what's the reward?
+
+===============
+
+Iron Drop
+  - If a letter's been marked present but ruled out of 3 locations, reveal its location
 
 ===============
 
@@ -6,7 +36,6 @@ Amulet of uniqueness
 - just kinda useless for 1 and 2 length words? That's probably ok
 
 ===============
-
 
 Current money becomes XP / levels
 - 1 skill point per level
@@ -20,7 +49,9 @@ Skills cost skill points
 
 
 Separate money buys consumables
-- backward tonic, for one
+  - backward tonic, for one
+  - all mastery gained is money, vice versa ?
+    - might be too hard
 
 
 ================
@@ -141,3 +172,7 @@ revealed words
 
 
 
+=================
+
+The whole "you-have-to-be-1-away-to-get-this-option is unecessary
+  - I like the climbing feel. Could be repurposed as a mini game or something

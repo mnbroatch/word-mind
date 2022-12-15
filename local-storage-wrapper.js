@@ -4,8 +4,20 @@ import defaultItems from './default-items'
 
 const INFINITY_REPLACEMENT = '_MNB_Infinity876'
 
+const defaultState = {
+  initialSkills: defaultSkills,
+  initialItems: defaultItems,
+  initialXp: 0,
+  initialMoney: 0
+}
+
 function loadState () {
   const state = localStorage.getItem('word-mind_state')
+
+  if (!state) {
+    return defaultState
+  }
+
   const { skills, xp, money, items } = JSON.parse(state)
 
   let initialSkills = skills
@@ -15,9 +27,34 @@ function loadState () {
         skill.value = Infinity
       }
 
-      skill.unlockedOptions.forEach((option, i) => {
-        if (option === INFINITY_REPLACEMENT) {
-          skill.unlockedOptions[i] = Infinity
+      skill.unlockedValues.forEach((value, i) => {
+        if (value === INFINITY_REPLACEMENT) {
+          skill.unlockedValues[i] = Infinity
+        }
+      })
+
+      skill.options.forEach((option, i) => {
+        if (option.value === INFINITY_REPLACEMENT) {
+          option.value = Infinity
+        }
+      })
+    })
+
+    // deprecated
+    Object.values(initialSkills).forEach(skill => {
+      if (skill.value === null) {
+        skill.value = Infinity
+      }
+
+      skill.unlockedValues.forEach((value, i) => {
+        if (value === null) {
+          skill.unlockedValues[i] = Infinity
+        }
+      })
+
+      skill.options.forEach((option, i) => {
+        if (option.value === null) {
+          option.value = Infinity
         }
       })
     })
@@ -42,6 +79,12 @@ function saveState ({ skills, xp, money }) {
       skill.unlockedValues.forEach((value, i) => {
         if (value === Infinity) {
           skill.unlockedValues[i] = INFINITY_REPLACEMENT
+        }
+      })
+
+      skill.options.forEach((option, i) => {
+        if (option.value === Infinity) {
+          option.value = INFINITY_REPLACEMENT
         }
       })
     })

@@ -30,7 +30,7 @@ export default function Results ({
         onClick={handleClose}
       >
         <span className="results__close-button-inner">
-          To the shop...
+          Continue
         </span>
       </button>
     </div>
