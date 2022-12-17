@@ -23,6 +23,8 @@ import allWords from './data/all-words.json'
 import gameWords from './data/game-words.json'
 import curseWords from './data/curse-words.json'
 
+const OPTION_COST = 20
+
 const { initialSkills, initialItems, initialXp, initialMoney } = loadState()
 
 const alphabet = 'qwertyuiopasdfghjklzxcvbnm'.split('')
@@ -372,6 +374,7 @@ export default function App () {
               handleClose={() => {
                 setUiState('hub')
               }}
+              optionCost={OPTION_COST}
             />
           </Modal>
           <Modal open={uiState === 'results'}>

@@ -4,15 +4,14 @@ import Skill from './skill.js'
 import calculateXpEarned from '../utils/calculate-xp-earned.js'
 import calculateXpCost from '../utils/calculate-xp-cost.js'
 
-const OPTION_COST = 10
-
 export default function Skills ({
   skills,
   xp,
   handleUnlockSkill,
   handleUnlockOption,
   handleSetOption,
-  handleClose
+  handleClose,
+  optionCost
 }) {
   return (
     <div className='skills'>
@@ -26,7 +25,7 @@ export default function Skills ({
         Skill Cost: {calculateXpCost(skills)}xp
       </div>
       <div className='skill__option-cost'>
-        Cost Per Option: {OPTION_COST} Mastery
+        Cost Per Option: {optionCost} Mastery
       </div>
       <div className='skills-list'>
         {Object.entries(skills).map(([key, {
@@ -41,7 +40,7 @@ export default function Skills ({
             id={key}
             description={description}
             options={options}
-            optionCost={OPTION_COST}
+            optionCost={optionCost}
             unlockedValues={unlockedValues}
             unlocked={unlocked}
             value={value}
@@ -63,5 +62,6 @@ Skills.propTypes = {
   handleUnlockSkill: PropTypes.func,
   handleUnlockOption: PropTypes.func,
   handleSetOption: PropTypes.func,
-  handleClose: PropTypes.func
+  handleClose: PropTypes.func,
+  optionCost: PropTypes.number
 }
