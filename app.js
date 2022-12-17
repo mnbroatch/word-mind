@@ -47,7 +47,7 @@ function isItemActive (item) {
 
 export default function App () {
   const [skills, skillsDispatch] = useReducer(skillsReducer, initialSkills)
-  const [items] = useReducer(itemsReducer, initialItems)
+  const [items, itemsDispatch] = useReducer(itemsReducer, initialItems)
   const [uiState, setUiState] = useState('game')
   const [lastXpEarned, setLastXpEarned] = useState(0)
   const [wonLastGame, setWonLastGame] = useState(false)
@@ -90,6 +90,16 @@ export default function App () {
       type: 'GAIN_MASTERY',
       skills
     })
+  }
+
+  const handleAdd100Xp = (endState) => {
+    const xpEarned = 100
+    setXp(xp + xpEarned)
+  }
+
+  const handleAdd100Money = (endState) => {
+    const moneyEarned = 100
+    setMoney(money + moneyEarned)
   }
 
   const handleAddLetter = (letter) => {
@@ -147,9 +157,7 @@ export default function App () {
     duration: skills.roundTimeLimit.value * 1000,
     refreshRate: uiState === 'game' ? undefined : null,
     onCountdownEnd: () => {
-      setGuesses([...guesses, ''])
-      currentGuessDispatch({ type: 'clear' })
-      resetRoundTime()
+      handleGameEnd({ won: false })
     }
   })
 
@@ -191,14 +199,13 @@ export default function App () {
     }
   }
 
-  const handleBuyItem = (skillId, value) => {
-    if (money >= skills[skillId].cost) {
-      skillsDispatch({
-        type: 'UNLOCK',
-        skillId,
-        value
+  const handleBuyItem = (itemId, value) => {
+    if (money >= items[itemId].cost) {
+      itemsDispatch({
+        type: 'BUY',
+        itemId
       })
-      setMoney(money - skills[skillId].cost)
+      setMoney(money - items[itemId].cost)
     }
   }
 
@@ -325,6 +332,12 @@ export default function App () {
             <div>DEBUG:</div>
             <button onClick={handleClearAll}>
               Clear all
+            </button>
+            <button onClick={handleAdd100Xp}>
+              Add 100 XP
+            </button>
+            <button onClick={handleAdd100Money}>
+              Add 100 Money
             </button>
             <button onClick={handleUnlockAll}>
               Unlock All Skills

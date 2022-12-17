@@ -3,7 +3,6 @@ bug - unlocking and immediately setting word length 6 doesn't update board size
 ================
 
 round timeout should make you lose
-maybe some options like timeouts should be hidden behind strict mode
 
 ================
 
@@ -176,3 +175,9 @@ revealed words
 
 The whole "you-have-to-be-1-away-to-get-this-option is unecessary
   - I like the climbing feel. Could be repurposed as a mini game or something
+
+=================
+
+"cooking" mechanic where certain combinations of options give bonus?
+  - strict mode + timers
+  - boards count vs letter count
