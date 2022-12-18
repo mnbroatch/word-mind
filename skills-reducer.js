@@ -10,6 +10,7 @@ export default function skillsReducer (prev, { type, skillId, skills, value }) {
       }
     }
   } else if (type === 'UNLOCK_OPTION') {
+    console.log('value', value)
     return {
       ...prev,
       [skillId]: {
@@ -53,7 +54,7 @@ export default function skillsReducer (prev, { type, skillId, skills, value }) {
       [key]: {
         ...skill,
         unlocked: skill.unlocked,
-        unlockedValues: skill.possibleValues
+        unlockedValues: [...skill.options.map(o => o.value), 'random']
       }
     }), {})
   } else {

@@ -37,8 +37,6 @@ export default function Skill ({
                   status = 'selected'
                 } else if (unlockedValues.includes(val)) {
                   status = 'unlocked'
-                } else if (options.some((opt, i) => opt.value !== Infinity && unlockedValues.some(o => o.value === opt.val) && Math.abs(i - index) === 1)) {
-                  status = 'unlockable'
                 } else {
                   status = 'locked'
                 }
@@ -70,6 +68,31 @@ export default function Skill ({
                 )
               })}
             </div>
+            {(() => {
+              let status
+              if (value === 'random') {
+                status = 'selected'
+              } else if (unlockedValues.includes('random')) {
+                status = 'unlocked'
+              } else {
+                status = 'locked'
+              }
+
+              const clickHandler = {
+                unlocked: (val) => { handleSetOption(id, val) },
+                unlockable: (val) => { handleUnlockOption(id, val) }
+              }[status]
+              return (
+                <button
+                  className={ `skill__option skill__option--random skill__option--${status}` }
+                  onClick={() => { clickHandler && clickHandler('random') }}
+                >
+                  <div className='skill__option-inner'>
+                    Random
+                  </div>
+                </button>
+              )
+            })()}
           </>
         : <>
             <button onClick={ () => handleUnlockSkill(id) }>unlock</button>
@@ -78,10 +101,11 @@ export default function Skill ({
   )
 }
 
+const value = PropTypes.oneOfType([PropTypes.number, PropTypes.bool, PropTypes.string])
 Skill.propTypes = {
   id: PropTypes.string,
-  value: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
-  unlockedValues: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.bool])),
+  value,
+  unlockedValues: PropTypes.arrayOf(value),
   unlocked: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.object),
   optionCost: PropTypes.number,

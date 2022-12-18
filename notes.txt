@@ -1,22 +1,15 @@
+====================
 
-==================
-
-you will gain a mastery level every 20 games.
-
-Balance (?)
-  - If you spend them immediately, you will gain a skill every 10 games.
-  - if you don't, you'll gain a skill level less. let the math decide how much.
-each mastery level n gives you xp(n+1) per game
-gotta work out the math for the xp-per-game curve
-
-===============
-
-playing with no modifiers should be a separate "skill" track. what's the reward?
+a game is now a sequence of games
 
 ===============
 
 Iron Drop
   - If a letter's been marked present but ruled out of 3 locations, reveal its location
+
+===============
+
+Amulet of Using The Scrabble Dictionary
 
 ===============
 
@@ -168,5 +161,16 @@ mini-mode:
   - Start with 2 guesses
   - Any newly-present letter grants a bones guess
 
+==================
+
+Balance (?)
+  - If you spend them immediately, you will gain a skill every 10 games.
+  - if you don't, you'll gain a skill level less. let the math decide how much.
+  - each mastery level n gives you xp(n+1) per game
+  - gotta work out the math for the xp-per-game curve
+
 ===============
+
+HIDDEN:
+playing with no modifiers should be a separate "skill" track. what's the reward?
 

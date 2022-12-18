@@ -4,6 +4,7 @@ import useCountdown from './hooks/use-countdown'
 import currentGuessReducer from './current-guess-reducer'
 import skillsReducer from './skills-reducer'
 import itemsReducer from './items-reducer'
+import equipmentReducer from './equipment-reducer'
 
 import Shop from './components/shop'
 import Results from './components/results'
@@ -23,9 +24,9 @@ import allWords from './data/all-words.json'
 import gameWords from './data/game-words.json'
 import curseWords from './data/curse-words.json'
 
-const OPTION_COST = 20
+const OPTION_COST = 10
 
-const { initialSkills, initialItems, initialXp, initialMoney } = loadState()
+const { initialSkills, initialItems, initialEquipment, initialXp, initialMoney } = loadState()
 
 const alphabet = 'qwertyuiopasdfghjklzxcvbnm'.split('')
 
@@ -35,10 +36,11 @@ const alphabetRows = [
   alphabet.slice(19)
 ]
 
-function getAnswers (skills, items) {
+function getAnswers (skills, items, equipment) {
   const wordLength = skills.wordLength.value
   const boardsCount = skills.boardsCount.value
-  const answers = gameWords.filter(word => word.length === +wordLength && !curseWords.includes(word))
+  const possibleWords = equipment.useFullDictionary.active ? allWords : gameWords
+  const answers = possibleWords.filter(word => word.length === +wordLength && !curseWords.includes(word))
     .sort(() => Math.random() - 0.5).slice(0, boardsCount)
   return isItemActive(items.reverse) ? answers.map(answer => answer.split('').reverse().join('')) : answers
 }
@@ -50,12 +52,13 @@ function isItemActive (item) {
 export default function App () {
   const [skills, skillsDispatch] = useReducer(skillsReducer, initialSkills)
   const [items, itemsDispatch] = useReducer(itemsReducer, initialItems)
-  const [uiState, setUiState] = useState('game')
+  const [equipment] = useReducer(equipmentReducer, initialEquipment)
+  const [uiState, setUiState] = useState('skills')
   const [lastXpEarned, setLastXpEarned] = useState(0)
   const [wonLastGame, setWonLastGame] = useState(false)
   const [xp, setXp] = useState(initialXp)
   const [money, setMoney] = useState(initialMoney)
-  const [answers, setAnswers] = useState(getAnswers(skills, items))
+  const [answers, setAnswers] = useState(getAnswers(skills, items, equipment))
   const [guesses, setGuesses] = useState([])
   const [currentGuess, currentGuessDispatch] = useReducer(currentGuessReducer, '')
 
@@ -87,7 +90,7 @@ export default function App () {
     setLastXpEarned(xpEarned)
     setWonLastGame(endState.won)
     setGuesses([])
-    setAnswers(getAnswers(skills, items))
+    setAnswers(getAnswers(skills, items, equipment))
     skillsDispatch({
       type: 'GAIN_MASTERY',
       skills
@@ -118,7 +121,7 @@ export default function App () {
     resetRoundTime()
     setGuesses([])
     setUiState('game')
-    setAnswers(getAnswers(skills, items))
+    setAnswers(getAnswers(skills, items, equipment))
   }
 
   useEffect(() => {
@@ -187,7 +190,7 @@ export default function App () {
   }
 
   const handleUnlockOption = (skillId, value) => {
-    const optionCost = 10
+    const optionCost = OPTION_COST
     const skill = skills[skillId]
     const totalMastery = skill.options.reduce((acc, opt) => acc + opt.mastery, 0)
     const spentMastery = (skill.unlockedValues.length - 2) * optionCost
@@ -222,8 +225,8 @@ export default function App () {
   }, [uiState])
 
   useEffect(() => {
-    saveState({ skills, xp, money })
-  }, [skills, xp, money])
+    saveState({ skills, xp, money, items, equipment })
+  }, [skills, xp, money, items, equipment])
 
   const handleClearAll = () => {
     localStorage.clear()

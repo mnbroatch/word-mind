@@ -1,12 +1,14 @@
 import cloneDeep from 'lodash/cloneDeep'
 import defaultSkills from './default-skills'
 import defaultItems from './default-items'
+import defaultEquipment from './default-equipment'
 
 const INFINITY_REPLACEMENT = '_MNB_Infinity876'
 
 const defaultState = {
   initialSkills: defaultSkills,
   initialItems: defaultItems,
+  initialEquipment: defaultEquipment,
   initialXp: 0,
   initialMoney: 0
 }
@@ -18,7 +20,7 @@ function loadState () {
     return defaultState
   }
 
-  const { skills, xp, money, items } = JSON.parse(state)
+  const { skills, xp, money, items, equipment } = JSON.parse(state)
 
   let initialSkills = skills
   if (initialSkills) {
@@ -62,13 +64,14 @@ function loadState () {
     initialSkills = defaultSkills
   }
 
-  const initialXp = xp ? JSON.parse(xp) : 0
-  const initialMoney = money ? JSON.parse(money) : 0
-  const initialItems = items ? JSON.parse(items) : defaultItems
-  return { initialSkills, initialItems, initialXp, initialMoney }
+  const initialXp = xp || 0
+  const initialMoney = money || 0
+  const initialItems = items || defaultItems
+  const initialEquipment = equipment || defaultEquipment
+  return { initialSkills, initialItems, initialXp, initialMoney, initialEquipment }
 }
 
-function saveState ({ skills, xp, money }) {
+function saveState ({ skills, xp, money, items, equipment }) {
   const skillsClone = cloneDeep(skills)
   if (skillsClone) {
     Object.values(skillsClone).forEach(skill => {
@@ -93,7 +96,9 @@ function saveState ({ skills, xp, money }) {
   const state = {
     skills,
     xp,
-    money
+    money,
+    items,
+    equipment
   }
   localStorage.setItem('word-mind_state', JSON.stringify(state))
 }

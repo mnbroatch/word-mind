@@ -1,6 +1,6 @@
 import defaultItems from './default-items'
 
-export default function itemsReducer (prev, { type, itemId, option }) {
+export default function itemsReducer (prev, { type, itemId }) {
   if (type === 'USE') {
     if (prev[itemId].ownedCount > 0) {
       return {
