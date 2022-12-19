@@ -1,10 +1,7 @@
 import React, { useReducer, useState, useEffect, useMemo } from 'react'
-import { loadState, saveState } from './local-storage-wrapper'
 import useCountdown from './hooks/use-countdown'
+import useGameState from './use-game-state'
 import currentGuessReducer from './current-guess-reducer'
-import skillsReducer from './skills-reducer'
-import itemsReducer from './items-reducer'
-import equipmentReducer from './equipment-reducer'
 
 import Shop from './components/shop'
 import Results from './components/results'
@@ -25,8 +22,6 @@ import gameWords from './data/game-words.json'
 import curseWords from './data/curse-words.json'
 
 const OPTION_COST = 10
-
-const { initialSkills, initialItems, initialEquipment, initialXp, initialMoney } = loadState()
 
 const alphabet = 'qwertyuiopasdfghjklzxcvbnm'.split('')
 
@@ -50,14 +45,22 @@ function isItemActive (item) {
 }
 
 export default function App () {
-  const [skills, skillsDispatch] = useReducer(skillsReducer, initialSkills)
-  const [items, itemsDispatch] = useReducer(itemsReducer, initialItems)
-  const [equipment] = useReducer(equipmentReducer, initialEquipment)
-  const [uiState, setUiState] = useState('skills')
+  const {
+    skills,
+    items,
+    equipment,
+    xp,
+    money,
+    skillsDispatch,
+    itemsDispatch,
+    setXp,
+    setMoney,
+    randomizeRandomSkills
+  } = useGameState()
+
+  const [uiState, setUiState] = useState('game')
   const [lastXpEarned, setLastXpEarned] = useState(0)
   const [wonLastGame, setWonLastGame] = useState(false)
-  const [xp, setXp] = useState(initialXp)
-  const [money, setMoney] = useState(initialMoney)
   const [answers, setAnswers] = useState(getAnswers(skills, items, equipment))
   const [guesses, setGuesses] = useState([])
   const [currentGuess, currentGuessDispatch] = useReducer(currentGuessReducer, '')
@@ -78,6 +81,8 @@ export default function App () {
       resetRoundTime()
     } else if (currentGuess === 'uuddl') {
       setUiState('cheats')
+    } else if (currentGuess === 'ldduu') {
+      setUiState('skills')
     }
   }
 
@@ -117,6 +122,7 @@ export default function App () {
   }
 
   const handleGameStart = () => {
+    randomizeRandomSkills()
     resetGameTime()
     resetRoundTime()
     setGuesses([])
@@ -144,7 +150,7 @@ export default function App () {
 
   useEffect(() => {
     const won = answers.length && answers.every(answer => guesses.includes(answer))
-    const lost = guesses.length >= skills.maxGuesses.value
+    const lost = guesses.length >= skills.maxWrongGuesses.value + skills.boardsCount.value
     if (won || lost) {
       handleGameEnd({ answers, guesses, won })
     }
@@ -223,10 +229,6 @@ export default function App () {
     document.addEventListener('keydown', addKey)
     return () => { document.removeEventListener('keydown', addKey) }
   }, [uiState])
-
-  useEffect(() => {
-    saveState({ skills, xp, money, items, equipment })
-  }, [skills, xp, money, items, equipment])
 
   const handleClearAll = () => {
     localStorage.clear()

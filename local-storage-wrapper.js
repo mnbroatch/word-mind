@@ -41,25 +41,6 @@ function loadState () {
         }
       })
     })
-
-    // deprecated
-    Object.values(initialSkills).forEach(skill => {
-      if (skill.value === null) {
-        skill.value = Infinity
-      }
-
-      skill.unlockedValues.forEach((value, i) => {
-        if (value === null) {
-          skill.unlockedValues[i] = Infinity
-        }
-      })
-
-      skill.options.forEach((option, i) => {
-        if (option.value === null) {
-          option.value = Infinity
-        }
-      })
-    })
   } else {
     initialSkills = defaultSkills
   }
@@ -68,6 +49,19 @@ function loadState () {
   const initialMoney = money || 0
   const initialItems = items || defaultItems
   const initialEquipment = equipment || defaultEquipment
+
+
+  // todo: don't mutate
+  Object.entries(defaultSkills).forEach(([key, skill]) => {
+    if (!initialSkills[key]) { initialSkills[key] = skill }
+  })
+  Object.entries(defaultItems).forEach(([key, item]) => {
+    if (!initialItems[key]) { initialItems[key] = item }
+  })
+  Object.entries(defaultEquipment).forEach(([key, equipment]) => {
+    if (!initialEquipment[key]) { initialEquipment[key] = equipment }
+  })
+
   return { initialSkills, initialItems, initialXp, initialMoney, initialEquipment }
 }
 
@@ -94,7 +88,7 @@ function saveState ({ skills, xp, money, items, equipment }) {
   }
 
   const state = {
-    skills,
+    skills: skillsClone,
     xp,
     money,
     items,

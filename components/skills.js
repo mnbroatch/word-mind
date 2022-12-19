@@ -13,6 +13,7 @@ export default function Skills ({
   handleClose,
   optionCost
 }) {
+  const skillCost = calculateXpCost(skills)
   return (
     <div className='skills'>
       <button
@@ -21,9 +22,6 @@ export default function Skills ({
       >
         Back to Hub
       </button>
-      <div className='skill__cost'>
-        Skill Cost: {calculateXpCost(skills)}xp
-      </div>
       <div className='skill__option-cost'>
         Cost Per Option: {optionCost} Mastery
       </div>
@@ -33,7 +31,8 @@ export default function Skills ({
           options,
           unlockedValues,
           unlocked,
-          description
+          description,
+          random
         }]) => (
           <Skill
             key={key}
@@ -41,12 +40,14 @@ export default function Skills ({
             description={description}
             options={options}
             optionCost={optionCost}
+            skillCost={skillCost}
             unlockedValues={unlockedValues}
             unlocked={unlocked}
             value={value}
             handleUnlockSkill={handleUnlockSkill}
             handleUnlockOption={handleUnlockOption}
             handleSetOption={handleSetOption}
+            random={random}
           />
         ))}
         {Object.keys(skills).slice(1).map((key) => <div key={key} className="skill-spacer" />)}

@@ -1,6 +1,12 @@
+
+Betting Skill / Equipment
+  - you wager on whether your next guess is correct
+
 ====================
 
-a game is now a sequence of games
+Support levels with multiple games
+  - a "level that is only a usual game" is a sequence of 1 games
+  - a level where the first game is min word length and the last game is max word length
 
 ===============
 

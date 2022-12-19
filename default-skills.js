@@ -1,13 +1,14 @@
 export default {
-  maxGuesses: {
-    description: 'Number of Guesses',
+  maxWrongGuesses: {
+    description: 'Max Wrong Guesses',
     options: [
       {
         value: Infinity,
         mastery: 0
+
       },
       {
-        value: 1,
+        value: 3,
         mastery: 0
       },
       {

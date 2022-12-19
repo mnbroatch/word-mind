@@ -11,12 +11,19 @@ export default function Skill ({
   handleSetOption,
   handleUnlockSkill,
   handleUnlockOption,
+  skillCost,
+  random,
   optionCost
 }) {
   const totalMastery = options.reduce((acc, opt) => acc + opt.mastery, 0)
   const spentMastery = (unlockedValues.length - 2) * optionCost
-  const remainingMastery = totalMastery - spentMastery
-  const selectedOptionMastery = options.find(opt => opt.value === value).mastery
+  const isFullyUpgraded = unlockedValues.length < options.length
+  let remainingMastery
+  let selectedOptionMastery
+  if (isFullyUpgraded) {
+    remainingMastery = totalMastery - spentMastery
+    selectedOptionMastery = options.find(opt => opt.value === value).mastery
+  }
   return (
     <div className='skill'>
       <div className='skill__description'>
@@ -24,16 +31,18 @@ export default function Skill ({
       </div>
       {unlocked
         ? <>
-            <div className='skill__mastery'>
-              Available Mastery: {remainingMastery}
-            </div>
-            <div className='skill__option-mastery'>
-              Mastery from selected option: {selectedOptionMastery}
-            </div>
+            {isFullyUpgraded && <div className='skill__mastery'>
+              <div className='skill__available-mastery'>
+                Available Mastery: {remainingMastery}
+              </div>
+              <div className='skill__option-mastery'>
+                Mastery from selected option: {selectedOptionMastery}
+              </div>
+            </div>}
             <div className='skill__options'>
               {options.map(({ value: val }, index) => {
                 let status
-                if (val === value) {
+                if (val === value && !random) {
                   status = 'selected'
                 } else if (unlockedValues.includes(val)) {
                   status = 'unlocked'
@@ -70,12 +79,10 @@ export default function Skill ({
             </div>
             {(() => {
               let status
-              if (value === 'random') {
+              if (random) {
                 status = 'selected'
-              } else if (unlockedValues.includes('random')) {
-                status = 'unlocked'
               } else {
-                status = 'locked'
+                status = 'unlocked'
               }
 
               const clickHandler = {
@@ -95,7 +102,7 @@ export default function Skill ({
             })()}
           </>
         : <>
-            <button onClick={ () => handleUnlockSkill(id) }>unlock</button>
+            <button onClick={ () => handleUnlockSkill(id) }>Unlock ({skillCost} XP)</button>
           </>}
     </div>
   )
@@ -112,5 +119,7 @@ Skill.propTypes = {
   description: PropTypes.string,
   handleSetOption: PropTypes.func,
   handleUnlockOption: PropTypes.func,
-  handleUnlockSkill: PropTypes.func
+  handleUnlockSkill: PropTypes.func,
+  skillCost: PropTypes.number,
+  random: PropTypes.bool
 }

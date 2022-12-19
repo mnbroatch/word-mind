@@ -109,6 +109,8 @@ body {
 .board {
   margin: 5px;
   box-shadow: $shadow-inset;
+  background-color: white;
+  transition: background-color 1s;
 }
 
 .board--solved {
@@ -224,11 +226,12 @@ body {
   width: 175px;
   margin: 12px;
   padding: 16px 0 16px 0;
+  text-align: center;
 }
 
 .skill-spacer {
   width: 175px;
-  margin: 0 4px 0 4px;
+  margin: 0 12px 0 12px;
   height: 0;
 }
 
@@ -246,11 +249,6 @@ body {
   width: 175px;
 }
 
-.skill__options {
-  display: flex;
-  justify-content: center;
-}
-
 .skill__option {
   border: 0;
   border-radius: 3px;
@@ -263,6 +261,7 @@ body {
 
   &--selected {
     background-color: green;
+    color: white;
   }
 
   &--unlocked {
@@ -281,6 +280,10 @@ body {
   transform: translate(-50%, -50%)
 }
 
+.skill__option--random {
+  width: 120px;
+}
+
 .keyboard {
   margin: 40px 0 70px 0;
   padding: 10px;
@@ -296,7 +299,6 @@ body {
 .keyboard-button {
   border: 0;
   background-color: white;
-  transition: box-shadow .1s;
 }
 
 .keyboard-letter, .delete-button {
