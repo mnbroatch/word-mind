@@ -7,7 +7,6 @@ import { loadState, saveState } from './local-storage-wrapper'
 const seedLength = 1
 
 const { initialSkills, initialItems, initialEquipment, initialXp, initialMoney } = loadState()
-console.log('initialSkills', initialSkills)
 
 const getSeed = () => {
   let seed = ''

@@ -5280,8 +5280,6 @@ var _loadState = loadState(),
     initialXp = _loadState.initialXp,
     initialMoney = _loadState.initialMoney;
 
-console.log('initialSkills', initialSkills);
-
 var getSeed = function getSeed() {
   var seed = '';
 
@@ -5565,7 +5563,6 @@ function Option(_ref) {
       handleUnlockOption = _ref.handleUnlockOption,
       random = _ref.random,
       optionCost = _ref.optionCost;
-  console.log('unlockedValues', unlockedValues);
   var status;
 
   if (optionValue === selectedValue && !random) {
@@ -5839,7 +5836,7 @@ function Hub(_ref) {
     className: "hub__shop-button",
     onClick: handleGoToGame
   }, /*#__PURE__*/react.createElement("span", {
-    className: "hub__continue button"
+    className: "hub__continue-button"
   }, "Continue")));
 }
 Hub.propTypes = {
@@ -6545,7 +6542,7 @@ function App() {
       setUiState('shop');
     },
     handleGoToGame: function handleGoToGame() {
-      setUiState('game');
+      handleGameStart();
     }
   })), /*#__PURE__*/react.createElement(Modal, {
     open: uiState === 'skills',

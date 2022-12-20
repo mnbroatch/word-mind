@@ -28,7 +28,7 @@ export default function Hub ({
         className='hub__shop-button'
         onClick={handleGoToGame}
       >
-        <span className="hub__continue button">
+        <span className="hub__continue-button">
           Continue
         </span>
       </button>

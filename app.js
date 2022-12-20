@@ -361,7 +361,7 @@ export default function App () {
                 setUiState('shop')
               }}
               handleGoToGame={() => {
-                setUiState('game')
+                handleGameStart()
               }}
             />
           </Modal>

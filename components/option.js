@@ -11,7 +11,6 @@ export default function Option ({
   random,
   optionCost
 }) {
-  console.log('unlockedValues', unlockedValues)
   let status
   if (optionValue === selectedValue && !random) {
     status = 'selected'
