@@ -1,3 +1,5 @@
+// const later = Date.now() * 2
+
 export default {
   strictMode: {
     description: 'Strict Mode',
@@ -23,7 +25,7 @@ export default {
   revealAnswers: {
     description: 'Reveal Answers',
     ownedCount: Infinity,
-    activeUntil: Date.now() * 2,
+    activeUntil: 0,
     duration: 1000 * 60,
     cost: 10
   }

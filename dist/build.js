@@ -5002,6 +5002,7 @@ function skillsReducer(prev, _ref) {
   }
 }
 ;// CONCATENATED MODULE: ./default-items.js
+// const later = Date.now() * 2
 /* harmony default export */ const default_items = ({
   strictMode: {
     description: 'Strict Mode',
@@ -5027,7 +5028,7 @@ function skillsReducer(prev, _ref) {
   revealAnswers: {
     description: 'Reveal Answers',
     ownedCount: Infinity,
-    activeUntil: Date.now() * 2,
+    activeUntil: 0,
     duration: 1000 * 60,
     cost: 10
   }
