@@ -21,10 +21,8 @@ export default function Skill ({
   const isFullyUpgraded = totalMastery >= optionCost * options.length
   const allOptionsAreUnlocked = unlockedValues.length >= options.length
   let remainingMastery
-  let selectedOptionMastery
   if (!isFullyUpgraded) {
     remainingMastery = totalMastery - spentMastery
-    selectedOptionMastery = options.find(opt => opt.value === value).mastery
   }
   return (
     <div className='skill'>
@@ -37,9 +35,6 @@ export default function Skill ({
               <div className='skill__available-mastery'>
                 Available Mastery: {remainingMastery}
               </div>
-            </div>}
-            {!isFullyUpgraded && <div className='skill__option-mastery'>
-              Option Mastery: {selectedOptionMastery}
             </div>}
             <div className='skill__options'>
               {options.map((option, index) => (

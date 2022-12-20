@@ -31,7 +31,7 @@ export default {
   },
   revealAnswers: {
     description: 'Reveal Answers',
-    ownedCount: Infinity,
+    ownedCount: 0,
     activeUntil: 0,
     duration: 1000 * 60,
     cost: 10
