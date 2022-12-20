@@ -10,9 +10,12 @@ export default function Item ({
 }) {
   return (
     <div className='item'>
-      <div className='item__description'>
+      <button
+        className='item__description'
+        onClick={handleBuyItem}
+      >
         {description}
-      </div>
+      </button>
     </div>
   )
 }

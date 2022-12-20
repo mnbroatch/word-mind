@@ -31,17 +31,19 @@ const alphabetRows = [
   alphabet.slice(19)
 ]
 
+function isItemActive (item) {
+  return item.activeUntil > Date.now()
+}
+
 function getAnswers (skills, items, equipment) {
   const wordLength = skills.wordLength.value
   const boardsCount = skills.boardsCount.value
-  const possibleWords = equipment.useFullDictionary.active ? allWords : gameWords
+  // const possibleWords = equipment.useFullDictionary.active ? allWords : gameWords
+  const possibleWords = isItemActive(items.useFullDictionary) ? allWords : gameWords
+
   const answers = possibleWords.filter(word => word.length === +wordLength && !curseWords.includes(word))
     .sort(() => Math.random() - 0.5).slice(0, boardsCount)
   return isItemActive(items.reverse) ? answers.map(answer => answer.split('').reverse().join('')) : answers
-}
-
-function isItemActive (item) {
-  return item.activeUntil > Date.now()
 }
 
 export default function App () {
@@ -89,8 +91,10 @@ export default function App () {
     const xpEarned = endState.won
       ? calculateXpEarned(skills)
       : 0
+    const moneyEarned = 10
     setUiState('results')
     setXp(xp + xpEarned)
+    setMoney(money + moneyEarned)
     setLastXpEarned(xpEarned)
     setWonLastGame(endState.won)
     setGuesses([])
@@ -125,6 +129,7 @@ export default function App () {
     resetGameTime()
     resetRoundTime()
     setGuesses([])
+    currentGuessDispatch({ type: 'clear' })
     setUiState('game')
     setAnswers(getAnswers(skills, items, equipment))
   }
@@ -209,7 +214,7 @@ export default function App () {
     }
   }
 
-  const handleBuyItem = (itemId, value) => {
+  const handleBuyItem = (itemId) => {
     if (money >= items[itemId].cost) {
       itemsDispatch({
         type: 'BUY',
@@ -217,6 +222,14 @@ export default function App () {
       })
       setMoney(money - items[itemId].cost)
     }
+  }
+
+  const handleUseItem = (itemId) => {
+    handleGameStart()
+    itemsDispatch({
+      type: 'USE',
+      itemId
+    })
   }
 
   useEffect(() => {
@@ -404,6 +417,29 @@ export default function App () {
           </Modal>
         </div>
       </div>
+      {Object.values(items).some(item => item.ownedCount >= 1) && (
+        <div className="inventory">
+          {Object.entries(items).filter(([key, item]) => item.ownedCount >= 1).map(([key, item]) => (
+            <div
+              key={key}
+              className="inventory__item"
+            >
+              <div>
+                {item.description}
+              </div>
+              <div>
+                Owned: {item.ownedCount}
+              </div>
+              <button
+                key={key}
+                onClick={() => { handleUseItem(key) }}
+              >
+                Use
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   )
 }

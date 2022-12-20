@@ -27,7 +27,7 @@ export default function Shop ({
             description={description}
             ownedCount={ownedCount}
             cost={cost}
-            handleBuyItem={handleBuyItem}
+            handleBuyItem={() => handleBuyItem(key)}
           />
         ))}
         {Object.keys(items).slice(1).map((key) => <div key={key} className="skill-spacer" />)}

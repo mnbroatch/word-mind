@@ -8,6 +8,13 @@ export default {
     duration: 1000 * 60,
     cost: 1
   },
+  useFullDictionary: {
+    description: 'Use Full Dictionary',
+    ownedCount: 0,
+    activeUntil: 0,
+    duration: 1000 * 60 * 60,
+    cost: 1
+  },
   reverse: {
     description: 'All Words are Backwards',
     ownedCount: 0,
