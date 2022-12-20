@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 export default function Option ({
   selectedValue,
+  mastery,
   value: optionValue,
   skillId,
   unlockedValues,
@@ -34,16 +35,28 @@ export default function Option ({
     displayValue = optionValue.toString()
   }
 
+  const percentDone = (mastery / optionCost) * 100
+
   return (
-    <button
-      className={ `option option--${status}` }
-      key={optionValue}
-      onClick={() => { clickHandler && clickHandler(optionValue) }}
-    >
-      <div className='option-inner'>
-        {displayValue}
+    <div className="option">
+      <div>
+        <div className="option__meter">
+          <div
+            style={{ height: `${percentDone}%` }}
+            className="option__meter__inner"
+          />
+        </div>
       </div>
-    </button>
+      <button
+        className={ `option-button option-button--${status}` }
+        key={optionValue}
+        onClick={() => { clickHandler && clickHandler(optionValue) }}
+      >
+        <div className='option-button__inner'>
+          {displayValue}
+        </div>
+      </button>
+    </div>
   )
 }
 

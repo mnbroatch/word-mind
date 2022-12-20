@@ -250,6 +250,25 @@ body {
 }
 
 .option {
+  display: inline-block;
+}
+
+.option__meter {
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  width: 6px;
+  background-color: $green2;
+}
+
+.option__meter__inner {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: $green1;
+}
+
+.option-button {
   border: 0;
   border-radius: 3px;
   margin: 2px;
@@ -273,14 +292,14 @@ body {
   }
 }
 
-.option-inner {
+.option-button__inner {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%)
 }
 
-.option--random {
+.option-button--random {
   width: 120px;
 }
 
