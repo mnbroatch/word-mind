@@ -26,7 +26,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_g
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0;font-family:system-ui}#root{height:100vh}.root{box-sizing:border-box;position:relative;display:flex;flex-direction:column;height:100vh}.main-content{flex:1;margin-top:5px;position:relative}.main-game{height:100%;display:flex;flex-direction:column}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{flex:1;display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase;background-color:#fff;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:45px;font-family:\"libre-baskerville\";font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;transform:rotate(-5deg);width:300px;margin-top:70px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.skills-list{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.skill{position:relative;box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:12px;padding:16px 0 16px 0}.skill-spacer{width:175px;margin:0 4px 0 4px;height:0}.skill__description{background-color:brown;color:#fff;left:0;padding:6px;position:absolute;text-align:center;top:-17px;left:-3px;transform:rotate(-2deg);white-space:nowrap;width:175px}.skill__options{display:flex;justify-content:center}.skill__option{border:0;border-radius:3px;margin:2px;height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.skill__option--selected{background-color:green}.skill__option--unlocked{background-color:#add8e6}.skill__option--unlockable{background-color:#ff0}.skill__option-inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard{margin:40px 0 70px 0;padding:10px;box-sizing:border-box;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff;transition:box-shadow .1s}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.xp{display:flex;height:100%;align-items:center;justify-content:center;color:#fff;font-family:libre-baskerville;position:relative;border-radius:9999999px;border:1px dotted #fff;background-image:linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));padding:0 10px 0 10px;box-sizing:border-box}.xp__background-squiggle{top:-0.15em;position:absolute;transform:scale(4.5, 3);height:100%;display:flex;justify-content:center;align-items:center;color:#f5b0cb;font-size:1.2em;opacity:.3}.xp__background-squiggle~.xp__background-squiggle{transform:scale(-4.5, 3);color:#372772}.xp__label{font-variant-numeric:tabular-nums}.xp__digit{display:inline-block;width:.65em;vertical-align:middle;text-align:center}.results .xp{font-size:3em}.results .xp__background-squiggle{font-size:2em}.money{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.money__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.money__label{color:#f6bd60;font-family:abril-fatface-regular}.money__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;display:flex;justify-content:space-between;align-items:center;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}@font-face{font-family:\"libre-baskerville\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ")}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0;font-family:system-ui}#root{height:100vh}.root{box-sizing:border-box;position:relative;display:flex;flex-direction:column;height:100vh}.main-content{flex:1;margin-top:5px;position:relative}.main-game{height:100%;display:flex;flex-direction:column}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{flex:1;display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray;background-color:#fff;transition:background-color 1s}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase;background-color:#fff;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:45px;font-family:\"libre-baskerville\";font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;transform:rotate(-5deg);width:300px;margin-top:70px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.skills-list{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.skill{position:relative;box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:12px;padding:16px 0 16px 0;text-align:center}.skill-spacer{width:175px;margin:0 12px 0 12px;height:0}.skill__description{background-color:brown;color:#fff;left:0;padding:6px;position:absolute;text-align:center;top:-17px;left:-3px;transform:rotate(-2deg);white-space:nowrap;width:175px}.skill__option{border:0;border-radius:3px;margin:2px;height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.skill__option--selected{background-color:green;color:#fff}.skill__option--unlocked{background-color:#add8e6}.skill__option--locked{background-color:#ff0}.skill__option-inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.skill__option--random{width:120px}.keyboard{margin:40px 0 70px 0;padding:10px;box-sizing:border-box;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.xp{display:flex;height:100%;align-items:center;justify-content:center;color:#fff;font-family:libre-baskerville;position:relative;border-radius:9999999px;border:1px dotted #fff;background-image:linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));padding:0 10px 0 10px;box-sizing:border-box}.xp__background-squiggle{top:-0.15em;position:absolute;transform:scale(4.5, 3);height:100%;display:flex;justify-content:center;align-items:center;color:#f5b0cb;font-size:1.2em;opacity:.3}.xp__background-squiggle~.xp__background-squiggle{transform:scale(-4.5, 3);color:#372772}.xp__label{font-variant-numeric:tabular-nums}.xp__digit{display:inline-block;width:.65em;vertical-align:middle;text-align:center}.results .xp{font-size:3em}.results .xp__background-squiggle{font-size:2em}.money{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.money__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.money__label{color:#f6bd60;font-family:abril-fatface-regular}.money__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;display:flex;justify-content:space-between;align-items:center;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}@font-face{font-family:\"libre-baskerville\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ")}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4674,18 +4674,114 @@ var __webpack_exports__ = {};
 var react = __webpack_require__(7294);
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
 var react_dom = __webpack_require__(3935);
-// EXTERNAL MODULE: ./node_modules/lodash/cloneDeep.js
-var cloneDeep = __webpack_require__(361);
-var cloneDeep_default = /*#__PURE__*/__webpack_require__.n(cloneDeep);
+;// CONCATENATED MODULE: ./hooks/use-rerender.js
+
+function useRerender() {
+  var set = (0,react.useState)(true)[1];
+  return function () {
+    set(function (prev) {
+      return !prev;
+    });
+  };
+}
+;// CONCATENATED MODULE: ./hooks/use-interval.js
+
+function useInterval(callback, delay) {
+  var savedCallbackRef = (0,react.useRef)();
+  (0,react.useEffect)(function () {
+    savedCallbackRef.current = callback;
+  }, [callback]);
+  (0,react.useEffect)(function () {
+    if (delay !== null) {
+      var id = setInterval(savedCallbackRef.current, delay);
+      return function () {
+        return clearInterval(id);
+      };
+    }
+  }, [delay]);
+}
+;// CONCATENATED MODULE: ./hooks/use-stopwatch.js
+
+
+
+function useStopwatch() {
+  var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+      _ref$refreshRate = _ref.refreshRate,
+      refreshRate = _ref$refreshRate === void 0 ? 1000 : _ref$refreshRate;
+
+  var isPaused = refreshRate === null;
+  var startTimeRef = (0,react.useRef)(Date.now());
+  var pauseTimeRef = (0,react.useRef)(Date.now());
+  var rerender = useRerender();
+  useInterval(rerender, refreshRate);
+
+  var reset = function reset() {
+    startTimeRef.current = Date.now();
+    pauseTimeRef.current = Date.now();
+    rerender();
+  };
+
+  (0,react.useEffect)(function () {
+    if (!isPaused) {
+      startTimeRef.current -= Date.now() - pauseTimeRef.current;
+    }
+
+    pauseTimeRef.current = Date.now();
+  }, [isPaused]);
+  var pauseDuration = isPaused ? Date.now() - pauseTimeRef.current : 0;
+  return {
+    reset: reset,
+    elapsed: Date.now() - startTimeRef.current - pauseDuration
+  };
+}
+;// CONCATENATED MODULE: ./hooks/use-previous.js
+
+function usePrevious(value) {
+  var ref = (0,react.useRef)();
+  (0,react.useEffect)(function () {
+    ref.current = value;
+  }, [value]);
+  return ref.current;
+}
+;// CONCATENATED MODULE: ./hooks/use-countdown.js
+
+
+
+function useCountdown(_ref) {
+  var refreshRate = _ref.refreshRate,
+      duration = _ref.duration,
+      onCountdownEnd = _ref.onCountdownEnd;
+
+  var _useStopwatch = useStopwatch({
+    refreshRate: refreshRate
+  }),
+      elapsed = _useStopwatch.elapsed,
+      reset = _useStopwatch.reset;
+
+  var remaining = duration - elapsed;
+  var prevRemaining = usePrevious(remaining);
+  var justFinished = remaining <= 0 && prevRemaining > 0;
+  (0,react.useEffect)(function () {
+    if (justFinished) {
+      if (onCountdownEnd) {
+        onCountdownEnd();
+      }
+    }
+  }, [justFinished]);
+  return {
+    reset: reset,
+    remaining: remaining < 0 ? 0 : remaining
+  };
+}
 ;// CONCATENATED MODULE: ./default-skills.js
 /* harmony default export */ const default_skills = ({
-  maxGuesses: {
-    description: 'Number of Guesses',
+  maxWrongGuesses: {
+    description: 'Max Wrong Guesses',
     options: [{
       value: Infinity,
       mastery: 0
     }, {
-      value: 1,
+      value: 3,
       mastery: 0
     }, {
       value: 4,
@@ -4790,6 +4886,93 @@ var cloneDeep_default = /*#__PURE__*/__webpack_require__.n(cloneDeep);
     unlocked: false
   }
 });
+;// CONCATENATED MODULE: ./skills-reducer.js
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+ // todo: make this an external constant
+
+var optionCost = 2;
+function skillsReducer(prev, _ref) {
+  var type = _ref.type,
+      skillId = _ref.skillId,
+      skills = _ref.skills,
+      value = _ref.value;
+
+  if (type === 'UNLOCK_SKILL') {
+    return _objectSpread(_objectSpread({}, prev), {}, _defineProperty({}, skillId, _objectSpread(_objectSpread({}, prev[skillId]), {}, {
+      unlocked: true
+    })));
+  } else if (type === 'UNLOCK_OPTION') {
+    return _objectSpread(_objectSpread({}, prev), {}, _defineProperty({}, skillId, _objectSpread(_objectSpread({}, prev[skillId]), {}, {
+      unlockedValues: Array.from(new Set([].concat(_toConsumableArray(prev[skillId].unlockedValues), [value])))
+    })));
+  } else if (type === 'SET_OPTION') {
+    return _objectSpread(_objectSpread({}, prev), {}, _defineProperty({}, skillId, _objectSpread(_objectSpread({}, prev[skillId]), {}, {
+      random: value === 'random',
+      value: value
+    })));
+  } else if (type === 'LOAD_INITIAL') {
+    return default_skills;
+  } else if (type === 'GAIN_MASTERY') {
+    return Object.fromEntries(Object.entries(skills).map(function (_ref2) {
+      var _ref3 = _slicedToArray(_ref2, 2),
+          skillId = _ref3[0],
+          skill = _ref3[1];
+
+      return [skillId, _objectSpread(_objectSpread({}, skill), {}, {
+        options: skill.options.map(function (option) {
+          return !(skill.unlocked && skill.value === option.value) ? option : _objectSpread(_objectSpread({}, option), {}, {
+            mastery: option.mastery + 1 >= optionCost ? optionCost : option.mastery + 1
+          });
+        })
+      })];
+    }));
+  } else if (type === 'UNLOCK_ALL') {
+    return Object.entries(prev).reduce(function (acc, _ref4) {
+      var _ref5 = _slicedToArray(_ref4, 2),
+          key = _ref5[0],
+          skill = _ref5[1];
+
+      return _objectSpread(_objectSpread({}, acc), {}, _defineProperty({}, key, _objectSpread(_objectSpread({}, skill), {}, {
+        options: skill.options.map(function (o) {
+          return _objectSpread(_objectSpread({}, o), {}, {
+            mastery: optionCost
+          });
+        }),
+        unlocked: true,
+        unlockedValues: skill.options.map(function (o) {
+          return o.value;
+        })
+      })));
+    }, {});
+  } else {
+    return prev;
+  }
+}
 ;// CONCATENATED MODULE: ./default-items.js
 /* harmony default export */ const default_items = ({
   strictMode: {
@@ -4821,7 +5004,92 @@ var cloneDeep_default = /*#__PURE__*/__webpack_require__.n(cloneDeep);
     cost: 10
   }
 });
+;// CONCATENATED MODULE: ./items-reducer.js
+function items_reducer_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function items_reducer_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? items_reducer_ownKeys(Object(source), !0).forEach(function (key) { items_reducer_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : items_reducer_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function items_reducer_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+function itemsReducer(prev, _ref) {
+  var type = _ref.type,
+      itemId = _ref.itemId;
+
+  if (type === 'USE') {
+    if (prev[itemId].ownedCount > 0) {
+      return items_reducer_objectSpread(items_reducer_objectSpread({}, prev), {}, items_reducer_defineProperty({}, itemId, items_reducer_objectSpread(items_reducer_objectSpread({}, prev[itemId]), {}, {
+        ownedCount: prev[itemId].ownedCount - 1,
+        activeUntil: Date.now() < prev[itemId].activeUntil ? prev[itemId].activeUntil - Date.now() + prev[itemId].duration : Date.now() + prev[itemId].duration
+      })));
+    } else {
+      return prev;
+    }
+  } else if (type === 'BUY') {
+    return items_reducer_objectSpread(items_reducer_objectSpread({}, prev), {}, items_reducer_defineProperty({}, itemId, items_reducer_objectSpread(items_reducer_objectSpread({}, prev[itemId]), {}, {
+      ownedCount: prev[itemId].ownedCount + 1
+    })));
+  } else if (type === 'LOAD_INITIAL') {
+    return default_items;
+  } else {
+    return prev;
+  }
+}
+;// CONCATENATED MODULE: ./default-equipment.js
+/* harmony default export */ const default_equipment = ({
+  useFullDictionary: {
+    description: 'Use Full Dictionary',
+    owned: false,
+    active: false
+  }
+});
+;// CONCATENATED MODULE: ./equipment-reducer.js
+function equipment_reducer_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function equipment_reducer_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? equipment_reducer_ownKeys(Object(source), !0).forEach(function (key) { equipment_reducer_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : equipment_reducer_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function equipment_reducer_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+function equipmentReducer(prev, _ref) {
+  var type = _ref.type,
+      equipmentId = _ref.equipmentId;
+
+  if (type === 'TOGGLE') {
+    if (prev[equipmentId].owned) {
+      return equipment_reducer_objectSpread(equipment_reducer_objectSpread({}, prev), {}, equipment_reducer_defineProperty({}, equipmentId, equipment_reducer_objectSpread(equipment_reducer_objectSpread({}, prev[equipmentId]), {}, {
+        owned: !prev[equipmentId].owned
+      })));
+    } else {
+      return prev;
+    }
+  } else if (type === 'UNLOCK') {
+    return equipment_reducer_objectSpread(equipment_reducer_objectSpread({}, prev), {}, equipment_reducer_defineProperty({}, equipmentId, equipment_reducer_objectSpread(equipment_reducer_objectSpread({}, prev[equipmentId]), {}, {
+      owned: true
+    })));
+  } else if (type === 'LOAD_INITIAL') {
+    return default_equipment;
+  } else {
+    return prev;
+  }
+}
+// EXTERNAL MODULE: ./node_modules/lodash/cloneDeep.js
+var cloneDeep = __webpack_require__(361);
+var cloneDeep_default = /*#__PURE__*/__webpack_require__.n(cloneDeep);
 ;// CONCATENATED MODULE: ./local-storage-wrapper.js
+function local_storage_wrapper_slicedToArray(arr, i) { return local_storage_wrapper_arrayWithHoles(arr) || local_storage_wrapper_iterableToArrayLimit(arr, i) || local_storage_wrapper_unsupportedIterableToArray(arr, i) || local_storage_wrapper_nonIterableRest(); }
+
+function local_storage_wrapper_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function local_storage_wrapper_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return local_storage_wrapper_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return local_storage_wrapper_arrayLikeToArray(o, minLen); }
+
+function local_storage_wrapper_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function local_storage_wrapper_iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function local_storage_wrapper_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
 
 
 
@@ -4829,6 +5097,7 @@ var INFINITY_REPLACEMENT = '_MNB_Infinity876';
 var defaultState = {
   initialSkills: default_skills,
   initialItems: default_items,
+  initialEquipment: default_equipment,
   initialXp: 0,
   initialMoney: 0
 };
@@ -4844,7 +5113,8 @@ function loadState() {
       skills = _JSON$parse.skills,
       xp = _JSON$parse.xp,
       money = _JSON$parse.money,
-      items = _JSON$parse.items;
+      items = _JSON$parse.items,
+      equipment = _JSON$parse.equipment;
 
   var initialSkills = skills;
 
@@ -4864,43 +5134,58 @@ function loadState() {
           option.value = Infinity;
         }
       });
-    }); // deprecated
-
-    Object.values(initialSkills).forEach(function (skill) {
-      if (skill.value === null) {
-        skill.value = Infinity;
-      }
-
-      skill.unlockedValues.forEach(function (value, i) {
-        if (value === null) {
-          skill.unlockedValues[i] = Infinity;
-        }
-      });
-      skill.options.forEach(function (option, i) {
-        if (option.value === null) {
-          option.value = Infinity;
-        }
-      });
     });
   } else {
     initialSkills = default_skills;
   }
 
-  var initialXp = xp ? JSON.parse(xp) : 0;
-  var initialMoney = money ? JSON.parse(money) : 0;
-  var initialItems = items ? JSON.parse(items) : default_items;
+  var initialXp = xp || 0;
+  var initialMoney = money || 0;
+  var initialItems = items || default_items;
+  var initialEquipment = equipment || default_equipment; // todo: don't mutate
+
+  Object.entries(default_skills).forEach(function (_ref) {
+    var _ref2 = local_storage_wrapper_slicedToArray(_ref, 2),
+        key = _ref2[0],
+        skill = _ref2[1];
+
+    if (!initialSkills[key]) {
+      initialSkills[key] = skill;
+    }
+  });
+  Object.entries(default_items).forEach(function (_ref3) {
+    var _ref4 = local_storage_wrapper_slicedToArray(_ref3, 2),
+        key = _ref4[0],
+        item = _ref4[1];
+
+    if (!initialItems[key]) {
+      initialItems[key] = item;
+    }
+  });
+  Object.entries(default_equipment).forEach(function (_ref5) {
+    var _ref6 = local_storage_wrapper_slicedToArray(_ref5, 2),
+        key = _ref6[0],
+        equipment = _ref6[1];
+
+    if (!initialEquipment[key]) {
+      initialEquipment[key] = equipment;
+    }
+  });
   return {
     initialSkills: initialSkills,
     initialItems: initialItems,
     initialXp: initialXp,
-    initialMoney: initialMoney
+    initialMoney: initialMoney,
+    initialEquipment: initialEquipment
   };
 }
 
-function saveState(_ref) {
-  var skills = _ref.skills,
-      xp = _ref.xp,
-      money = _ref.money;
+function saveState(_ref7) {
+  var skills = _ref7.skills,
+      xp = _ref7.xp,
+      money = _ref7.money,
+      items = _ref7.items,
+      equipment = _ref7.equipment;
   var skillsClone = cloneDeep_default()(skills);
 
   if (skillsClone) {
@@ -4923,111 +5208,123 @@ function saveState(_ref) {
   }
 
   var state = {
-    skills: skills,
+    skills: skillsClone,
     xp: xp,
-    money: money
+    money: money,
+    items: items,
+    equipment: equipment
   };
   localStorage.setItem('word-mind_state', JSON.stringify(state));
 }
 
 
-;// CONCATENATED MODULE: ./hooks/use-rerender.js
+;// CONCATENATED MODULE: ./use-game-state.js
+function use_game_state_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-function useRerender() {
-  var set = (0,react.useState)(true)[1];
-  return function () {
-    set(function (prev) {
-      return !prev;
+function use_game_state_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? use_game_state_ownKeys(Object(source), !0).forEach(function (key) { use_game_state_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : use_game_state_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function use_game_state_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function use_game_state_slicedToArray(arr, i) { return use_game_state_arrayWithHoles(arr) || use_game_state_iterableToArrayLimit(arr, i) || use_game_state_unsupportedIterableToArray(arr, i) || use_game_state_nonIterableRest(); }
+
+function use_game_state_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function use_game_state_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return use_game_state_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return use_game_state_arrayLikeToArray(o, minLen); }
+
+function use_game_state_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function use_game_state_iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function use_game_state_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+var seedLength = 1;
+
+var _loadState = loadState(),
+    initialSkills = _loadState.initialSkills,
+    initialItems = _loadState.initialItems,
+    initialEquipment = _loadState.initialEquipment,
+    initialXp = _loadState.initialXp,
+    initialMoney = _loadState.initialMoney;
+
+var getSeed = function getSeed() {
+  var seed = '';
+
+  for (var i = 0, len = seedLength; i < len; i++) {
+    seed += Math.random().toString().slice(2);
+  }
+
+  return seed;
+};
+
+function useGameState() {
+  var _useState = (0,react.useState)(getSeed),
+      _useState2 = use_game_state_slicedToArray(_useState, 2),
+      seed = _useState2[0],
+      setSeed = _useState2[1];
+
+  var _useReducer = (0,react.useReducer)(skillsReducer, initialSkills),
+      _useReducer2 = use_game_state_slicedToArray(_useReducer, 2),
+      skills = _useReducer2[0],
+      skillsDispatch = _useReducer2[1];
+
+  var _useReducer3 = (0,react.useReducer)(itemsReducer, initialItems),
+      _useReducer4 = use_game_state_slicedToArray(_useReducer3, 2),
+      items = _useReducer4[0],
+      itemsDispatch = _useReducer4[1];
+
+  var _useReducer5 = (0,react.useReducer)(equipmentReducer, initialEquipment),
+      _useReducer6 = use_game_state_slicedToArray(_useReducer5, 1),
+      equipment = _useReducer6[0];
+
+  var _useState3 = (0,react.useState)(initialXp),
+      _useState4 = use_game_state_slicedToArray(_useState3, 2),
+      xp = _useState4[0],
+      setXp = _useState4[1];
+
+  var _useState5 = (0,react.useState)(initialMoney),
+      _useState6 = use_game_state_slicedToArray(_useState5, 2),
+      money = _useState6[0],
+      setMoney = _useState6[1];
+
+  var skillsToUse = Object.entries(skills).reduce(function (acc, _ref, i) {
+    var _ref2 = use_game_state_slicedToArray(_ref, 2),
+        key = _ref2[0],
+        skill = _ref2[1];
+
+    return use_game_state_objectSpread(use_game_state_objectSpread({}, acc), {}, use_game_state_defineProperty({}, key, use_game_state_objectSpread(use_game_state_objectSpread({}, skill), {}, {
+      value: skill.value === 'random' ? skill.options[seed[i] % skill.options.length].value : skill.value
+    })));
+  }, {});
+  (0,react.useEffect)(function () {
+    saveState({
+      skills: skillsToUse,
+      xp: xp,
+      money: money,
+      items: items,
+      equipment: equipment
     });
-  };
-}
-;// CONCATENATED MODULE: ./hooks/use-interval.js
+  }, [skillsToUse, xp, money, items, equipment]);
 
-function useInterval(callback, delay) {
-  var savedCallbackRef = (0,react.useRef)();
-  (0,react.useEffect)(function () {
-    savedCallbackRef.current = callback;
-  }, [callback]);
-  (0,react.useEffect)(function () {
-    if (delay !== null) {
-      var id = setInterval(savedCallbackRef.current, delay);
-      return function () {
-        return clearInterval(id);
-      };
-    }
-  }, [delay]);
-}
-;// CONCATENATED MODULE: ./hooks/use-stopwatch.js
-
-
-
-function useStopwatch() {
-  var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-      _ref$refreshRate = _ref.refreshRate,
-      refreshRate = _ref$refreshRate === void 0 ? 1000 : _ref$refreshRate;
-
-  var isPaused = refreshRate === null;
-  var startTimeRef = (0,react.useRef)(Date.now());
-  var pauseTimeRef = (0,react.useRef)(Date.now());
-  var rerender = useRerender();
-  useInterval(rerender, refreshRate);
-
-  var reset = function reset() {
-    startTimeRef.current = Date.now();
-    pauseTimeRef.current = Date.now();
-    rerender();
+  var randomizeRandomSkills = function randomizeRandomSkills() {
+    setSeed(getSeed());
   };
 
-  (0,react.useEffect)(function () {
-    if (!isPaused) {
-      startTimeRef.current -= Date.now() - pauseTimeRef.current;
-    }
-
-    pauseTimeRef.current = Date.now();
-  }, [isPaused]);
-  var pauseDuration = isPaused ? Date.now() - pauseTimeRef.current : 0;
   return {
-    reset: reset,
-    elapsed: Date.now() - startTimeRef.current - pauseDuration
-  };
-}
-;// CONCATENATED MODULE: ./hooks/use-previous.js
-
-function usePrevious(value) {
-  var ref = (0,react.useRef)();
-  (0,react.useEffect)(function () {
-    ref.current = value;
-  }, [value]);
-  return ref.current;
-}
-;// CONCATENATED MODULE: ./hooks/use-countdown.js
-
-
-
-function useCountdown(_ref) {
-  var refreshRate = _ref.refreshRate,
-      duration = _ref.duration,
-      onCountdownEnd = _ref.onCountdownEnd;
-
-  var _useStopwatch = useStopwatch({
-    refreshRate: refreshRate
-  }),
-      elapsed = _useStopwatch.elapsed,
-      reset = _useStopwatch.reset;
-
-  var remaining = duration - elapsed;
-  var prevRemaining = usePrevious(remaining);
-  var justFinished = remaining <= 0 && prevRemaining > 0;
-  (0,react.useEffect)(function () {
-    if (justFinished) {
-      if (onCountdownEnd) {
-        onCountdownEnd();
-      }
-    }
-  }, [justFinished]);
-  return {
-    reset: reset,
-    remaining: remaining < 0 ? 0 : remaining
+    skills: skillsToUse,
+    items: items,
+    equipment: equipment,
+    xp: xp,
+    money: money,
+    skillsDispatch: skillsDispatch,
+    itemsDispatch: itemsDispatch,
+    setXp: setXp,
+    setMoney: setMoney,
+    randomizeRandomSkills: randomizeRandomSkills
   };
 }
 ;// CONCATENATED MODULE: ./current-guess-reducer.js
@@ -5038,117 +5335,6 @@ function useCountdown(_ref) {
     return prevState + action.letter.toLowerCase();
   } else if (action.type === 'clear') {
     return '';
-  }
-}
-;// CONCATENATED MODULE: ./skills-reducer.js
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-function skillsReducer(prev, _ref) {
-  var type = _ref.type,
-      skillId = _ref.skillId,
-      skills = _ref.skills,
-      value = _ref.value;
-
-  if (type === 'UNLOCK_SKILL') {
-    return _objectSpread(_objectSpread({}, prev), {}, _defineProperty({}, skillId, _objectSpread(_objectSpread({}, prev[skillId]), {}, {
-      unlocked: true
-    })));
-  } else if (type === 'UNLOCK_OPTION') {
-    return _objectSpread(_objectSpread({}, prev), {}, _defineProperty({}, skillId, _objectSpread(_objectSpread({}, prev[skillId]), {}, {
-      unlockedValues: Array.from(new Set([].concat(_toConsumableArray(prev[skillId].unlockedValues), [value])))
-    })));
-  } else if (type === 'SET_OPTION') {
-    return _objectSpread(_objectSpread({}, prev), {}, _defineProperty({}, skillId, _objectSpread(_objectSpread({}, prev[skillId]), {}, {
-      value: value
-    })));
-  } else if (type === 'LOAD_INITIAL') {
-    return default_skills;
-  } else if (type === 'GAIN_MASTERY') {
-    var masteryIncreasePerGame = 1;
-    var maxMasteryPerOption = 10;
-    return Object.fromEntries(Object.entries(skills).map(function (_ref2) {
-      var _ref3 = _slicedToArray(_ref2, 2),
-          skillId = _ref3[0],
-          skill = _ref3[1];
-
-      return [skillId, _objectSpread(_objectSpread({}, skill), {}, {
-        options: skill.options.map(function (option) {
-          return !(skill.unlocked && skill.value === option.value) ? option : _objectSpread(_objectSpread({}, option), {}, {
-            mastery: option.mastery + masteryIncreasePerGame >= maxMasteryPerOption ? maxMasteryPerOption : option.mastery + masteryIncreasePerGame
-          });
-        })
-      })];
-    }));
-  } else if (type === 'UNLOCK_ALL') {
-    return Object.entries(prev).reduce(function (acc, _ref4) {
-      var _ref5 = _slicedToArray(_ref4, 2),
-          key = _ref5[0],
-          skill = _ref5[1];
-
-      return _objectSpread(_objectSpread({}, acc), {}, _defineProperty({}, key, _objectSpread(_objectSpread({}, skill), {}, {
-        unlocked: skill.unlocked,
-        unlockedValues: skill.possibleValues
-      })));
-    }, {});
-  } else {
-    return prev;
-  }
-}
-;// CONCATENATED MODULE: ./items-reducer.js
-function items_reducer_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
-function items_reducer_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? items_reducer_ownKeys(Object(source), !0).forEach(function (key) { items_reducer_defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : items_reducer_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
-function items_reducer_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-function itemsReducer(prev, _ref) {
-  var type = _ref.type,
-      itemId = _ref.itemId,
-      option = _ref.option;
-
-  if (type === 'USE') {
-    if (prev[itemId].ownedCount > 0) {
-      return items_reducer_objectSpread(items_reducer_objectSpread({}, prev), {}, items_reducer_defineProperty({}, itemId, items_reducer_objectSpread(items_reducer_objectSpread({}, prev[itemId]), {}, {
-        ownedCount: prev[itemId].ownedCount - 1,
-        activeUntil: Date.now() < prev[itemId].activeUntil ? prev[itemId].activeUntil - Date.now() + prev[itemId].duration : Date.now() + prev[itemId].duration
-      })));
-    } else {
-      return prev;
-    }
-  } else if (type === 'BUY') {
-    return items_reducer_objectSpread(items_reducer_objectSpread({}, prev), {}, items_reducer_defineProperty({}, itemId, items_reducer_objectSpread(items_reducer_objectSpread({}, prev[itemId]), {}, {
-      ownedCount: prev[itemId].ownedCount + 1
-    })));
-  } else if (type === 'LOAD_INITIAL') {
-    return default_items;
-  } else {
-    return prev;
   }
 }
 // EXTERNAL MODULE: ./node_modules/prop-types/index.js
@@ -5349,22 +5535,34 @@ function Skill(_ref) {
       handleSetOption = _ref.handleSetOption,
       handleUnlockSkill = _ref.handleUnlockSkill,
       handleUnlockOption = _ref.handleUnlockOption,
+      skillCost = _ref.skillCost,
+      random = _ref.random,
       optionCost = _ref.optionCost;
   var totalMastery = options.reduce(function (acc, opt) {
     return acc + opt.mastery;
   }, 0);
   var spentMastery = (unlockedValues.length - 2) * optionCost;
-  var remainingMastery = totalMastery - spentMastery;
-  var selectedOptionMastery = options.find(function (opt) {
-    return opt.value === value;
-  }).mastery;
+  var isFullyUpgraded = totalMastery >= optionCost * options.length;
+  var allOptionsAreUnlocked = unlockedValues.length >= options.length;
+  var remainingMastery;
+  var selectedOptionMastery;
+
+  if (!isFullyUpgraded) {
+    remainingMastery = totalMastery - spentMastery;
+    selectedOptionMastery = options.find(function (opt) {
+      return opt.value === value;
+    }).mastery;
+  }
+
   return /*#__PURE__*/react.createElement("div", {
     className: "skill"
   }, /*#__PURE__*/react.createElement("div", {
     className: "skill__description"
-  }, description), unlocked ? /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement("div", {
+  }, description), unlocked ? /*#__PURE__*/react.createElement(react.Fragment, null, !allOptionsAreUnlocked && /*#__PURE__*/react.createElement("div", {
     className: "skill__mastery"
-  }, "Available Mastery: ", remainingMastery), /*#__PURE__*/react.createElement("div", {
+  }, /*#__PURE__*/react.createElement("div", {
+    className: "skill__available-mastery"
+  }, "Available Mastery: ", remainingMastery)), !isFullyUpgraded && /*#__PURE__*/react.createElement("div", {
     className: "skill__option-mastery"
   }, "Mastery from selected option: ", selectedOptionMastery), /*#__PURE__*/react.createElement("div", {
     className: "skill__options"
@@ -5372,25 +5570,19 @@ function Skill(_ref) {
     var val = _ref2.value;
     var status;
 
-    if (val === value) {
+    if (val === value && !random) {
       status = 'selected';
     } else if (unlockedValues.includes(val)) {
       status = 'unlocked';
-    } else if (options.some(function (opt, i) {
-      return opt.value !== Infinity && unlockedValues.some(function (o) {
-        return o.value === opt.val;
-      }) && Math.abs(i - index) === 1;
-    })) {
-      status = 'unlockable';
     } else {
       status = 'locked';
     }
 
     var clickHandler = {
-      unlocked: function unlocked(val) {
+      unlocked: function unlocked() {
         handleSetOption(id, val);
       },
-      unlockable: function unlockable(val) {
+      locked: function locked() {
         handleUnlockOption(id, val);
       }
     }[status];
@@ -5417,38 +5609,64 @@ function Skill(_ref) {
     }, /*#__PURE__*/react.createElement("div", {
       className: "skill__option-inner"
     }, displayValue));
-  }))) : /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement("button", {
+  })), function () {
+    if (!isFullyUpgraded) return null;
+    var status;
+
+    if (random) {
+      status = 'selected';
+    } else {
+      status = 'unlocked';
+    }
+
+    return /*#__PURE__*/react.createElement("button", {
+      className: "skill__option skill__option--random skill__option--".concat(status),
+      onClick: function onClick() {
+        handleSetOption(id, 'random');
+      }
+    }, /*#__PURE__*/react.createElement("div", {
+      className: "skill__option-inner"
+    }, "Random"));
+  }()) : /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement("button", {
     onClick: function onClick() {
       return handleUnlockSkill(id);
     }
-  }, "unlock")));
+  }, "Unlock (", skillCost, " XP)")));
 }
+var value = prop_types_default().oneOfType([(prop_types_default()).number, (prop_types_default()).bool, (prop_types_default()).string]);
 Skill.propTypes = {
   id: (prop_types_default()).string,
-  value: prop_types_default().oneOfType([(prop_types_default()).number, (prop_types_default()).bool]),
-  unlockedValues: prop_types_default().arrayOf(prop_types_default().oneOfType([(prop_types_default()).number, (prop_types_default()).bool])),
+  value: value,
+  unlockedValues: prop_types_default().arrayOf(value),
   unlocked: (prop_types_default()).bool,
   options: prop_types_default().arrayOf((prop_types_default()).object),
   optionCost: (prop_types_default()).number,
   description: (prop_types_default()).string,
   handleSetOption: (prop_types_default()).func,
   handleUnlockOption: (prop_types_default()).func,
-  handleUnlockSkill: (prop_types_default()).func
+  handleUnlockSkill: (prop_types_default()).func,
+  skillCost: (prop_types_default()).number,
+  random: (prop_types_default()).bool
 };
 ;// CONCATENATED MODULE: ./utils/calculate-xp-earned.js
 function calculatePointsEarned(skills) {
   var numberOfUnlockedOptions = Object.values(skills).reduce(function (acc, skill) {
     return acc + (!skill.unlocked ? 0 : skill.unlockedValues.length);
   }, 0);
+  var numberOfRandomOptionsActivated = Object.values(skills).reduce(function (acc, skill) {
+    return acc + (skill.value === 'random' ? 1 : 0);
+  }, 0);
   var basePoints = 1;
-  return Math.floor(basePoints * numberOfUnlockedOptions + 1);
+  var multiplierForRandomOptions = 3;
+  return Math.floor(basePoints * (numberOfUnlockedOptions + numberOfRandomOptionsActivated * multiplierForRandomOptions + 1));
 }
 ;// CONCATENATED MODULE: ./utils/calculate-xp-cost.js
 function calculate_xp_cost_calculatePointsEarned(skills) {
+  var baseCost = 0.5;
   var unlockedSkillsCount = Object.values(skills).reduce(function (acc, skill) {
     return acc + (skill.unlocked ? 1 : 0);
   }, 0);
-  return 10 * (unlockedSkillsCount + 1);
+  return 10 * baseCost * (unlockedSkillsCount + 1);
 }
 ;// CONCATENATED MODULE: ./components/skills.js
 function skills_slicedToArray(arr, i) { return skills_arrayWithHoles(arr) || skills_iterableToArrayLimit(arr, i) || skills_unsupportedIterableToArray(arr, i) || skills_nonIterableRest(); }
@@ -5468,24 +5686,23 @@ function skills_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var OPTION_COST = 10;
 function Skills(_ref) {
   var skills = _ref.skills,
       xp = _ref.xp,
       handleUnlockSkill = _ref.handleUnlockSkill,
       handleUnlockOption = _ref.handleUnlockOption,
       handleSetOption = _ref.handleSetOption,
-      handleClose = _ref.handleClose;
+      handleClose = _ref.handleClose,
+      optionCost = _ref.optionCost;
+  var skillCost = calculate_xp_cost_calculatePointsEarned(skills);
   return /*#__PURE__*/react.createElement("div", {
     className: "skills"
   }, /*#__PURE__*/react.createElement("button", {
     className: "skills__close-button",
     onClick: handleClose
   }, "Back to Hub"), /*#__PURE__*/react.createElement("div", {
-    className: "skill__cost"
-  }, "Skill Cost: ", calculate_xp_cost_calculatePointsEarned(skills), "xp"), /*#__PURE__*/react.createElement("div", {
     className: "skill__option-cost"
-  }, "Cost Per Option: ", OPTION_COST, " Mastery"), /*#__PURE__*/react.createElement("div", {
+  }, "Cost Per Option: ", optionCost, " Mastery"), /*#__PURE__*/react.createElement("div", {
     className: "skills-list"
   }, Object.entries(skills).map(function (_ref2) {
     var _ref3 = skills_slicedToArray(_ref2, 2),
@@ -5495,20 +5712,23 @@ function Skills(_ref) {
         options = _ref3$.options,
         unlockedValues = _ref3$.unlockedValues,
         unlocked = _ref3$.unlocked,
-        description = _ref3$.description;
+        description = _ref3$.description,
+        random = _ref3$.random;
 
     return /*#__PURE__*/react.createElement(Skill, {
       key: key,
       id: key,
       description: description,
       options: options,
-      optionCost: OPTION_COST,
+      optionCost: optionCost,
+      skillCost: skillCost,
       unlockedValues: unlockedValues,
       unlocked: unlocked,
       value: value,
       handleUnlockSkill: handleUnlockSkill,
       handleUnlockOption: handleUnlockOption,
-      handleSetOption: handleSetOption
+      handleSetOption: handleSetOption,
+      random: random
     });
   }), Object.keys(skills).slice(1).map(function (key) {
     return /*#__PURE__*/react.createElement("div", {
@@ -5523,7 +5743,8 @@ Skills.propTypes = {
   handleUnlockSkill: (prop_types_default()).func,
   handleUnlockOption: (prop_types_default()).func,
   handleSetOption: (prop_types_default()).func,
-  handleClose: (prop_types_default()).func
+  handleClose: (prop_types_default()).func,
+  optionCost: (prop_types_default()).number
 };
 ;// CONCATENATED MODULE: ./components/hub.js
 
@@ -5846,7 +6067,7 @@ const all_words_namespaceObject = JSON.parse('["the","be","and","a","of","to","i
 ;// CONCATENATED MODULE: ./data/game-words.json
 const game_words_namespaceObject = JSON.parse('["the","be","and","a","of","to","in","i","you","it","have","that","for","do","he","with","on","this","we","not","but","they","say","at","what","his","from","go","or","by","get","she","my","can","as","know","if","me","your","all","who","about","their","will","so","would","make","just","up","think","time","there","see","her","out","one","come","people","take","year","him","them","some","want","how","when","which","now","like","other","could","our","into","here","then","than","look","way","more","these","no","thing","well","because","also","two","use","tell","good","first","man","day","find","give","new","us","any","those","very","need","back","should","even","only","many","really","work","life","why","right","down","try","let","something","too","call","woman","may","still","through","mean","after","never","world","feel","yeah","great","last","child","oh","over","ask","school","state","much","talk","keep","leave","put","help","big","where","same","own","while","start","three","high","every","another","become","most","between","happen","family","president","old","yes","house","show","again","student","seem","might","part","hear","its","place","problem","believe","country","always","week","point","hand","off","play","turn","few","group","such","against","run","guy","case","question","night","live","game","number","write","bring","without","money","lot","book","system","government","next","city","company","story","today","job","move","must","bad","friend","during","begin","love","each","hold","different","american","little","before","ever","word","fact","read","anything","nothing","sure","small","month","program","maybe","under","business","home","kind","stop","pay","study","since","issue","name","idea","room","percent","far","away","law","actually","large","though","provide","lose","power","kid","war","understand","head","mother","real","best","team","eye","long","side","water","young","wait","okay","both","yet","meet","service","area","important","person","hey","thank","someone","end","change","however","around","hour","everything","national","four","line","girl","watch","until","father","sit","create","information","car","learn","least","already","kill","minute","party","include","stand","together","follow","health","remember","often","reason","speak","ago","set","black","member","community","once","social","news","allow","win","body","lead","continue","whether","enough","spend","level","able","political","almost","boy","university","stay","add","later","five","probably","center","among","face","public","die","food","else","history","buy","result","morning","parent","office","course","send","research","walk","door","white","several","court","grow","better","open","moment","including","consider","within","second","late","street","free","everyone","policy","table","sorry","care","low","human","please","hope","TRUE","process","teacher","data","offer","death","whole","experience","plan","easy","education","build","expect","fall","himself","age","hard","sense","across","early","college","music","appear","mind","class","police","effect","season","tax","heart","son","art","possible","serve","break","although","market","air","force","require","foot","listen","agree","according","anyone","baby","wrong","cut","decide","republican","full","behind","pass","interest","sometimes","security","eat","report","control","rate","local","suggest","nation","sell","action","support","wife","decision","receive","value","base","pick","phone","thanks","event","drive","strong","reach","remain","explain","site","hit","pull","church","model","perhaps","relationship","six","fine","movie","field","raise","less","player","couple","million","themselves","record","especially","difference","light","development","federal","former","role","pretty","myself","view","price","effort","nice","quite","along","voice","finally","department","either","toward","leader","photo","wear","space","project","return","position","special","film","major","type","town","article","road","form","chance","drug","economic","situation","choose","practice","cause","happy","science","join","teach","develop","share","yourself","carry","clear","brother","matter","dead","image","star","cost","simply","post","society","picture","piece","paper","energy","personal","building","military","doctor","activity","exactly","media","miss","evidence","product","realize","save","arm","technology","catch","comment","term","color","cover","describe","guess","choice","source","mom","soon","director","international","rule","campaign","ground","election","uh","check","page","fight","itself","test","patient","produce","certain","whatever","half","video","throw","third","rest","recent","available","step","ready","opportunity","official","oil","organization","character","single","current","likely","county","future","dad","whose","shoot","industry","list","general","stuff","figure","attention","forget","risk","focus","short","fire","dog","red","hair","condition","wall","daughter","deal","author","truth","upon","husband","period","series","order","officer","close","land","note","computer","thought","economy","goal","bank","behavior","sound","certainly","nearly","increase","act","north","blood","culture","medical","ok","everybody","top","difficult","language","window","response","population","lie","tree","park","worker","draw","drop","push","earth","per","private","tonight","race","letter","gun","simple","wonder","involve","hell","poor","answer","nature","administration","common","message","song","enjoy","similar","congress","attack","past","hot","seek","amount","analysis","store","defense","bill","cell","performance","hospital","bed","board","protect","century","summer","material","individual","recently","example","represent","fill","animal","fail","factor","natural","sir","agency","usually","significant","ability","mile","statement","entire","democrat","floor","serious","career","dollar","vote","sex","compare","south","forward","subject","financial","identify","beautiful","decade","bit","reduce","sister","quality","quickly","press","worry","accept","enter","mention","thus","plant","movement","scene","section","treatment","wish","benefit","interesting","west","candidate","approach","determine","resource","claim","prove","sort","size","somebody","knowledge","rather","hang","sport","tv","loss","argue","left","meeting","skill","card","feeling","despite","degree","crime","sign","occur","imagine","near","king","box","present","seven","foreign","laugh","disease","lady","beyond","discuss","finish","design","concern","ball","east","recognize","apply","prepare","network","huge","success","district","cup","physical","growth","rise","hi","standard","fan","theory","staff","hurt","legal","september","outside","et","strategy","clearly","property","lay","final","authority","perfect","method","region","impact","indicate","safe","committee","supposed","dream","training","shit","central","option","eight","particularly","completely","opinion","main","ten","interview","exist","remove","dark","union","professor","pressure","purpose","stage","blue","herself","sun","pain","artist","employee","avoid","account","release","fund","environment","treat","specific","version","shot","hate","reality","visit","club","justice","river","brain","memory","rock","camera","global","various","arrive","notice","detail","challenge","argument","nobody","weapon","station","island","absolutely","instead","discussion","affect","anyway","respond","trouble","conversation","manage","date","army","charge","seat","assume","writer","perform","credit","green","marriage","operation","indeed","sleep","necessary","reveal","agent","access","bar","debate","leg","contain","beat","cool","democratic","cold","glass","improve","adult","trade","religious","review","address","association","measure","stock","gas","deep","lawyer","production","relate","middle","management","original","victim","cancer","speech","particular","trial","none","item","weight","tomorrow","positive","citizen","trip","establish","executive","politics","stick","customer","manager","publish","popular","sing","ahead","conference","total","discover","fast","direction","sunday","maintain","majority","peace","dinner","partner","user","above","fly","bag","therefore","rich","tough","owner","shall","inside","voter","tool","june","mountain","range","coach","fear","friday","attorney","unless","nor","expert","structure","budget","insurance","text","freedom","crazy","reader","style","march","machine","november","generation","income","born","admit","hello","onto","sea","mouth","throughout","web","shake","threat","solution","shut","travel","scientist","hide","obviously","refer","alone","drink","investigation","senator","unit","photograph","july","television","key","sexual","radio","prevent","modern","senate","violence","touch","feature","audience","evening","whom","front","hall","task","score","skin","suffer","wide","spring","civil","safety","weekend","worth","title","heat","normal","yard","finger","tend","mission","eventually","participant","hotel","judge","pattern","institution","faith","professional","reflect","folk","surface","client","edge","traditional","council","device","firm","environmental","responsibility","chair","internet","october","funny","immediately","investment","ship","effective","previous","content","consumer","element","nuclear","spirit","directly","afraid","define","handle","track","wind","lack","announce","journal","heavy","ice","collection","feed","soldier","governor","fish","shoulder","cultural","successful","fair","trust","suddenly","interested","deliver","saturday","editor","fresh","anybody","destroy","critical","agreement","powerful","researcher","concept","willing","band","marry","promise","easily","restaurant","league","senior","capital","anymore","april","potential","etc","quick","magazine","status","attend","replace","due","hill","kitchen","achieve","screen","generally","mistake","strike","battle","spot","basic","corner","target","driver","beginning","religion","crisis","count","museum","engage","communication","murder","blow","object","express","huh","encourage","blog","smile","belief","block","debt","labor","understanding","neighborhood","contract","species","additional","sample","involved","mostly","path","concerned","apple","conduct","god","wonderful","library","prison","hole","attempt","complete","code","sales","gift","refuse","garden","introduce","roll","christian","definitely","lake","earn","plane","vehicle","examine","application","thousand","coffee","gain","file","billion","reform","ignore","welcome","gold","jump","planet","location","bird","amazing","principle","promote","search","nine","alive","possibility","sky","otherwise","remind","healthy","fit","horse","advantage","commercial","steal","basis","context","highly","christmas","strength","monday","beach","survey","writing","master","cry","scale","resident","football","sweet","failure","reporter","commit","associate","vision","function","truly","sick","average","stupid","chinese","connection","camp","stone","hundred","truck","afternoon","responsible","secretary","apparently","smart","southern","totally","western","collect","conflict","burn","learning","wake","contribute","ride","british","following","newspaper","foundation","variety","perspective","document","presence","stare","lesson","limit","appreciate","observe","currently","fun","crowd","apartment","survive","guest","soul","protection","intelligence","yesterday","somewhere","border","reading","terms","leadership","chief","attitude","um","deny","website","seriously","actual","recall","fix","negative","connect","distance","regular","climate","relation","flight","dangerous","boat","aspect","grab","favorite","january","independent","volume","am","lots","online","theater","speed","aware","identity","demand","extra","guard","demonstrate","fully","tuesday","facility","farm","august","hire","link","shoe","institute","below","living","european","quarter","basically","forest","multiple","poll","wild","twice","cross","background","settle","winter","presidential","operate","fuck","daily","shop","division","slowly","advice","reaction","injury","ticket","grade","wow","birth","painting","outcome","enemy","damage","being","storm","shape","bowl","commission","captain","ear","troop","female","wood","warm","clean","minister","neighbor","tiny","mental","software","glad","finding","lord","temperature","quiet","spread","bright","influence","kick","annual","procedure","respect","wave","tradition","threaten","primary","strange","actor","blame","active","cat","depend","bus","clothes","affair","contact","category","topic","victory","direct","towards","map","egg","ensure","expression","session","competition","possibly","technique","mine","intend","impossible","moral","academic","wine","somehow","gather","scientific","african","cook","participate","gay","appropriate","youth","dress","straight","weather","recommend","medicine","novel","obvious","thursday","exchange","explore","extend","bay","invite","tie","ah","belong","obtain","broad","conclusion","progress","surprise","assessment","cash","defend","pound","correct","married","pair","slightly","loan","village","suit","historical","meaning","supply","lift","ourselves","honey","bone","consequence","unique","regulation","award","bottom","excuse","familiar","classroom","reference","emerge","lunch","ad","desire","instruction","emergency","thinking","tour","french","combine","moon","sad","december","anywhere","chicken","fuel","train","abuse","construction","wednesday","deserve","famous","intervention","grand","confirm","lucky","insist","coast","proud","fourth","cop","angry","native","supreme","baseball","email","accident","duty","growing","struggle","revenue","expand","launch","trend","ring","repeat","breath","inch","neck","core","terrible","relatively","complex","slow","soft","generate","extremely","forever","corporate","prefer","except","cheap","literature","mayor","male","importance","danger","emotional","knee","ass","capture","traffic","fucking","plate","equipment","select","studio","expensive","secret","engine","adopt","luck","via","pm","panel","hero","circle","critic","solve","busy","episode","requirement","politician","rain","colleague","disappear","beer","predict","exercise","tired","democracy","ultimately","setting","honor","works","unfortunately","theme","united","pool","educational","empty","comfortable","investigate","useful","pocket","digital","plenty","entirely","afford","sugar","teaching","conservative","chairman","error","bridge","tall","specifically","flower","universe","acknowledge","coverage","crew","locate","balance","equal","lip","lean","zone","wedding","copy","joke","used","bear","meal","minority","sight","russian","soviet","profit","careful","gender","tape","ocean","unidentified","host","grant","circumstance","boss","declare","domestic","tea","organize","english","neither","surround","manner","surprised","percentage","massive","cloud","winner","honest","propose","rely","plus","sentence","request","appearance","regarding","excellent","criminal","salt","beauty","bottle","component","fee","jewish","yours","dry","dance","shirt","tip","plastic","indian","mark","tooth","meat","stress","illegal","significantly","february","constitution","definition","uncle","metal","album","self","suppose","investor","fruit","holy","desk","eastern","valley","largely","abortion","chapter","commitment","celebrate","arrest","prime","urban","internal","bother","proposal","shift","capacity","guilty","warn","weak","catholic","nose","variable","convention","jury","root","incident","climb","hearing","everywhere","payment","conclude","scream","surgery","shadow","witness","increasingly","chest","amendment","paint","complain","extent","pleasure","nod","holiday","super","talent","necessarily","liberal","expectation","accuse","knock","previously","wing","corporation","sector","fat","experiment","match","thin","farmer","rare","confidence","bunch","bet","cite","northern","speaker","breast","contribution","leaf","creative","interaction","hat","doubt","pursue","overall","nurse","gene","package","weird","difficulty","hardly","daddy","estimate","era","aid","vs","invest","personally","notion","explanation","airport","chain","expose","lock","convince","channel","carefully","tear","estate","initial","purchase","guide","forth","bond","birthday","pray","improvement","ancient","ought","escape","trail","brown","fashion","length","sheet","funding","meanwhile","fault","barely","eliminate","motion","essential","apart","combination","limited","description","mix","snow","implement","proper","marketing","approve","bomb","slip","regional","muscle","FALSE","creation","typically","spending","instrument","mass","thick","kiss","increased","inspire","separate","noise","yellow","aim","cycle","signal","app","golden","reject","inform","perception","visitor","cast","contrast","judgment","representative","regime","merely","producer","whoa","route","typical","analyst","elect","smell","disability","comparison","rating","campus","assess","solid","branch","mad","somewhat","gentleman","opposition","suspect","aside","athlete","opening","prayer","frequently","employ","basketball","existing","revolution","click","emotion","platform","frame","appeal","quote","brand","enable","legislation","addition","lab","oppose","row","immigration","asset","observation","taste","decline","attract","ha","household","breathe","existence","mirror","pilot","relief","milk","warning","heaven","flow","literally","quit","calorie","seed","vast","bike","german","employer","drag","technical","disaster","display","sale","bathroom","succeed","consistent","agenda","enforcement","diet","silence","journalist","bible","queen","divide","expense","cream","exposure","priority","soil","angel","journey","relevant","tank","cheese","schedule","bedroom","tone","selection","perfectly","wheel","gap","veteran","disagree","characteristic","protein","resolution","regard","fewer","engineer","dish","waste","print","depression","dude","upper","wrap","ceo","visual","initiative","rush","gate","whenever","entry","japanese","gray","assistance","height","compete","essentially","phase","recover","criticism","faculty","achievement","alcohol","therapy","offense","killer","personality","landscape","deeply","reasonable","suck","transition","fairly","column","wash","button","opponent","pour","immigrant","distribution","golf","pregnant","unable","alternative","violent","portion","acquire","suicide","stretch","deficit","symptom","solar","complaint","capable","analyze","scared","supporter","dig","twenty","pretend","philosophy","childhood","lower","wealth","welfare","poverty","prosecutor","spiritual","double","evaluate","israeli","reply","buck","knife","round","tech","detective","pack","disorder","creature","closely","industrial","housing","chip","regardless","numerous","command","shooting","dozen","pop","layer","bread","exception","passion","highway","pure","commander","extreme","publication","vice","fellow","mystery","championship","install","tale","liberty","beneath","passenger","physician","graduate","sharp","substance","atmosphere","stir","muslim","passage","pepper","emphasize","cable","square","recipe","load","beside","roof","vegetable","accomplish","silent","habit","discovery","recovery","dna","territory","girlfriend","consist","surely","proof","nervous","immediate","parking","sin","unusual","rice","engineering","advance","bury","cake","anonymous","flag","contemporary","jail","rural","interpretation","wage","breakfast","severe","profile","saving","brief","adjust","reduction","constantly","assist","bitch","constant","permit","primarily","entertainment","shout","academy","teaspoon","transfer","usual","ally","clinical","swear","avenue","priest","employment","relax","owe","transform","grass","narrow","ethnic","scholar","edition","abandon","practical","infection","musical","suggestion","resistance","smoke","prince","illness","embrace","republic","volunteer","evaluation","opposite","awesome","switch","iraqi","iron","perceive","fundamental","phrase","assumption","sand","designer","planning","leading","mode","widely","occasion","pose","approximately","retire","elsewhere","festival","cap","secure","attach","mechanism","intention","scenario","yell","incredible","spanish","strongly","racial","transportation","pot","boyfriend","consideration","prior","retirement","rarely","joint","preserve","enormous","cigarette","factory","valuable","clip","electric","giant","slave","submit","effectively","monitor","resolve","remaining","participation","stream","rid","origin","teen","congressional","bind","coat","tower","license","twitter","impose","innocent","curriculum","mail","insight","investigator","virus","hurricane","accurate","provision","communicate","vary","jacket","increasing","equally","implication","fiction","protest","mama","imply","twin","pant","bend","shock","criteria","arab","dirty","toy","potentially","assault","peak","anger","boot","dramatic","peer","enhance","math","slide","favor","pink","dust","aunt","lost","prospect","mood","settlement","justify","depth","juice","formal","virtually","gallery","tension","throat","draft","reputation","index","normally","mess","joy","steel","motor","enterprise","salary","moreover","cousin","ordinary","evolution","helpful","competitive","lovely","fishing","anxiety","carbon","essay","islamic","drama","odd","evil","stranger","belt","urge","toss","fifth","formula","potato","monster","telephone","rape","palm","jet","navy","excited","plot","angle","criticize","prisoner","discipline","negotiation","damn","butter","desert","complicated","prize","blind","assign","bullet","awareness","sequence","illustrate","provider","minor","activist","poem","vacation","weigh","gang","privacy","clock","arrange","penalty","stomach","concert","originally","statistics","electronic","properly","bureau","wolf","and/or","classic","recommendation","exciting","maker","dear","impression","broken","battery","narrative","arise","sake","delivery","forgive","visible","heavily","junior","rep","diversity","string","lawsuit","latter","cute","deputy","restore","buddy","psychological","besides","intense","friendly","lane","hungry","bean","sauce","dominate","testing","trick","fantasy","absence","offensive","symbol","recognition","detect","tablespoon","construct","hmm","approval","aids","whereas","defensive","independence","apologize","asian","rose","ghost","involvement","permanent","wire","whisper","mouse","airline","founder","objective","nowhere","phenomenon","evolve","exact","silver","cent","universal","teenager","crucial","viewer","ridiculous","chocolate","sensitive","grandmother","missile","roughly","constitutional","adventure","genetic","related","swing","ultimate","manufacturer","unknown","wipe","crop","survival","dimension","resist","darkness","guarantee","historic","educator","rough","personnel","confront","terrorist","royal","elite","occupy","emphasis","wet","destruction","raw","inner","proceed","violate","chart","pace","finance","champion","snap","advise","initially","advanced","unlikely","barrier","advocate","label","horrible","burden","violation","unlike","idiot","lifetime","working","ongoing","react","routine","presentation","gear","mexican","stadium","translate","mortgage","sheriff","clinic","spin","coalition","naturally","hopefully","menu","smooth","advertising","interpret","dismiss","apparent","arrangement","incorporate","split","brilliant","storage","framework","honestly","chase","sigh","assure","utility","aggressive","cookie","terror","wealthy","update","forum","alliance","possess","empire","curious","corn","calculate","hurry","testimony","elementary","stake","precisely","bite","given","substantial","depending","glance","tissue","concentration","developer","found","ballot","consume","overcome","biological","chamber","similarly","dare","developing","tiger","ratio","lover","expansion","encounter","occasionally","unemployment","pet","awful","laboratory","administrator","quarterback","rocket","preparation","relative","confident","strategic","marine","publisher","innovation","highlight","nut","fighter","rank","electricity","instance","fortune","freeze","variation","armed","negotiate","laughter","wisdom","correspondent","mixture","assistant","retain","tomato","testify","ingredient","galaxy","qualify","scheme","gop","shame","concentrate","contest","introduction","boundary","tube","versus","chef","regularly","ugly","screw","tongue","palestinian","fiscal","creek","hip","accompany","terrorism","respondent","narrator","voting","refugee","assembly","fraud","limitation","partnership","crash","representation","ministry","flat","wise","register","comedy","tap","infrastructure","organic","islam","diverse","intellectual","tight","port","fate","absolute","dialogue","frequency","tribe","external","appointment","convert","surprising","mobile","establishment","worried","bye","shopping","celebrity","congressman","impress","taxpayer","adapt","publicly","pride","clothing","rapidly","domain","mainly","ceiling","alter","shelter","random","obligation","shower","beg","asleep","musician","extraordinary","dirt","pc","bell","ceremony","clue","guideline","comfort","pregnancy","borrow","conventional","tourist","incentive","custom","cheek","tournament","satellite","nearby","comprehensive","stable","medication","script","educate","efficient","scare","psychology","logic","economics","nevertheless","devil","thirty","charity","fiber","ideal","friendship","net","motivation","differently","reserve","observer","humanity","survivor","fence","quietly","humor","funeral","spokesman","extension","loose","sink","historian","ruin","chemical","singer","drunk","swim","onion","specialist","missing","pan","distribute","silly","deck","reflection","shortly","database","remote","permission","remarkable","everyday","lifestyle","sweep","naked","sufficient","lion","consumption","capability","emission","sidebar","crap","dealer","measurement","vital","impressive","bake","fantastic","adviser","yield","mere","imagination","radical","tragedy","scary","consultant","lieutenant","upset","attractive","acre","drawing","defeat","newly","scandal","ambassador","ooh","bench","counter","odds","rat","horror","vulnerable","prevention","segment","ban","tail","constitute","badly","bless","literary","magic","implementation","legitimate","slight","strip","desperate","distant","preference","politically","feedback","italian","detailed","buyer","cooperation","profession","incredibly","orange","killing","sue","photographer","running","engagement","differ","pitch","extensive","salad","stair","grace","divorce","vessel","pig","assignment","distinction","circuit","acid","canadian","flee","efficiency","memorial","proposed","entity","iphone","punishment","pause","pill","rub","romantic","myth","economist","latin","decent","craft","poetry","thread","wooden","confuse","privilege","coal","fool","cow","characterize","pie","decrease","resort","legacy","re","frankly","cancel","derive","dumb","scope","formation","grandfather","hence","margin","wound","exhibition","legislature","furthermore","portrait","sustain","uniform","painful","loud","miracle","harm","zero","tactic","mask","calm","inflation","hunting","physically","flesh","temporary","nerve","lung","steady","headline","sudden","successfully","defendant","pole","satisfy","entrance","aircraft","withdraw","cabinet","repeatedly","happiness","admission","correlation","proportion","dispute","candy","reward","counselor","recording","pile","explosion","appoint","couch","cognitive","furniture","significance","grateful","commissioner","shelf","tremendous","warrior","physics","garage","flavor","squeeze","prominent","fifty","fade","oven","satisfaction","discrimination","recession","allegation","boom","weekly","lately","restriction","diamond","crack","conviction","heel","fake","fame","shine","playoff","actress","cheat","format","controversy","auto","grocery","headquarters","rip","shade","regulate","meter","olympic","pipe","celebration","handful","copyright","dependent","signature","bishop","strengthen","soup","entitle","whoever","carrier","anniversary","pizza","ethics","legend","eagle","scholarship","membership","standing","possession","treaty","partly","consciousness","manufacturing","announcement","tire","makeup","prediction","stability","trace","norm","irish","genius","gently","operator","mall","rumor","poet","tendency","subsequent","alien","explode","controversial","maintenance","courage","exceed","principal","vaccine","identification","sandwich","bull","lens","twelve","mainstream","presidency","integrity","distinct","intelligent","secondary","bias","hypothesis","fifteen","nomination","delay","adjustment","sanction","render","acceptable","mutual","examination","meaningful","communist","superior","currency","collective","flame","guitar","doctrine","float","commerce","invent","robot","rapid","plain","respectively","particle","glove","till","edit","moderate","jazz","infant","summary","server","leather","radiation","prompt","composition","operating","assert","discourse","dump","wildlife","soccer","mandate","downtown","nightmare","barrel","homeless","globe","uncomfortable","execute","trap","gesture","pale","tent","receiver","horizon","diagnosis","considerable","gospel","automatically","fighting","stroke","wander","duck","grain","beast","remark","fabric","civilization","corruption","collapse","greatly","workshop","inquiry","cd","admire","exclude","rifle","closet","reporting","curve","patch","touchdown","experimental","earnings","hunter","tunnel","corps","behave","rent","motivate","attribute","elderly","virtual","minimum","weakness","progressive","doc","medium","virtue","ounce","athletic","confusion","legislative","facilitate","midnight","deer","undergo","heritage","summit","sword","telescope","donate","blade","toe","agriculture","enforce","recruit","dose","concerning","integrate","prescription","retail","adoption","monthly","deadly","grave","rope","reliable","transaction","lawn","consistently","mount","bubble","briefly","absorb","princess","log","blanket","kingdom","anticipate","bug","dedicate","nominee","transformation","temple","arrival","frustration","changing","demonstration","pollution","poster","nail","nonprofit","guidance","exhibit","pen","interrupt","lemon","bankruptcy","resign","dominant","invasion","sacred","replacement","portray","hunt","distinguish","melt","consensus","hardware","rail","mate","korean","cabin","dining","snake","tobacco","orientation","trigger","wherever","seize","punish","sexy","depict","input","seemingly","widespread","competitor","flip","freshman","donation","administrative","donor","gradually","overlook","toilet","pleased","resemble","ideology","glory","maximum","organ","skip","starting","brush","brick","gut","reservation","rebel","disappointed","oak","valid","instructor","rescue","racism","pension","diabetes","cluster","eager","marijuana","combat","praise","costume","sixth","frequent","inspiration","concrete","cooking","conspiracy","trait","van","institutional","garlic","drinking","crystal","pro","helicopter","counsel","equation","roman","sophisticated","timing","pope","opera","ethical","indication","motive","porch","reinforce","gaze","ours","lap","written","reverse","starter","injure","chronic","continued","exclusive","colonel","beef","abroad","thanksgiving","intensity","cave","basement","associated","fascinating","interact","illustration","essence","container","driving","dynamic","gym","bat","plead","promotion","uncertainty","ownership","officially","tag","documentary","stem","flood","guilt","alarm","turkey","diagnose","precious","swallow","initiate","fitness","restrict","gulf","mommy","unexpected","shrug","agricultural","sacrifice","spectrum","dragon","bacteria","shore","pastor","cliff","adequate","tackle","occupation","compose","slice","brave","stimulus","patent","powder","harsh","chaos","kit","piano","surprisingly","lend","correctly","govern","modest","shared","psychologist","servant","overwhelming","elevator","hispanic","divine","transmission","butt","commonly","cowboy","ease","intent","counseling","gentle","rhythm","complexity","nonetheless","effectiveness","lonely","statistical","longtime","strain","garbage","devote","venture","aide","subtle","rod","civilian","endure","basket","strict","loser","franchise","saint","prosecution","lyrics","compound","architecture","destination","cope","province","sum","lecture","spill","genuine","upstairs","trading","acceptance","revelation","indicator","collaboration","rhetoric","tune","slam","inevitable","monkey","protocol","productive","jeans","companion","convict","boost","recipient","practically","array","persuade","undermine","yep","ranch","scout","medal","endless","translation","ski","conservation","habitat","contractor","trailer","pitcher","towel","goodbye","bonus","dramatically","genre","caller","exit","hook","behavioral","omit","pit","boring","suspend","cholesterol","closed","advertisement","bombing","consult","expertise","creator","peaceful","provided","tablet","ruling","warming","equity","rational","utilize","pine","bitter","surgeon","affordable","tennis","artistic","download","suffering","accuracy","literacy","treasury","talented","crown","importantly","bare","invisible","sergeant","regulatory","thumb","colony","walking","accessible","integration","spouse","excitement","residence","bold","adolescent","greek","doll","oxygen","gravity","functional","palace","echo","cotton","estimated","endorse","lawmaker","determination","flash","simultaneously","dynamics","shell","hint","administer","christianity","distract","alleged","statute","biology","follower","nasty","evident","confess","eligible","consent","pump","bloody","occasional","trunk","prohibit","sustainable","belly","banking","asshole","journalism","obstacle","ridge","heal","bastard","cheer","apology","tumor","architect","wrist","harbor","handsome","bullshit","realm","twist","inspector","surveillance","trauma","rebuild","romance","gross","deadline","classical","convey","compensation","insect","output","parliament","suite","opposed","fold","separation","demon","eating","structural","equality","logical","probability","await","generous","acquisition","custody","compromise","greet","trash","judicial","earthquake","insane","realistic","assemble","necessity","horn","parameter","grip","modify","sponsor","mathematics","hallway","liability","crawl","theoretical","condemn","fluid","homeland","technological","exam","anchor","spell","considering","conscious","vitamin","known","hostage","actively","mill","teenage","retrieve","processing","sentiment","offering","oral","convinced","photography","coin","laptop","bounce","goodness","affiliation","punch","burst","bee","blessing","continuous","landing","repair","ritual","bath","sneak","historically","mud","scan","reminder","hers","slavery","supervisor","quantity","olympics","pleasant","slope","skirt","outlet","curtain","declaration","seal","immune","calendar","paragraph","identical","regret","quest","entrepreneur","specify","stumble","clay","noon","elbow","outstanding","unity","manipulate","airplane","portfolio","mysterious","delicious","northwest","sweat","profound","treasure","flour","lightly","rally","default","alongside","hug","isolate","exploration","limb","enroll","outer","charter","southwest","arena","witch","upcoming","forty","someday","unite","courtesy","statue","fist","castle","precise","squad","cruise","legally","embassy","patience","thereby","bush","purple","electrical","outfit","cage","retired","shark","lobby","sidewalk","runner","ankle","attraction","artificial","mercy","indigenous","slap","dancer","candle","sexually","needle","hidden","chronicle","suburb","toxic","underlying","sensor","deploy","debut","magnitude","suspicion","colonial","icon","grandma","info","jurisdiction","iranian","parade","archive","gifted","rage","outdoor","ending","loop","altogether","burning","reception","crush","premise","deem","automatic","whale","mechanical","credibility","drain","drift","loyalty","promising","tide","traveler","grief","metaphor","skull","pursuit","therapist","backup","workplace","instinct","export","bleed","seventh","fixed","broadcast","disclose","execution","pal","chuckle","density","correction","kinda","relieve","teammate","corridor","enthusiasm","extended","alright","panic","pad","bid","mild","productivity","tuck","railroad","frozen","minimize","amid","inspection","cab","expected","nonsense","leap","rider","theology","terrific","accent","invitation","liar","oversee","awkward","registration","suburban","momentum","instantly","clerk","chin","hockey","laser","proposition","rob","beam","ancestor","creativity","verse","casual","objection","clever","shove","revolutionary","carbohydrate","steam","reportedly","forehead","resume","sheep","carpet","cloth","interior","questionnaire","departure","behalf","graph","diplomatic","thief","herb","subsidy","fossil","patrol","pulse","mechanic","cattle","screening","continuing","electoral","supposedly","dignity","prophet","commentary","serving","safely","homework","allegedly","android","alpha","insert","mortality","contend","elephant","solely","continent","ecosystem","olive","syndrome","abstract","accusation","coming","sock","pickup","shuttle","improved","calculation","innovative","demographic","accommodate","jaw","unfair","tragic","comprise","faster","nutrition","mentor","stance","rabbit","dot","contributor","cooperate","disk","hesitate","offend","exploit","compel","likelihood","sibling","southeast","gorgeous","undertake","painter","residential","counterpart","believer","lamp","inmate","thoroughly","freak","filter","pillow","orbit","purse","likewise","cease","passing","vanish","instructional","clause","mentally","pond","neutral","shield","popularity","cartoon","authorize","combined","graphic","darling","traditionally","vendor","poorly","conceive","opt","descend","firmly","beloved","openly","gathering","fever","preach","interfere","arrow","required","capitalism","fork","meantime","presumably","racist","illusion","removal","anxious","organism","awake","sculpture","spare","harassment","drum","diminish","helmet","certificate","tribal","mmm","sadly","cart","spy","sunlight","delete","rookie","clarify","hunger","practitioner","performer","protective","jar","programming","dawn","salmon","census","accomplishment","conscience","fortunately","minimal","molecule","supportive","sole","threshold","inventory","comply","monetary","transport","shy","drill","influential","verbal","ranking","gram","grasp","puzzle","envelope","classify","enact","unfortunate","scatter","cure","readily","discount","addiction","emerging","worthy","marker","juror","blend","businessman","premium","retailer","liver","pirate","protester","outlook","elder","gallon","additionally","ignorance","chemistry","sometime","weed","babe","fraction","conversion","tolerate","drown","merit","citizenship","coordinator","validity","lightning","turtle","ambition","worldwide","sail","added","delicate","comic","soap","hostile","instruct","shortage","useless","booth","diary","gasp","suspicious","transit","excite","publishing","curiosity","grid","rolling","bow","cruel","disclosure","rival","denial","secular","speculation","sympathy","tender","inappropriate","sodium","bang","challenging","ipad","sack","barn","reliability","hormone","footage","carve","alley","coastal","cafe","partial","flexible","experienced","mixed","vampire","optimistic","dessert","northeast","specialize","fleet","availability","compliance","pin","pork","astronomer","forbid","installation","boil","nest","exclusively","goat","shallow","equip","equivalent","betray","willingness","banker","interval","gasoline","encouraging","bucket","theft","laundry","constraint","dying","hatred","jewelry","migration","invention","loving","revenge","unprecedented","outline","sheer","halloween","sweetheart","spit","lazy","intimate","defender","technically","peanut","unclear","piss","workout","wilderness","compelling","eleven","backyard","alike","partially","guardian","passionate","scripture","midst","ideological","thrive","sensitivity","emotionally","ignorant","explicitly","unfold","headache","eternal","chop","ego","spectacular","deposit","verdict","accountability","nominate","civic","uncover","critique","aisle","tropical","annually","eighth","blast","corrupt","compassion","scratch","verify","offender","inherit","strive","chunk","appreciation","canvas","proceedings","magical","loyal","aah","desperately","throne","brutal","spite","propaganda","irony","soda","projection","dutch","parental","disabled","collector","disappointment","happily","steep","fancy","listener","whip","drawer","heck","developmental","ash","socially","courtroom","stamp","solo","trainer","induce","anytime","morality","syrian","pipeline","bride","instant","spark","doorway","interface","learner","casino","placement","cord","conception","flexibility","thou","elegant","flaw","locker","peel","plea","goddamn","import","stack","gosh","philosophical","junk","bicycle","vocal","chew","destiny","ambitious","unbelievable","halfway","jealous","sphere","invade","excessive","countless","sunset","accounting","faithful","freely","extract","adaptation","ray","depressed","emperor","wagon","columnist","jungle","embarrassed","trillion","breeze","foster","venue","discourage","disturbing","riot","isolation","explicit","commodity","attendance","tab","consequently","dough","streak","silk","similarity","steak","dancing","petition","viable","breathing","mm","balloon","monument","cue","sleeve","toll","reluctant","warrant","stiff","tattoo","softly","graduation","deliberately","consecutive","upgrade","accurately","strictly","leak","casualty","risky","banana","blank","beneficial","shrink","chat","rack","rude","usage","testament","browser","processor","thigh","perceived","talking","merchant","quantum","eyebrow","surrounding","vocabulary","ashamed","eh","radar","stunning","murderer","burger","collar","align","textbook","sensation","afterward","charm","sunny","hammer","keyboard","persist","wheat","predator","bizarre"]');
 ;// CONCATENATED MODULE: ./data/curse-words.json
-const curse_words_namespaceObject = JSON.parse('["4r5e","5h1t","5hit","a55","anal","anus","ar5e","arrse","arse","ass","ass-fucker","asses","assfucker","assfukka","asshole","assholes","asswhole","a_s_s","b!tch","b00bs","b17ch","b1tch","ballbag","balls","ballsack","bastard","beastial","beastiality","bellend","bestial","bestiality","bi+ch","biatch","bitch","bitcher","bitchers","bitches","bitchin","bitching","bloody","blow job","blowjob","blowjobs","boiolas","bollock","bollok","boner","boob","boobs","booobs","boooobs","booooobs","booooooobs","breasts","buceta","bugger","bum","bunny fucker","butt","butthole","buttmunch","buttplug","c0ck","c0cksucker","carpet muncher","cawk","chink","cipa","cl1t","clit","clitoris","clits","cnut","cock","cock-sucker","cockface","cockhead","cockmunch","cockmuncher","cocks","cocksuck ","cocksucked ","cocksucker","cocksucking","cocksucks ","cocksuka","cocksukka","cok","cokmuncher","coksucka","coon","cox","crap","cum","cummer","cumming","cums","cumshot","cunilingus","cunillingus","cunnilingus","cunt","cuntlick ","cuntlicker ","cuntlicking ","cunts","cyalis","cyberfuc","cyberfuck ","cyberfucked ","cyberfucker","cyberfuckers","cyberfucking ","d1ck","damn","dick","dickhead","dildo","dildos","dink","dinks","dirsa","dlck","dog-fucker","doggin","dogging","donkeyribber","doosh","duche","dyke","ejaculate","ejaculated","ejaculates ","ejaculating ","ejaculatings","ejaculation","ejakulate","f u c k","f u c k e r","f4nny","fag","fagging","faggitt","faggot","faggs","fagot","fagots","fags","fanny","fannyflaps","fannyfucker","fanyy","fatass","fcuk","fcuker","fcuking","feck","fecker","felching","fellate","fellatio","fingerfuck ","fingerfucked ","fingerfucker ","fingerfuckers","fingerfucking ","fingerfucks ","fistfuck","fistfucked ","fistfucker ","fistfuckers ","fistfucking ","fistfuckings ","fistfucks ","flange","fook","fooker","fuck","fucka","fucked","fucker","fuckers","fuckhead","fuckheads","fuckin","fucking","fuckings","fuckingshitmotherfucker","fuckme ","fucks","fuckwhit","fuckwit","fudge packer","fudgepacker","fuk","fuker","fukker","fukkin","fuks","fukwhit","fukwit","fux","fux0r","f_u_c_k","gangbang","gangbanged ","gangbangs ","gaylord","gaysex","goatse","god-dam","god-damned","goddamn","goddamned","hardcoresex ","hell","heshe","hoar","hoare","hoer","homo","hore","horniest","horny","hotsex","jack-off ","jackoff","jap","jerk-off ","jism","jiz ","jizm ","jizz","kawk","knob","knobead","knobed","knobend","knobhead","knobjocky","knobjokey","kock","kondum","kondums","kum","kummer","kumming","kums","kunilingus","kiunt","l3i+ch","l3itch","labia","lmfao","lust","lusting","m0f0","m0fo","m45terbate","ma5terb8","ma5terbate","masochist","master-bate","masterb8","masterbat*","masterbat3","masterbate","masterbation","masterbations","masturbate","mo-fo","mof0","mofo","mothafuck","mothafucka","mothafuckas","mothafuckaz","mothafucked ","mothafucker","mothafuckers","mothafuckin","mothafucking ","mothafuckings","mothafucks","mother fucker","motherfuck","motherfucked","motherfucker","motherfuckers","motherfuckin","motherfucking","motherfuckings","motherfuckka","motherfucks","muff","mutha","muthafecker","muthafuckker","muther","mutherfucker","n1gga","n1gger","nazi","nigg3r","nigg4h","nigga","niggah","niggas","niggaz","nigger","niggers ","nob","nob jokey","nobhead","nobjocky","nobjokey","numbnuts","nutsack","orgasim ","orgasims ","orgasm","orgasms ","p0rn","pawn","pecker","penis","penisfucker","phonesex","phuck","phuk","phuked","phuking","phukked","phukking","phuks","phuq","pigfucker","pimpis","piss","pissed","pisser","pissers","pisses ","pissflaps","pissin ","pissing","pissoff ","poop","porn","porno","pornography","pornos","prick","pricks ","pron","pube","pusse","pussi","pussies","pussy","pussys ","rectum","retard","rimjaw","rimming","s hit","s.o.b.","sadist","schlong","screwing","scroat","scrote","scrotum","semen","sex","sh!+","sh!t","sh1t","shag","shagger","shaggin","shagging","shemale","shi+","shit","shitdick","shite","shited","shitey","shitfuck","shitfull","shithead","shiting","shitings","shits","shitted","shitter","shitters ","shitting","shittings","shitty ","skank","slut","sluts","smegma","smut","snatch","son-of-a-bitch","spac","spunk","s_h_i_t","t1tt1e5","t1tties","teets","teez","testical","testicle","tit","titfuck","tits","titt","tittie5","tittiefucker","titties","tittyfuck","tittywank","titwank","tosser","turd","tw4t","twat","twathead","twatty","twunt","twunter","v14gra","v1gra","vagina","viagra","vulva","w00se","wang","wank","wanker","wanky","whoar","whore","willies","willy","xrated","xxx"]');
+const curse_words_namespaceObject = JSON.parse('["4r5e","5h1t","5hit","a55","anal","anus","ar5e","arrse","arse","ass","ass-fucker","asses","assfucker","assfukka","asshole","assholes","asswhole","a_s_s","b!tch","b00bs","b17ch","b1tch","ballbag","balls","ballsack","bastard","beastial","beastiality","bellend","bestial","bestiality","bi+ch","biatch","bitch","bitcher","bitchers","bitches","bitchin","bitching","bloody","blow job","blowjob","blowjobs","boiolas","bollock","bollok","boner","boob","boobs","booobs","boooobs","booooobs","booooooobs","breasts","buceta","bugger","bum","bunny fucker","butt","butthole","buttmunch","buttplug","c0ck","c0cksucker","carpet muncher","cawk","chink","cipa","cl1t","clit","clitoris","clits","cnut","cock","cock-sucker","cockface","cockhead","cockmunch","cockmuncher","cocks","cocksuck ","cocksucked ","cocksucker","cocksucking","cocksucks ","cocksuka","cocksukka","cok","cokmuncher","coksucka","coon","cox","crap","cum","cummer","cumming","cums","cumshot","cunilingus","cunillingus","cunnilingus","cunt","cuntlick ","cuntlicker ","cuntlicking ","cunts","cyalis","cyberfuc","cyberfuck ","cyberfucked ","cyberfucker","cyberfuckers","cyberfucking ","d1ck","damn","dick","dickhead","dildo","dildos","dink","dinks","dirsa","dlck","dog-fucker","doggin","dogging","donkeyribber","doosh","duche","dyke","ejaculate","ejaculated","ejaculates ","ejaculating ","ejaculatings","ejaculation","ejakulate","f u c k","f u c k e r","f4nny","fag","fagging","faggitt","faggot","faggs","fagot","fagots","faggy","fags","fanny","fannyflaps","fannyfucker","fanyy","fatass","fcuk","fcuker","fcuking","feck","fecker","felching","fellate","fellatio","fingerfuck ","fingerfucked ","fingerfucker ","fingerfuckers","fingerfucking ","fingerfucks ","fistfuck","fistfucked ","fistfucker ","fistfuckers ","fistfucking ","fistfuckings ","fistfucks ","flange","fook","fooker","fuck","fucka","fucked","fucker","fuckers","fuckhead","fuckheads","fuckin","fucking","fuckings","fuckingshitmotherfucker","fuckme ","fucks","fuckwhit","fuckwit","fudge packer","fudgepacker","fuk","fuker","fukker","fukkin","fuks","fukwhit","fukwit","fux","fux0r","f_u_c_k","gangbang","gangbanged ","gangbangs ","gaylord","gaysex","goatse","god-dam","god-damned","goddamn","goddamned","hardcoresex ","hell","heshe","hoar","hoare","hoer","homo","hore","horniest","horny","hotsex","jack-off ","jackoff","jap","jerk-off ","jism","jiz ","jizm ","jizz","kawk","knob","knobead","knobed","knobend","knobhead","knobjocky","knobjokey","kock","kondum","kondums","kum","kummer","kumming","kums","kunilingus","kiunt","l3i+ch","l3itch","labia","lmfao","lust","lusting","m0f0","m0fo","m45terbate","ma5terb8","ma5terbate","masochist","master-bate","masterb8","masterbat*","masterbat3","masterbate","masterbation","masterbations","masturbate","mo-fo","mof0","mofo","mothafuck","mothafucka","mothafuckas","mothafuckaz","mothafucked ","mothafucker","mothafuckers","mothafuckin","mothafucking ","mothafuckings","mothafucks","mother fucker","motherfuck","motherfucked","motherfucker","motherfuckers","motherfuckin","motherfucking","motherfuckings","motherfuckka","motherfucks","muff","mutha","muthafecker","muthafuckker","muther","mutherfucker","n1gga","n1gger","nazi","nigg3r","nigg4h","nigga","niggah","niggas","niggaz","nigger","niggers ","nob","nob jokey","nobhead","nobjocky","nobjokey","numbnuts","nutsack","orgasim ","orgasims ","orgasm","orgasms ","p0rn","pawn","pecker","penis","penisfucker","phonesex","phuck","phuk","phuked","phuking","phukked","phukking","phuks","phuq","pigfucker","pimpis","piss","pissed","pisser","pissers","pisses ","pissflaps","pissin ","pissing","pissoff ","poop","porn","porno","pornography","pornos","prick","pricks ","pron","pube","pusse","pussi","pussies","pussy","pussys ","rectum","retard","rimjaw","rimming","s hit","s.o.b.","sadist","schlong","screwing","scroat","scrote","scrotum","semen","sex","sh!+","sh!t","sh1t","shag","shagger","shaggin","shagging","shemale","shi+","shit","shitdick","shite","shited","shitey","shitfuck","shitfull","shithead","shiting","shitings","shits","shitted","shitter","shitters ","shitting","shittings","shitty ","skank","slut","sluts","smegma","smut","snatch","son-of-a-bitch","spac","spunk","s_h_i_t","t1tt1e5","t1tties","teets","teez","testical","testicle","tit","titfuck","tits","titt","tittie5","tittiefucker","titties","tittyfuck","tittywank","titwank","tosser","turd","tw4t","twat","twathead","twatty","twunt","twunter","v14gra","v1gra","vagina","viagra","vulva","w00se","wang","wank","wanker","wanky","whoar","whore","willies","willy","xrated","xxx"]');
 ;// CONCATENATED MODULE: ./app.js
 function app_toConsumableArray(arr) { return app_arrayWithoutHoles(arr) || app_iterableToArray(arr) || app_unsupportedIterableToArray(arr) || app_nonIterableSpread(); }
 
@@ -5887,22 +6108,15 @@ function app_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
-
-
-var _loadState = loadState(),
-    initialSkills = _loadState.initialSkills,
-    initialItems = _loadState.initialItems,
-    initialXp = _loadState.initialXp,
-    initialMoney = _loadState.initialMoney;
-
+var OPTION_COST = 2;
 var alphabet = 'qwertyuiopasdfghjklzxcvbnm'.split('');
 var alphabetRows = [alphabet.slice(0, 10), alphabet.slice(10, 19), alphabet.slice(19)];
 
-function getAnswers(skills, items) {
+function getAnswers(skills, items, equipment) {
   var wordLength = skills.wordLength.value;
   var boardsCount = skills.boardsCount.value;
-  var answers = game_words_namespaceObject.filter(function (word) {
+  var possibleWords = equipment.useFullDictionary.active ? all_words_namespaceObject : game_words_namespaceObject;
+  var answers = possibleWords.filter(function (word) {
     return word.length === +wordLength && !curse_words_namespaceObject.includes(word);
   }).sort(function () {
     return Math.random() - 0.5;
@@ -5917,14 +6131,17 @@ function isItemActive(item) {
 }
 
 function App() {
-  var _useReducer = (0,react.useReducer)(skillsReducer, initialSkills),
-      _useReducer2 = app_slicedToArray(_useReducer, 2),
-      skills = _useReducer2[0],
-      skillsDispatch = _useReducer2[1];
-
-  var _useReducer3 = (0,react.useReducer)(itemsReducer, initialItems),
-      _useReducer4 = app_slicedToArray(_useReducer3, 1),
-      items = _useReducer4[0];
+  var _useGameState = useGameState(),
+      skills = _useGameState.skills,
+      items = _useGameState.items,
+      equipment = _useGameState.equipment,
+      xp = _useGameState.xp,
+      money = _useGameState.money,
+      skillsDispatch = _useGameState.skillsDispatch,
+      itemsDispatch = _useGameState.itemsDispatch,
+      setXp = _useGameState.setXp,
+      setMoney = _useGameState.setMoney,
+      randomizeRandomSkills = _useGameState.randomizeRandomSkills;
 
   var _useState = (0,react.useState)('game'),
       _useState2 = app_slicedToArray(_useState, 2),
@@ -5941,30 +6158,20 @@ function App() {
       wonLastGame = _useState6[0],
       setWonLastGame = _useState6[1];
 
-  var _useState7 = (0,react.useState)(initialXp),
+  var _useState7 = (0,react.useState)(getAnswers(skills, items, equipment)),
       _useState8 = app_slicedToArray(_useState7, 2),
-      xp = _useState8[0],
-      setXp = _useState8[1];
+      answers = _useState8[0],
+      setAnswers = _useState8[1];
 
-  var _useState9 = (0,react.useState)(initialMoney),
+  var _useState9 = (0,react.useState)([]),
       _useState10 = app_slicedToArray(_useState9, 2),
-      money = _useState10[0],
-      setMoney = _useState10[1];
+      guesses = _useState10[0],
+      setGuesses = _useState10[1];
 
-  var _useState11 = (0,react.useState)(getAnswers(skills, items)),
-      _useState12 = app_slicedToArray(_useState11, 2),
-      answers = _useState12[0],
-      setAnswers = _useState12[1];
-
-  var _useState13 = (0,react.useState)([]),
-      _useState14 = app_slicedToArray(_useState13, 2),
-      guesses = _useState14[0],
-      setGuesses = _useState14[1];
-
-  var _useReducer5 = (0,react.useReducer)(current_guess_reducer, ''),
-      _useReducer6 = app_slicedToArray(_useReducer5, 2),
-      currentGuess = _useReducer6[0],
-      currentGuessDispatch = _useReducer6[1];
+  var _useReducer = (0,react.useReducer)(current_guess_reducer, ''),
+      _useReducer2 = app_slicedToArray(_useReducer, 2),
+      currentGuess = _useReducer2[0],
+      currentGuessDispatch = _useReducer2[1];
 
   var handleGuess = function handleGuess() {
     if (!guesses.includes(currentGuess) && currentGuess.length === skills.wordLength.value && all_words_namespaceObject.includes(isItemActive(items.reverse) ? currentGuess.split('').reverse().join('') : currentGuess) && (!isItemActive(items.strictMode) || isGuessStrictlyValid(currentGuess, guesses, answers))) {
@@ -5975,6 +6182,8 @@ function App() {
       resetRoundTime();
     } else if (currentGuess === 'uuddl') {
       setUiState('cheats');
+    } else if (currentGuess === 'ldduu') {
+      setUiState('skills');
     }
   };
 
@@ -5985,11 +6194,21 @@ function App() {
     setLastXpEarned(xpEarned);
     setWonLastGame(endState.won);
     setGuesses([]);
-    setAnswers(getAnswers(skills, items));
+    setAnswers(getAnswers(skills, items, equipment));
     skillsDispatch({
       type: 'GAIN_MASTERY',
       skills: skills
     });
+  };
+
+  var handleAdd100Xp = function handleAdd100Xp(endState) {
+    var xpEarned = 100;
+    setXp(xp + xpEarned);
+  };
+
+  var handleAdd100Money = function handleAdd100Money(endState) {
+    var moneyEarned = 100;
+    setMoney(money + moneyEarned);
   };
 
   var handleAddLetter = function handleAddLetter(letter) {
@@ -6002,11 +6221,12 @@ function App() {
   };
 
   var handleGameStart = function handleGameStart() {
+    randomizeRandomSkills();
     resetGameTime();
     resetRoundTime();
     setGuesses([]);
     setUiState('game');
-    setAnswers(getAnswers(skills, items));
+    setAnswers(getAnswers(skills, items, equipment));
   };
 
   (0,react.useEffect)(function () {
@@ -6035,7 +6255,7 @@ function App() {
     var won = answers.length && answers.every(function (answer) {
       return guesses.includes(answer);
     });
-    var lost = guesses.length >= skills.maxGuesses.value;
+    var lost = guesses.length >= skills.maxWrongGuesses.value + skills.boardsCount.value;
 
     if (won || lost) {
       handleGameEnd({
@@ -6062,11 +6282,9 @@ function App() {
     duration: skills.roundTimeLimit.value * 1000,
     refreshRate: uiState === 'game' ? undefined : null,
     onCountdownEnd: function onCountdownEnd() {
-      setGuesses([].concat(app_toConsumableArray(guesses), ['']));
-      currentGuessDispatch({
-        type: 'clear'
+      handleGameEnd({
+        won: false
       });
-      resetRoundTime();
     }
   }),
       roundTimeRemaining = _useCountdown2.remaining,
@@ -6097,7 +6315,7 @@ function App() {
   };
 
   var handleUnlockOption = function handleUnlockOption(skillId, value) {
-    var optionCost = 10;
+    var optionCost = OPTION_COST;
     var skill = skills[skillId];
     var totalMastery = skill.options.reduce(function (acc, opt) {
       return acc + opt.mastery;
@@ -6114,14 +6332,13 @@ function App() {
     }
   };
 
-  var handleBuyItem = function handleBuyItem(skillId, value) {
-    if (money >= skills[skillId].cost) {
-      skillsDispatch({
-        type: 'UNLOCK',
-        skillId: skillId,
-        value: value
+  var handleBuyItem = function handleBuyItem(itemId, value) {
+    if (money >= items[itemId].cost) {
+      itemsDispatch({
+        type: 'BUY',
+        itemId: itemId
       });
-      setMoney(money - skills[skillId].cost);
+      setMoney(money - items[itemId].cost);
     }
   };
 
@@ -6137,13 +6354,6 @@ function App() {
       document.removeEventListener('keydown', addKey);
     };
   }, [uiState]);
-  (0,react.useEffect)(function () {
-    saveState({
-      skills: skills,
-      xp: xp,
-      money: money
-    });
-  }, [skills, xp, money]);
 
   var handleClearAll = function handleClearAll() {
     localStorage.clear();
@@ -6249,6 +6459,10 @@ function App() {
   }, /*#__PURE__*/react.createElement("div", null, "DEBUG:"), /*#__PURE__*/react.createElement("button", {
     onClick: handleClearAll
   }, "Clear all"), /*#__PURE__*/react.createElement("button", {
+    onClick: handleAdd100Xp
+  }, "Add 100 XP"), /*#__PURE__*/react.createElement("button", {
+    onClick: handleAdd100Money
+  }, "Add 100 Money"), /*#__PURE__*/react.createElement("button", {
     onClick: handleUnlockAll
   }, "Unlock All Skills")), /*#__PURE__*/react.createElement(Modal, {
     open: uiState === 'hub',
@@ -6274,7 +6488,8 @@ function App() {
     handleSetOption: handleSetOption,
     handleClose: function handleClose() {
       setUiState('hub');
-    }
+    },
+    optionCost: OPTION_COST
   })), /*#__PURE__*/react.createElement(Modal, {
     open: uiState === 'results'
   }, /*#__PURE__*/react.createElement(Results, {

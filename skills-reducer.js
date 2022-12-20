@@ -1,5 +1,8 @@
 import defaultSkills from './default-skills'
 
+// todo: make this an external constant
+const optionCost = 2
+
 export default function skillsReducer (prev, { type, skillId, skills, value }) {
   if (type === 'UNLOCK_SKILL') {
     return {
@@ -10,7 +13,6 @@ export default function skillsReducer (prev, { type, skillId, skills, value }) {
       }
     }
   } else if (type === 'UNLOCK_OPTION') {
-    console.log('value', value)
     return {
       ...prev,
       [skillId]: {
@@ -23,15 +25,13 @@ export default function skillsReducer (prev, { type, skillId, skills, value }) {
       ...prev,
       [skillId]: {
         ...prev[skillId],
+        random: value === 'random',
         value
       }
     }
   } else if (type === 'LOAD_INITIAL') {
     return defaultSkills
   } else if (type === 'GAIN_MASTERY') {
-    const masteryIncreasePerGame = 1
-    const maxMasteryPerOption = 10
-
     return Object.fromEntries(Object.entries(skills).map(([skillId, skill]) => [
       skillId,
       {
@@ -41,9 +41,9 @@ export default function skillsReducer (prev, { type, skillId, skills, value }) {
             ? option
             : {
                 ...option,
-                mastery: option.mastery + masteryIncreasePerGame >= maxMasteryPerOption
-                  ? maxMasteryPerOption
-                  : option.mastery + masteryIncreasePerGame
+                mastery: option.mastery + 1 >= optionCost
+                  ? optionCost
+                  : option.mastery + 1
               }
         })
       }
@@ -53,8 +53,9 @@ export default function skillsReducer (prev, { type, skillId, skills, value }) {
       ...acc,
       [key]: {
         ...skill,
-        unlocked: skill.unlocked,
-        unlockedValues: [...skill.options.map(o => o.value), 'random']
+        options: skill.options.map(o => ({ ...o, mastery: optionCost })),
+        unlocked: true,
+        unlockedValues: skill.options.map(o => o.value)
       }
     }), {})
   } else {

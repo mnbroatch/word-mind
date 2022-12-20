@@ -11,7 +11,7 @@ const { initialSkills, initialItems, initialEquipment, initialXp, initialMoney }
 const getSeed = () => {
   let seed = ''
   for (let i = 0, len = seedLength; i < len; i++) {
-    seed += Math.random().toString().slice(1)
+    seed += Math.random().toString().slice(2)
   }
   return seed
 }
@@ -29,15 +29,14 @@ export default function useGameState () {
       ...acc,
       [key]: {
         ...skill,
-        value: skill.value === 'random' ? skill.options[seed[i] % skill.options.length].value : skill.value,
-        random: skill.value === 'random'
+        value: skill.value === 'random' ? skill.options[seed[i] % skill.options.length].value : skill.value
       }
     }
   }, {})
 
   useEffect(() => {
     saveState({ skills: skillsToUse, xp, money, items, equipment })
-  }, [skills, xp, money, items, equipment])
+  }, [skillsToUse, xp, money, items, equipment])
 
   const randomizeRandomSkills = () => { setSeed(getSeed()) }
 

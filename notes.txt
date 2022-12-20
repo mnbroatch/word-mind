@@ -1,6 +1,12 @@
+bug: random doesn't stay random
+
+====================
 
 Betting Skill / Equipment
-  - you wager on whether your next guess is correct
+  - puts a wager on the game
+  - you must "call your shot"
+    - guessing without calling shot is a loss
+    - calling wrong answer is a loss
 
 ====================
 
@@ -25,19 +31,10 @@ Amulet of uniqueness
 
 ===============
 
-Current money becomes XP / levels
-- 1 skill point per level
-
-Skills cost skill points
-  - Each has 5 options
-    - maybe different skills have different # of options
-  - Can be upgraded by earning mastery
-  - Each option stops giving mastery after a certain point
-  - Maxing all options rewards the "use a random option" option that gives a lot of xp
-
-
 Separate money buys consumables
   - backward tonic, for one
+  - word keeps changing to keep you wrong as much as possible
+    - useful for call-shot, esp 3 letters
   - all mastery gained is money, vice versa ?
     - might be too hard
 
@@ -133,14 +130,12 @@ hidden secrets
 
 
 
-attach rpg items to modifiers?
-  - changing the numeric option is like "upgrading the item"
 
 inventory
   - potions change rules for a number of games
-    - adds status effect which can be added other ways too, good or bad
   - idols open up options
   - currency
+
 
 
 

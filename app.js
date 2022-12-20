@@ -21,7 +21,7 @@ import allWords from './data/all-words.json'
 import gameWords from './data/game-words.json'
 import curseWords from './data/curse-words.json'
 
-const OPTION_COST = 10
+const OPTION_COST = 2
 
 const alphabet = 'qwertyuiopasdfghjklzxcvbnm'.split('')
 
