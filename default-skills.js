@@ -113,7 +113,7 @@ export default {
     unlocked: false
   },
   roundTimeLimit: {
-    description: 'Round Time Limit',
+    description: 'Guess Time Limit',
     options: [
       {
         value: Infinity,
@@ -133,6 +133,34 @@ export default {
       },
       {
         value: 300,
+        mastery: 0
+      }
+    ],
+    value: Infinity,
+    unlockedValues: [Infinity, 60],
+    unlocked: false
+  },
+  callShot: {
+    description: 'Call Shot + XP Multiplier Bet',
+    options: [
+      {
+        value: 'off',
+        mastery: 0
+      },
+      {
+        value: 2,
+        mastery: 0
+      },
+      {
+        value: 3,
+        mastery: 0
+      },
+      {
+        value: 4,
+        mastery: 0
+      },
+      {
+        value: 5,
         mastery: 0
       }
     ],
