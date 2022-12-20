@@ -26,7 +26,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_g
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0;font-family:system-ui}#root{height:100vh}.root{box-sizing:border-box;position:relative;display:flex;flex-direction:column;height:100vh}.main-content{flex:1;margin-top:5px;position:relative}.main-game{height:100%;display:flex;flex-direction:column}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{flex:1;display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray;background-color:#fff;transition:background-color 1s}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase;background-color:#fff;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:45px;font-family:\"libre-baskerville\";font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;transform:rotate(-5deg);width:300px;margin-top:70px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.skills-list{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.skill{position:relative;box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:12px;padding:16px 0 16px 0;text-align:center}.skill-spacer{width:175px;margin:0 12px 0 12px;height:0}.skill__description{background-color:brown;color:#fff;left:0;padding:6px;position:absolute;text-align:center;top:-17px;left:-3px;transform:rotate(-2deg);white-space:nowrap;width:175px}.skill__option{border:0;border-radius:3px;margin:2px;height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.skill__option--selected{background-color:green;color:#fff}.skill__option--unlocked{background-color:#add8e6}.skill__option--locked{background-color:#ff0}.skill__option-inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.skill__option--random{width:120px}.keyboard{margin:40px 0 70px 0;padding:10px;box-sizing:border-box;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.xp{display:flex;height:100%;align-items:center;justify-content:center;color:#fff;font-family:libre-baskerville;position:relative;border-radius:9999999px;border:1px dotted #fff;background-image:linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));padding:0 10px 0 10px;box-sizing:border-box}.xp__background-squiggle{top:-0.15em;position:absolute;transform:scale(4.5, 3);height:100%;display:flex;justify-content:center;align-items:center;color:#f5b0cb;font-size:1.2em;opacity:.3}.xp__background-squiggle~.xp__background-squiggle{transform:scale(-4.5, 3);color:#372772}.xp__label{font-variant-numeric:tabular-nums}.xp__digit{display:inline-block;width:.65em;vertical-align:middle;text-align:center}.results .xp{font-size:3em}.results .xp__background-squiggle{font-size:2em}.money{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.money__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.money__label{color:#f6bd60;font-family:abril-fatface-regular}.money__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;display:flex;justify-content:space-between;align-items:center;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}@font-face{font-family:\"libre-baskerville\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ")}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0;font-family:system-ui}#root{height:100vh}.root{box-sizing:border-box;position:relative;display:flex;flex-direction:column;height:100vh}.main-content{flex:1;margin-top:5px;position:relative}.main-game{height:100%;display:flex;flex-direction:column}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{flex:1;display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray;background-color:#fff;transition:background-color 1s}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase;background-color:#fff;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:45px;font-family:\"libre-baskerville\";font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;transform:rotate(-5deg);width:300px;margin-top:70px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.skills-list{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.skill{position:relative;box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:12px;padding:16px 0 16px 0;text-align:center}.skill-spacer{width:175px;margin:0 12px 0 12px;height:0}.skill__description{background-color:brown;color:#fff;left:0;padding:6px;position:absolute;text-align:center;top:-17px;left:-3px;transform:rotate(-2deg);white-space:nowrap;width:175px}.option{border:0;border-radius:3px;margin:2px;height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option--selected{background-color:green;color:#fff}.option--unlocked{background-color:#add8e6}.option--locked{background-color:#ff0}.option-inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.option--random{width:120px}.keyboard{margin:40px 0 70px 0;padding:10px;box-sizing:border-box;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.xp{display:flex;height:100%;align-items:center;justify-content:center;color:#fff;font-family:libre-baskerville;position:relative;border-radius:9999999px;border:1px dotted #fff;background-image:linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));padding:0 10px 0 10px;box-sizing:border-box}.xp__background-squiggle{top:-0.15em;position:absolute;transform:scale(4.5, 3);height:100%;display:flex;justify-content:center;align-items:center;color:#f5b0cb;font-size:1.2em;opacity:.3}.xp__background-squiggle~.xp__background-squiggle{transform:scale(-4.5, 3);color:#372772}.xp__label{font-variant-numeric:tabular-nums}.xp__digit{display:inline-block;width:.65em;vertical-align:middle;text-align:center}.results .xp{font-size:3em}.results .xp__background-squiggle{font-size:2em}.money{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.money__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.money__label{color:#f6bd60;font-family:abril-fatface-regular}.money__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;display:flex;justify-content:space-between;align-items:center;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}@font-face{font-family:\"libre-baskerville\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ")}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4864,7 +4864,7 @@ function useCountdown(_ref) {
     unlocked: false
   },
   roundTimeLimit: {
-    description: 'Round Time Limit',
+    description: 'Guess Time Limit',
     options: [{
       value: Infinity,
       mastery: 0
@@ -4884,7 +4884,35 @@ function useCountdown(_ref) {
     value: Infinity,
     unlockedValues: [Infinity, 60],
     unlocked: false
-  }
+  } // callShot: {
+  //   description: 'Call Shot + XP Multiplier Bet',
+  //   options: [
+  //     {
+  //       value: 'off',
+  //       mastery: 0
+  //     },
+  //     {
+  //       value: 2,
+  //       mastery: 0
+  //     },
+  //     {
+  //       value: 3,
+  //       mastery: 0
+  //     },
+  //     {
+  //       value: 4,
+  //       mastery: 0
+  //     },
+  //     {
+  //       value: 5,
+  //       mastery: 0
+  //     }
+  //   ],
+  //   value: Infinity,
+  //   unlockedValues: [Infinity, 60],
+  //   unlocked: false
+  // }
+
 });
 ;// CONCATENATED MODULE: ./skills-reducer.js
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -4998,8 +5026,8 @@ function skillsReducer(prev, _ref) {
   },
   revealAnswers: {
     description: 'Reveal Answers',
-    ownedCount: 0,
-    activeUntil: 0,
+    ownedCount: Infinity,
+    activeUntil: Date.now() * 2,
     duration: 1000 * 60,
     cost: 10
   }
@@ -5250,6 +5278,8 @@ var _loadState = loadState(),
     initialEquipment = _loadState.initialEquipment,
     initialXp = _loadState.initialXp,
     initialMoney = _loadState.initialMoney;
+
+console.log('initialSkills', initialSkills);
 
 var getSeed = function getSeed() {
   var seed = '';
@@ -5522,7 +5552,78 @@ Results.propTypes = {
   handleClose: (prop_types_default()).func,
   wonLastGame: (prop_types_default()).bool
 };
+;// CONCATENATED MODULE: ./components/option.js
+
+
+function Option(_ref) {
+  var selectedValue = _ref.selectedValue,
+      optionValue = _ref.value,
+      skillId = _ref.skillId,
+      unlockedValues = _ref.unlockedValues,
+      handleSetOption = _ref.handleSetOption,
+      handleUnlockOption = _ref.handleUnlockOption,
+      random = _ref.random,
+      optionCost = _ref.optionCost;
+  console.log('unlockedValues', unlockedValues);
+  var status;
+
+  if (optionValue === selectedValue && !random) {
+    status = 'selected';
+  } else if (unlockedValues.includes(optionValue)) {
+    status = 'unlocked';
+  } else {
+    status = 'locked';
+  }
+
+  var clickHandler = {
+    unlocked: function unlocked() {
+      handleSetOption(skillId, optionValue);
+    },
+    locked: function locked() {
+      handleUnlockOption(skillId, optionValue);
+    }
+  }[status];
+  var displayValue;
+
+  if (typeof optionValue === 'boolean') {
+    displayValue = optionValue ? 'On' : 'Off';
+  } else if (optionValue === Infinity) {
+    displayValue = /*#__PURE__*/react.createElement("span", {
+      style: {
+        fontSize: '2em'
+      }
+    }, "\u221E");
+  } else {
+    displayValue = optionValue.toString();
+  }
+
+  return /*#__PURE__*/react.createElement("button", {
+    className: "option option--".concat(status),
+    key: optionValue,
+    onClick: function onClick() {
+      clickHandler && clickHandler(optionValue);
+    }
+  }, /*#__PURE__*/react.createElement("div", {
+    className: "option-inner"
+  }, displayValue));
+}
+var value = prop_types_default().oneOfType([(prop_types_default()).number, (prop_types_default()).bool, (prop_types_default()).string]);
+Option.propTypes = {
+  selectedValue: value,
+  value: value,
+  skillId: (prop_types_default()).string,
+  unlockedValues: prop_types_default().arrayOf(value),
+  optionCost: (prop_types_default()).number,
+  handleSetOption: (prop_types_default()).func,
+  handleUnlockOption: (prop_types_default()).func,
+  handleUnlockSkill: (prop_types_default()).func,
+  skillCost: (prop_types_default()).number,
+  random: (prop_types_default()).bool
+};
 ;// CONCATENATED MODULE: ./components/skill.js
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
 
 
 function Skill(_ref) {
@@ -5564,51 +5665,19 @@ function Skill(_ref) {
     className: "skill__available-mastery"
   }, "Available Mastery: ", remainingMastery)), !isFullyUpgraded && /*#__PURE__*/react.createElement("div", {
     className: "skill__option-mastery"
-  }, "Mastery from selected option: ", selectedOptionMastery), /*#__PURE__*/react.createElement("div", {
+  }, "Option Mastery: ", selectedOptionMastery), /*#__PURE__*/react.createElement("div", {
     className: "skill__options"
-  }, options.map(function (_ref2, index) {
-    var val = _ref2.value;
-    var status;
-
-    if (val === value && !random) {
-      status = 'selected';
-    } else if (unlockedValues.includes(val)) {
-      status = 'unlocked';
-    } else {
-      status = 'locked';
-    }
-
-    var clickHandler = {
-      unlocked: function unlocked() {
-        handleSetOption(id, val);
-      },
-      locked: function locked() {
-        handleUnlockOption(id, val);
-      }
-    }[status];
-    var displayValue;
-
-    if (typeof val === 'boolean') {
-      displayValue = val ? 'On' : 'Off';
-    } else if (val === Infinity) {
-      displayValue = /*#__PURE__*/react.createElement("span", {
-        style: {
-          fontSize: '2em'
-        }
-      }, "\u221E");
-    } else {
-      displayValue = val.toString();
-    }
-
-    return /*#__PURE__*/react.createElement("button", {
-      className: "skill__option skill__option--".concat(status),
-      key: val,
-      onClick: function onClick() {
-        clickHandler && clickHandler(val);
-      }
-    }, /*#__PURE__*/react.createElement("div", {
-      className: "skill__option-inner"
-    }, displayValue));
+  }, options.map(function (option, index) {
+    return /*#__PURE__*/react.createElement(Option, _extends({
+      key: option.value,
+      optionCost: optionCost,
+      random: random,
+      skillId: id,
+      selectedValue: value,
+      unlockedValues: unlockedValues,
+      handleSetOption: handleSetOption,
+      handleUnlockOption: handleUnlockOption
+    }, option));
   })), function () {
     if (!isFullyUpgraded) return null;
     var status;
@@ -5633,11 +5702,11 @@ function Skill(_ref) {
     }
   }, "Unlock (", skillCost, " XP)")));
 }
-var value = prop_types_default().oneOfType([(prop_types_default()).number, (prop_types_default()).bool, (prop_types_default()).string]);
+var skill_value = prop_types_default().oneOfType([(prop_types_default()).number, (prop_types_default()).bool, (prop_types_default()).string]);
 Skill.propTypes = {
   id: (prop_types_default()).string,
-  value: value,
-  unlockedValues: prop_types_default().arrayOf(value),
+  value: skill_value,
+  unlockedValues: prop_types_default().arrayOf(skill_value),
   unlocked: (prop_types_default()).bool,
   options: prop_types_default().arrayOf((prop_types_default()).object),
   optionCost: (prop_types_default()).number,

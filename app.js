@@ -57,7 +57,6 @@ export default function App () {
     setMoney,
     randomizeRandomSkills
   } = useGameState()
-
   const [uiState, setUiState] = useState('game')
   const [lastXpEarned, setLastXpEarned] = useState(0)
   const [wonLastGame, setWonLastGame] = useState(false)

@@ -249,7 +249,7 @@ body {
   width: 175px;
 }
 
-.skill__option {
+.option {
   border: 0;
   border-radius: 3px;
   margin: 2px;
@@ -273,14 +273,14 @@ body {
   }
 }
 
-.skill__option-inner {
+.option-inner {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%)
 }
 
-.skill__option--random {
+.option--random {
   width: 120px;
 }
 

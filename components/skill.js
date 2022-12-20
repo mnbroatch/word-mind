@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Option from './option'
 
 export default function Skill ({
   id,
@@ -38,45 +39,22 @@ export default function Skill ({
               </div>
             </div>}
             {!isFullyUpgraded && <div className='skill__option-mastery'>
-              Mastery from selected option: {selectedOptionMastery}
+              Option Mastery: {selectedOptionMastery}
             </div>}
             <div className='skill__options'>
-              {options.map(({ value: val }, index) => {
-                let status
-                if (val === value && !random) {
-                  status = 'selected'
-                } else if (unlockedValues.includes(val)) {
-                  status = 'unlocked'
-                } else {
-                  status = 'locked'
-                }
-
-                const clickHandler = {
-                  unlocked: () => { handleSetOption(id, val) },
-                  locked: () => { handleUnlockOption(id, val) }
-                }[status]
-
-                let displayValue
-                if (typeof val === 'boolean') {
-                  displayValue = val ? 'On' : 'Off'
-                } else if (val === Infinity) {
-                  displayValue = <span style={{ fontSize: '2em' }}>∞</span>
-                } else {
-                  displayValue = val.toString()
-                }
-
-                return (
-                  <button
-                    className={ `skill__option skill__option--${status}` }
-                    key={val}
-                    onClick={() => { clickHandler && clickHandler(val) }}
-                  >
-                    <div className='skill__option-inner'>
-                      {displayValue}
-                    </div>
-                  </button>
-                )
-              })}
+              {options.map((option, index) => (
+                <Option
+                  key={option.value}
+                  optionCost={optionCost}
+                  random={random}
+                  skillId={id}
+                  selectedValue={value}
+                  unlockedValues={unlockedValues}
+                  handleSetOption={handleSetOption}
+                  handleUnlockOption={handleUnlockOption}
+                  {...option}
+                />
+              ))}
             </div>
             {(() => {
               if (!isFullyUpgraded) return null
