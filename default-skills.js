@@ -139,33 +139,33 @@ export default {
     value: Infinity,
     unlockedValues: [Infinity, 60],
     unlocked: false
+  },
+  callShot: {
+    description: 'Call Shot XP Wager',
+    options: [
+      {
+        value: 0,
+        mastery: 0
+      },
+      {
+        value: 1,
+        mastery: 0
+      },
+      {
+        value: 2,
+        mastery: 0
+      },
+      {
+        value: 3,
+        mastery: 0
+      },
+      {
+        value: 4,
+        mastery: 0
+      }
+    ],
+    value: 0,
+    unlockedValues: [0, 1],
+    unlocked: false
   }
-  // callShot: {
-  //   description: 'Call Shot + XP Multiplier Bet',
-  //   options: [
-  //     {
-  //       value: 'off',
-  //       mastery: 0
-  //     },
-  //     {
-  //       value: 2,
-  //       mastery: 0
-  //     },
-  //     {
-  //       value: 3,
-  //       mastery: 0
-  //     },
-  //     {
-  //       value: 4,
-  //       mastery: 0
-  //     },
-  //     {
-  //       value: 5,
-  //       mastery: 0
-  //     }
-  //   ],
-  //   value: Infinity,
-  //   unlockedValues: [Infinity, 60],
-  //   unlocked: false
-  // }
 }

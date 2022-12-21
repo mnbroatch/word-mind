@@ -258,7 +258,7 @@ body {
   display: inline-block;
   height: 40px;
   width: 6px;
-  background-color: $green2;
+  background-color: $greengrey;
 }
 
 .option__meter__inner {
@@ -481,6 +481,15 @@ body {
 
   &:active {
     box-shadow: $shadow-active;
+  }
+}
+
+.call-shot-button {
+  margin: 10px;
+  padding: 5px;
+
+  &--active {
+    background-color: $green1;
   }
 }
 

@@ -50,7 +50,6 @@ function loadState () {
   const initialItems = items || defaultItems
   const initialEquipment = equipment || defaultEquipment
 
-
   // todo: don't mutate
   Object.entries(defaultSkills).forEach(([key, skill]) => {
     if (!initialSkills[key]) { initialSkills[key] = skill }

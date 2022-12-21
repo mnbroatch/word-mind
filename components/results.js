@@ -5,6 +5,7 @@ import XpDisplay from './xp-display.js'
 
 export default function Results ({
   options,
+  answers,
   xp,
   lastXpEarned,
   handleClose,
@@ -20,6 +21,11 @@ export default function Results ({
       {!wonLastGame && (
         <div className="results-title results-title--lost">
           FAILED
+        </div>
+      )}
+      {!wonLastGame && (
+        <div className="results-answers">
+          {answers}
         </div>
       )}
       <div>
@@ -39,6 +45,7 @@ export default function Results ({
 
 Results.propTypes = {
   options: PropTypes.object,
+  answers: PropTypes.arrayOf(PropTypes.string),
   xp: PropTypes.number,
   lastXpEarned: PropTypes.number,
   handleClose: PropTypes.func,

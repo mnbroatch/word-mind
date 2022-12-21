@@ -1,5 +1,6 @@
 import React, { useReducer, useState, useEffect, useMemo } from 'react'
 import useCountdown from './hooks/use-countdown'
+import usePrevious from './hooks/use-previous'
 import useGameState from './use-game-state'
 import currentGuessReducer from './current-guess-reducer'
 
@@ -63,8 +64,10 @@ export default function App () {
   const [lastXpEarned, setLastXpEarned] = useState(0)
   const [wonLastGame, setWonLastGame] = useState(false)
   const [answers, setAnswers] = useState(getAnswers(skills, items, equipment))
-  const [guesses, setGuesses] = useState([])
   const [currentGuess, currentGuessDispatch] = useReducer(currentGuessReducer, '')
+  const [guesses, setGuesses] = useState([])
+  const [shotIsCalled, setShotIsCalled] = useState(false)
+  const previousGuesses = usePrevious(guesses)
 
   const handleGuess = () => {
     if (
@@ -88,9 +91,12 @@ export default function App () {
   }
 
   const handleGameEnd = (endState) => {
-    const xpEarned = endState.won
-      ? calculateXpEarned(skills)
-      : 0
+    const callShotWagerResult = endState.won ? skills.callShot.value : 0 - skills.callShot.value
+    const xpEarned = (
+      endState.won
+        ? calculateXpEarned(skills)
+        : 0
+    ) + callShotWagerResult
     const moneyEarned = 10
     setUiState('results')
     setXp(xp + xpEarned)
@@ -98,7 +104,6 @@ export default function App () {
     setLastXpEarned(xpEarned)
     setWonLastGame(endState.won)
     setGuesses([])
-    setAnswers(getAnswers(skills, items, equipment))
     skillsDispatch({
       type: 'GAIN_MASTERY',
       skills
@@ -153,12 +158,29 @@ export default function App () {
   }, [handleGuess, handleAddLetter])
 
   useEffect(() => {
-    const won = answers.length && answers.every(answer => guesses.includes(answer))
-    const lost = guesses.length >= skills.maxWrongGuesses.value + skills.boardsCount.value
-    if (won || lost) {
-      handleGameEnd({ answers, guesses, won })
+    const didJustGuess = previousGuesses && previousGuesses.length === guesses.length - 1
+    const guessedAnswersCount = answers.filter(answer => guesses.includes(answer)).length
+    const previousGuessedAnswersCount = answers.filter(answer => previousGuesses && previousGuesses.includes(answer)).length
+    const didJustGuessAnswer = guessedAnswersCount !== previousGuessedAnswersCount
+
+    let status = 'playing'
+    if (
+      (shotIsCalled && didJustGuess && !didJustGuessAnswer)
+      // || (didJustGuessAnswer && skills.callShot.value && !shotIsCalled)
+      || (guesses.length >= skills.maxWrongGuesses.value + skills.boardsCount.value)
+    ) {
+      status = 'lost'
+    } else if (answers.length === guessedAnswersCount) {
+      status = 'won'
     }
-  }, [guesses, answers, skills, handleGameEnd])
+
+    if (status !== 'playing') {
+      handleGameEnd({ answers, guesses, won: status === 'won' })
+    }
+    if (didJustGuess) {
+      setShotIsCalled(false)
+    }
+  }, [guesses, answers, skills, handleGameEnd, shotIsCalled])
 
   const { remaining: gameTimeRemaining, reset: resetGameTime } = useCountdown({
     duration: skills.gameTimeLimit.value * 1000,
@@ -284,6 +306,18 @@ export default function App () {
         {skills.roundTimeLimit.value !== Infinity && <div className='round-time-remaining'>
           Round Time Remaining: {secondsRemainingInRound}
         </div>}
+        {!!skills.callShot.value && (
+          <button
+            className={[
+              'button',
+              'call-shot-button',
+              shotIsCalled && 'call-shot-button--active'
+            ].filter(Boolean).join(' ')}
+            onClick={() => { setShotIsCalled(prev => !prev) }}
+          >
+            Call Shot (Wager {skills.callShot.value} XP)
+          </button>
+        )}
         <div className='main-game'>
           {isItemActive(items.revealAnswers) && (
             <div className='revealed-answers'>
@@ -397,6 +431,7 @@ export default function App () {
           <Modal open={uiState === 'results'}>
             <Results
               xp={xp}
+              answers={answers}
               lastXpEarned={lastXpEarned}
               handleClose={() => {
                 setUiState('hub')

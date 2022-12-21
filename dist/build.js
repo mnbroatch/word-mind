@@ -26,7 +26,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_g
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0;font-family:system-ui}#root{height:100vh}.root{box-sizing:border-box;position:relative;display:flex;flex-direction:column;height:100vh}.main-content{flex:1;margin-top:5px;position:relative}.main-game{height:100%;display:flex;flex-direction:column}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{flex:1;display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray;background-color:#fff;transition:background-color 1s}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase;background-color:#fff;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:45px;font-family:\"libre-baskerville\";font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;transform:rotate(-5deg);width:300px;margin-top:70px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.skills-list{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.skill{position:relative;box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:12px;padding:16px 0 16px 0;text-align:center}.skill-spacer{width:175px;margin:0 12px 0 12px;height:0}.skill__description{background-color:brown;color:#fff;left:0;padding:6px;position:absolute;text-align:center;top:-17px;left:-3px;transform:rotate(-2deg);white-space:nowrap;width:175px}.option{display:inline-block}.option__meter{position:relative;display:inline-block;height:40px;width:6px;background-color:#94c595}.option__meter__inner{position:absolute;width:100%;bottom:0;background-color:#a1e8af}.option-button{border:0;border-radius:3px;margin:2px;height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option-button--selected{background-color:green;color:#fff}.option-button--unlocked{background-color:#add8e6}.option-button--locked{background-color:#ff0}.option-button__inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.option-button--random{width:120px}.keyboard{margin:40px 0 70px 0;padding:10px;box-sizing:border-box;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.xp{display:flex;height:100%;align-items:center;justify-content:center;color:#fff;font-family:libre-baskerville;position:relative;border-radius:9999999px;border:1px dotted #fff;background-image:linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));padding:0 10px 0 10px;box-sizing:border-box}.xp__background-squiggle{top:-0.15em;position:absolute;transform:scale(4.5, 3);height:100%;display:flex;justify-content:center;align-items:center;color:#f5b0cb;font-size:1.2em;opacity:.3}.xp__background-squiggle~.xp__background-squiggle{transform:scale(-4.5, 3);color:#372772}.xp__label{font-variant-numeric:tabular-nums}.xp__digit{display:inline-block;width:.65em;vertical-align:middle;text-align:center}.results .xp{font-size:3em}.results .xp__background-squiggle{font-size:2em}.money{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.money__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.money__label{color:#f6bd60;font-family:abril-fatface-regular}.money__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;display:flex;justify-content:space-between;align-items:center;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}.inventory{border:1px solid #000;margin:15px;padding:15px}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}@font-face{font-family:\"libre-baskerville\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ")}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0;font-family:system-ui}#root{height:100vh}.root{box-sizing:border-box;position:relative;display:flex;flex-direction:column;height:100vh}.main-content{flex:1;margin-top:5px;position:relative}.main-game{height:100%;display:flex;flex-direction:column}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{flex:1;display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray;background-color:#fff;transition:background-color 1s}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase;background-color:#fff;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:45px;font-family:\"libre-baskerville\";font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;transform:rotate(-5deg);width:300px;margin-top:70px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.skills-list{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.skill{position:relative;box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:12px;padding:16px 0 16px 0;text-align:center}.skill-spacer{width:175px;margin:0 12px 0 12px;height:0}.skill__description{background-color:brown;color:#fff;left:0;padding:6px;position:absolute;text-align:center;top:-17px;left:-3px;transform:rotate(-2deg);white-space:nowrap;width:175px}.option{display:inline-block}.option__meter{position:relative;display:inline-block;height:40px;width:6px;background-color:#84a194}.option__meter__inner{position:absolute;width:100%;bottom:0;background-color:#a1e8af}.option-button{border:0;border-radius:3px;margin:2px;height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option-button--selected{background-color:green;color:#fff}.option-button--unlocked{background-color:#add8e6}.option-button--locked{background-color:#ff0}.option-button__inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.option-button--random{width:120px}.keyboard{margin:40px 0 70px 0;padding:10px;box-sizing:border-box;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.xp{display:flex;height:100%;align-items:center;justify-content:center;color:#fff;font-family:libre-baskerville;position:relative;border-radius:9999999px;border:1px dotted #fff;background-image:linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));padding:0 10px 0 10px;box-sizing:border-box}.xp__background-squiggle{top:-0.15em;position:absolute;transform:scale(4.5, 3);height:100%;display:flex;justify-content:center;align-items:center;color:#f5b0cb;font-size:1.2em;opacity:.3}.xp__background-squiggle~.xp__background-squiggle{transform:scale(-4.5, 3);color:#372772}.xp__label{font-variant-numeric:tabular-nums}.xp__digit{display:inline-block;width:.65em;vertical-align:middle;text-align:center}.results .xp{font-size:3em}.results .xp__background-squiggle{font-size:2em}.money{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.money__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.money__label{color:#f6bd60;font-family:abril-fatface-regular}.money__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;display:flex;justify-content:space-between;align-items:center;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}.call-shot-button{margin:10px;padding:5px}.call-shot-button--active{background-color:#a1e8af}.inventory{border:1px solid #000;margin:15px;padding:15px}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}@font-face{font-family:\"libre-baskerville\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ")}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4884,35 +4884,29 @@ function useCountdown(_ref) {
     value: Infinity,
     unlockedValues: [Infinity, 60],
     unlocked: false
-  } // callShot: {
-  //   description: 'Call Shot + XP Multiplier Bet',
-  //   options: [
-  //     {
-  //       value: 'off',
-  //       mastery: 0
-  //     },
-  //     {
-  //       value: 2,
-  //       mastery: 0
-  //     },
-  //     {
-  //       value: 3,
-  //       mastery: 0
-  //     },
-  //     {
-  //       value: 4,
-  //       mastery: 0
-  //     },
-  //     {
-  //       value: 5,
-  //       mastery: 0
-  //     }
-  //   ],
-  //   value: Infinity,
-  //   unlockedValues: [Infinity, 60],
-  //   unlocked: false
-  // }
-
+  },
+  callShot: {
+    description: 'Call Shot XP Wager',
+    options: [{
+      value: 0,
+      mastery: 0
+    }, {
+      value: 1,
+      mastery: 0
+    }, {
+      value: 2,
+      mastery: 0
+    }, {
+      value: 3,
+      mastery: 0
+    }, {
+      value: 4,
+      mastery: 0
+    }],
+    value: 0,
+    unlockedValues: [0, 1],
+    unlocked: false
+  }
 });
 ;// CONCATENATED MODULE: ./skills-reducer.js
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -5535,6 +5529,7 @@ XpDisplay.propTypes = {
 
 function Results(_ref) {
   var options = _ref.options,
+      answers = _ref.answers,
       xp = _ref.xp,
       lastXpEarned = _ref.lastXpEarned,
       handleClose = _ref.handleClose,
@@ -5545,7 +5540,9 @@ function Results(_ref) {
     className: "results-title results-title--won"
   }, "+ ", lastXpEarned, " XP"), !wonLastGame && /*#__PURE__*/react.createElement("div", {
     className: "results-title results-title--lost"
-  }, "FAILED"), /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement(XpDisplay, {
+  }, "FAILED"), !wonLastGame && /*#__PURE__*/react.createElement("div", {
+    className: "results-answers"
+  }, answers), /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement(XpDisplay, {
     amount: xp
   })), /*#__PURE__*/react.createElement("button", {
     className: "results__close-button",
@@ -5556,6 +5553,7 @@ function Results(_ref) {
 }
 Results.propTypes = {
   options: (prop_types_default()).object,
+  answers: prop_types_default().arrayOf((prop_types_default()).string),
   xp: (prop_types_default()).number,
   lastXpEarned: (prop_types_default()).number,
   handleClose: (prop_types_default()).func,
@@ -6190,6 +6188,7 @@ function app_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var OPTION_COST = 2;
 var alphabet = 'qwertyuiopasdfghjklzxcvbnm'.split('');
 var alphabetRows = [alphabet.slice(0, 10), alphabet.slice(10, 19), alphabet.slice(19)];
@@ -6246,15 +6245,22 @@ function App() {
       answers = _useState8[0],
       setAnswers = _useState8[1];
 
+  var _useReducer = (0,react.useReducer)(current_guess_reducer, ''),
+      _useReducer2 = app_slicedToArray(_useReducer, 2),
+      currentGuess = _useReducer2[0],
+      currentGuessDispatch = _useReducer2[1];
+
   var _useState9 = (0,react.useState)([]),
       _useState10 = app_slicedToArray(_useState9, 2),
       guesses = _useState10[0],
       setGuesses = _useState10[1];
 
-  var _useReducer = (0,react.useReducer)(current_guess_reducer, ''),
-      _useReducer2 = app_slicedToArray(_useReducer, 2),
-      currentGuess = _useReducer2[0],
-      currentGuessDispatch = _useReducer2[1];
+  var _useState11 = (0,react.useState)(false),
+      _useState12 = app_slicedToArray(_useState11, 2),
+      shotIsCalled = _useState12[0],
+      setShotIsCalled = _useState12[1];
+
+  var previousGuesses = usePrevious(guesses);
 
   var handleGuess = function handleGuess() {
     if (!guesses.includes(currentGuess) && currentGuess.length === skills.wordLength.value && all_words_namespaceObject.includes(isItemActive(items.reverse) ? currentGuess.split('').reverse().join('') : currentGuess) && (!isItemActive(items.strictMode) || isGuessStrictlyValid(currentGuess, guesses, answers))) {
@@ -6271,7 +6277,8 @@ function App() {
   };
 
   var handleGameEnd = function handleGameEnd(endState) {
-    var xpEarned = endState.won ? calculatePointsEarned(skills) : 0;
+    var callShotWagerResult = endState.won ? skills.callShot.value : 0 - skills.callShot.value;
+    var xpEarned = (endState.won ? calculatePointsEarned(skills) : 0) + callShotWagerResult;
     var moneyEarned = 10;
     setUiState('results');
     setXp(xp + xpEarned);
@@ -6279,7 +6286,6 @@ function App() {
     setLastXpEarned(xpEarned);
     setWonLastGame(endState.won);
     setGuesses([]);
-    setAnswers(getAnswers(skills, items, equipment));
     skillsDispatch({
       type: 'GAIN_MASTERY',
       skills: skills
@@ -6340,19 +6346,35 @@ function App() {
     };
   }, [handleGuess, handleAddLetter]);
   (0,react.useEffect)(function () {
-    var won = answers.length && answers.every(function (answer) {
+    var didJustGuess = previousGuesses && previousGuesses.length === guesses.length - 1;
+    var guessedAnswersCount = answers.filter(function (answer) {
       return guesses.includes(answer);
-    });
-    var lost = guesses.length >= skills.maxWrongGuesses.value + skills.boardsCount.value;
+    }).length;
+    var previousGuessedAnswersCount = answers.filter(function (answer) {
+      return previousGuesses && previousGuesses.includes(answer);
+    }).length;
+    var didJustGuessAnswer = guessedAnswersCount !== previousGuessedAnswersCount;
+    var status = 'playing';
 
-    if (won || lost) {
+    if (shotIsCalled && didJustGuess && !didJustGuessAnswer // || (didJustGuessAnswer && skills.callShot.value && !shotIsCalled)
+    || guesses.length >= skills.maxWrongGuesses.value + skills.boardsCount.value) {
+      status = 'lost';
+    } else if (answers.length === guessedAnswersCount) {
+      status = 'won';
+    }
+
+    if (status !== 'playing') {
       handleGameEnd({
         answers: answers,
         guesses: guesses,
-        won: won
+        won: status === 'won'
       });
     }
-  }, [guesses, answers, skills, handleGameEnd]);
+
+    if (didJustGuess) {
+      setShotIsCalled(false);
+    }
+  }, [guesses, answers, skills, handleGameEnd, shotIsCalled]);
 
   var _useCountdown = useCountdown({
     duration: skills.gameTimeLimit.value * 1000,
@@ -6500,7 +6522,14 @@ function App() {
     className: "game-time-remaining"
   }, "Game Time Remaining: ", secondsRemainingInGame), skills.roundTimeLimit.value !== Infinity && /*#__PURE__*/react.createElement("div", {
     className: "round-time-remaining"
-  }, "Round Time Remaining: ", secondsRemainingInRound), /*#__PURE__*/react.createElement("div", {
+  }, "Round Time Remaining: ", secondsRemainingInRound), !!skills.callShot.value && /*#__PURE__*/react.createElement("button", {
+    className: ['button', 'call-shot-button', shotIsCalled && 'call-shot-button--active'].filter(Boolean).join(' '),
+    onClick: function onClick() {
+      setShotIsCalled(function (prev) {
+        return !prev;
+      });
+    }
+  }, "Call Shot (Wager ", skills.callShot.value, " XP)"), /*#__PURE__*/react.createElement("div", {
     className: "main-game"
   }, isItemActive(items.revealAnswers) && /*#__PURE__*/react.createElement("div", {
     className: "revealed-answers"
@@ -6590,6 +6619,7 @@ function App() {
     open: uiState === 'results'
   }, /*#__PURE__*/react.createElement(Results, {
     xp: xp,
+    answers: answers,
     lastXpEarned: lastXpEarned,
     handleClose: function handleClose() {
       setUiState('hub');
