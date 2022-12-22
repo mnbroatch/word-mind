@@ -499,6 +499,26 @@ body {
   padding: 15px;
 }
 
+.inventory__item {
+  display: inline-block;
+  margin: 5px;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.equipment-inventory {
+  border: 1px solid black;
+  margin: 15px;
+  padding: 15px;
+}
+
+.equipment-inventory__piece {
+  display: inline-block;
+  margin: 5px;
+  border: 1px solid black;
+  padding: 5px;
+}
+
 @font-face {
   font-family: 'kenia-regular';
   src: url('./assets/kenia-regular.ttf');

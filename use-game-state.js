@@ -20,7 +20,7 @@ export default function useGameState () {
   const [seed, setSeed] = useState(getSeed)
   const [skills, skillsDispatch] = useReducer(skillsReducer, initialSkills)
   const [items, itemsDispatch] = useReducer(itemsReducer, initialItems)
-  const [equipment] = useReducer(equipmentReducer, initialEquipment)
+  const [equipment, equipmentDispatch] = useReducer(equipmentReducer, initialEquipment)
   const [xp, setXp] = useState(initialXp)
   const [money, setMoney] = useState(initialMoney)
 
@@ -48,6 +48,7 @@ export default function useGameState () {
     money,
     skillsDispatch,
     itemsDispatch,
+    equipmentDispatch,
     setXp,
     setMoney,
     randomizeRandomSkills

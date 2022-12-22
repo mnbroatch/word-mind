@@ -6,7 +6,6 @@ import calculateXpCost from '../utils/calculate-xp-cost.js'
 
 export default function Skills ({
   skills,
-  xp,
   handleUnlockSkill,
   handleUnlockOption,
   handleSetOption,
@@ -59,7 +58,6 @@ export default function Skills ({
 
 Skills.propTypes = {
   skills: PropTypes.object,
-  xp: PropTypes.number,
   handleUnlockSkill: PropTypes.func,
   handleUnlockOption: PropTypes.func,
   handleSetOption: PropTypes.func,

@@ -2,15 +2,17 @@ import defaultItems from './default-items'
 
 export default function itemsReducer (prev, { type, itemId }) {
   if (type === 'USE') {
+    const x = Date.now() < prev[itemId].activeUntil
+      ? prev[itemId].activeUntil + prev[itemId].duration
+      : Date.now() + prev[itemId].duration
+    console.log('x', x)
     if (prev[itemId].ownedCount > 0) {
       return {
         ...prev,
         [itemId]: {
           ...prev[itemId],
           ownedCount: prev[itemId].ownedCount - 1,
-          activeUntil: Date.now() < prev[itemId].activeUntil
-            ? prev[itemId].activeUntil - Date.now() + prev[itemId].duration
-            : Date.now() + prev[itemId].duration
+          activeUntil: x
         }
       }
     } else {

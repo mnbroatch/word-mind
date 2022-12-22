@@ -5,6 +5,7 @@ import useGameState from './use-game-state'
 import currentGuessReducer from './current-guess-reducer'
 
 import Shop from './components/shop'
+import Equipment from './components/equipment'
 import Results from './components/results'
 import Skills from './components/skills'
 import Hub from './components/hub'
@@ -39,8 +40,7 @@ function isItemActive (item) {
 function getAnswers (skills, items, equipment) {
   const wordLength = skills.wordLength.value
   const boardsCount = skills.boardsCount.value
-  // const possibleWords = equipment.useFullDictionary.active ? allWords : gameWords
-  const possibleWords = isItemActive(items.useFullDictionary) ? allWords : gameWords
+  const possibleWords = equipment.useFullDictionary.active ? allWords : gameWords
 
   const answers = possibleWords.filter(word => word.length === +wordLength && !curseWords.includes(word))
     .sort(() => Math.random() - 0.5).slice(0, boardsCount)
@@ -56,6 +56,7 @@ export default function App () {
     money,
     skillsDispatch,
     itemsDispatch,
+    equipmentDispatch,
     setXp,
     setMoney,
     randomizeRandomSkills
@@ -78,7 +79,7 @@ export default function App () {
             ? currentGuess.split('').reverse().join('')
             : currentGuess
         )
-        && (!isItemActive(items.strictMode) || isGuessStrictlyValid(currentGuess, guesses, answers))
+        && (!equipment.strictMode.active || isGuessStrictlyValid(currentGuess, guesses, answers))
     ) {
       setGuesses([...guesses, currentGuess])
       currentGuessDispatch({ type: 'clear' })
@@ -86,7 +87,7 @@ export default function App () {
     } else if (currentGuess === 'uuddl') {
       setUiState('cheats')
     } else if (currentGuess === 'ldduu') {
-      setUiState('skills')
+      setUiState('hub')
     }
   }
 
@@ -110,14 +111,12 @@ export default function App () {
     })
   }
 
-  const handleAdd100Xp = (endState) => {
-    const xpEarned = 100
-    setXp(xp + xpEarned)
+  const handleAddOneXp = (endState) => {
+    setXp(xp + 1)
   }
 
-  const handleAdd100Money = (endState) => {
-    const moneyEarned = 100
-    setMoney(money + moneyEarned)
+  const handleAddOneMoney = (endState) => {
+    setMoney(money + 1)
   }
 
   const handleAddLetter = (letter) => {
@@ -246,11 +245,27 @@ export default function App () {
     }
   }
 
+  const handleBuyEquipment = (equipmentId) => {
+    if (!equipment[equipmentId].owned && money >= equipment[equipmentId].cost) {
+      equipmentDispatch({
+        type: 'UNLOCK',
+        equipmentId
+      })
+      setMoney(money - equipment[equipmentId].cost)
+    }
+  }
+
   const handleUseItem = (itemId) => {
-    handleGameStart()
     itemsDispatch({
       type: 'USE',
       itemId
+    })
+  }
+
+  const handleToggleEquipment = (equipmentId) => {
+    equipmentDispatch({
+      type: 'TOGGLE',
+      equipmentId
     })
   }
 
@@ -273,9 +288,12 @@ export default function App () {
     currentGuessDispatch({ type: 'clear' })
   }
 
-  const handleUnlockAll = () => {
-    skillsDispatch({ type: 'UNLOCK_ALL' })
-  }
+  // const handleUnlockAll = () => {
+  //   skillsDispatch({ type: 'UNLOCK_ALL' })
+  // }
+  //           <button onClick={handleUnlockAll}>
+  //             Unlock All Skills
+  //           </button>
 
   const possibleWords = useMemo(() => {
     return isItemActive(items.showPossibleWords)
@@ -386,14 +404,11 @@ export default function App () {
             <button onClick={handleClearAll}>
               Clear all
             </button>
-            <button onClick={handleAdd100Xp}>
-              Add 100 XP
+            <button onClick={handleAddOneXp}>
+              Add 1 XP
             </button>
-            <button onClick={handleAdd100Money}>
-              Add 100 Money
-            </button>
-            <button onClick={handleUnlockAll}>
-              Unlock All Skills
+            <button onClick={handleAddOneMoney}>
+              Add $1
             </button>
           </Modal>
           <Modal
@@ -401,15 +416,33 @@ export default function App () {
             handleClose={handleGameStart}
           >
             <Hub
+              items={items}
+              equipment={equipment}
+              handleUseItem={handleUseItem}
+              handleToggleEquipment={handleToggleEquipment}
               handleGoToSkills={() => {
                 setUiState('skills')
               }}
               handleGoToShop={() => {
                 setUiState('shop')
               }}
+              handleGoToEquipment={() => {
+                setUiState('equipment')
+              }}
               handleGoToGame={() => {
                 handleGameStart()
               }}
+            />
+          </Modal>
+          <Modal open={uiState === 'results'}>
+            <Results
+              xp={xp}
+              answers={answers}
+              lastXpEarned={lastXpEarned}
+              handleClose={() => {
+                setUiState('hub')
+              }}
+              wonLastGame={wonLastGame}
             />
           </Modal>
           <Modal
@@ -428,53 +461,27 @@ export default function App () {
               optionCost={OPTION_COST}
             />
           </Modal>
-          <Modal open={uiState === 'results'}>
-            <Results
-              xp={xp}
-              answers={answers}
-              lastXpEarned={lastXpEarned}
-              handleClose={() => {
-                setUiState('hub')
-              }}
-              wonLastGame={wonLastGame}
-            />
-          </Modal>
           <Modal open={uiState === 'shop'}>
             <Shop
               items={items}
-              money={money}
               handleBuyItem={handleBuyItem}
               handleClose={() => {
                 setUiState('hub')
               }}
-              wonLastGame={wonLastGame}
+            />
+          </Modal>
+          <Modal open={uiState === 'equipment'}>
+            <Equipment
+              equipment={equipment}
+              money={money}
+              handleBuyEquipment={handleBuyEquipment}
+              handleClose={() => {
+                setUiState('hub')
+              }}
             />
           </Modal>
         </div>
       </div>
-      {Object.values(items).some(item => item.ownedCount >= 1) && (
-        <div className="inventory">
-          {Object.entries(items).filter(([key, item]) => item.ownedCount >= 1).map(([key, item]) => (
-            <div
-              key={key}
-              className="inventory__item"
-            >
-              <div>
-                {item.description}
-              </div>
-              <div>
-                Owned: {item.ownedCount}
-              </div>
-              <button
-                key={key}
-                onClick={() => { handleUseItem(key) }}
-              >
-                Use
-              </button>
-            </div>
-          ))}
-        </div>
-      )}
     </div>
   )
 }

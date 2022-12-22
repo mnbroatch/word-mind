@@ -7,7 +7,7 @@ export default function equipmentReducer (prev, { type, equipmentId }) {
         ...prev,
         [equipmentId]: {
           ...prev[equipmentId],
-          owned: !prev[equipmentId].owned
+          active: !prev[equipmentId].active
         }
       }
     } else {

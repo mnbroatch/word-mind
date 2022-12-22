@@ -26,7 +26,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_g
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0;font-family:system-ui}#root{height:100vh}.root{box-sizing:border-box;position:relative;display:flex;flex-direction:column;height:100vh}.main-content{flex:1;margin-top:5px;position:relative}.main-game{height:100%;display:flex;flex-direction:column}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{flex:1;display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray;background-color:#fff;transition:background-color 1s}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase;background-color:#fff;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:45px;font-family:\"libre-baskerville\";font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;transform:rotate(-5deg);width:300px;margin-top:70px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.skills-list{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.skill{position:relative;box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:12px;padding:16px 0 16px 0;text-align:center}.skill-spacer{width:175px;margin:0 12px 0 12px;height:0}.skill__description{background-color:brown;color:#fff;left:0;padding:6px;position:absolute;text-align:center;top:-17px;left:-3px;transform:rotate(-2deg);white-space:nowrap;width:175px}.option{display:inline-block}.option__meter{position:relative;display:inline-block;height:40px;width:6px;background-color:#84a194}.option__meter__inner{position:absolute;width:100%;bottom:0;background-color:#a1e8af}.option-button{border:0;border-radius:3px;margin:2px;height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option-button--selected{background-color:green;color:#fff}.option-button--unlocked{background-color:#add8e6}.option-button--locked{background-color:#ff0}.option-button__inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.option-button--random{width:120px}.keyboard{margin:40px 0 70px 0;padding:10px;box-sizing:border-box;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.xp{display:flex;height:100%;align-items:center;justify-content:center;color:#fff;font-family:libre-baskerville;position:relative;border-radius:9999999px;border:1px dotted #fff;background-image:linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));padding:0 10px 0 10px;box-sizing:border-box}.xp__background-squiggle{top:-0.15em;position:absolute;transform:scale(4.5, 3);height:100%;display:flex;justify-content:center;align-items:center;color:#f5b0cb;font-size:1.2em;opacity:.3}.xp__background-squiggle~.xp__background-squiggle{transform:scale(-4.5, 3);color:#372772}.xp__label{font-variant-numeric:tabular-nums}.xp__digit{display:inline-block;width:.65em;vertical-align:middle;text-align:center}.results .xp{font-size:3em}.results .xp__background-squiggle{font-size:2em}.money{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.money__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.money__label{color:#f6bd60;font-family:abril-fatface-regular}.money__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;display:flex;justify-content:space-between;align-items:center;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}.call-shot-button{margin:10px;padding:5px}.call-shot-button--active{background-color:#a1e8af}.inventory{border:1px solid #000;margin:15px;padding:15px}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}@font-face{font-family:\"libre-baskerville\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ")}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0;font-family:system-ui}#root{height:100vh}.root{box-sizing:border-box;position:relative;display:flex;flex-direction:column;height:100vh}.main-content{flex:1;margin-top:5px;position:relative}.main-game{height:100%;display:flex;flex-direction:column}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{flex:1;display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray;background-color:#fff;transition:background-color 1s}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase;background-color:#fff;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:45px;font-family:\"libre-baskerville\";font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;transform:rotate(-5deg);width:300px;margin-top:70px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.skills-list{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.skill{position:relative;box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:12px;padding:16px 0 16px 0;text-align:center}.skill-spacer{width:175px;margin:0 12px 0 12px;height:0}.skill__description{background-color:brown;color:#fff;left:0;padding:6px;position:absolute;text-align:center;top:-17px;left:-3px;transform:rotate(-2deg);white-space:nowrap;width:175px}.option{display:inline-block}.option__meter{position:relative;display:inline-block;height:40px;width:6px;background-color:#84a194}.option__meter__inner{position:absolute;width:100%;bottom:0;background-color:#a1e8af}.option-button{border:0;border-radius:3px;margin:2px;height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option-button--selected{background-color:green;color:#fff}.option-button--unlocked{background-color:#add8e6}.option-button--locked{background-color:#ff0}.option-button__inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.option-button--random{width:120px}.keyboard{margin:40px 0 70px 0;padding:10px;box-sizing:border-box;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.xp{display:flex;height:100%;align-items:center;justify-content:center;color:#fff;font-family:libre-baskerville;position:relative;border-radius:9999999px;border:1px dotted #fff;background-image:linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));padding:0 10px 0 10px;box-sizing:border-box}.xp__background-squiggle{top:-0.15em;position:absolute;transform:scale(4.5, 3);height:100%;display:flex;justify-content:center;align-items:center;color:#f5b0cb;font-size:1.2em;opacity:.3}.xp__background-squiggle~.xp__background-squiggle{transform:scale(-4.5, 3);color:#372772}.xp__label{font-variant-numeric:tabular-nums}.xp__digit{display:inline-block;width:.65em;vertical-align:middle;text-align:center}.results .xp{font-size:3em}.results .xp__background-squiggle{font-size:2em}.money{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.money__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.money__label{color:#f6bd60;font-family:abril-fatface-regular}.money__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;display:flex;justify-content:space-between;align-items:center;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}.call-shot-button{margin:10px;padding:5px}.call-shot-button--active{background-color:#a1e8af}.inventory{border:1px solid #000;margin:15px;padding:15px}.inventory__item{display:inline-block;margin:5px;border:1px solid #000;padding:5px}.equipment-inventory{border:1px solid #000;margin:15px;padding:15px}.equipment-inventory__piece{display:inline-block;margin:5px;border:1px solid #000;padding:5px}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}@font-face{font-family:\"libre-baskerville\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ")}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4998,20 +4998,6 @@ function skillsReducer(prev, _ref) {
 ;// CONCATENATED MODULE: ./default-items.js
 // const later = Date.now() * 2
 /* harmony default export */ const default_items = ({
-  strictMode: {
-    description: 'Strict Mode',
-    ownedCount: 0,
-    activeUntil: 0,
-    duration: 1000 * 60,
-    cost: 1
-  },
-  useFullDictionary: {
-    description: 'Use Full Dictionary',
-    ownedCount: 0,
-    activeUntil: 0,
-    duration: 1000 * 60 * 60,
-    cost: 1
-  },
   reverse: {
     description: 'All Words are Backwards',
     ownedCount: 0,
@@ -5047,10 +5033,13 @@ function itemsReducer(prev, _ref) {
       itemId = _ref.itemId;
 
   if (type === 'USE') {
+    var x = Date.now() < prev[itemId].activeUntil ? prev[itemId].activeUntil + prev[itemId].duration : Date.now() + prev[itemId].duration;
+    console.log('x', x);
+
     if (prev[itemId].ownedCount > 0) {
       return items_reducer_objectSpread(items_reducer_objectSpread({}, prev), {}, items_reducer_defineProperty({}, itemId, items_reducer_objectSpread(items_reducer_objectSpread({}, prev[itemId]), {}, {
         ownedCount: prev[itemId].ownedCount - 1,
-        activeUntil: Date.now() < prev[itemId].activeUntil ? prev[itemId].activeUntil - Date.now() + prev[itemId].duration : Date.now() + prev[itemId].duration
+        activeUntil: x
       })));
     } else {
       return prev;
@@ -5070,7 +5059,14 @@ function itemsReducer(prev, _ref) {
   useFullDictionary: {
     description: 'Use Full Dictionary',
     owned: false,
-    active: false
+    active: false,
+    cost: 1
+  },
+  strictMode: {
+    description: 'Strict Mode',
+    owned: false,
+    active: false,
+    cost: 1
   }
 });
 ;// CONCATENATED MODULE: ./equipment-reducer.js
@@ -5088,7 +5084,7 @@ function equipmentReducer(prev, _ref) {
   if (type === 'TOGGLE') {
     if (prev[equipmentId].owned) {
       return equipment_reducer_objectSpread(equipment_reducer_objectSpread({}, prev), {}, equipment_reducer_defineProperty({}, equipmentId, equipment_reducer_objectSpread(equipment_reducer_objectSpread({}, prev[equipmentId]), {}, {
-        owned: !prev[equipmentId].owned
+        active: !prev[equipmentId].active
       })));
     } else {
       return prev;
@@ -5308,8 +5304,9 @@ function useGameState() {
       itemsDispatch = _useReducer4[1];
 
   var _useReducer5 = (0,react.useReducer)(equipmentReducer, initialEquipment),
-      _useReducer6 = use_game_state_slicedToArray(_useReducer5, 1),
-      equipment = _useReducer6[0];
+      _useReducer6 = use_game_state_slicedToArray(_useReducer5, 2),
+      equipment = _useReducer6[0],
+      equipmentDispatch = _useReducer6[1];
 
   var _useState3 = (0,react.useState)(initialXp),
       _useState4 = use_game_state_slicedToArray(_useState3, 2),
@@ -5352,6 +5349,7 @@ function useGameState() {
     money: money,
     skillsDispatch: skillsDispatch,
     itemsDispatch: itemsDispatch,
+    equipmentDispatch: equipmentDispatch,
     setXp: setXp,
     setMoney: setMoney,
     randomizeRandomSkills: randomizeRandomSkills
@@ -5448,6 +5446,58 @@ function Shop(_ref) {
 Shop.propTypes = {
   items: (prop_types_default()).object,
   handleBuyItem: (prop_types_default()).func,
+  handleClose: (prop_types_default()).func
+};
+;// CONCATENATED MODULE: ./components/equipment.js
+function equipment_slicedToArray(arr, i) { return equipment_arrayWithHoles(arr) || equipment_iterableToArrayLimit(arr, i) || equipment_unsupportedIterableToArray(arr, i) || equipment_nonIterableRest(); }
+
+function equipment_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function equipment_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return equipment_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return equipment_arrayLikeToArray(o, minLen); }
+
+function equipment_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function equipment_iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function equipment_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+function Equipment(_ref) {
+  var equipment = _ref.equipment,
+      handleBuyEquipment = _ref.handleBuyEquipment,
+      handleClose = _ref.handleClose;
+  return /*#__PURE__*/react.createElement("div", {
+    className: "equipment"
+  }, /*#__PURE__*/react.createElement("button", {
+    className: "equipment__close-button",
+    onClick: handleClose
+  }, "Leave Shop"), /*#__PURE__*/react.createElement("div", {
+    className: "equipment-list"
+  }, Object.entries(equipment).map(function (_ref2) {
+    var _ref3 = equipment_slicedToArray(_ref2, 2),
+        key = _ref3[0],
+        _ref3$ = _ref3[1],
+        description = _ref3$.description,
+        owned = _ref3$.owned,
+        cost = _ref3$.cost;
+
+    return /*#__PURE__*/react.createElement("button", {
+      key: key,
+      onClick: function onClick() {
+        handleBuyEquipment(key);
+      }
+    }, /*#__PURE__*/react.createElement("div", null, description), /*#__PURE__*/react.createElement("div", null, owned ? 'Sold Out' : "Cost: $".concat(cost)));
+  }), Object.keys(equipment).slice(1).map(function (key) {
+    return /*#__PURE__*/react.createElement("div", {
+      key: key,
+      className: "skill-spacer"
+    });
+  })));
+}
+Equipment.propTypes = {
+  equipment: (prop_types_default()).object,
+  handleBuyEquipment: (prop_types_default()).func,
   handleClose: (prop_types_default()).func
 };
 ;// CONCATENATED MODULE: ./hooks/use-rolling-number.js
@@ -5768,7 +5818,6 @@ function skills_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function Skills(_ref) {
   var skills = _ref.skills,
-      xp = _ref.xp,
       handleUnlockSkill = _ref.handleUnlockSkill,
       handleUnlockOption = _ref.handleUnlockOption,
       handleSetOption = _ref.handleSetOption,
@@ -5819,7 +5868,6 @@ function Skills(_ref) {
 }
 Skills.propTypes = {
   skills: (prop_types_default()).object,
-  xp: (prop_types_default()).number,
   handleUnlockSkill: (prop_types_default()).func,
   handleUnlockOption: (prop_types_default()).func,
   handleSetOption: (prop_types_default()).func,
@@ -5827,34 +5875,117 @@ Skills.propTypes = {
   optionCost: (prop_types_default()).number
 };
 ;// CONCATENATED MODULE: ./components/hub.js
+function hub_slicedToArray(arr, i) { return hub_arrayWithHoles(arr) || hub_iterableToArrayLimit(arr, i) || hub_unsupportedIterableToArray(arr, i) || hub_nonIterableRest(); }
 
+function hub_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function hub_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return hub_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return hub_arrayLikeToArray(o, minLen); }
+
+function hub_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function hub_iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function hub_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+function isItemActive(item) {
+  return item.activeUntil > Date.now();
+}
 
 function Hub(_ref) {
-  var handleGoToShop = _ref.handleGoToShop,
+  var items = _ref.items,
+      equipment = _ref.equipment,
+      handleUseItem = _ref.handleUseItem,
+      handleToggleEquipment = _ref.handleToggleEquipment,
+      handleGoToShop = _ref.handleGoToShop,
+      handleGoToGame = _ref.handleGoToGame,
       handleGoToSkills = _ref.handleGoToSkills,
-      handleGoToGame = _ref.handleGoToGame;
+      handleGoToEquipment = _ref.handleGoToEquipment;
+  var rerender = useRerender();
+  useInterval(rerender, 1000);
   return /*#__PURE__*/react.createElement("div", {
     className: "hub"
   }, /*#__PURE__*/react.createElement("button", {
-    className: "hub__close-button",
+    className: "hub__button",
     onClick: handleGoToSkills
   }, /*#__PURE__*/react.createElement("span", {
-    className: "hub__close-button-inner"
+    className: "hub__button-inner"
   }, "SKILLS")), /*#__PURE__*/react.createElement("button", {
-    className: "hub__close-button",
+    className: "hub__button",
     onClick: handleGoToShop
   }, /*#__PURE__*/react.createElement("span", {
-    className: "hub__close-button-inner"
+    className: "hub__button-inner"
   }, "SHOP")), /*#__PURE__*/react.createElement("button", {
-    className: "hub__shop-button",
+    className: "hub__button",
+    onClick: handleGoToEquipment
+  }, /*#__PURE__*/react.createElement("span", {
+    className: "hub__button-inner"
+  }, "EQUIPMENT SHOP")), /*#__PURE__*/react.createElement("button", {
+    className: "hub__continue-button",
     onClick: handleGoToGame
   }, /*#__PURE__*/react.createElement("span", {
     className: "hub__continue-button"
-  }, "Continue")));
+  }, "Continue")), Object.values(items).some(function (item) {
+    return item.ownedCount >= 1;
+  }) && /*#__PURE__*/react.createElement("div", {
+    className: "inventory"
+  }, Object.entries(items).filter(function (_ref2) {
+    var _ref3 = hub_slicedToArray(_ref2, 2),
+        key = _ref3[0],
+        item = _ref3[1];
+
+    return item.ownedCount >= 1;
+  }).map(function (_ref4) {
+    var _ref5 = hub_slicedToArray(_ref4, 2),
+        key = _ref5[0],
+        item = _ref5[1];
+
+    return /*#__PURE__*/react.createElement("div", {
+      key: key,
+      className: "inventory__item"
+    }, /*#__PURE__*/react.createElement("div", null, item.description), /*#__PURE__*/react.createElement("div", null, "Owned: ", item.ownedCount), /*#__PURE__*/react.createElement("button", {
+      onClick: function onClick() {
+        handleUseItem(key);
+      }
+    }, "Use"), isItemActive(item) && /*#__PURE__*/react.createElement("div", null, "Active time remaining: ", Math.floor((item.activeUntil - Date.now()) / 1000), "s"));
+  })), Object.values(equipment).some(function (piece) {
+    return piece.owned;
+  }) && /*#__PURE__*/react.createElement("div", {
+    className: "equipment-inventory"
+  }, Object.entries(equipment).filter(function (_ref6) {
+    var _ref7 = hub_slicedToArray(_ref6, 2),
+        key = _ref7[0],
+        piece = _ref7[1];
+
+    return piece.owned;
+  }).map(function (_ref8) {
+    var _ref9 = hub_slicedToArray(_ref8, 2),
+        key = _ref9[0],
+        piece = _ref9[1];
+
+    return /*#__PURE__*/react.createElement("div", {
+      key: key,
+      className: "equipment-inventory__piece"
+    }, /*#__PURE__*/react.createElement("div", null, piece.description), /*#__PURE__*/react.createElement("button", {
+      className: "button",
+      onClick: function onClick() {
+        handleToggleEquipment(key);
+      }
+    }, piece.active ? 'EQUIPPED' : 'NOT EQUIPPED'));
+  })));
 }
 Hub.propTypes = {
+  items: (prop_types_default()).object,
+  equipment: (prop_types_default()).object,
+  handleToggleEquipment: (prop_types_default()).func,
+  handleUseItem: (prop_types_default()).func,
   handleGoToShop: (prop_types_default()).func,
   handleGoToSkills: (prop_types_default()).func,
+  handleGoToEquipment: (prop_types_default()).func,
   handleGoToGame: (prop_types_default()).func
 };
 ;// CONCATENATED MODULE: ./components/modal.js
@@ -6189,25 +6320,25 @@ function app_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var OPTION_COST = 2;
 var alphabet = 'qwertyuiopasdfghjklzxcvbnm'.split('');
 var alphabetRows = [alphabet.slice(0, 10), alphabet.slice(10, 19), alphabet.slice(19)];
 
-function isItemActive(item) {
+function app_isItemActive(item) {
   return item.activeUntil > Date.now();
 }
 
 function getAnswers(skills, items, equipment) {
   var wordLength = skills.wordLength.value;
-  var boardsCount = skills.boardsCount.value; // const possibleWords = equipment.useFullDictionary.active ? allWords : gameWords
-
-  var possibleWords = isItemActive(items.useFullDictionary) ? all_words_namespaceObject : game_words_namespaceObject;
+  var boardsCount = skills.boardsCount.value;
+  var possibleWords = equipment.useFullDictionary.active ? all_words_namespaceObject : game_words_namespaceObject;
   var answers = possibleWords.filter(function (word) {
     return word.length === +wordLength && !curse_words_namespaceObject.includes(word);
   }).sort(function () {
     return Math.random() - 0.5;
   }).slice(0, boardsCount);
-  return isItemActive(items.reverse) ? answers.map(function (answer) {
+  return app_isItemActive(items.reverse) ? answers.map(function (answer) {
     return answer.split('').reverse().join('');
   }) : answers;
 }
@@ -6221,6 +6352,7 @@ function App() {
       money = _useGameState.money,
       skillsDispatch = _useGameState.skillsDispatch,
       itemsDispatch = _useGameState.itemsDispatch,
+      equipmentDispatch = _useGameState.equipmentDispatch,
       setXp = _useGameState.setXp,
       setMoney = _useGameState.setMoney,
       randomizeRandomSkills = _useGameState.randomizeRandomSkills;
@@ -6263,7 +6395,7 @@ function App() {
   var previousGuesses = usePrevious(guesses);
 
   var handleGuess = function handleGuess() {
-    if (!guesses.includes(currentGuess) && currentGuess.length === skills.wordLength.value && all_words_namespaceObject.includes(isItemActive(items.reverse) ? currentGuess.split('').reverse().join('') : currentGuess) && (!isItemActive(items.strictMode) || isGuessStrictlyValid(currentGuess, guesses, answers))) {
+    if (!guesses.includes(currentGuess) && currentGuess.length === skills.wordLength.value && all_words_namespaceObject.includes(app_isItemActive(items.reverse) ? currentGuess.split('').reverse().join('') : currentGuess) && (!equipment.strictMode.active || isGuessStrictlyValid(currentGuess, guesses, answers))) {
       setGuesses([].concat(app_toConsumableArray(guesses), [currentGuess]));
       currentGuessDispatch({
         type: 'clear'
@@ -6272,7 +6404,7 @@ function App() {
     } else if (currentGuess === 'uuddl') {
       setUiState('cheats');
     } else if (currentGuess === 'ldduu') {
-      setUiState('skills');
+      setUiState('hub');
     }
   };
 
@@ -6292,14 +6424,12 @@ function App() {
     });
   };
 
-  var handleAdd100Xp = function handleAdd100Xp(endState) {
-    var xpEarned = 100;
-    setXp(xp + xpEarned);
+  var handleAddOneXp = function handleAddOneXp(endState) {
+    setXp(xp + 1);
   };
 
-  var handleAdd100Money = function handleAdd100Money(endState) {
-    var moneyEarned = 100;
-    setMoney(money + moneyEarned);
+  var handleAddOneMoney = function handleAddOneMoney(endState) {
+    setMoney(money + 1);
   };
 
   var handleAddLetter = function handleAddLetter(letter) {
@@ -6452,11 +6582,27 @@ function App() {
     }
   };
 
+  var handleBuyEquipment = function handleBuyEquipment(equipmentId) {
+    if (!equipment[equipmentId].owned && money >= equipment[equipmentId].cost) {
+      equipmentDispatch({
+        type: 'UNLOCK',
+        equipmentId: equipmentId
+      });
+      setMoney(money - equipment[equipmentId].cost);
+    }
+  };
+
   var handleUseItem = function handleUseItem(itemId) {
-    handleGameStart();
     itemsDispatch({
       type: 'USE',
       itemId: itemId
+    });
+  };
+
+  var handleToggleEquipment = function handleToggleEquipment(equipmentId) {
+    equipmentDispatch({
+      type: 'TOGGLE',
+      equipmentId: equipmentId
     });
   };
 
@@ -6484,16 +6630,16 @@ function App() {
     currentGuessDispatch({
       type: 'clear'
     });
-  };
+  }; // const handleUnlockAll = () => {
+  //   skillsDispatch({ type: 'UNLOCK_ALL' })
+  // }
+  //           <button onClick={handleUnlockAll}>
+  //             Unlock All Skills
+  //           </button>
 
-  var handleUnlockAll = function handleUnlockAll() {
-    skillsDispatch({
-      type: 'UNLOCK_ALL'
-    });
-  };
 
   var possibleWords = (0,react.useMemo)(function () {
-    return isItemActive(items.showPossibleWords) ? game_words_namespaceObject.filter(function (word) {
+    return app_isItemActive(items.showPossibleWords) ? game_words_namespaceObject.filter(function (word) {
       return isGuessStrictlyValid(word, guesses, answers);
     }) : [];
   }, [guesses, answers, skills]);
@@ -6531,7 +6677,7 @@ function App() {
     }
   }, "Call Shot (Wager ", skills.callShot.value, " XP)"), /*#__PURE__*/react.createElement("div", {
     className: "main-game"
-  }, isItemActive(items.revealAnswers) && /*#__PURE__*/react.createElement("div", {
+  }, app_isItemActive(items.revealAnswers) && /*#__PURE__*/react.createElement("div", {
     className: "revealed-answers"
   }, sortedAnswers.join(' ')), /*#__PURE__*/react.createElement("div", {
     className: "boards"
@@ -6571,7 +6717,7 @@ function App() {
   }), /*#__PURE__*/react.createElement("button", {
     className: "button keyboard-button guess-button",
     onClick: handleGuess
-  }, "GUESS"))), isItemActive(items.showPossibleWords) && /*#__PURE__*/react.createElement("div", null, "Possible words:", /*#__PURE__*/react.createElement("div", null, possibleWords.join(' '))), /*#__PURE__*/react.createElement("div", {
+  }, "GUESS"))), app_isItemActive(items.showPossibleWords) && /*#__PURE__*/react.createElement("div", null, "Possible words:", /*#__PURE__*/react.createElement("div", null, possibleWords.join(' '))), /*#__PURE__*/react.createElement("div", {
     className: "modals"
   }, /*#__PURE__*/react.createElement("a", {
     className: ['modals__background', uiState !== 'game' && 'modals__background--active'].filter(Boolean).join(' '),
@@ -6584,24 +6730,39 @@ function App() {
   }, /*#__PURE__*/react.createElement("div", null, "DEBUG:"), /*#__PURE__*/react.createElement("button", {
     onClick: handleClearAll
   }, "Clear all"), /*#__PURE__*/react.createElement("button", {
-    onClick: handleAdd100Xp
-  }, "Add 100 XP"), /*#__PURE__*/react.createElement("button", {
-    onClick: handleAdd100Money
-  }, "Add 100 Money"), /*#__PURE__*/react.createElement("button", {
-    onClick: handleUnlockAll
-  }, "Unlock All Skills")), /*#__PURE__*/react.createElement(Modal, {
+    onClick: handleAddOneXp
+  }, "Add 1 XP"), /*#__PURE__*/react.createElement("button", {
+    onClick: handleAddOneMoney
+  }, "Add $1")), /*#__PURE__*/react.createElement(Modal, {
     open: uiState === 'hub',
     handleClose: handleGameStart
   }, /*#__PURE__*/react.createElement(Hub, {
+    items: items,
+    equipment: equipment,
+    handleUseItem: handleUseItem,
+    handleToggleEquipment: handleToggleEquipment,
     handleGoToSkills: function handleGoToSkills() {
       setUiState('skills');
     },
     handleGoToShop: function handleGoToShop() {
       setUiState('shop');
     },
+    handleGoToEquipment: function handleGoToEquipment() {
+      setUiState('equipment');
+    },
     handleGoToGame: function handleGoToGame() {
       handleGameStart();
     }
+  })), /*#__PURE__*/react.createElement(Modal, {
+    open: uiState === 'results'
+  }, /*#__PURE__*/react.createElement(Results, {
+    xp: xp,
+    answers: answers,
+    lastXpEarned: lastXpEarned,
+    handleClose: function handleClose() {
+      setUiState('hub');
+    },
+    wonLastGame: wonLastGame
   })), /*#__PURE__*/react.createElement(Modal, {
     open: uiState === 'skills',
     handleClose: handleGameStart
@@ -6616,50 +6777,23 @@ function App() {
     },
     optionCost: OPTION_COST
   })), /*#__PURE__*/react.createElement(Modal, {
-    open: uiState === 'results'
-  }, /*#__PURE__*/react.createElement(Results, {
-    xp: xp,
-    answers: answers,
-    lastXpEarned: lastXpEarned,
-    handleClose: function handleClose() {
-      setUiState('hub');
-    },
-    wonLastGame: wonLastGame
-  })), /*#__PURE__*/react.createElement(Modal, {
     open: uiState === 'shop'
   }, /*#__PURE__*/react.createElement(Shop, {
     items: items,
-    money: money,
     handleBuyItem: handleBuyItem,
     handleClose: function handleClose() {
       setUiState('hub');
-    },
-    wonLastGame: wonLastGame
-  })))), Object.values(items).some(function (item) {
-    return item.ownedCount >= 1;
-  }) && /*#__PURE__*/react.createElement("div", {
-    className: "inventory"
-  }, Object.entries(items).filter(function (_ref) {
-    var _ref2 = app_slicedToArray(_ref, 2),
-        key = _ref2[0],
-        item = _ref2[1];
-
-    return item.ownedCount >= 1;
-  }).map(function (_ref3) {
-    var _ref4 = app_slicedToArray(_ref3, 2),
-        key = _ref4[0],
-        item = _ref4[1];
-
-    return /*#__PURE__*/react.createElement("div", {
-      key: key,
-      className: "inventory__item"
-    }, /*#__PURE__*/react.createElement("div", null, item.description), /*#__PURE__*/react.createElement("div", null, "Owned: ", item.ownedCount), /*#__PURE__*/react.createElement("button", {
-      key: key,
-      onClick: function onClick() {
-        handleUseItem(key);
-      }
-    }, "Use"));
-  })));
+    }
+  })), /*#__PURE__*/react.createElement(Modal, {
+    open: uiState === 'equipment'
+  }, /*#__PURE__*/react.createElement(Equipment, {
+    equipment: equipment,
+    money: money,
+    handleBuyEquipment: handleBuyEquipment,
+    handleClose: function handleClose() {
+      setUiState('hub');
+    }
+  })))));
 }
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
 var injectStylesIntoStyleTag = __webpack_require__(3379);
