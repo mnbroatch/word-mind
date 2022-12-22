@@ -6617,26 +6617,23 @@ function App() {
     return function () {
       document.removeEventListener('keydown', addKey);
     };
-  }, [uiState]);
-
-  var handleClearAll = function handleClearAll() {
-    localStorage.clear();
-    skillsDispatch({
-      type: 'LOAD_INITIAL'
-    });
-    setUiState('game');
-    setXp(0);
-    setGuesses([]);
-    currentGuessDispatch({
-      type: 'clear'
-    });
-  }; // const handleUnlockAll = () => {
+  }, [uiState]); // const handleClearAll = () => {
+  //   localStorage.clear()
+  //   skillsDispatch({ type: 'LOAD_INITIAL' })
+  //   setUiState('game')
+  //   setXp(0)
+  //   setGuesses([])
+  //   currentGuessDispatch({ type: 'clear' })
+  // }
+  //           <button onClick={handleClearAll}>
+  //             Clear all
+  //           </button>
+  // const handleUnlockAll = () => {
   //   skillsDispatch({ type: 'UNLOCK_ALL' })
   // }
   //           <button onClick={handleUnlockAll}>
   //             Unlock All Skills
   //           </button>
-
 
   var possibleWords = (0,react.useMemo)(function () {
     return app_isItemActive(items.showPossibleWords) ? game_words_namespaceObject.filter(function (word) {
@@ -6728,8 +6725,6 @@ function App() {
       setUiState('game');
     }
   }, /*#__PURE__*/react.createElement("div", null, "DEBUG:"), /*#__PURE__*/react.createElement("button", {
-    onClick: handleClearAll
-  }, "Clear all"), /*#__PURE__*/react.createElement("button", {
     onClick: handleAddOneXp
   }, "Add 1 XP"), /*#__PURE__*/react.createElement("button", {
     onClick: handleAddOneMoney

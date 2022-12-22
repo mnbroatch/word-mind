@@ -279,14 +279,17 @@ export default function App () {
     return () => { document.removeEventListener('keydown', addKey) }
   }, [uiState])
 
-  const handleClearAll = () => {
-    localStorage.clear()
-    skillsDispatch({ type: 'LOAD_INITIAL' })
-    setUiState('game')
-    setXp(0)
-    setGuesses([])
-    currentGuessDispatch({ type: 'clear' })
-  }
+  // const handleClearAll = () => {
+  //   localStorage.clear()
+  //   skillsDispatch({ type: 'LOAD_INITIAL' })
+  //   setUiState('game')
+  //   setXp(0)
+  //   setGuesses([])
+  //   currentGuessDispatch({ type: 'clear' })
+  // }
+  //           <button onClick={handleClearAll}>
+  //             Clear all
+  //           </button>
 
   // const handleUnlockAll = () => {
   //   skillsDispatch({ type: 'UNLOCK_ALL' })
@@ -401,9 +404,6 @@ export default function App () {
             handleClose={() => { setUiState('game') }}
           >
             <div>DEBUG:</div>
-            <button onClick={handleClearAll}>
-              Clear all
-            </button>
             <button onClick={handleAddOneXp}>
               Add 1 XP
             </button>
