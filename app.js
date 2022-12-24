@@ -272,6 +272,7 @@ export default function App () {
       document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`)
     }, 100)
     window.addEventListener('resize', resizeHandler)
+    resizeHandler()
     return () => { window.removeEventListener('resize', resizeHandler) }
   }, [])
 
