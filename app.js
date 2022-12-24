@@ -1,8 +1,7 @@
-import React, { useReducer, useState, useEffect, useMemo } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import useCountdown from './hooks/use-countdown'
 import usePrevious from './hooks/use-previous'
 import useGameState from './use-game-state'
-import currentGuessReducer from './current-guess-reducer'
 
 import Shop from './components/shop'
 import Equipment from './components/equipment'
@@ -11,7 +10,7 @@ import Skills from './components/skills'
 import Hub from './components/hub'
 import Modal from './components/modal'
 import Board from './components/board'
-import KeyboardLetter from './components/keyboard-letter'
+import Controls from './components/controls'
 import MoneyDisplay from './components/money-display'
 import XpDisplay from './components/xp-display'
 
@@ -24,14 +23,6 @@ import gameWords from './data/game-words.json'
 import curseWords from './data/curse-words.json'
 
 const OPTION_COST = 2
-
-const alphabet = 'qwertyuiopasdfghjklzxcvbnm'.split('')
-
-const alphabetRows = [
-  alphabet.slice(0, 10),
-  alphabet.slice(10, 19),
-  alphabet.slice(19)
-]
 
 function isItemActive (item) {
   return item.activeUntil > Date.now()
@@ -65,30 +56,54 @@ export default function App () {
   const [lastXpEarned, setLastXpEarned] = useState(0)
   const [wonLastGame, setWonLastGame] = useState(false)
   const [answers, setAnswers] = useState(getAnswers(skills, items, equipment))
-  const [currentGuess, currentGuessDispatch] = useReducer(currentGuessReducer, '')
-  const [guesses, setGuesses] = useState([])
   const [shotIsCalled, setShotIsCalled] = useState(false)
+  // const [guesses, setGuesses] = useState([
+  //   'THERE',
+  //   'HEART',
+  //   'TONER',
+  //   'THORN',
+  //   'BOATS',
+  //   'LOSER',
+  //   'FAILS',
+  //   'FLAIR',
+  //   'CHAIR',
+  //   'APPLE',
+  //   'WINDY',
+  //   'DENSE',
+  //   'BOOTS',
+  //   'STOOP',
+  //   'HONOR',
+  //   'DREAM',
+  //   'CHUNK',
+  //   'HELLO',
+  //   'BLEND',
+  //   'GLOWS',
+  //   'SLOWS',
+  //   'DOGGY'
+  // ])
+  const [guesses, setGuesses] = useState([])
   const previousGuesses = usePrevious(guesses)
 
-  const handleGuess = () => {
-    if (
-      !guesses.includes(currentGuess)
-        && currentGuess.length === skills.wordLength.value
-        && allWords.includes(
-          isItemActive(items.reverse)
-            ? currentGuess.split('').reverse().join('')
-            : currentGuess
-        )
-        && (!equipment.strictMode.active || isGuessStrictlyValid(currentGuess, guesses, answers))
-    ) {
-      setGuesses([...guesses, currentGuess])
-      currentGuessDispatch({ type: 'clear' })
+  const handleGuess = (guess) => {
+    const isValidGuess = !guesses.includes(guess)
+      && guess.length === skills.wordLength.value
+      && allWords.includes(
+        isItemActive(items.reverse)
+          ? guess.split('').reverse().join('')
+          : guess
+      )
+      && (!equipment.strictMode.active || isGuessStrictlyValid(guess, guesses, answers))
+
+    if (isValidGuess) {
+      setGuesses([...guesses, guess])
       resetRoundTime()
-    } else if (currentGuess === 'uuddl') {
+    } else if (guess === 'uuddl') {
       setUiState('cheats')
-    } else if (currentGuess === 'ldduu') {
+    } else if (guess === 'ldduu') {
       setUiState('hub')
     }
+
+    return isValidGuess
   }
 
   const handleGameEnd = (endState) => {
@@ -119,42 +134,14 @@ export default function App () {
     setMoney(money + 1)
   }
 
-  const handleAddLetter = (letter) => {
-    if (
-      alphabet.includes(letter.toLowerCase())
-      && currentGuess.length < skills.wordLength.value
-    ) {
-      currentGuessDispatch({ type: 'add_letter', letter })
-    }
-  }
-
   const handleGameStart = () => {
     randomizeRandomSkills()
     resetGameTime()
     resetRoundTime()
     setGuesses([])
-    currentGuessDispatch({ type: 'clear' })
     setUiState('game')
     setAnswers(getAnswers(skills, items, equipment))
   }
-
-  useEffect(() => {
-    const addKey = (e) => {
-      if (e.keyCode === 13 || e.keyCode === 32) {
-        e.preventDefault()
-      }
-
-      if (e.keyCode === 8) {
-        currentGuessDispatch({ type: 'rub' })
-      } else if (e.keyCode === 13) {
-        handleGuess()
-      } else {
-        handleAddLetter(String.fromCharCode(e.keyCode))
-      }
-    }
-    document.addEventListener('keydown', addKey)
-    return () => { document.removeEventListener('keydown', addKey) }
-  }, [handleGuess, handleAddLetter])
 
   useEffect(() => {
     const didJustGuess = previousGuesses && previousGuesses.length === guesses.length - 1
@@ -285,7 +272,6 @@ export default function App () {
   //   setUiState('game')
   //   setXp(0)
   //   setGuesses([])
-  //   currentGuessDispatch({ type: 'clear' })
   // }
   //           <button onClick={handleClearAll}>
   //             Clear all
@@ -350,37 +336,16 @@ export default function App () {
               <Board
                 answer={answer}
                 guesses={guesses}
-                currentGuess={currentGuess}
                 key={answer}
               />
             ))}
           </div>
-          <div className='keyboard'>
-            {alphabetRows.map(row => (
-              <div className="keyboard-row" key={row[0]}>
-                {row.map(letter => (
-                  <KeyboardLetter
-                    letter={letter}
-                    answers={sortedAnswers}
-                    guesses={guesses}
-                    handleLetterInput={() => { handleAddLetter(letter) }}
-                    key={letter}
-                  />
-                ))}
-                {row[0] === 'z' && (
-                  <button
-                    className="button keyboard-button delete-button"
-                    onClick={() => { currentGuessDispatch({ type: 'rub' }) }}
-                  >
-                    <span className="delete-button__label">DEL</span>
-                  </button>
-                )}
-              </div>
-            ))}
-            <button className="button keyboard-button guess-button" onClick={handleGuess}>
-              GUESS
-            </button>
-          </div>
+          <Controls
+            submitGuess={handleGuess}
+            wordLength={skills.wordLength.value}
+            answers={answers}
+            guesses={guesses}
+          />
         </div>
         {isItemActive(items.showPossibleWords) && (
           <div>

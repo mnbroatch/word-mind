@@ -1,4 +1,16 @@
-bug: random doesn't stay random
+100 boards in 30 min
+
+====================
+
+UX: Display reason for each failure
+  - this helps if people misunderstand call shots.
+    - NEEEEEEEEEEEEEEEEEEEEEEED tutorial modals
+
+====================
+
+The fact that you can make multiple call shots in a game is really the best
+
+note: fix making multiple call shots
 
 ====================
 

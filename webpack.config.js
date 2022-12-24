@@ -10,7 +10,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      title: 'Word Mind',
+      title: 'Wordlegend',
       template: './index.html'
     })
   ],

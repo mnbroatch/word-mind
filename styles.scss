@@ -22,7 +22,8 @@ body {
 }
 
 #root {
-  height: 100vh
+  height: 100vh;
+  overflow: hidden;
 }
 
 .root {
@@ -101,6 +102,8 @@ body {
 
 .boards {
   flex: 1;
+  flex-basis: 0px;
+  overflow-y: scroll;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -120,6 +123,18 @@ body {
 .guess {
   margin-top: 3px;
   display: flex;
+}
+
+.controls {
+  margin: 20px 0 20px 0;
+  text-align: center;
+  overflow-y: scroll;
+
+  .guess {
+    padding: 5px;
+    display: inline-flex;
+    box-shadow: 1px 1px 3px black;
+  }
 }
 
 .guess__letter {
@@ -304,7 +319,7 @@ body {
 }
 
 .keyboard {
-  margin: 40px 0 70px 0;
+  margin-top: 5px;
   padding: 10px;
   box-sizing: border-box;
   text-align: center;
