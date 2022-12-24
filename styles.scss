@@ -16,9 +16,13 @@ $shadow-hover: inset 1px 1px 2px grey;
 $shadow-active: inset 2px 2px 3px grey;
 $shadow-inset: inset 1px 1px 5px grey;
 
+html {
+  height: 100%; 
+}
 body {
   margin: 0;
   font-family: system-ui;
+  height: 100%;
 }
 
 #root {
@@ -30,7 +34,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 100vh
+  height: 100%;
 } 
 
 .main-content {
