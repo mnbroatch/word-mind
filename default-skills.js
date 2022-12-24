@@ -52,7 +52,7 @@ export default {
         mastery: 0
       }
     ],
-    value: 1,
+    value: 100,
     unlockedValues: [1, 2],
     unlocked: false
   },
