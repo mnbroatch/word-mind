@@ -290,16 +290,6 @@ export default function App () {
       : []
   }, [guesses, answers, skills])
 
-  const sortedAnswers = [...answers].sort((a, b) => {
-    if (guesses.includes(a) && !guesses.includes(b)) {
-      return -1
-    } else if (guesses.includes(b) && !guesses.includes(a)) {
-      return 1
-    } else {
-      return (a).localeCompare(b)
-    }
-  })
-
   return (
     <div className='root'>
       <div className='top-bar'>
@@ -328,11 +318,11 @@ export default function App () {
         <div className='main-game'>
           {isItemActive(items.revealAnswers) && (
             <div className='revealed-answers'>
-              {sortedAnswers.join(' ')}
+              {answers.join(' ')}
             </div>
           )}
           <div className='boards'>
-            {sortedAnswers.map(answer => (
+            {answers.map(answer => (
               <Board
                 answer={answer}
                 guesses={guesses}
