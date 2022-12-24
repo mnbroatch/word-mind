@@ -26,7 +26,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_g
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0;font-family:system-ui}#root{height:100vh}.root{box-sizing:border-box;position:relative;display:flex;flex-direction:column;height:100vh}.main-content{flex:1;margin-top:5px;position:relative}.main-game{height:100%;display:flex;flex-direction:column}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{flex:1;display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray;background-color:#fff;transition:background-color 1s}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase;background-color:#fff;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:45px;font-family:\"libre-baskerville\";font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;transform:rotate(-5deg);width:300px;margin-top:70px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.skills-list{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.skill{position:relative;box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:12px;padding:16px 0 16px 0;text-align:center}.skill-spacer{width:175px;margin:0 12px 0 12px;height:0}.skill__description{background-color:brown;color:#fff;left:0;padding:6px;position:absolute;text-align:center;top:-17px;left:-3px;transform:rotate(-2deg);white-space:nowrap;width:175px}.option{display:inline-block}.option__meter{position:relative;display:inline-block;height:40px;width:6px;background-color:#84a194}.option__meter__inner{position:absolute;width:100%;bottom:0;background-color:#a1e8af}.option-button{border:0;border-radius:3px;margin:2px;height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option-button--selected{background-color:green;color:#fff}.option-button--unlocked{background-color:#add8e6}.option-button--locked{background-color:#ff0}.option-button__inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.option-button--random{width:120px}.keyboard{margin:40px 0 70px 0;padding:10px;box-sizing:border-box;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.xp{display:flex;height:100%;align-items:center;justify-content:center;color:#fff;font-family:libre-baskerville;position:relative;border-radius:9999999px;border:1px dotted #fff;background-image:linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));padding:0 10px 0 10px;box-sizing:border-box}.xp__background-squiggle{top:-0.15em;position:absolute;transform:scale(4.5, 3);height:100%;display:flex;justify-content:center;align-items:center;color:#f5b0cb;font-size:1.2em;opacity:.3}.xp__background-squiggle~.xp__background-squiggle{transform:scale(-4.5, 3);color:#372772}.xp__label{font-variant-numeric:tabular-nums}.xp__digit{display:inline-block;width:.65em;vertical-align:middle;text-align:center}.results .xp{font-size:3em}.results .xp__background-squiggle{font-size:2em}.money{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.money__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.money__label{color:#f6bd60;font-family:abril-fatface-regular}.money__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;display:flex;justify-content:space-between;align-items:center;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}.call-shot-button{margin:10px;padding:5px}.call-shot-button--active{background-color:#a1e8af}.inventory{border:1px solid #000;margin:15px;padding:15px}.inventory__item{display:inline-block;margin:5px;border:1px solid #000;padding:5px}.equipment-inventory{border:1px solid #000;margin:15px;padding:15px}.equipment-inventory__piece{display:inline-block;margin:5px;border:1px solid #000;padding:5px}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}@font-face{font-family:\"libre-baskerville\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ")}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0;font-family:system-ui}#root{height:100vh;overflow:hidden}.root{box-sizing:border-box;position:relative;display:flex;flex-direction:column;height:100vh}.main-content{flex:1;margin-top:5px;position:relative}.main-game{height:100%;display:flex;flex-direction:column}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{flex:1;flex-basis:0px;overflow-y:scroll;display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray;background-color:#fff;transition:background-color 1s}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.controls{margin:20px 0 20px 0;text-align:center;overflow-y:scroll}.controls .guess{padding:5px;display:inline-flex;box-shadow:1px 1px 3px #000}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase;background-color:#fff;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:45px;font-family:\"libre-baskerville\";font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;transform:rotate(-5deg);width:300px;margin-top:70px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.skills-list{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.skill{position:relative;box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:12px;padding:16px 0 16px 0;text-align:center}.skill-spacer{width:175px;margin:0 12px 0 12px;height:0}.skill__description{background-color:brown;color:#fff;left:0;padding:6px;position:absolute;text-align:center;top:-17px;left:-3px;transform:rotate(-2deg);white-space:nowrap;width:175px}.option{display:inline-block}.option__meter{position:relative;display:inline-block;height:40px;width:6px;background-color:#84a194}.option__meter__inner{position:absolute;width:100%;bottom:0;background-color:#a1e8af}.option-button{border:0;border-radius:3px;margin:2px;height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option-button--selected{background-color:green;color:#fff}.option-button--unlocked{background-color:#add8e6}.option-button--locked{background-color:#ff0}.option-button__inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.option-button--random{width:120px}.keyboard{margin-top:5px;padding:10px;box-sizing:border-box;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.xp{display:flex;height:100%;align-items:center;justify-content:center;color:#fff;font-family:libre-baskerville;position:relative;border-radius:9999999px;border:1px dotted #fff;background-image:linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));padding:0 10px 0 10px;box-sizing:border-box}.xp__background-squiggle{top:-0.15em;position:absolute;transform:scale(4.5, 3);height:100%;display:flex;justify-content:center;align-items:center;color:#f5b0cb;font-size:1.2em;opacity:.3}.xp__background-squiggle~.xp__background-squiggle{transform:scale(-4.5, 3);color:#372772}.xp__label{font-variant-numeric:tabular-nums}.xp__digit{display:inline-block;width:.65em;vertical-align:middle;text-align:center}.results .xp{font-size:3em}.results .xp__background-squiggle{font-size:2em}.money{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.money__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.money__label{color:#f6bd60;font-family:abril-fatface-regular}.money__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;display:flex;justify-content:space-between;align-items:center;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}.call-shot-button{margin:10px;padding:5px}.call-shot-button--active{background-color:#a1e8af}.inventory{border:1px solid #000;margin:15px;padding:15px}.inventory__item{display:inline-block;margin:5px;border:1px solid #000;padding:5px}.equipment-inventory{border:1px solid #000;margin:15px;padding:15px}.equipment-inventory__piece{display:inline-block;margin:5px;border:1px solid #000;padding:5px}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}@font-face{font-family:\"libre-baskerville\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ")}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5355,16 +5355,6 @@ function useGameState() {
     randomizeRandomSkills: randomizeRandomSkills
   };
 }
-;// CONCATENATED MODULE: ./current-guess-reducer.js
-/* harmony default export */ function current_guess_reducer(prevState, action) {
-  if (action.type === 'rub') {
-    return prevState.slice(0, -1);
-  } else if (action.type === 'add_letter') {
-    return prevState + action.letter.toLowerCase();
-  } else if (action.type === 'clear') {
-    return '';
-  }
-}
 // EXTERNAL MODULE: ./node_modules/prop-types/index.js
 var prop_types = __webpack_require__(5697);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
@@ -6068,31 +6058,26 @@ Guess.propTypes = {
 
 function Board(_ref) {
   var guesses = _ref.guesses,
-      answer = _ref.answer,
-      currentGuess = _ref.currentGuess;
-  // todo: revisit why are we expecting number of guesses to be greater than 1?
+      answer = _ref.answer;
   var solutionIndex = guesses.indexOf(answer);
-  var guessesToShow = solutionIndex === -1 ? guesses : guesses.slice(0, solutionIndex + 1);
   return /*#__PURE__*/react.createElement("div", {
     className: ['board', solutionIndex !== -1 && 'board--solved'].filter(Boolean).join(' ')
   }, /*#__PURE__*/react.createElement("div", {
     className: "guesses"
-  }, guessesToShow.map(function (guess, i) {
+  }, guesses.length ? guesses.map(function (guess, i) {
     return /*#__PURE__*/react.createElement(Guess, {
       answer: answer,
       guess: guess,
       key: i
     });
-  }), solutionIndex === -1 && /*#__PURE__*/react.createElement(Guess, {
+  }) : /*#__PURE__*/react.createElement(Guess, {
     answer: answer,
-    guess: currentGuess,
-    noColor: true
+    guess: answer.replace(/./g, ' ')
   })));
 }
 Board.propTypes = {
   answer: (prop_types_default()).string,
-  guesses: prop_types_default().arrayOf((prop_types_default()).string),
-  currentGuess: (prop_types_default()).string
+  guesses: prop_types_default().arrayOf((prop_types_default()).string)
 };
 ;// CONCATENATED MODULE: ./components/keyboard-letter.js
 function keyboard_letter_toConsumableArray(arr) { return keyboard_letter_arrayWithoutHoles(arr) || keyboard_letter_iterableToArray(arr) || keyboard_letter_unsupportedIterableToArray(arr) || keyboard_letter_nonIterableSpread(); }
@@ -6161,6 +6146,137 @@ KeyboardLetter.propTypes = {
   answers: prop_types_default().arrayOf((prop_types_default()).string),
   guesses: prop_types_default().arrayOf((prop_types_default()).string),
   handleLetterInput: (prop_types_default()).func
+};
+;// CONCATENATED MODULE: ./current-guess-reducer.js
+/* harmony default export */ function current_guess_reducer(prevState, action) {
+  if (action.type === 'rub') {
+    return prevState.slice(0, -1);
+  } else if (action.type === 'add_letter') {
+    return prevState + action.letter.toLowerCase();
+  } else if (action.type === 'clear') {
+    return '';
+  }
+}
+;// CONCATENATED MODULE: ./components/controls.js
+function controls_slicedToArray(arr, i) { return controls_arrayWithHoles(arr) || controls_iterableToArrayLimit(arr, i) || controls_unsupportedIterableToArray(arr, i) || controls_nonIterableRest(); }
+
+function controls_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function controls_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return controls_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return controls_arrayLikeToArray(o, minLen); }
+
+function controls_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function controls_iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function controls_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+var alphabet = 'qwertyuiopasdfghjklzxcvbnm'.split('');
+var alphabetRows = [alphabet.slice(0, 10), alphabet.slice(10, 19), alphabet.slice(19)];
+function Controls(_ref) {
+  var submitGuess = _ref.submitGuess,
+      wordLength = _ref.wordLength,
+      guesses = _ref.guesses,
+      answers = _ref.answers;
+
+  var _useReducer = (0,react.useReducer)(current_guess_reducer, ''),
+      _useReducer2 = controls_slicedToArray(_useReducer, 2),
+      currentGuess = _useReducer2[0],
+      currentGuessDispatch = _useReducer2[1];
+
+  (0,react.useEffect)(function () {
+    currentGuessDispatch({
+      type: 'clear'
+    });
+  }, [answers]);
+
+  var handleAddLetter = function handleAddLetter(letter) {
+    if (alphabet.includes(letter.toLowerCase()) && currentGuess.length < wordLength) {
+      currentGuessDispatch({
+        type: 'add_letter',
+        letter: letter
+      });
+    }
+  };
+
+  var handleGuess = function handleGuess() {
+    var isValidGuess = submitGuess(currentGuess);
+
+    if (isValidGuess) {
+      currentGuessDispatch({
+        type: 'clear'
+      });
+    }
+  };
+
+  (0,react.useEffect)(function () {
+    var addKey = function addKey(e) {
+      if (e.keyCode === 13 || e.keyCode === 32) {
+        e.preventDefault();
+      }
+
+      if (e.keyCode === 8) {
+        currentGuessDispatch({
+          type: 'rub'
+        });
+      } else if (e.keyCode === 13) {
+        handleGuess();
+      } else {
+        handleAddLetter(String.fromCharCode(e.keyCode));
+      }
+    };
+
+    document.addEventListener('keydown', addKey);
+    return function () {
+      document.removeEventListener('keydown', addKey);
+    };
+  }, [handleGuess, handleAddLetter]);
+  return /*#__PURE__*/react.createElement("div", {
+    className: "controls"
+  }, /*#__PURE__*/react.createElement(Guess, {
+    answer: answers[0],
+    guess: currentGuess,
+    noColor: true
+  }), /*#__PURE__*/react.createElement("div", {
+    className: "keyboard"
+  }, alphabetRows.map(function (row) {
+    return /*#__PURE__*/react.createElement("div", {
+      className: "keyboard-row",
+      key: row[0]
+    }, row.map(function (letter) {
+      return /*#__PURE__*/react.createElement(KeyboardLetter, {
+        letter: letter,
+        answers: answers,
+        guesses: guesses,
+        handleLetterInput: function handleLetterInput() {
+          handleAddLetter(letter);
+        },
+        key: letter
+      });
+    }), row[0] === 'z' && /*#__PURE__*/react.createElement("button", {
+      className: "button keyboard-button delete-button",
+      onClick: function onClick() {
+        currentGuessDispatch({
+          type: 'rub'
+        });
+      }
+    }, /*#__PURE__*/react.createElement("span", {
+      className: "delete-button__label"
+    }, "DEL")));
+  }), /*#__PURE__*/react.createElement("button", {
+    className: "button keyboard-button guess-button",
+    onClick: handleGuess
+  }, "GUESS")));
+}
+Controls.propTypes = {
+  submitGuess: (prop_types_default()).func,
+  wordLength: (prop_types_default()).number,
+  answers: prop_types_default().arrayOf((prop_types_default()).string),
+  guesses: prop_types_default().arrayOf((prop_types_default()).string)
 };
 ;// CONCATENATED MODULE: ./components/money-display.js
 
@@ -6320,10 +6436,7 @@ function app_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
 var OPTION_COST = 2;
-var alphabet = 'qwertyuiopasdfghjklzxcvbnm'.split('');
-var alphabetRows = [alphabet.slice(0, 10), alphabet.slice(10, 19), alphabet.slice(19)];
 
 function app_isItemActive(item) {
   return item.activeUntil > Date.now();
@@ -6377,35 +6490,55 @@ function App() {
       answers = _useState8[0],
       setAnswers = _useState8[1];
 
-  var _useReducer = (0,react.useReducer)(current_guess_reducer, ''),
-      _useReducer2 = app_slicedToArray(_useReducer, 2),
-      currentGuess = _useReducer2[0],
-      currentGuessDispatch = _useReducer2[1];
-
-  var _useState9 = (0,react.useState)([]),
+  var _useState9 = (0,react.useState)(false),
       _useState10 = app_slicedToArray(_useState9, 2),
-      guesses = _useState10[0],
-      setGuesses = _useState10[1];
+      shotIsCalled = _useState10[0],
+      setShotIsCalled = _useState10[1]; // const [guesses, setGuesses] = useState([
+  //   'THERE',
+  //   'HEART',
+  //   'TONER',
+  //   'THORN',
+  //   'BOATS',
+  //   'LOSER',
+  //   'FAILS',
+  //   'FLAIR',
+  //   'CHAIR',
+  //   'APPLE',
+  //   'WINDY',
+  //   'DENSE',
+  //   'BOOTS',
+  //   'STOOP',
+  //   'HONOR',
+  //   'DREAM',
+  //   'CHUNK',
+  //   'HELLO',
+  //   'BLEND',
+  //   'GLOWS',
+  //   'SLOWS',
+  //   'DOGGY'
+  // ])
 
-  var _useState11 = (0,react.useState)(false),
+
+  var _useState11 = (0,react.useState)([]),
       _useState12 = app_slicedToArray(_useState11, 2),
-      shotIsCalled = _useState12[0],
-      setShotIsCalled = _useState12[1];
+      guesses = _useState12[0],
+      setGuesses = _useState12[1];
 
   var previousGuesses = usePrevious(guesses);
 
-  var handleGuess = function handleGuess() {
-    if (!guesses.includes(currentGuess) && currentGuess.length === skills.wordLength.value && all_words_namespaceObject.includes(app_isItemActive(items.reverse) ? currentGuess.split('').reverse().join('') : currentGuess) && (!equipment.strictMode.active || isGuessStrictlyValid(currentGuess, guesses, answers))) {
-      setGuesses([].concat(app_toConsumableArray(guesses), [currentGuess]));
-      currentGuessDispatch({
-        type: 'clear'
-      });
+  var handleGuess = function handleGuess(guess) {
+    var isValidGuess = !guesses.includes(guess) && guess.length === skills.wordLength.value && all_words_namespaceObject.includes(app_isItemActive(items.reverse) ? guess.split('').reverse().join('') : guess) && (!equipment.strictMode.active || isGuessStrictlyValid(guess, guesses, answers));
+
+    if (isValidGuess) {
+      setGuesses([].concat(app_toConsumableArray(guesses), [guess]));
       resetRoundTime();
-    } else if (currentGuess === 'uuddl') {
+    } else if (guess === 'uuddl') {
       setUiState('cheats');
-    } else if (currentGuess === 'ldduu') {
+    } else if (guess === 'ldduu') {
       setUiState('hub');
     }
+
+    return isValidGuess;
   };
 
   var handleGameEnd = function handleGameEnd(endState) {
@@ -6432,49 +6565,15 @@ function App() {
     setMoney(money + 1);
   };
 
-  var handleAddLetter = function handleAddLetter(letter) {
-    if (alphabet.includes(letter.toLowerCase()) && currentGuess.length < skills.wordLength.value) {
-      currentGuessDispatch({
-        type: 'add_letter',
-        letter: letter
-      });
-    }
-  };
-
   var handleGameStart = function handleGameStart() {
     randomizeRandomSkills();
     resetGameTime();
     resetRoundTime();
     setGuesses([]);
-    currentGuessDispatch({
-      type: 'clear'
-    });
     setUiState('game');
     setAnswers(getAnswers(skills, items, equipment));
   };
 
-  (0,react.useEffect)(function () {
-    var addKey = function addKey(e) {
-      if (e.keyCode === 13 || e.keyCode === 32) {
-        e.preventDefault();
-      }
-
-      if (e.keyCode === 8) {
-        currentGuessDispatch({
-          type: 'rub'
-        });
-      } else if (e.keyCode === 13) {
-        handleGuess();
-      } else {
-        handleAddLetter(String.fromCharCode(e.keyCode));
-      }
-    };
-
-    document.addEventListener('keydown', addKey);
-    return function () {
-      document.removeEventListener('keydown', addKey);
-    };
-  }, [handleGuess, handleAddLetter]);
   (0,react.useEffect)(function () {
     var didJustGuess = previousGuesses && previousGuesses.length === guesses.length - 1;
     var guessedAnswersCount = answers.filter(function (answer) {
@@ -6623,7 +6722,6 @@ function App() {
   //   setUiState('game')
   //   setXp(0)
   //   setGuesses([])
-  //   currentGuessDispatch({ type: 'clear' })
   // }
   //           <button onClick={handleClearAll}>
   //             Clear all
@@ -6640,17 +6738,6 @@ function App() {
       return isGuessStrictlyValid(word, guesses, answers);
     }) : [];
   }, [guesses, answers, skills]);
-
-  var sortedAnswers = app_toConsumableArray(answers).sort(function (a, b) {
-    if (guesses.includes(a) && !guesses.includes(b)) {
-      return -1;
-    } else if (guesses.includes(b) && !guesses.includes(a)) {
-      return 1;
-    } else {
-      return a.localeCompare(b);
-    }
-  });
-
   return /*#__PURE__*/react.createElement("div", {
     className: "root"
   }, /*#__PURE__*/react.createElement("div", {
@@ -6676,45 +6763,20 @@ function App() {
     className: "main-game"
   }, app_isItemActive(items.revealAnswers) && /*#__PURE__*/react.createElement("div", {
     className: "revealed-answers"
-  }, sortedAnswers.join(' ')), /*#__PURE__*/react.createElement("div", {
+  }, answers.join(' ')), /*#__PURE__*/react.createElement("div", {
     className: "boards"
-  }, sortedAnswers.map(function (answer) {
+  }, answers.map(function (answer) {
     return /*#__PURE__*/react.createElement(Board, {
       answer: answer,
       guesses: guesses,
-      currentGuess: currentGuess,
       key: answer
     });
-  })), /*#__PURE__*/react.createElement("div", {
-    className: "keyboard"
-  }, alphabetRows.map(function (row) {
-    return /*#__PURE__*/react.createElement("div", {
-      className: "keyboard-row",
-      key: row[0]
-    }, row.map(function (letter) {
-      return /*#__PURE__*/react.createElement(KeyboardLetter, {
-        letter: letter,
-        answers: sortedAnswers,
-        guesses: guesses,
-        handleLetterInput: function handleLetterInput() {
-          handleAddLetter(letter);
-        },
-        key: letter
-      });
-    }), row[0] === 'z' && /*#__PURE__*/react.createElement("button", {
-      className: "button keyboard-button delete-button",
-      onClick: function onClick() {
-        currentGuessDispatch({
-          type: 'rub'
-        });
-      }
-    }, /*#__PURE__*/react.createElement("span", {
-      className: "delete-button__label"
-    }, "DEL")));
-  }), /*#__PURE__*/react.createElement("button", {
-    className: "button keyboard-button guess-button",
-    onClick: handleGuess
-  }, "GUESS"))), app_isItemActive(items.showPossibleWords) && /*#__PURE__*/react.createElement("div", null, "Possible words:", /*#__PURE__*/react.createElement("div", null, possibleWords.join(' '))), /*#__PURE__*/react.createElement("div", {
+  })), /*#__PURE__*/react.createElement(Controls, {
+    submitGuess: handleGuess,
+    wordLength: skills.wordLength.value,
+    answers: answers,
+    guesses: guesses
+  })), app_isItemActive(items.showPossibleWords) && /*#__PURE__*/react.createElement("div", null, "Possible words:", /*#__PURE__*/react.createElement("div", null, possibleWords.join(' '))), /*#__PURE__*/react.createElement("div", {
     className: "modals"
   }, /*#__PURE__*/react.createElement("a", {
     className: ['modals__background', uiState !== 'game' && 'modals__background--active'].filter(Boolean).join(' '),
