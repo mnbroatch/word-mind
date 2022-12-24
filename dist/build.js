@@ -26,7 +26,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_g
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0;font-family:system-ui}.root{box-sizing:border-box;position:fixed;display:flex;flex-direction:column;height:100vh}.main-content{flex:1;margin-top:5px;position:relative}.main-game{height:100%;display:flex;flex-direction:column}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{flex:1;flex-basis:0px;overflow-y:scroll;display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray;background-color:#fff;transition:background-color 1s}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.controls{margin:20px 0 20px 0;text-align:center;overflow-y:scroll}.controls .guess{padding:5px;display:inline-flex;box-shadow:1px 1px 3px #000}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase;background-color:#fff;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:45px;font-family:\"libre-baskerville\";font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;transform:rotate(-5deg);width:300px;margin-top:70px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.skills-list{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.skill{position:relative;box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:12px;padding:16px 0 16px 0;text-align:center}.skill-spacer{width:175px;margin:0 12px 0 12px;height:0}.skill__description{background-color:brown;color:#fff;left:0;padding:6px;position:absolute;text-align:center;top:-17px;left:-3px;transform:rotate(-2deg);white-space:nowrap;width:175px}.option{display:inline-block}.option__meter{position:relative;display:inline-block;height:40px;width:6px;background-color:#84a194}.option__meter__inner{position:absolute;width:100%;bottom:0;background-color:#a1e8af}.option-button{border:0;border-radius:3px;margin:2px;height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option-button--selected{background-color:green;color:#fff}.option-button--unlocked{background-color:#add8e6}.option-button--locked{background-color:#ff0}.option-button__inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.option-button--random{width:120px}.keyboard{margin-top:5px;padding:10px;box-sizing:border-box;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.xp{display:flex;height:100%;align-items:center;justify-content:center;color:#fff;font-family:libre-baskerville;position:relative;border-radius:9999999px;border:1px dotted #fff;background-image:linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));padding:0 10px 0 10px;box-sizing:border-box}.xp__background-squiggle{top:-0.15em;position:absolute;transform:scale(4.5, 3);height:100%;display:flex;justify-content:center;align-items:center;color:#f5b0cb;font-size:1.2em;opacity:.3}.xp__background-squiggle~.xp__background-squiggle{transform:scale(-4.5, 3);color:#372772}.xp__label{font-variant-numeric:tabular-nums}.xp__digit{display:inline-block;width:.65em;vertical-align:middle;text-align:center}.results .xp{font-size:3em}.results .xp__background-squiggle{font-size:2em}.money{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.money__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.money__label{color:#f6bd60;font-family:abril-fatface-regular}.money__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;display:flex;justify-content:space-between;align-items:center;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}.call-shot-button{margin:10px;padding:5px}.call-shot-button--active{background-color:#a1e8af}.inventory{border:1px solid #000;margin:15px;padding:15px}.inventory__item{display:inline-block;margin:5px;border:1px solid #000;padding:5px}.equipment-inventory{border:1px solid #000;margin:15px;padding:15px}.equipment-inventory__piece{display:inline-block;margin:5px;border:1px solid #000;padding:5px}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}@font-face{font-family:\"libre-baskerville\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ")}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0;font-family:system-ui}.root{box-sizing:border-box;position:fixed;display:flex;flex-direction:column;height:100vh;height:calc(var(--vh, 1vh)*100)}.main-content{flex:1;margin-top:5px;position:relative}.main-game{height:100%;display:flex;flex-direction:column}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{flex:1;flex-basis:0px;overflow-y:scroll;display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray;background-color:#fff;transition:background-color 1s}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.controls{margin:20px 0 20px 0;text-align:center;overflow-y:scroll}.controls .guess{padding:5px;display:inline-flex;box-shadow:1px 1px 3px #000}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase;background-color:#fff;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:45px;font-family:\"libre-baskerville\";font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;transform:rotate(-5deg);width:300px;margin-top:70px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.skills-list{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.skill{position:relative;box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:12px;padding:16px 0 16px 0;text-align:center}.skill-spacer{width:175px;margin:0 12px 0 12px;height:0}.skill__description{background-color:brown;color:#fff;left:0;padding:6px;position:absolute;text-align:center;top:-17px;left:-3px;transform:rotate(-2deg);white-space:nowrap;width:175px}.option{display:inline-block}.option__meter{position:relative;display:inline-block;height:40px;width:6px;background-color:#84a194}.option__meter__inner{position:absolute;width:100%;bottom:0;background-color:#a1e8af}.option-button{border:0;border-radius:3px;margin:2px;height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option-button--selected{background-color:green;color:#fff}.option-button--unlocked{background-color:#add8e6}.option-button--locked{background-color:#ff0}.option-button__inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.option-button--random{width:120px}.keyboard{margin-top:5px;padding:10px;box-sizing:border-box;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.xp{display:flex;height:100%;align-items:center;justify-content:center;color:#fff;font-family:libre-baskerville;position:relative;border-radius:9999999px;border:1px dotted #fff;background-image:linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));padding:0 10px 0 10px;box-sizing:border-box}.xp__background-squiggle{top:-0.15em;position:absolute;transform:scale(4.5, 3);height:100%;display:flex;justify-content:center;align-items:center;color:#f5b0cb;font-size:1.2em;opacity:.3}.xp__background-squiggle~.xp__background-squiggle{transform:scale(-4.5, 3);color:#372772}.xp__label{font-variant-numeric:tabular-nums}.xp__digit{display:inline-block;width:.65em;vertical-align:middle;text-align:center}.results .xp{font-size:3em}.results .xp__background-squiggle{font-size:2em}.money{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.money__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.money__label{color:#f6bd60;font-family:abril-fatface-regular}.money__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;display:flex;justify-content:space-between;align-items:center;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}.call-shot-button{margin:10px;padding:5px}.call-shot-button--active{background-color:#a1e8af}.inventory{border:1px solid #000;margin:15px;padding:15px}.inventory__item{display:inline-block;margin:5px;border:1px solid #000;padding:5px}.equipment-inventory{border:1px solid #000;margin:15px;padding:15px}.equipment-inventory__piece{display:inline-block;margin:5px;border:1px solid #000;padding:5px}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}@font-face{font-family:\"libre-baskerville\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ")}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1292,6 +1292,32 @@ function baseTimes(n, iteratee) {
 }
 
 module.exports = baseTimes;
+
+
+/***/ }),
+
+/***/ 7561:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var trimmedEndIndex = __webpack_require__(7990);
+
+/** Used to match leading whitespace. */
+var reTrimStart = /^\s+/;
+
+/**
+ * The base implementation of `_.trim`.
+ *
+ * @private
+ * @param {string} string The string to trim.
+ * @returns {string} Returns the trimmed string.
+ */
+function baseTrim(string) {
+  return string
+    ? string.slice(0, trimmedEndIndex(string) + 1).replace(reTrimStart, '')
+    : string;
+}
+
+module.exports = baseTrim;
 
 
 /***/ }),
@@ -2940,6 +2966,32 @@ module.exports = toSource;
 
 /***/ }),
 
+/***/ 7990:
+/***/ ((module) => {
+
+/** Used to match a single whitespace character. */
+var reWhitespace = /\s/;
+
+/**
+ * Used by `_.trim` and `_.trimEnd` to get the index of the last non-whitespace
+ * character of `string`.
+ *
+ * @private
+ * @param {string} string The string to inspect.
+ * @returns {number} Returns the index of the last non-whitespace character.
+ */
+function trimmedEndIndex(string) {
+  var index = string.length;
+
+  while (index-- && reWhitespace.test(string.charAt(index))) {}
+  return index;
+}
+
+module.exports = trimmedEndIndex;
+
+
+/***/ }),
+
 /***/ 361:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -2972,6 +3024,204 @@ function cloneDeep(value) {
 }
 
 module.exports = cloneDeep;
+
+
+/***/ }),
+
+/***/ 3279:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var isObject = __webpack_require__(3218),
+    now = __webpack_require__(7771),
+    toNumber = __webpack_require__(4841);
+
+/** Error message constants. */
+var FUNC_ERROR_TEXT = 'Expected a function';
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeMax = Math.max,
+    nativeMin = Math.min;
+
+/**
+ * Creates a debounced function that delays invoking `func` until after `wait`
+ * milliseconds have elapsed since the last time the debounced function was
+ * invoked. The debounced function comes with a `cancel` method to cancel
+ * delayed `func` invocations and a `flush` method to immediately invoke them.
+ * Provide `options` to indicate whether `func` should be invoked on the
+ * leading and/or trailing edge of the `wait` timeout. The `func` is invoked
+ * with the last arguments provided to the debounced function. Subsequent
+ * calls to the debounced function return the result of the last `func`
+ * invocation.
+ *
+ * **Note:** If `leading` and `trailing` options are `true`, `func` is
+ * invoked on the trailing edge of the timeout only if the debounced function
+ * is invoked more than once during the `wait` timeout.
+ *
+ * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
+ * until to the next tick, similar to `setTimeout` with a timeout of `0`.
+ *
+ * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+ * for details over the differences between `_.debounce` and `_.throttle`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to debounce.
+ * @param {number} [wait=0] The number of milliseconds to delay.
+ * @param {Object} [options={}] The options object.
+ * @param {boolean} [options.leading=false]
+ *  Specify invoking on the leading edge of the timeout.
+ * @param {number} [options.maxWait]
+ *  The maximum time `func` is allowed to be delayed before it's invoked.
+ * @param {boolean} [options.trailing=true]
+ *  Specify invoking on the trailing edge of the timeout.
+ * @returns {Function} Returns the new debounced function.
+ * @example
+ *
+ * // Avoid costly calculations while the window size is in flux.
+ * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
+ *
+ * // Invoke `sendMail` when clicked, debouncing subsequent calls.
+ * jQuery(element).on('click', _.debounce(sendMail, 300, {
+ *   'leading': true,
+ *   'trailing': false
+ * }));
+ *
+ * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
+ * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
+ * var source = new EventSource('/stream');
+ * jQuery(source).on('message', debounced);
+ *
+ * // Cancel the trailing debounced invocation.
+ * jQuery(window).on('popstate', debounced.cancel);
+ */
+function debounce(func, wait, options) {
+  var lastArgs,
+      lastThis,
+      maxWait,
+      result,
+      timerId,
+      lastCallTime,
+      lastInvokeTime = 0,
+      leading = false,
+      maxing = false,
+      trailing = true;
+
+  if (typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  wait = toNumber(wait) || 0;
+  if (isObject(options)) {
+    leading = !!options.leading;
+    maxing = 'maxWait' in options;
+    maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
+    trailing = 'trailing' in options ? !!options.trailing : trailing;
+  }
+
+  function invokeFunc(time) {
+    var args = lastArgs,
+        thisArg = lastThis;
+
+    lastArgs = lastThis = undefined;
+    lastInvokeTime = time;
+    result = func.apply(thisArg, args);
+    return result;
+  }
+
+  function leadingEdge(time) {
+    // Reset any `maxWait` timer.
+    lastInvokeTime = time;
+    // Start the timer for the trailing edge.
+    timerId = setTimeout(timerExpired, wait);
+    // Invoke the leading edge.
+    return leading ? invokeFunc(time) : result;
+  }
+
+  function remainingWait(time) {
+    var timeSinceLastCall = time - lastCallTime,
+        timeSinceLastInvoke = time - lastInvokeTime,
+        timeWaiting = wait - timeSinceLastCall;
+
+    return maxing
+      ? nativeMin(timeWaiting, maxWait - timeSinceLastInvoke)
+      : timeWaiting;
+  }
+
+  function shouldInvoke(time) {
+    var timeSinceLastCall = time - lastCallTime,
+        timeSinceLastInvoke = time - lastInvokeTime;
+
+    // Either this is the first call, activity has stopped and we're at the
+    // trailing edge, the system time has gone backwards and we're treating
+    // it as the trailing edge, or we've hit the `maxWait` limit.
+    return (lastCallTime === undefined || (timeSinceLastCall >= wait) ||
+      (timeSinceLastCall < 0) || (maxing && timeSinceLastInvoke >= maxWait));
+  }
+
+  function timerExpired() {
+    var time = now();
+    if (shouldInvoke(time)) {
+      return trailingEdge(time);
+    }
+    // Restart the timer.
+    timerId = setTimeout(timerExpired, remainingWait(time));
+  }
+
+  function trailingEdge(time) {
+    timerId = undefined;
+
+    // Only invoke if we have `lastArgs` which means `func` has been
+    // debounced at least once.
+    if (trailing && lastArgs) {
+      return invokeFunc(time);
+    }
+    lastArgs = lastThis = undefined;
+    return result;
+  }
+
+  function cancel() {
+    if (timerId !== undefined) {
+      clearTimeout(timerId);
+    }
+    lastInvokeTime = 0;
+    lastArgs = lastCallTime = lastThis = timerId = undefined;
+  }
+
+  function flush() {
+    return timerId === undefined ? result : trailingEdge(now());
+  }
+
+  function debounced() {
+    var time = now(),
+        isInvoking = shouldInvoke(time);
+
+    lastArgs = arguments;
+    lastThis = this;
+    lastCallTime = time;
+
+    if (isInvoking) {
+      if (timerId === undefined) {
+        return leadingEdge(lastCallTime);
+      }
+      if (maxing) {
+        // Handle invocations in a tight loop.
+        clearTimeout(timerId);
+        timerId = setTimeout(timerExpired, wait);
+        return invokeFunc(lastCallTime);
+      }
+    }
+    if (timerId === undefined) {
+      timerId = setTimeout(timerExpired, wait);
+    }
+    return result;
+  }
+  debounced.cancel = cancel;
+  debounced.flush = flush;
+  return debounced;
+}
+
+module.exports = debounce;
 
 
 /***/ }),
@@ -3410,6 +3660,42 @@ module.exports = isSet;
 
 /***/ }),
 
+/***/ 3448:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var baseGetTag = __webpack_require__(4239),
+    isObjectLike = __webpack_require__(7005);
+
+/** `Object#toString` result references. */
+var symbolTag = '[object Symbol]';
+
+/**
+ * Checks if `value` is classified as a `Symbol` primitive or object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @example
+ *
+ * _.isSymbol(Symbol.iterator);
+ * // => true
+ *
+ * _.isSymbol('abc');
+ * // => false
+ */
+function isSymbol(value) {
+  return typeof value == 'symbol' ||
+    (isObjectLike(value) && baseGetTag(value) == symbolTag);
+}
+
+module.exports = isSymbol;
+
+
+/***/ }),
+
 /***/ 6719:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -3527,6 +3813,36 @@ module.exports = keysIn;
 
 /***/ }),
 
+/***/ 7771:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var root = __webpack_require__(5639);
+
+/**
+ * Gets the timestamp of the number of milliseconds that have elapsed since
+ * the Unix epoch (1 January 1970 00:00:00 UTC).
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Date
+ * @returns {number} Returns the timestamp.
+ * @example
+ *
+ * _.defer(function(stamp) {
+ *   console.log(_.now() - stamp);
+ * }, _.now());
+ * // => Logs the number of milliseconds it took for the deferred invocation.
+ */
+var now = function() {
+  return root.Date.now();
+};
+
+module.exports = now;
+
+
+/***/ }),
+
 /***/ 479:
 /***/ ((module) => {
 
@@ -3578,6 +3894,77 @@ function stubFalse() {
 }
 
 module.exports = stubFalse;
+
+
+/***/ }),
+
+/***/ 4841:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var baseTrim = __webpack_require__(7561),
+    isObject = __webpack_require__(3218),
+    isSymbol = __webpack_require__(3448);
+
+/** Used as references for various `Number` constants. */
+var NAN = 0 / 0;
+
+/** Used to detect bad signed hexadecimal string values. */
+var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+
+/** Used to detect binary string values. */
+var reIsBinary = /^0b[01]+$/i;
+
+/** Used to detect octal string values. */
+var reIsOctal = /^0o[0-7]+$/i;
+
+/** Built-in method references without a dependency on `root`. */
+var freeParseInt = parseInt;
+
+/**
+ * Converts `value` to a number.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to process.
+ * @returns {number} Returns the number.
+ * @example
+ *
+ * _.toNumber(3.2);
+ * // => 3.2
+ *
+ * _.toNumber(Number.MIN_VALUE);
+ * // => 5e-324
+ *
+ * _.toNumber(Infinity);
+ * // => Infinity
+ *
+ * _.toNumber('3.2');
+ * // => 3.2
+ */
+function toNumber(value) {
+  if (typeof value == 'number') {
+    return value;
+  }
+  if (isSymbol(value)) {
+    return NAN;
+  }
+  if (isObject(value)) {
+    var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
+    value = isObject(other) ? (other + '') : other;
+  }
+  if (typeof value != 'string') {
+    return value === 0 ? value : +value;
+  }
+  value = baseTrim(value);
+  var isBinary = reIsBinary.test(value);
+  return (isBinary || reIsOctal.test(value))
+    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
+    : (reIsBadHex.test(value) ? NAN : +value);
+}
+
+module.exports = toNumber;
 
 
 /***/ }),
@@ -4674,6 +5061,9 @@ var __webpack_exports__ = {};
 var react = __webpack_require__(7294);
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
 var react_dom = __webpack_require__(3935);
+// EXTERNAL MODULE: ./node_modules/lodash/debounce.js
+var debounce = __webpack_require__(3279);
+var debounce_default = /*#__PURE__*/__webpack_require__.n(debounce);
 ;// CONCATENATED MODULE: ./hooks/use-rerender.js
 
 function useRerender() {
@@ -6436,6 +6826,7 @@ function app_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var OPTION_COST = 2;
 
 function app_isItemActive(item) {
@@ -6716,7 +7107,16 @@ function App() {
     return function () {
       document.removeEventListener('keydown', addKey);
     };
-  }, [uiState]); // const handleClearAll = () => {
+  }, [uiState]);
+  (0,react.useEffect)(function () {
+    var resizeHandler = debounce_default()(function () {
+      document.documentElement.style.setProperty('--vh', "".concat(window.innerHeight * 0.01, "px"));
+    }, 100);
+    window.addEventListener('resize', resizeHandler);
+    return function () {
+      window.removeEventListener('resize', resizeHandler);
+    };
+  }, []); // const handleClearAll = () => {
   //   localStorage.clear()
   //   skillsDispatch({ type: 'LOAD_INITIAL' })
   //   setUiState('game')

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react'
+import debounce from 'lodash/debounce'
 import useCountdown from './hooks/use-countdown'
 import usePrevious from './hooks/use-previous'
 import useGameState from './use-game-state'
@@ -265,6 +266,14 @@ export default function App () {
     document.addEventListener('keydown', addKey)
     return () => { document.removeEventListener('keydown', addKey) }
   }, [uiState])
+
+  useEffect(() => {
+    const resizeHandler = debounce(() => {
+      document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`)
+    }, 100)
+    window.addEventListener('resize', resizeHandler)
+    return () => { window.removeEventListener('resize', resizeHandler) }
+  }, [])
 
   // const handleClearAll = () => {
   //   localStorage.clear()
