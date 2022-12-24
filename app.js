@@ -25,6 +25,8 @@ import curseWords from './data/curse-words.json'
 
 const OPTION_COST = 2
 
+let x = 'x'
+
 function isItemActive (item) {
   return item.activeUntil > Date.now()
 }
@@ -270,11 +272,12 @@ export default function App () {
   useEffect(() => {
     const resizeHandler = debounce(() => {
       document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`)
+      x = 'blah: ' + window.innerHeight + ' | ' + roundTimeRemaining
     }, 100)
     window.addEventListener('resize', resizeHandler)
     resizeHandler()
     return () => { window.removeEventListener('resize', resizeHandler) }
-  }, [])
+  }, [roundTimeRemaining])
 
   // const handleClearAll = () => {
   //   localStorage.clear()
@@ -305,6 +308,9 @@ export default function App () {
       <div className='top-bar'>
         <XpDisplay amount={xp} />
         <MoneyDisplay amount={money} />
+      </div>
+      <div>
+        x: {x}
       </div>
       <div className="main-content">
         {skills.gameTimeLimit.value !== Infinity && <div className='game-time-remaining'>
