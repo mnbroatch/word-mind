@@ -22,21 +22,21 @@ body {
 }
 
 .root {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
 } 
 
 .main-content {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   margin-top: 5px;
   position: relative;
 }
 
 .main-game {
-  height: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
@@ -121,7 +121,7 @@ body {
 }
 
 .controls {
-  // margin: 20px 0 20px 0;
+  margin: 20px 0 20px 0;
   text-align: center;
   overflow-y: scroll;
 
@@ -315,7 +315,7 @@ body {
 
 .keyboard {
   margin-top: 5px;
-  // padding: 10px;
+  padding: 10px;
   box-sizing: border-box;
   text-align: center;
 }

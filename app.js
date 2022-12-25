@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useMemo } from 'react'
-import debounce from 'lodash/debounce'
 import useCountdown from './hooks/use-countdown'
 import usePrevious from './hooks/use-previous'
 import useGameState from './use-game-state'
@@ -24,8 +23,6 @@ import gameWords from './data/game-words.json'
 import curseWords from './data/curse-words.json'
 
 const OPTION_COST = 2
-
-let x = 'x'
 
 function isItemActive (item) {
   return item.activeUntil > Date.now()
@@ -269,16 +266,6 @@ export default function App () {
     return () => { document.removeEventListener('keydown', addKey) }
   }, [uiState])
 
-  useEffect(() => {
-    const resizeHandler = debounce(() => {
-      document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`)
-      x = 'blah: ' + window.innerHeight + ' | ' + roundTimeRemaining
-    }, 100)
-    window.addEventListener('resize', resizeHandler)
-    resizeHandler()
-    return () => { window.removeEventListener('resize', resizeHandler) }
-  }, [roundTimeRemaining])
-
   // const handleClearAll = () => {
   //   localStorage.clear()
   //   skillsDispatch({ type: 'LOAD_INITIAL' })
@@ -308,9 +295,6 @@ export default function App () {
       <div className='top-bar'>
         <XpDisplay amount={xp} />
         <MoneyDisplay amount={money} />
-      </div>
-      <div>
-        x: {x}
       </div>
       <div className="main-content">
         {skills.gameTimeLimit.value !== Infinity && <div className='game-time-remaining'>
