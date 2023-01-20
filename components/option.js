@@ -43,7 +43,10 @@ export default function Option ({
         <div className="option__meter">
           <div
             style={{ height: `${percentDone}%` }}
-            className="option__meter__inner"
+            className={[
+              'option__meter__inner',
+              percentDone >= 100 && 'option__meter__inner--complete'
+            ].filter(Boolean).join(' ')}
           />
         </div>
       </div>
@@ -64,6 +67,7 @@ const value = PropTypes.oneOfType([PropTypes.number, PropTypes.bool, PropTypes.s
 Option.propTypes = {
   selectedValue: value,
   value,
+  mastery: PropTypes.number,
   skillId: PropTypes.string,
   unlockedValues: PropTypes.arrayOf(value),
   optionCost: PropTypes.number,

@@ -269,13 +269,18 @@ body {
   height: 40px;
   width: 6px;
   background-color: $greengrey;
+
 }
 
 .option__meter__inner {
   position: absolute;
   width: 100%;
   bottom: 0;
-  background-color: $green1;
+  background: $green1;
+
+  &--complete {
+    animation: yellow-green 1s infinite;
+  }
 }
 
 .option-button {
@@ -295,6 +300,10 @@ body {
 
   &--unlocked {
     background-color: lightBlue;
+  }
+
+  &--unlockable {
+    animation: yellow-green 1s infinite;
   }
 
   &--locked {
@@ -542,4 +551,18 @@ body {
 @font-face {
   font-family: 'libre-baskerville';
   src: url('./assets/libre-baskerville.ttf');
+}
+
+@keyframes yellow-green {
+  0% {
+    background: $green1;
+  }
+
+  50% {
+    background: $yellow;
+  }
+
+  100% {
+    background: $green1;
+  }
 }

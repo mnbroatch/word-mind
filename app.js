@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useState, useEffect, useMemo, useRef } from 'react'
 import useCountdown from './hooks/use-countdown'
 import usePrevious from './hooks/use-previous'
 import useGameState from './use-game-state'
@@ -10,6 +10,7 @@ import Skills from './components/skills'
 import Hub from './components/hub'
 import Modal from './components/modal'
 import Board from './components/board'
+import PreGame from './components/pre-game'
 import Controls from './components/controls'
 import MoneyDisplay from './components/money-display'
 import XpDisplay from './components/xp-display'
@@ -57,32 +58,9 @@ export default function App () {
   const [wonLastGame, setWonLastGame] = useState(false)
   const [answers, setAnswers] = useState(getAnswers(skills, items, equipment))
   const [shotIsCalled, setShotIsCalled] = useState(false)
-  // const [guesses, setGuesses] = useState([
-  //   'THERE',
-  //   'HEART',
-  //   'TONER',
-  //   'THORN',
-  //   'BOATS',
-  //   'LOSER',
-  //   'FAILS',
-  //   'FLAIR',
-  //   'CHAIR',
-  //   'APPLE',
-  //   'WINDY',
-  //   'DENSE',
-  //   'BOOTS',
-  //   'STOOP',
-  //   'HONOR',
-  //   'DREAM',
-  //   'CHUNK',
-  //   'HELLO',
-  //   'BLEND',
-  //   'GLOWS',
-  //   'SLOWS',
-  //   'DOGGY'
-  // ])
   const [guesses, setGuesses] = useState([])
   const previousGuesses = usePrevious(guesses)
+  const boardsRef = useRef()
 
   const handleGuess = (guess) => {
     const isValidGuess = !guesses.includes(guess)
@@ -95,7 +73,25 @@ export default function App () {
       && (!equipment.strictMode.active || isGuessStrictlyValid(guess, guesses, answers))
 
     if (isValidGuess) {
+      const boardWithLastVisibleBottom = [...boardsRef.current.children].reverse().find((board) => {
+        const topToBoardBottomDistance = board.offsetTop + board.scrollHeight
+        const topToBottomVisibleDistance = boardsRef.current.scrollTop + boardsRef.current.offsetHeight
+        return topToBoardBottomDistance >= boardsRef.current.scrollTop
+          && topToBoardBottomDistance <= topToBottomVisibleDistance
+      })
+
+      let topToFirstBoardBottomDistance
+      if (boardWithLastVisibleBottom) {
+        topToFirstBoardBottomDistance = boardWithLastVisibleBottom.offsetTop + boardWithLastVisibleBottom.scrollHeight
+      }
+
       setGuesses([...guesses, guess])
+
+      if (boardWithLastVisibleBottom) {
+        const newTopToFirstBoardBottomDistance = boardWithLastVisibleBottom.offsetTop + boardWithLastVisibleBottom.scrollHeight
+        boardsRef.current.scrollTop += newTopToFirstBoardBottomDistance - topToFirstBoardBottomDistance
+      }
+
       resetRoundTime()
     } else if (guess === 'uuddl') {
       setUiState('cheats')
@@ -259,7 +255,7 @@ export default function App () {
   useEffect(() => {
     const addKey = (e) => {
       if (e.keyCode === 27 && uiState !== 'game') {
-        handleGameStart()
+        setUiState('hub')
       }
     }
     document.addEventListener('keydown', addKey)
@@ -321,7 +317,7 @@ export default function App () {
               {answers.join(' ')}
             </div>
           )}
-          <div className='boards'>
+          <div ref={boardsRef} className='boards'>
             {answers.map(answer => (
               <Board
                 answer={answer}
@@ -432,6 +428,15 @@ export default function App () {
               handleBuyEquipment={handleBuyEquipment}
               handleClose={() => {
                 setUiState('hub')
+              }}
+            />
+          </Modal>
+          <Modal open={uiState === 'pre-game'}>
+            <PreGame
+              items={items}
+              handleBuyItem={handleBuyItem}
+              handleClose={() => {
+                setUiState('game')
               }}
             />
           </Modal>
