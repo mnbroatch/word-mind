@@ -6,7 +6,7 @@ import { loadState, saveState } from './local-storage-wrapper'
 
 const seedLength = 1
 
-const { initialSkills, initialItems, initialEquipment, initialXp, initialMoney } = loadState()
+const { initialSkills, initialItems, initialEquipment, initialXp, initialMoney, initialCompletedLevelIds } = loadState()
 
 const getSeed = () => {
   let seed = ''
@@ -23,6 +23,8 @@ export default function useGameState () {
   const [equipment, equipmentDispatch] = useReducer(equipmentReducer, initialEquipment)
   const [xp, setXp] = useState(initialXp)
   const [money, setMoney] = useState(initialMoney)
+  const [completedLevelIds, setCompletedLevelIds] = useState(initialCompletedLevelIds)
+  const addCompletedLevelId = (levelId) => { setCompletedLevelIds(prev => [...new Set([...prev, levelId])]) }
 
   const skillsToUse = Object.entries(skills).reduce((acc, [key, skill], i) => {
     return {
@@ -46,11 +48,13 @@ export default function useGameState () {
     equipment,
     xp,
     money,
+    completedLevelIds,
     skillsDispatch,
     itemsDispatch,
     equipmentDispatch,
     setXp,
     setMoney,
-    randomizeRandomSkills
+    addCompletedLevelId,
+    randomizeRandomSkills,
   }
 }

@@ -1,4 +1,7 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react'
+import YarnBound from 'yarn-bound'
+import DialogueTree from 'react-dialogue-tree'
+
 import useCountdown from './hooks/use-countdown'
 import usePrevious from './hooks/use-previous'
 import useGameState from './use-game-state'
@@ -22,6 +25,8 @@ import isGuessStrictlyValid from './utils/is-guess-strictly-valid'
 import allWords from './data/all-words.json'
 import gameWords from './data/game-words.json'
 import curseWords from './data/curse-words.json'
+
+import story from './story.js'
 
 const OPTION_COST = 2
 
@@ -51,9 +56,11 @@ export default function App () {
     equipmentDispatch,
     setXp,
     setMoney,
-    randomizeRandomSkills
+    randomizeRandomSkills,
+    completedLevelIds,
+    addCompletedLevelId
   } = useGameState()
-  const [uiState, setUiState] = useState('game')
+  const [uiState, setUiState] = useState('hub')
   const [lastXpEarned, setLastXpEarned] = useState(0)
   const [wonLastGame, setWonLastGame] = useState(false)
   const [answers, setAnswers] = useState(getAnswers(skills, items, equipment))
@@ -61,6 +68,14 @@ export default function App () {
   const [guesses, setGuesses] = useState([])
   const previousGuesses = usePrevious(guesses)
   const boardsRef = useRef()
+
+  const handleCommand = function (command) {
+    console.log('command', command)
+    if (command === 'play') {
+      setUiState('pre-game')
+    }
+  }
+  const runner = new YarnBound({ dialogue: story, handleCommand, startAt: 'level_1' })
 
   const handleGuess = (guess) => {
     const isValidGuess = !guesses.includes(guess)
@@ -116,6 +131,7 @@ export default function App () {
     setLastXpEarned(xpEarned)
     setWonLastGame(endState.won)
     setGuesses([])
+    addCompletedLevelId(currentLevelId)
     skillsDispatch({
       type: 'GAIN_MASTERY',
       skills
@@ -252,10 +268,16 @@ export default function App () {
     })
   }
 
+  const handleClose = () => {
+    if (uiState !== 'game') {
+      setUiState('hub')
+    }
+  }
+
   useEffect(() => {
     const addKey = (e) => {
-      if (e.keyCode === 27 && uiState !== 'game') {
-        setUiState('hub')
+      if (e.keyCode === 27) {
+        handleClose()
       }
     }
     document.addEventListener('keydown', addKey)
@@ -347,13 +369,9 @@ export default function App () {
               'modals__background',
               uiState !== 'game' && 'modals__background--active'
             ].filter(Boolean).join(' ')}
-            onClick={handleGameStart}
           >
           </a>
-          <Modal
-            open={uiState === 'cheats'}
-            handleClose={() => { setUiState('game') }}
-          >
+          <Modal open={uiState === 'cheats'}>
             <div>DEBUG:</div>
             <button onClick={handleAddOneXp}>
               Add 1 XP
@@ -362,10 +380,7 @@ export default function App () {
               Add $1
             </button>
           </Modal>
-          <Modal
-            open={uiState === 'hub'}
-            handleClose={handleGameStart}
-          >
+          <Modal open={uiState === 'hub'}>
             <Hub
               items={items}
               equipment={equipment}
@@ -381,7 +396,7 @@ export default function App () {
                 setUiState('equipment')
               }}
               handleGoToGame={() => {
-                handleGameStart()
+                setUiState('pre-game')
               }}
             />
           </Modal>
@@ -390,25 +405,18 @@ export default function App () {
               xp={xp}
               answers={answers}
               lastXpEarned={lastXpEarned}
-              handleClose={() => {
-                setUiState('hub')
-              }}
+              handleClose={handleClose}
               wonLastGame={wonLastGame}
             />
           </Modal>
-          <Modal
-            open={uiState === 'skills'}
-            handleClose={handleGameStart}
-          >
+          <Modal open={uiState === 'skills'}>
             <Skills
               skills={skills}
               xp={xp}
               handleUnlockSkill={handleUnlockSkill}
               handleUnlockOption={handleUnlockOption}
               handleSetOption={handleSetOption}
-              handleClose={() => {
-                setUiState('hub')
-              }}
+              handleClose={handleClose}
               optionCost={OPTION_COST}
             />
           </Modal>
@@ -416,9 +424,7 @@ export default function App () {
             <Shop
               items={items}
               handleBuyItem={handleBuyItem}
-              handleClose={() => {
-                setUiState('hub')
-              }}
+              handleClose={handleClose}
             />
           </Modal>
           <Modal open={uiState === 'equipment'}>
@@ -426,18 +432,14 @@ export default function App () {
               equipment={equipment}
               money={money}
               handleBuyEquipment={handleBuyEquipment}
-              handleClose={() => {
-                setUiState('hub')
-              }}
+              handleClose={handleClose}
             />
           </Modal>
           <Modal open={uiState === 'pre-game'}>
             <PreGame
-              items={items}
-              handleBuyItem={handleBuyItem}
-              handleClose={() => {
-                setUiState('game')
-              }}
+              runner={runner}
+              startGame={handleGameStart}
+              handleClose={handleClose}
             />
           </Modal>
         </div>

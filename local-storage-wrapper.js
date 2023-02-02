@@ -10,7 +10,8 @@ const defaultState = {
   initialItems: defaultItems,
   initialEquipment: defaultEquipment,
   initialXp: 0,
-  initialMoney: 0
+  initialMoney: 0,
+  initialCompletedLevelIds: []
 }
 
 function loadState () {
@@ -20,7 +21,7 @@ function loadState () {
     return defaultState
   }
 
-  const { skills, xp, money, items, equipment } = JSON.parse(state)
+  const { skills, xp, money, completedLevelIds, items, equipment } = JSON.parse(state)
 
   let initialSkills = skills
   if (initialSkills) {
@@ -47,6 +48,7 @@ function loadState () {
 
   const initialXp = xp || 0
   const initialMoney = money || 0
+  const initialCompletedLevelIds = completedLevelIds || []
   const initialItems = items || defaultItems
   const initialEquipment = equipment || defaultEquipment
 
@@ -61,10 +63,10 @@ function loadState () {
     if (!initialEquipment[key]) { initialEquipment[key] = equipment }
   })
 
-  return { initialSkills, initialItems, initialXp, initialMoney, initialEquipment }
+  return { initialSkills, initialItems, initialXp, initialMoney, initialEquipment, initialCompletedLevelIds }
 }
 
-function saveState ({ skills, xp, money, items, equipment }) {
+function saveState ({ skills, xp, money, completedLevelIds, items, equipment }) {
   const skillsClone = cloneDeep(skills)
   if (skillsClone) {
     Object.values(skillsClone).forEach(skill => {
@@ -90,6 +92,7 @@ function saveState ({ skills, xp, money, items, equipment }) {
     skills: skillsClone,
     xp,
     money,
+    completedLevelIds,
     items,
     equipment
   }

@@ -10,7 +10,7 @@ export default function PreGame ({
         Here is the description!
       </div>
       <button
-        className='pregame__start-button'
+        className='pr-egame__start-button'
         onClick={startGame}
       >
         Start!
