@@ -29,15 +29,15 @@
     "style-loader": "^3.3.1",
     "webpack": "^5.66.0",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.8.1",
-    "yarn-bound": "0.3.2"
+    "webpack-dev-server": "^4.8.1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
-    "react-dialogue-tree": "^0.9.5",
-    "react-dom": "^18.2.0"
+    "react-dialogue-tree": "^0.12.2",
+    "react-dom": "^18.2.0",
+    "yarn-bound": "^0.4.1"
   }
 }

@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react'
 import YarnBound from 'yarn-bound'
-import DialogueTree from 'react-dialogue-tree'
-
 import useCountdown from './hooks/use-countdown'
 import usePrevious from './hooks/use-previous'
 import useGameState from './use-game-state'
@@ -60,7 +58,7 @@ export default function App () {
     completedLevelIds,
     addCompletedLevelId
   } = useGameState()
-  const [uiState, setUiState] = useState('hub')
+  const [uiState, _setUiState] = useState('hub')
   const [lastXpEarned, setLastXpEarned] = useState(0)
   const [wonLastGame, setWonLastGame] = useState(false)
   const [answers, setAnswers] = useState(getAnswers(skills, items, equipment))
@@ -69,13 +67,26 @@ export default function App () {
   const previousGuesses = usePrevious(guesses)
   const boardsRef = useRef()
 
-  const handleCommand = function (command) {
-    console.log('command', command)
-    if (command === 'play') {
-      setUiState('pre-game')
-    }
+  const handleCommand = function ({ command }) {
+    const match = command.match(/^setUiState (.+)/)
+    setUiState(match[1])
   }
-  const runner = new YarnBound({ dialogue: story, handleCommand, startAt: 'level_1' })
+
+  // rework if performance issues arise
+  const runner = useRef(new YarnBound({
+    dialogue: story,
+    startAt: 'level_1',
+    handleCommand
+  })).current
+
+  const setUiState = (state) => {
+    // In case we back out of a level intro
+    if (state === 'hub') {
+      runner.jump('hub')
+    }
+    runner.history = []
+    _setUiState(state)
+  }
 
   const handleGuess = (guess) => {
     const isValidGuess = !guesses.includes(guess)
@@ -125,17 +136,18 @@ export default function App () {
         : 0
     ) + callShotWagerResult
     const moneyEarned = 10
-    setUiState('results')
+    runner.runner.variables.set('wonLastGame', endState.won)
+    runner.advance()
+    setWonLastGame(endState.won)
     setXp(xp + xpEarned)
     setMoney(money + moneyEarned)
     setLastXpEarned(xpEarned)
-    setWonLastGame(endState.won)
     setGuesses([])
-    addCompletedLevelId(currentLevelId)
     skillsDispatch({
       type: 'GAIN_MASTERY',
       skills
     })
+    setUiState('results')
   }
 
   const handleAddOneXp = (endState) => {
@@ -310,6 +322,7 @@ export default function App () {
 
   return (
     <div className='root'>
+      { answers }
       <div className='top-bar'>
         <XpDisplay amount={xp} />
         <MoneyDisplay amount={money} />
@@ -407,6 +420,7 @@ export default function App () {
               lastXpEarned={lastXpEarned}
               handleClose={handleClose}
               wonLastGame={wonLastGame}
+              runner={runner}
             />
           </Modal>
           <Modal open={uiState === 'skills'}>
@@ -437,9 +451,9 @@ export default function App () {
           </Modal>
           <Modal open={uiState === 'pre-game'}>
             <PreGame
-              runner={runner}
               startGame={handleGameStart}
               handleClose={handleClose}
+              runner={runner}
             />
           </Modal>
         </div>

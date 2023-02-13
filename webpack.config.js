@@ -22,7 +22,7 @@ module.exports = {
       },
       {
         test: /\.jsx?$/,
-        exclude: /(node_modules)/,
+        exclude: /node_modules\/(?!react-dialogue-tree).+/,
         use: {
           loader: 'babel-loader',
           options: {

@@ -1,24 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import DialogueTree from 'react-dialogue-tree/src/index'
 
 export default function PreGame ({
-  startGame
+  startGame,
+  runner
 }) {
+  const handleCommand = function (command) {
+    if (command.command === 'play') {
+      startGame()
+    }
+  }
+
   return (
     <div className='pre-game'>
-      <div className='pre-game__description'>
-        Here is the description!
-      </div>
-      <button
-        className='pr-egame__start-button'
-        onClick={startGame}
-      >
-        Start!
-      </button>
+      <DialogueTree runner={runner} handleCommand={handleCommand} stopAtCommand />
     </div>
   )
 }
 
 PreGame.propTypes = {
-  startGame: PropTypes.func
+  startGame: PropTypes.func,
+  runner: PropTypes.object
 }

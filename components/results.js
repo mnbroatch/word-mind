@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import DialogueTree from 'react-dialogue-tree/src/index'
 
 import XpDisplay from './xp-display.js'
 
@@ -9,7 +10,8 @@ export default function Results ({
   xp,
   lastXpEarned,
   handleClose,
-  wonLastGame
+  wonLastGame,
+  runner
 }) {
   return (
     <div className='results'>
@@ -31,6 +33,7 @@ export default function Results ({
       <div>
         <XpDisplay amount={xp} />
       </div>
+      <DialogueTree runner={runner} />
       <button
         className='results__close-button'
         onClick={handleClose}
@@ -49,5 +52,6 @@ Results.propTypes = {
   xp: PropTypes.number,
   lastXpEarned: PropTypes.number,
   handleClose: PropTypes.func,
-  wonLastGame: PropTypes.bool
+  wonLastGame: PropTypes.bool,
+  runner: PropTypes.object
 }

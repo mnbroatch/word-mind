@@ -1,17 +1,22 @@
 export default `
-
 title: level_1
 ---
 Your first level
 You take a deep breath
 And guess
-<<play>>
-<<if $wonLastLevel>>
+<<setUiState game>>
+<<pause>>
+<<if $wonLastGame>>
   You beat level 1!
-  <<jump level_1>>
+  <<set $currentLevel = "level_2">>
+  <<jump hub>>
 <<else>>
   You lost on level 1.
-  <<jump level_2>>
+  Continue?
+    -> Yes
+      <<jump level_1>>
+    -> No
+      <<jump hub>>
 <<endif>>
 ===
 
@@ -20,13 +25,19 @@ title: level_2
 Your second level
 You take a deep breath
 And guess
-<<play>>
-<<if $wonLastLevel>>
+<<setUiState game>>
+<<pause>>
+<<if $wonLastGame>>
   You beat level 2!
-  <<jump level_2>>
+  <<set $currentLevel = "level_x">>
+  <<jump hub>>
 <<else>>
   You lost on level 2.
-  <<jump level_x>>
+  Continue?
+    -> Yes
+      <<jump level_2>>
+    -> No
+      <<jump hub>>
 <<endif>>
 ===
 
@@ -35,14 +46,25 @@ title: level_x
 Another level.
 You take a deep breath
 And guess
-<<play>>
-<<if $wonLastLevel>>
+<<setUiState game>>
+<<pause>>
+<<if $wonLastGame>>
   You beat another level. Goodie.
-  <<jump level_x>>
+  <<jump hub>>
 <<else>>
   You lost another level.
-  <<jump level_x>>
+  Continue?
+    -> Yes
+      <<jump level_x>>
+    -> No
+      <<jump hub>>
 <<endif>>
 ===
 
+title: hub
+---
+<<setUiState hub>>
+<<pause>>
+<<jump $currentLevel>>
+===
 `
