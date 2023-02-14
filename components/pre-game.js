@@ -6,15 +6,9 @@ export default function PreGame ({
   startGame,
   runner
 }) {
-  const handleCommand = function (command) {
-    if (command.command === 'play') {
-      startGame()
-    }
-  }
-
   return (
     <div className='pre-game'>
-      <DialogueTree runner={runner} handleCommand={handleCommand} stopAtCommand />
+      <DialogueTree runner={runner} stopAtCommand />
     </div>
   )
 }

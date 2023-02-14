@@ -58,7 +58,7 @@ export default function App () {
     completedLevelIds,
     addCompletedLevelId
   } = useGameState()
-  const [uiState, _setUiState] = useState('hub')
+  const [uiState, setUiState] = useState('hub')
   const [lastXpEarned, setLastXpEarned] = useState(0)
   const [wonLastGame, setWonLastGame] = useState(false)
   const [answers, setAnswers] = useState(getAnswers(skills, items, equipment))
@@ -67,27 +67,44 @@ export default function App () {
   const previousGuesses = usePrevious(guesses)
   const boardsRef = useRef()
 
-  const handleCommand = function ({ command }) {
-    const match = command.match(/^setUiState (.+)/)
-    setUiState(match[1])
+  // ref is so YarnBound command handler can see newest ui state
+  // rework if YarnBound instantiations cause performance issues
+  const uiStateRef = useRef(uiState)
+  uiStateRef.current = uiState
+  const runnerRef = useRef()
+  if (!runnerRef.current) {
+    runnerRef.current = new YarnBound({
+      dialogue: story,
+      startAt: 'hub',
+      handleCommand: function ({ command }) {
+        const match = command.match(/^setUiState (.+)/)
+        if (uiStateRef.current !== match[1]) {
+          switch (match[1]) {
+            case 'hub':
+              setUiState('hub')
+              break
+            case 'game':
+              handleGameStart()
+              break
+          }
+        }
+      }
+    })
+  }
+  const runner = runnerRef.current
+
+  const handleGameStart = () => {
+    randomizeRandomSkills()
+    resetGameTime()
+    resetRoundTime()
+    setGuesses([])
+    setUiState('game')
+    setAnswers(getAnswers(skills, items, equipment))
   }
 
-  // rework if performance issues arise
-  const runner = useRef(new YarnBound({
-    dialogue: story,
-    startAt: 'level_1',
-    handleCommand
-  })).current
-
-  console.log('runner.currentResult', runner.currentResult)
-
-  const setUiState = (state) => {
-    // In case we back out of a level intro
-    if (state === 'hub' && uiState !== 'hub') {
-      runner.jump('hub')
-    }
-    runner.history = []
-    _setUiState(state)
+  const handleGoToHub = () => {
+    setUiState('hub')
+    runner.jump('hub') // In case we back out of a level intro
   }
 
   const handleGuess = (guess) => {
@@ -124,7 +141,7 @@ export default function App () {
     } else if (guess === 'uuddl') {
       setUiState('cheats')
     } else if (guess === 'ldduu') {
-      setUiState('hub')
+      handleGoToHub()
     }
 
     return isValidGuess
@@ -149,6 +166,7 @@ export default function App () {
       type: 'GAIN_MASTERY',
       skills
     })
+    runner.history = []
     setUiState('results')
   }
 
@@ -158,15 +176,6 @@ export default function App () {
 
   const handleAddOneMoney = (endState) => {
     setMoney(money + 1)
-  }
-
-  const handleGameStart = () => {
-    randomizeRandomSkills()
-    resetGameTime()
-    resetRoundTime()
-    setGuesses([])
-    setUiState('game')
-    setAnswers(getAnswers(skills, items, equipment))
   }
 
   useEffect(() => {
@@ -284,7 +293,7 @@ export default function App () {
 
   const handleClose = () => {
     if (uiState !== 'game') {
-      setUiState('hub')
+      handleGoToHub()
     }
   }
 
@@ -317,10 +326,11 @@ export default function App () {
   //           </button>
 
   const possibleWords = useMemo(() => {
+    const words = equipment.useFullDictionary.active ? allWords : gameWords
     return isItemActive(items.showPossibleWords)
-      ? gameWords.filter(word => isGuessStrictlyValid(word, guesses, answers))
+      ? words.filter(word => isGuessStrictlyValid(word, guesses, answers))
       : []
-  }, [guesses, answers, skills])
+  }, [guesses, answers, skills, equipment.useFullDictionary.active])
 
   return (
     <div className='root'>
@@ -412,6 +422,7 @@ export default function App () {
               }}
               handleGoToGame={() => {
                 runner.advance() // runner is "paused" on hub
+                runner.history = []
                 setUiState('pre-game')
               }}
             />
