@@ -92,7 +92,6 @@ export default function App () {
     })
   }
   const runner = runnerRef.current
-
   const handleGameStart = () => {
     randomizeRandomSkills()
     resetGameTime()
@@ -334,7 +333,7 @@ export default function App () {
 
   return (
     <div className='root'>
-      { answers }
+      { typeof new URL(window.location.href).searchParams.get('showAnswers') === 'string' && answers}
       <div className='top-bar'>
         <XpDisplay amount={xp} />
         <MoneyDisplay amount={money} />

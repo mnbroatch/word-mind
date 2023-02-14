@@ -1,64 +1,61 @@
 export default `
 title: level_1
 ---
-Your first level
-You take a deep breath
-And guess
+You happen upon a hideous monster!
 <<setUiState game>>
 <<pause>>
 <<if $wonLastGame>>
-  You beat level 1!
+  You valiantly slay the creature.
   <<set $currentLevel = "level_2">>
   <<jump hub>>
 <<else>>
-  You lost on level 1.
-  Continue?
-    -> Yes
-      <<jump level_1>>
-    -> No
-      <<jump hub>>
+  You are chomped by the fell beast.
+  <<jump continue>>
 <<endif>>
 ===
 
 title: level_2
 ---
-Your second level
-You take a deep breath
-And guess
+You happen upon a hideous monster!
+You can hardly tell it apart from the last one you fought!
+Have at ye!
 <<setUiState game>>
 <<pause>>
 <<if $wonLastGame>>
-  You beat level 2!
+  The second monster went down, exactly as the first
   <<set $currentLevel = "level_x">>
   <<jump hub>>
 <<else>>
-  You lost on level 2.
-  Continue?
-    -> Yes
-      <<jump level_2>>
-    -> No
-      <<jump hub>>
+  You are defeated in shame
+  <<jump continue>>
 <<endif>>
 ===
 
 title: level_x
 ---
-Another level.
-You take a deep breath
-And guess
+You happen upon...
+You know what? You're pretty sure you're just in a time loop now.
+Forever fighting the same monster.
+Meh, could be worse
 <<setUiState game>>
 <<pause>>
 <<if $wonLastGame>>
-  You beat another level. Goodie.
+  Let the bodies hit the floor
   <<jump hub>>
 <<else>>
-  You lost another level.
-  Continue?
-    -> Yes
-      <<jump level_x>>
-    -> No
-      <<jump hub>>
+  Let the bodies hit the floor
+  Your body, that is
+  <<jump continue>>
 <<endif>>
+===
+
+title: continue
+---
+Continue?
+  -> Yes
+    <<jump {$currentLevel}>>
+  -> I want to prepare first
+    <<jump hub>>
 ===
 
 title: hub

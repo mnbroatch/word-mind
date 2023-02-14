@@ -72,7 +72,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_g
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0;font-family:system-ui}.root{display:flex;flex-direction:column;height:100vh}.main-content{display:flex;flex-direction:column;flex:1;margin-top:5px;position:relative}.main-game,.results,.modal__inner{flex:1;display:flex;flex-direction:column;height:100%}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{flex:1;flex-basis:0px;overflow-y:scroll;display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray;background-color:#fff;transition:background-color 1s}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.controls{margin:20px 0 20px 0;text-align:center;overflow-y:scroll}.controls .guess{padding:5px;display:inline-flex;box-shadow:1px 1px 3px #000}.guess__letter{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin:4px;border:1px solid #000;text-transform:uppercase;background-color:#fff;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:45px;font-family:\"libre-baskerville\";font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;margin:0 auto 50px auto;transform:rotate(-5deg);width:300px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.skills-list{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.skill{position:relative;box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:12px;padding:16px 0 16px 0;text-align:center}.skill-spacer{width:175px;margin:0 12px 0 12px;height:0}.skill__description{background-color:brown;color:#fff;left:0;padding:6px;position:absolute;text-align:center;top:-17px;left:-3px;transform:rotate(-2deg);white-space:nowrap;width:175px}.option{display:inline-block}.option__meter{position:relative;display:inline-block;height:40px;width:6px;background-color:#84a194}.option__meter__inner{position:absolute;width:100%;bottom:0;background:#a1e8af}.option__meter__inner--complete{animation:yellow-green 1s infinite}.option-button{border:0;border-radius:3px;margin:2px;height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option-button--selected{background-color:green;color:#fff}.option-button--unlocked{background-color:#add8e6}.option-button--unlockable{animation:yellow-green 1s infinite}.option-button--locked{background-color:#ff0}.option-button__inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.option-button--random{width:120px}.keyboard{margin-top:5px;padding:10px;box-sizing:border-box;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.xp{display:flex;height:100%;align-items:center;justify-content:center;color:#fff;font-family:libre-baskerville;position:relative;border-radius:9999999px;border:1px dotted #fff;background-image:linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));padding:0 10px 0 10px;box-sizing:border-box}.xp__background-squiggle{top:-0.15em;position:absolute;transform:scale(4.5, 3);height:100%;display:flex;justify-content:center;align-items:center;color:#f5b0cb;font-size:1.2em;opacity:.3}.xp__background-squiggle~.xp__background-squiggle{transform:scale(-4.5, 3);color:#372772}.xp__label{font-variant-numeric:tabular-nums}.xp__digit{display:inline-block;width:.65em;vertical-align:middle;text-align:center}.results .xp{font-size:3em}.results .xp__background-squiggle{font-size:2em}.money{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.money__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.money__label{color:#f6bd60;font-family:abril-fatface-regular}.money__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;display:flex;justify-content:space-between;align-items:center;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}.call-shot-button{margin:10px;padding:5px}.call-shot-button--active{background-color:#a1e8af}.inventory{border:1px solid #000;margin:15px;padding:15px}.inventory__item{display:inline-block;margin:5px;border:1px solid #000;padding:5px}.equipment-inventory{border:1px solid #000;margin:15px;padding:15px}.equipment-inventory__piece{display:inline-block;margin:5px;border:1px solid #000;padding:5px}.results .dialogue-tree{position:relative;margin:50px;flex:1;height:0;max-height:330px}.results .dialogue-tree .chat-scroller{border-radius:50px 0 0 50px}.results .dialogue-tree .dialogue-tree__node-spacer{padding:15px}.results .dialogue-tree .dialogue-tree__node-wrapper{border-radius:25px}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}@font-face{font-family:\"libre-baskerville\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ")}@keyframes yellow-green{0%{background:#a1e8af}50%{background:#f6bd60}100%{background:#a1e8af}}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0;font-family:system-ui}.root{display:flex;flex-direction:column;height:100vh}.main-content{display:flex;flex-direction:column;flex:1;margin-top:5px;position:relative}.main-game,.results,.modal__inner{flex:1;display:flex;flex-direction:column;height:100%}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.boards{flex:1;flex-basis:0px;overflow-y:scroll;display:flex;flex-wrap:wrap;justify-content:center}.board{margin:5px;box-shadow:inset 1px 1px 5px gray;background-color:#fff;transition:background-color 1s}.board--monster{margin:40px;border:solid #698620;border-width:40px 20px 20px;box-shadow:inset 1px 1px 5px #000;background-color:#7d1a1a;position:relative;align-self:center;animation:monster-idle 4s infinite}.board--monster::before{font-size:2.5em;font-weight:bold;content:\"|\";position:absolute;background-color:#fff;padding:2px;top:-1.2em;left:10%;transform:rotate(94deg)}.board--monster::after{font-size:2.5em;font-weight:bold;content:\"|\";position:absolute;background-color:#fff;padding:2px;top:-1.2em;right:10%;transform:rotate(57deg)}.board--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.controls{margin:20px 0 20px 0;text-align:center;overflow-y:scroll}.controls .guess{padding:5px;display:inline-flex;box-shadow:1px 1px 3px #000}.guess__letter{display:flex;justify-content:center;align-items:center;height:1.5em;width:1.5em;margin:4px;border:1px solid #000;text-transform:uppercase;background-color:#fff;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:45px;font-family:\"libre-baskerville\";font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;margin:0 auto 50px auto;transform:rotate(-5deg);width:300px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.skills-list{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.skill{position:relative;box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:12px;padding:16px 0 16px 0;text-align:center}.skill-spacer{width:175px;margin:0 12px 0 12px;height:0}.skill__description{background-color:brown;color:#fff;left:0;padding:6px;position:absolute;text-align:center;top:-17px;left:-3px;transform:rotate(-2deg);white-space:nowrap;width:175px}.option{display:inline-block}.option__meter{position:relative;display:inline-block;height:40px;width:6px;background-color:#84a194}.option__meter__inner{position:absolute;width:100%;bottom:0;background:#a1e8af}.option__meter__inner--complete{animation:yellow-green 1s infinite}.option-button{border:0;border-radius:3px;margin:2px;height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option-button--selected{background-color:green;color:#fff}.option-button--unlocked{background-color:#add8e6}.option-button--unlockable{animation:yellow-green 1s infinite}.option-button--locked{background-color:#ff0}.option-button__inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.option-button--random{width:120px}.keyboard{margin-top:5px;padding:10px;box-sizing:border-box;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.xp{display:flex;height:100%;align-items:center;justify-content:center;color:#fff;font-family:libre-baskerville;position:relative;border-radius:9999999px;border:1px dotted #fff;background-image:linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));padding:0 10px 0 10px;box-sizing:border-box}.xp__background-squiggle{top:-0.15em;position:absolute;transform:scale(4.5, 3);height:100%;display:flex;justify-content:center;align-items:center;color:#f5b0cb;font-size:1.2em;opacity:.3}.xp__background-squiggle~.xp__background-squiggle{transform:scale(-4.5, 3);color:#372772}.xp__label{font-variant-numeric:tabular-nums}.xp__digit{display:inline-block;width:.65em;vertical-align:middle;text-align:center}.results .xp{font-size:3em}.results .xp__background-squiggle{font-size:2em}.money{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.money__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.money__label{color:#f6bd60;font-family:abril-fatface-regular}.money__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;display:flex;justify-content:space-between;align-items:center;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}.call-shot-button{margin:10px;padding:5px}.call-shot-button--active{background-color:#a1e8af}.inventory{border:1px solid #000;margin:15px;padding:15px}.inventory__item{display:inline-block;margin:5px;border:1px solid #000;padding:5px}.equipment-inventory{border:1px solid #000;margin:15px;padding:15px}.equipment-inventory__piece{display:inline-block;margin:5px;border:1px solid #000;padding:5px}.results .dialogue-tree{position:relative;margin:50px;flex:1;height:0;max-height:330px}.results .dialogue-tree .chat-scroller{border-radius:50px 0 0 50px}.results .dialogue-tree .dialogue-tree__node-spacer{padding:15px}.results .dialogue-tree .dialogue-tree__node-wrapper{border-radius:25px}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}@font-face{font-family:\"libre-baskerville\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ")}@keyframes yellow-green{0%{background:#a1e8af}50%{background:#f6bd60}100%{background:#a1e8af}}@keyframes monster-idle{0%{transform-origin:50% 100%;transform:rotate(-15deg)}50%{transform-origin:50% 100%;transform:rotate(15deg)}100%{transform-origin:50% 100%;transform:rotate(-15deg)}}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -7476,8 +7476,9 @@ class Runner {
         // ignore the rest of this outer loop and
         // tell parent loops to ignore following nodes.
         // Recursive call here would cause stack overflow
+        const destination = node.destination instanceof _nodes.default.InlineExpressionNode ? this.evaluateExpressionOrLiteral(node.destination) : node.destination;
         return {
-          jump: node.destination
+          jump: destination
         };
       } else if (node instanceof _nodes.default.StopCommandNode) {
         // ignore the rest of this outer loop and
@@ -7675,7 +7676,7 @@ module.exports = exports.default;
 /***/ }),
 
 /***/ 352:
-/***/ ((module, exports, __nested_webpack_require_83737__) => {
+/***/ ((module, exports, __nested_webpack_require_83897__) => {
 
 
 
@@ -7683,8 +7684,8 @@ Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 exports["default"] = void 0;
-var _yarnBound = _interopRequireDefault(__nested_webpack_require_83737__(424));
-var _index = _interopRequireDefault(__nested_webpack_require_83737__(167));
+var _yarnBound = _interopRequireDefault(__nested_webpack_require_83897__(424));
+var _index = _interopRequireDefault(__nested_webpack_require_83897__(167));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 const {
   OptionsResult,
@@ -7912,7 +7913,7 @@ module.exports = exports.default;
 /***/ }),
 
 /***/ 424:
-/***/ ((module, exports, __nested_webpack_require_91632__) => {
+/***/ ((module, exports, __nested_webpack_require_91792__) => {
 
 
 
@@ -7920,8 +7921,8 @@ Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 exports["default"] = void 0;
-var _index = _interopRequireDefault(__nested_webpack_require_91632__(167));
-var _lineParser = _interopRequireDefault(__nested_webpack_require_91632__(279));
+var _index = _interopRequireDefault(__nested_webpack_require_91792__(167));
+var _lineParser = _interopRequireDefault(__nested_webpack_require_91792__(279));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 class YarnBound {
   constructor(_ref) {
@@ -8024,7 +8025,7 @@ module.exports = exports.default;
 /******/ 	var __webpack_module_cache__ = {};
 /******/ 	
 /******/ 	// The require function
-/******/ 	function __nested_webpack_require_95306__(moduleId) {
+/******/ 	function __nested_webpack_require_95466__(moduleId) {
 /******/ 		// Check if module is in cache
 /******/ 		var cachedModule = __webpack_module_cache__[moduleId];
 /******/ 		if (cachedModule !== undefined) {
@@ -8038,7 +8039,7 @@ module.exports = exports.default;
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __nested_webpack_require_95306__);
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __nested_webpack_require_95466__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -8049,7 +8050,7 @@ module.exports = exports.default;
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __nested_webpack_require_95306__(352);
+/******/ 	var __webpack_exports__ = __nested_webpack_require_95466__(352);
 /******/ 	
 /******/ 	return __webpack_exports__;
 /******/ })()
@@ -10840,7 +10841,10 @@ class Runner {
         // ignore the rest of this outer loop and
         // tell parent loops to ignore following nodes.
         // Recursive call here would cause stack overflow
-        return { jump: node.destination };
+        const destination = node.destination instanceof parser_nodes.InlineExpressionNode
+          ? this.evaluateExpressionOrLiteral(node.destination)
+          : node.destination
+        return { jump: destination };
       } else if (node instanceof parser_nodes.StopCommandNode) {
         // ignore the rest of this outer loop and
         // tell parent loops to ignore following nodes
@@ -11989,6 +11993,7 @@ function Hub(_ref) {
     handleGoToGame = _ref.handleGoToGame,
     handleGoToSkills = _ref.handleGoToSkills,
     handleGoToEquipment = _ref.handleGoToEquipment;
+  // For live updating item remaining durations (can optimize)
   var rerender = useRerender();
   useInterval(rerender, 1000);
   return /*#__PURE__*/react.createElement("div", {
@@ -12145,7 +12150,7 @@ function Board(_ref) {
     answer = _ref.answer;
   var solutionIndex = guesses.indexOf(answer);
   return /*#__PURE__*/react.createElement("div", {
-    className: ['board', solutionIndex !== -1 && 'board--solved'].filter(Boolean).join(' ')
+    className: ['board', 'board--monster', solutionIndex !== -1 && 'board--solved'].filter(Boolean).join(' ')
   }, /*#__PURE__*/react.createElement("div", {
     className: "guesses"
   }, guesses.length ? guesses.map(function (guess, i) {
@@ -12170,16 +12175,10 @@ Board.propTypes = {
 function PreGame(_ref) {
   var startGame = _ref.startGame,
     runner = _ref.runner;
-  var handleCommand = function handleCommand(command) {
-    if (command.command === 'play') {
-      startGame();
-    }
-  };
   return /*#__PURE__*/react.createElement("div", {
     className: "pre-game"
   }, /*#__PURE__*/react.createElement(DialogueTreeContainer, {
     runner: runner,
-    handleCommand: handleCommand,
     stopAtCommand: true
   }));
 }
@@ -12474,7 +12473,7 @@ const game_words_namespaceObject = JSON.parse('["the","be","and","a","of","to","
 ;// CONCATENATED MODULE: ./data/curse-words.json
 const curse_words_namespaceObject = JSON.parse('["4r5e","5h1t","5hit","a55","anal","anus","ar5e","arrse","arse","ass","ass-fucker","asses","assfucker","assfukka","asshole","assholes","asswhole","a_s_s","b!tch","b00bs","b17ch","b1tch","ballbag","balls","ballsack","bastard","beastial","beastiality","bellend","bestial","bestiality","bi+ch","biatch","bitch","bitcher","bitchers","bitches","bitchin","bitching","bloody","blow job","blowjob","blowjobs","boiolas","bollock","bollok","boner","boob","boobs","booobs","boooobs","booooobs","booooooobs","breasts","buceta","bugger","bum","bunny fucker","butt","butthole","buttmunch","buttplug","c0ck","c0cksucker","carpet muncher","cawk","chink","cipa","cl1t","clit","clitoris","clits","cnut","cock","cock-sucker","cockface","cockhead","cockmunch","cockmuncher","cocks","cocksuck ","cocksucked ","cocksucker","cocksucking","cocksucks ","cocksuka","cocksukka","cok","cokmuncher","coksucka","coon","cox","crap","cum","cummer","cumming","cums","cumshot","cunilingus","cunillingus","cunnilingus","cunt","cuntlick ","cuntlicker ","cuntlicking ","cunts","cyalis","cyberfuc","cyberfuck ","cyberfucked ","cyberfucker","cyberfuckers","cyberfucking ","d1ck","damn","dick","dickhead","dildo","dildos","dink","dinks","dirsa","dlck","dog-fucker","doggin","dogging","donkeyribber","doosh","duche","dyke","ejaculate","ejaculated","ejaculates ","ejaculating ","ejaculatings","ejaculation","ejakulate","f u c k","f u c k e r","f4nny","fag","fagging","faggitt","faggot","faggs","fagot","fagots","faggy","fags","fanny","fannyflaps","fannyfucker","fanyy","fatass","fcuk","fcuker","fcuking","feck","fecker","felching","fellate","fellatio","fingerfuck ","fingerfucked ","fingerfucker ","fingerfuckers","fingerfucking ","fingerfucks ","fistfuck","fistfucked ","fistfucker ","fistfuckers ","fistfucking ","fistfuckings ","fistfucks ","flange","fook","fooker","fuck","fucka","fucked","fucker","fuckers","fuckhead","fuckheads","fuckin","fucking","fuckings","fuckingshitmotherfucker","fuckme ","fucks","fuckwhit","fuckwit","fudge packer","fudgepacker","fuk","fuker","fukker","fukkin","fuks","fukwhit","fukwit","fux","fux0r","f_u_c_k","gangbang","gangbanged ","gangbangs ","gaylord","gaysex","goatse","god-dam","god-damned","goddamn","goddamned","hardcoresex ","hell","heshe","hoar","hoare","hoer","homo","hore","horniest","horny","hotsex","jack-off ","jackoff","jap","jerk-off ","jism","jiz ","jizm ","jizz","kawk","knob","knobead","knobed","knobend","knobhead","knobjocky","knobjokey","kock","kondum","kondums","kum","kummer","kumming","kums","kunilingus","kiunt","l3i+ch","l3itch","labia","lmfao","lust","lusting","m0f0","m0fo","m45terbate","ma5terb8","ma5terbate","masochist","master-bate","masterb8","masterbat*","masterbat3","masterbate","masterbation","masterbations","masturbate","mo-fo","mof0","mofo","mothafuck","mothafucka","mothafuckas","mothafuckaz","mothafucked ","mothafucker","mothafuckers","mothafuckin","mothafucking ","mothafuckings","mothafucks","mother fucker","motherfuck","motherfucked","motherfucker","motherfuckers","motherfuckin","motherfucking","motherfuckings","motherfuckka","motherfucks","muff","mutha","muthafecker","muthafuckker","muther","mutherfucker","n1gga","n1gger","nazi","nigg3r","nigg4h","nigga","niggah","niggas","niggaz","nigger","niggers ","nob","nob jokey","nobhead","nobjocky","nobjokey","numbnuts","nutsack","orgasim ","orgasims ","orgasm","orgasms ","p0rn","pawn","pecker","penis","penisfucker","phonesex","phuck","phuk","phuked","phuking","phukked","phukking","phuks","phuq","pigfucker","pimpis","piss","pissed","pisser","pissers","pisses ","pissflaps","pissin ","pissing","pissoff ","poop","porn","porno","pornography","pornos","prick","pricks ","pron","pube","pusse","pussi","pussies","pussy","pussys ","rectum","retard","rimjaw","rimming","s hit","s.o.b.","sadist","schlong","screwing","scroat","scrote","scrotum","semen","sex","sh!+","sh!t","sh1t","shag","shagger","shaggin","shagging","shemale","shi+","shit","shitdick","shite","shited","shitey","shitfuck","shitfull","shithead","shiting","shitings","shits","shitted","shitter","shitters ","shitting","shittings","shitty ","skank","slut","sluts","smegma","smut","snatch","son-of-a-bitch","spac","spunk","s_h_i_t","t1tt1e5","t1tties","teets","teez","testical","testicle","tit","titfuck","tits","titt","tittie5","tittiefucker","titties","tittyfuck","tittywank","titwank","tosser","turd","tw4t","twat","twathead","twatty","twunt","twunter","v14gra","v1gra","vagina","viagra","vulva","w00se","wang","wank","wanker","wanky","whoar","whore","willies","willy","xrated","xxx"]');
 ;// CONCATENATED MODULE: ./story.js
-/* harmony default export */ const story = ("\ntitle: level_1\n---\nYour first level\nYou take a deep breath\nAnd guess\n<<setUiState game>>\n<<pause>>\n<<if $wonLastGame>>\n  You beat level 1!\n  <<set $currentLevel = \"level_2\">>\n  <<jump hub>>\n<<else>>\n  You lost on level 1.\n  Continue?\n    -> Yes\n      <<jump level_1>>\n    -> No\n      <<jump hub>>\n<<endif>>\n===\n\ntitle: level_2\n---\nYour second level\nYou take a deep breath\nAnd guess\n<<setUiState game>>\n<<pause>>\n<<if $wonLastGame>>\n  You beat level 2!\n  <<set $currentLevel = \"level_x\">>\n  <<jump hub>>\n<<else>>\n  You lost on level 2.\n  Continue?\n    -> Yes\n      <<jump level_2>>\n    -> No\n      <<jump hub>>\n<<endif>>\n===\n\ntitle: level_x\n---\nAnother level.\nYou take a deep breath\nAnd guess\n<<setUiState game>>\n<<pause>>\n<<if $wonLastGame>>\n  You beat another level. Goodie.\n  <<jump hub>>\n<<else>>\n  You lost another level.\n  Continue?\n    -> Yes\n      <<jump level_x>>\n    -> No\n      <<jump hub>>\n<<endif>>\n===\n\ntitle: hub\n---\n<<setUiState hub>>\n<<pause>>\n<<jump $currentLevel>>\n===\n");
+/* harmony default export */ const story = ("\ntitle: level_1\n---\nYou happen upon a hideous monster!\n<<setUiState game>>\n<<pause>>\n<<if $wonLastGame>>\n  You valiantly slay the creature.\n  <<set $currentLevel = \"level_2\">>\n  <<jump hub>>\n<<else>>\n  You are chomped by the fell beast.\n  <<jump continue>>\n<<endif>>\n===\n\ntitle: level_2\n---\nYou happen upon a hideous monster!\nYou can hardly tell it apart from the last one you fought!\nHave at ye!\n<<setUiState game>>\n<<pause>>\n<<if $wonLastGame>>\n  The second monster went down, exactly as the first\n  <<set $currentLevel = \"level_x\">>\n  <<jump hub>>\n<<else>>\n  You are defeated in shame\n  <<jump continue>>\n<<endif>>\n===\n\ntitle: level_x\n---\nYou happen upon...\nYou know what? You're pretty sure you're just in a time loop now.\nForever fighting the same monster.\nMeh, could be worse\n<<setUiState game>>\n<<pause>>\n<<if $wonLastGame>>\n  Let the bodies hit the floor\n  <<jump hub>>\n<<else>>\n  Let the bodies hit the floor\n  Your body, that is\n  <<jump continue>>\n<<endif>>\n===\n\ntitle: continue\n---\nContinue?\n  -> Yes\n    <<jump {$currentLevel}>>\n  -> I want to prepare first\n    <<jump hub>>\n===\n\ntitle: hub\n---\n<<setUiState hub>>\n<<declare $currentLevel = \"level_1\">>\n<<pause>>\n<<jump {$currentLevel}>>\n===\n");
 ;// CONCATENATED MODULE: ./app.js
 function app_toConsumableArray(arr) { return app_arrayWithoutHoles(arr) || app_iterableToArray(arr) || app_unsupportedIterableToArray(arr) || app_nonIterableSpread(); }
 function app_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -12544,7 +12543,7 @@ function App() {
   var _useState = (0,react.useState)('hub'),
     _useState2 = app_slicedToArray(_useState, 2),
     uiState = _useState2[0],
-    _setUiState = _useState2[1];
+    setUiState = _useState2[1];
   var _useState3 = (0,react.useState)(0),
     _useState4 = app_slicedToArray(_useState3, 2),
     lastXpEarned = _useState4[0],
@@ -12567,26 +12566,46 @@ function App() {
     setGuesses = _useState12[1];
   var previousGuesses = usePrevious(guesses);
   var boardsRef = (0,react.useRef)();
-  var handleCommand = function handleCommand(_ref) {
-    var command = _ref.command;
-    var match = command.match(/^setUiState (.+)/);
-    setUiState(match[1]);
+
+  // ref is so YarnBound command handler can see newest ui state
+  // rework if YarnBound instantiations cause performance issues
+  var uiStateRef = (0,react.useRef)(uiState);
+  uiStateRef.current = uiState;
+  var runnerRef = (0,react.useRef)();
+  if (!runnerRef.current) {
+    runnerRef.current = new (yarn_bound_default())({
+      dialogue: story,
+      startAt: 'hub',
+      handleCommand: function handleCommand(_ref) {
+        var command = _ref.command;
+        var match = command.match(/^setUiState (.+)/);
+        if (uiStateRef.current !== match[1]) {
+          switch (match[1]) {
+            case 'hub':
+              setUiState('hub');
+              break;
+            case 'game':
+              handleGameStart();
+              break;
+          }
+        }
+      }
+    });
+  }
+  var runner = runnerRef.current;
+  var handleGameStart = function handleGameStart() {
+    randomizeRandomSkills();
+    resetGameTime();
+    resetRoundTime();
+    setGuesses([]);
+    setUiState('game');
+    setAnswers(getAnswers(skills, items, equipment));
+  };
+  var handleGoToHub = function handleGoToHub() {
+    setUiState('hub');
+    runner.jump('hub'); // In case we back out of a level intro
   };
 
-  // rework if performance issues arise
-  var runner = (0,react.useRef)(new (yarn_bound_default())({
-    dialogue: story,
-    startAt: 'level_1',
-    handleCommand: handleCommand
-  })).current;
-  var setUiState = function setUiState(state) {
-    // In case we back out of a level intro
-    if (state === 'hub') {
-      runner.jump('hub');
-    }
-    runner.history = [];
-    _setUiState(state);
-  };
   var handleGuess = function handleGuess(guess) {
     var isValidGuess = !guesses.includes(guess) && guess.length === skills.wordLength.value && all_words_namespaceObject.includes(app_isItemActive(items.reverse) ? guess.split('').reverse().join('') : guess) && (!equipment.strictMode.active || isGuessStrictlyValid(guess, guesses, answers));
     if (isValidGuess) {
@@ -12608,7 +12627,7 @@ function App() {
     } else if (guess === 'uuddl') {
       setUiState('cheats');
     } else if (guess === 'ldduu') {
-      setUiState('hub');
+      handleGoToHub();
     }
     return isValidGuess;
   };
@@ -12627,6 +12646,7 @@ function App() {
       type: 'GAIN_MASTERY',
       skills: skills
     });
+    runner.history = [];
     setUiState('results');
   };
   var handleAddOneXp = function handleAddOneXp(endState) {
@@ -12634,14 +12654,6 @@ function App() {
   };
   var handleAddOneMoney = function handleAddOneMoney(endState) {
     setMoney(money + 1);
-  };
-  var handleGameStart = function handleGameStart() {
-    randomizeRandomSkills();
-    resetGameTime();
-    resetRoundTime();
-    setGuesses([]);
-    setUiState('game');
-    setAnswers(getAnswers(skills, items, equipment));
   };
   (0,react.useEffect)(function () {
     var didJustGuess = previousGuesses && previousGuesses.length === guesses.length - 1;
@@ -12761,7 +12773,7 @@ function App() {
   };
   var handleClose = function handleClose() {
     if (uiState !== 'game') {
-      setUiState('hub');
+      handleGoToHub();
     }
   };
   (0,react.useEffect)(function () {
@@ -12795,13 +12807,14 @@ function App() {
   //           </button>
 
   var possibleWords = (0,react.useMemo)(function () {
-    return app_isItemActive(items.showPossibleWords) ? game_words_namespaceObject.filter(function (word) {
+    var words = equipment.useFullDictionary.active ? all_words_namespaceObject : game_words_namespaceObject;
+    return app_isItemActive(items.showPossibleWords) ? words.filter(function (word) {
       return isGuessStrictlyValid(word, guesses, answers);
     }) : [];
-  }, [guesses, answers, skills]);
+  }, [guesses, answers, skills, equipment.useFullDictionary.active]);
   return /*#__PURE__*/react.createElement("div", {
     className: "root"
-  }, answers, /*#__PURE__*/react.createElement("div", {
+  }, typeof new URL(window.location.href).searchParams.get('showAnswers') === 'string' && answers, /*#__PURE__*/react.createElement("div", {
     className: "top-bar"
   }, /*#__PURE__*/react.createElement(XpDisplay, {
     amount: xp
@@ -12865,6 +12878,8 @@ function App() {
       setUiState('equipment');
     },
     handleGoToGame: function handleGoToGame() {
+      runner.advance(); // runner is "paused" on hub
+      runner.history = [];
       setUiState('pre-game');
     }
   })), /*#__PURE__*/react.createElement(Modal, {

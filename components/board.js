@@ -8,6 +8,7 @@ export default function Board ({ guesses, answer }) {
     <div
       className={[
         'board',
+        'board--monster',
         solutionIndex !== -1 && 'board--solved'
       ].filter(Boolean).join(' ')}
     >
