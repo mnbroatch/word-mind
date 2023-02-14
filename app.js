@@ -79,9 +79,11 @@ export default function App () {
     handleCommand
   })).current
 
+  console.log('runner.currentResult', runner.currentResult)
+
   const setUiState = (state) => {
     // In case we back out of a level intro
-    if (state === 'hub') {
+    if (state === 'hub' && uiState !== 'hub') {
       runner.jump('hub')
     }
     runner.history = []
@@ -409,6 +411,7 @@ export default function App () {
                 setUiState('equipment')
               }}
               handleGoToGame={() => {
+                runner.advance() // runner is "paused" on hub
                 setUiState('pre-game')
               }}
             />

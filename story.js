@@ -65,6 +65,6 @@ title: hub
 ---
 <<setUiState hub>>
 <<pause>>
-<<jump $currentLevel>>
+<<jump {$currentLevel}>>
 ===
 `

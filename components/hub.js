@@ -17,6 +17,7 @@ export default function Hub ({
   handleGoToSkills,
   handleGoToEquipment
 }) {
+  // For live updating item remaining durations (can optimize)
   const rerender = useRerender()
   useInterval(rerender, 1000)
   return (
