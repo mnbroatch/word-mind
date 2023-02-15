@@ -12310,7 +12310,7 @@ function App() {
     amount: xp
   }), /*#__PURE__*/react.createElement(HpDisplay, {
     amount: hp,
-    max: 10
+    max: maxHp
   }), /*#__PURE__*/react.createElement(MoneyDisplay, {
     amount: money
   })), /*#__PURE__*/react.createElement("div", {

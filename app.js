@@ -144,7 +144,7 @@ export default function App () {
       { typeof new URL(window.location.href).searchParams.get('showAnswers') === 'string' && enemies}
       <div className='top-bar'>
         <XpDisplay amount={xp} />
-        <HpDisplay amount={hp} max={10} />
+        <HpDisplay amount={hp} max={maxHp} />
         <MoneyDisplay amount={money} />
       </div>
       <div className="main-content">
