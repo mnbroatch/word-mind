@@ -2,14 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Guess from './guess.js'
 
-export default function Enemy ({ guesses, answer }) {
-  const solutionIndex = guesses.indexOf(answer)
+export default function Enemy ({ guesses, answer, dead }) {
   return (
     <div
       className={[
         'enemy',
         'enemy--monster',
-        solutionIndex !== -1 && 'enemy--solved'
+        dead && 'enemy--dead'
       ].filter(Boolean).join(' ')}
     >
       <div className='guesses'>
@@ -33,5 +32,6 @@ export default function Enemy ({ guesses, answer }) {
 
 Enemy.propTypes = {
   answer: PropTypes.string,
-  guesses: PropTypes.arrayOf(PropTypes.string)
+  guesses: PropTypes.arrayOf(PropTypes.string),
+  dead: PropTypes.boolean
 }

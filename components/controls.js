@@ -22,7 +22,7 @@ export default function Controls ({
 
   useEffect(() => {
     currentGuessDispatch({ type: 'clear' })
-  }, [answers])
+  }, [answers.join()])
 
   const handleAddLetter = (letter) => {
     if (

@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
+import useRerender from './hooks/use-rerender.js'
+import useInterval from './hooks/use-interval.js'
 import useYarnBound from './hooks/use-yarn-bound'
 import useGameState from './use-game-state'
 import useEnemies from './hooks/use-enemies'
@@ -9,23 +11,30 @@ import Modal from './components/modal'
 import Enemy from './components/enemy'
 import PreGame from './components/pre-game'
 import Controls from './components/controls'
-import MoneyDisplay from './components/money-display'
 import XpDisplay from './components/xp-display'
+import HpDisplay from './components/hp-display'
+import MoneyDisplay from './components/money-display'
 
 export default function App () {
+  const rerender = useRerender()
+  useInterval(rerender, 1000)
+
   const {
     xp,
     money,
     setXp,
     setMoney
   } = useGameState()
+  const maxHp = 15
   const [uiState, setUiState] = useState('hub')
   const [wonLastGame, setWonLastGame] = useState(false)
   const [guesses, setGuesses] = useState([])
   const enemiesRef = useRef()
   const [selectedEnemyIndex, setSelectedEnemyIndex] = useState(0)
+  const [hp, setHp] = useState(maxHp)
   const handleGameStart = () => {
     setGuesses([])
+    setHp(maxHp)
     setUiState('game')
   }
 
@@ -35,9 +44,21 @@ export default function App () {
     handleGameStart
   )
 
+  const hurtPlayer = (damage) => {
+    if (uiState === 'game') {
+      console.log('hp1', hp)
+      setHp(prev => prev - damage)
+      console.log('hp2', hp)
+      if (hp - damage <= 0) {
+        handleGameEnd(false)
+      }
+    }
+  }
+
   const enemies = useEnemies(
     runner.currentResult.metadata.enemies || 'monster',
-    guesses
+    guesses,
+    hurtPlayer
   )
 
   let selectedEnemy = enemies[selectedEnemyIndex]
@@ -88,9 +109,11 @@ export default function App () {
         handleGameEnd(true)
       }
     }
+
+    return isValidGuess
   }
 
-  const handleGameEnd = (didWin) => {
+  function handleGameEnd (didWin) {
     const xpEarned = 10
     const moneyEarned = 10
     runner.runner.variables.set('wonLastGame', didWin)
@@ -98,6 +121,7 @@ export default function App () {
     setWonLastGame(didWin)
     setXp(xp + xpEarned)
     setMoney(money + moneyEarned)
+    setHp(maxHp)
     setGuesses([])
     runner.history = []
     setUiState('results')
@@ -113,11 +137,14 @@ export default function App () {
     return () => { document.removeEventListener('keydown', addKey) }
   }, [uiState])
 
+  console.log(enemies.map(e => e.answer))
+
   return (
     <div className='root'>
       { typeof new URL(window.location.href).searchParams.get('showAnswers') === 'string' && enemies}
       <div className='top-bar'>
         <XpDisplay amount={xp} />
+        <HpDisplay amount={hp} max={10} />
         <MoneyDisplay amount={money} />
       </div>
       <div className="main-content">

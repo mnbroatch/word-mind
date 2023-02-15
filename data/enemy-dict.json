@@ -1,0 +1,35 @@
+{
+  "monster": {
+    "description": "A monster",
+    "wordLength": 4,
+    "attacks": [
+      {
+        "name": "punch",
+        "startup": 10000,
+        "damage": 1
+      }
+    ]
+  },
+  "smallMonster": {
+    "description": "A little monsterette",
+    "wordLength": 3,
+    "attacks": [
+      {
+        "name": "punch",
+        "startup": 10000,
+        "damage": 1
+      }
+    ]
+  },
+  "bigMonster": {
+    "description": "A big monster",
+    "wordLength": 5,
+    "attacks": [
+      {
+        "name": "punch",
+        "startup": 10000,
+        "damage": 1
+      }
+    ]
+  }
+}
