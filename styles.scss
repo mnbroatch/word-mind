@@ -97,23 +97,32 @@ body {
   transform: translateX(0);
 } 
 
-.boards {
+.enemies {
   flex: 1;
   flex-basis: 0px;
   overflow-y: scroll;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
-.board {
+.enemy-container {
+  padding: .5em;
+
+  &--selected {
+    border: 1px solid black;
+  }
+}
+
+.enemy {
   margin: 5px;
   box-shadow: $shadow-inset;
   background-color: white;
   transition: background-color 1s;
 }
 
-.board--monster {
+.enemy--monster {
   margin: 20px;
   border: solid #698620;
   border-width: 2.6em 1.3em 1.3em;
@@ -148,7 +157,7 @@ body {
   }
 }
 
-.board--solved {
+.enemy--solved {
   background-color: $pink;
 }
 

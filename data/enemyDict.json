@@ -1,0 +1,14 @@
+{
+  "monster": {
+    "wordLength": 4,
+    "description": "A monster"
+  },
+  "smallMonster": {
+    "wordLength": 3,
+    "description": "A little monsterette"
+  },
+  "bigMonster": {
+    "wordLength": 5,
+    "description": "A big monster"
+  }
+}

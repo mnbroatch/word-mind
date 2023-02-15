@@ -1,5 +1,6 @@
 export default `
 title: level_1
+enemies: monster
 ---
 You happen upon a hideous monster!
 <<setUiState game>>
@@ -15,14 +16,14 @@ You happen upon a hideous monster!
 ===
 
 title: level_2
+enemies: monster bigMonster
 ---
-You happen upon a hideous monster!
-You can hardly tell it apart from the last one you fought!
+You happen upon two hideous monsters!
 Have at ye!
 <<setUiState game>>
 <<pause>>
 <<if $wonLastGame>>
-  The second monster went down, exactly as the first
+  The second set of monsters went down as hard as the first
   <<set $currentLevel = "level_x">>
   <<jump hub>>
 <<else>>
@@ -32,11 +33,12 @@ Have at ye!
 ===
 
 title: level_x
+enemies: monster bigMonster smallMonster
 ---
 You happen upon...
 You know what? You're pretty sure you're just in a time loop now.
-Forever fighting the same monster.
-Meh, could be worse
+Forever fighting the same monsters.
+Meh, could be worse!
 <<setUiState game>>
 <<pause>>
 <<if $wonLastGame>>
