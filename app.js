@@ -35,7 +35,6 @@ export default function App () {
   const handleGameStart = () => {
     setGuesses([])
     setHp(maxHp)
-    setUiState('game')
   }
 
   const runner = useYarnBound(
@@ -123,8 +122,6 @@ export default function App () {
     setMoney(money + moneyEarned)
     setHp(maxHp)
     setGuesses([])
-    runner.history = []
-    setUiState('results')
   }
 
   useEffect(() => {
@@ -182,8 +179,6 @@ export default function App () {
             <Hub
               handleGoToGame={() => {
                 runner.advance() // runner is "paused" on hub
-                runner.history = []
-                setUiState('pre-game')
               }}
             />
           </Modal>

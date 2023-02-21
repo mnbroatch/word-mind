@@ -15,11 +15,6 @@ export default function Results ({
 }) {
   return (
     <div className='results'>
-      {wonLastGame && (
-        <div className="results-title results-title--won">
-          + {lastXpEarned} XP
-        </div>
-      )}
       {!wonLastGame && (
         <div className="results-title results-title--lost">
           FAILED
@@ -30,18 +25,8 @@ export default function Results ({
           {answers}
         </div>
       )}
-      <div>
-        <XpDisplay amount={xp} />
-      </div>
+      <XpDisplay amount={xp} />
       <DialogueTree runner={runner} />
-      <button
-        className='results__close-button'
-        onClick={handleClose}
-      >
-        <span className="results__close-button-inner">
-          Continue
-        </span>
-      </button>
     </div>
   )
 }

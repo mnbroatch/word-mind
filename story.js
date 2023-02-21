@@ -5,6 +5,7 @@ enemies: monster
 You happen upon a hideous monster!
 <<setUiState game>>
 <<pause>>
+<<setUiState results>>
 <<if $wonLastGame>>
   You valiantly slay the creature.
   <<set $currentLevel = "level_2">>
@@ -22,6 +23,7 @@ You happen upon two hideous monsters!
 Have at ye!
 <<setUiState game>>
 <<pause>>
+<<setUiState results>>
 <<if $wonLastGame>>
   The second set of monsters went down as hard as the first
   <<set $currentLevel = "level_x">>
@@ -41,6 +43,7 @@ Forever fighting the same monsters.
 Meh, could be worse!
 <<setUiState game>>
 <<pause>>
+<<setUiState results>>
 <<if $wonLastGame>>
   Let the bodies hit the floor
   <<jump hub>>
@@ -55,6 +58,7 @@ title: continue
 ---
 Continue?
   -> Yes
+    <<setUiState pre-game>>
     <<jump {$currentLevel}>>
   -> I want to prepare first
     <<jump hub>>
@@ -65,6 +69,7 @@ title: hub
 <<setUiState hub>>
 <<declare $currentLevel = "level_1">>
 <<pause>>
+<<setUiState pre-game>>
 <<jump {$currentLevel}>>
 ===
 `

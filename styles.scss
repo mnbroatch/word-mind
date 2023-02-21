@@ -479,14 +479,13 @@ body {
   background: $green1;
   transition: width .3s;
 
-  &--complete {
-    animation: green-green 1s infinite;
+  &--low {
+    animation: yellow-green 1s infinite;
   }
 }
 
 .xp {
   display: flex;
-  height: 100%;
   align-items: center;
   justify-content: center;
   color: white;
@@ -530,7 +529,8 @@ body {
 }
 
 .results .xp {
-  font-size: 3em;
+  margin: 30px 0;
+  font-size: 1.5em;
 }
 
 .results .xp__background-squiggle {
@@ -619,7 +619,7 @@ body {
 
 .results .dialogue-tree {
   position: relative;
-  margin: 50px;
+  margin: 0 25px;
   flex: 1;
   height: 0;
   max-height: 330px;
@@ -666,19 +666,6 @@ body {
   }
 }
 
-@keyframes green-green {
-  0% {
-    background: $green1;
-  }
-
-  50% {
-    background: $green2;
-  }
-
-  100% {
-    background: $green1;
-  }
-}
 @keyframes monster-idle {
   0% {
     transform-origin: 50% 100%;

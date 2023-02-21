@@ -18,13 +18,12 @@ export default function useYarnBound (
         const match = command.match(/^setUiState (.+)/)
         if (uiStateRef.current !== match[1]) {
           switch (match[1]) {
-            case 'hub':
-              setUiState('hub')
-              break
             case 'game':
               handleGameStart()
               break
           }
+          if (runnerRef.current) runnerRef.current.history = []
+          setUiState(match[1])
         }
       }
     })

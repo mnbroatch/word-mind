@@ -15,7 +15,7 @@ export default function HpDisplay ({ amount, max }) {
           style={{ width: `${percentDone}%` }}
           className={[
             'hp__meter__inner',
-            percentDone >= 100 && 'hp__meter__inner--complete'
+            percentDone < 25 && 'hp__meter__inner--low'
           ].filter(Boolean).join(' ')}
         />
         <div className='hp__label'>
