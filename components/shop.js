@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Item from './item.js'
+import defaultItems from '../default-items.js'
 
 export default function Shop ({
   items,
@@ -16,7 +17,8 @@ export default function Shop ({
         Leave Shop
       </button>
       <div className='items-list'>
-        {Object.entries(items).map(([key, {
+        {Object.entries(items).filter(([key]) => key in defaultItems).map(([key, {
+          name,
           description,
           ownedCount,
           cost
@@ -24,6 +26,7 @@ export default function Shop ({
           <Item
             key={key}
             id={key}
+            name={name}
             description={description}
             ownedCount={ownedCount}
             cost={cost}

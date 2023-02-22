@@ -5,6 +5,8 @@ import useYarnBound from './hooks/use-yarn-bound'
 import useGameState from './use-game-state'
 import useEnemies from './hooks/use-enemies'
 
+import InventoryItem from './components/inventory-item'
+import Shop from './components/shop'
 import Results from './components/results'
 import Hub from './components/hub'
 import Modal from './components/modal'
@@ -15,6 +17,8 @@ import XpDisplay from './components/xp-display'
 import HpDisplay from './components/hp-display'
 import MoneyDisplay from './components/money-display'
 
+import defaultItems from './default-items.js'
+
 export default function App () {
   const rerender = useRerender()
   useInterval(rerender, 1000)
@@ -22,7 +26,9 @@ export default function App () {
   const {
     xp,
     money,
+    items,
     setXp,
+    itemsDispatch,
     setMoney
   } = useGameState()
   const maxHp = 15
@@ -45,9 +51,7 @@ export default function App () {
 
   const hurtPlayer = (damage) => {
     if (uiState === 'game') {
-      console.log('hp1', hp)
       setHp(prev => prev - damage)
-      console.log('hp2', hp)
       if (hp - damage <= 0) {
         handleGameEnd(false)
       }
@@ -67,7 +71,7 @@ export default function App () {
     selectedEnemy = enemies[firstAliveEnemyIndex]
   }
 
-  const handleGoToHub = () => {
+  const goToHub = () => {
     setUiState('hub')
     runner.jump('hub') // In case we back out of a level intro
   }
@@ -113,8 +117,8 @@ export default function App () {
   }
 
   function handleGameEnd (didWin) {
-    const xpEarned = 10
-    const moneyEarned = 10
+    const xpEarned = didWin ? 10 : 0
+    const moneyEarned = didWin ? 0 : 5
     runner.runner.variables.set('wonLastGame', didWin)
     runner.advance()
     setWonLastGame(didWin)
@@ -124,10 +128,54 @@ export default function App () {
     setGuesses([])
   }
 
+  const handleBuyItem = (itemId) => {
+    if (money >= items[itemId].cost) {
+      itemsDispatch({
+        type: 'BUY',
+        itemId
+      })
+      setMoney(money - items[itemId].cost)
+    }
+  }
+
+  const handleUseItem = (itemId) => {
+    let canUse = false
+    if (items[itemId].ownedCount > 0) {
+      switch (itemId) {
+        case 'potion': {
+          if (hp < maxHp) {
+            canUse = true
+            setHp(Math.min(Math.round(hp + (maxHp / 2)), maxHp))
+          }
+          break
+        }
+        case 'bigPotion': {
+          if (hp < maxHp) {
+            canUse = true
+            setHp(Math.min(hp + maxHp, maxHp))
+          }
+          break
+        }
+        case 'veryBigPotion': {
+          canUse = true
+          setHp(hp + maxHp)
+          break
+        }
+      }
+    }
+
+    if (canUse) {
+      itemsDispatch({
+        type: 'USE',
+        itemId
+      })
+    }
+  }
+
   useEffect(() => {
     const addKey = (e) => {
       if (e.keyCode === 27 && uiState !== 'game') {
-        handleGoToHub()
+        goToHub()
       }
     }
     document.addEventListener('keydown', addKey)
@@ -143,6 +191,15 @@ export default function App () {
         <XpDisplay amount={xp} />
         <HpDisplay amount={hp} max={maxHp} />
         <MoneyDisplay amount={money} />
+      </div>
+      <div className="inventory">
+        {Object.entries(items).filter(([key]) => key in defaultItems).map(([id, { name, description, ownedCount }]) => <InventoryItem
+          key={id}
+          handleUseItem={() => handleUseItem(id)}
+          name={name}
+          description={description}
+          ownedCount={ownedCount}
+        />)}
       </div>
       <div className="main-content">
         <div className='main-game'>
@@ -177,8 +234,11 @@ export default function App () {
           </a>
           <Modal open={uiState === 'hub'}>
             <Hub
-              handleGoToGame={() => {
+              goToGame={() => {
                 runner.advance() // runner is "paused" on hub
+              }}
+              goToShop={() => {
+                setUiState('shop')
               }}
             />
           </Modal>
@@ -193,8 +253,15 @@ export default function App () {
           <Modal open={uiState === 'pre-game'}>
             <PreGame
               startGame={handleGameStart}
-              handleClose={handleGoToHub}
+              handleClose={goToHub}
               runner={runner}
+            />
+          </Modal>
+          <Modal open={uiState === 'shop'}>
+            <Shop
+              items={items}
+              handleBuyItem={handleBuyItem}
+              handleClose={goToHub}
             />
           </Modal>
         </div>

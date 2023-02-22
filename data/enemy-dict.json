@@ -5,7 +5,7 @@
     "attacks": [
       {
         "name": "punch",
-        "startup": 10000,
+        "startup": 1000,
         "damage": 1
       }
     ]

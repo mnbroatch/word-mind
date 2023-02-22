@@ -1,26 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function Item ({
+export default function InventoryItem ({
   name,
   description,
-  cost,
   ownedCount,
-  handleBuyItem
+  handleUseItem
 }) {
   return (
     <button
-      onClick={handleBuyItem}
+      onClick={handleUseItem}
       className='item'
     >
       <div className='item__name'>
         {name}
-      </div>
-      <div className='item__cost'>
-        ${cost}
-      </div>
-      <div className='item__description'>
-        {description}
       </div>
       <div className='item__owned-count'>
         Owned: {ownedCount}
@@ -29,10 +22,9 @@ export default function Item ({
   )
 }
 
-Item.propTypes = {
+InventoryItem.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
-  cost: PropTypes.number,
   ownedCount: PropTypes.number,
-  handleBuyItem: PropTypes.func
+  handleUseItem: PropTypes.func
 }

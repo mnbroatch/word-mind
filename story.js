@@ -56,6 +56,7 @@ Meh, could be worse!
 
 title: continue
 ---
+There's a few coins forgotten in the dirt you land in.
 Continue?
   -> Yes
     <<setUiState pre-game>>

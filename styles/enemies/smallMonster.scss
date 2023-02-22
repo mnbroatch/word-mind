@@ -1,0 +1,60 @@
+$shadow-inset-black: inset 1px 1px 5px black;
+
+.enemy--smallMonster {
+  margin: 20px;
+  border: solid #698620;
+  border-width: 2.6em 1.3em 1.3em;
+  box-shadow: $shadow-inset-black;
+  background-color: #7d1a1a;
+  position: relative;
+  align-self: center;
+
+  &:not(.enemy--dead) {
+    animation: smallMonster-idle 4s infinite;
+  }
+
+  &.enemy--dead {
+    transform: rotate(-140deg);
+  }
+
+  &::before {
+    font-size: 2.5em;
+    font-weight: bold;
+    content: '|';
+    position: absolute;
+    background-color: white;
+    padding: 2px;
+    top: -1.2em;
+    left: 10%;
+    transform: rotate(94deg);
+  }
+
+  &::after {
+    font-size: 2.5em;
+    font-weight: bold;
+    content: '|';
+    position: absolute;
+    background-color: white;
+    padding: 2px;
+    top: -1.2em;
+    right: 10%;
+    transform: rotate(57deg);
+  }
+}
+
+@keyframes smallMonster-idle {
+  0% {
+    transform-origin: 50% 100%;
+    transform: rotate(-15deg);
+  }
+
+  50% {
+    transform-origin: 50% 100%;
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform-origin: 50% 100%;
+    transform: rotate(-15deg);
+  }
+}

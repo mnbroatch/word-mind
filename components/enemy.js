@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Guess from './guess.js'
 
-export default function Enemy ({ guesses, answer, dead }) {
+export default function Enemy ({ type, guesses, answer, dead }) {
   return (
     <div
       className={[
         'enemy',
-        'enemy--monster',
+        `enemy--${type}`,
         dead && 'enemy--dead'
       ].filter(Boolean).join(' ')}
     >
@@ -33,5 +33,6 @@ export default function Enemy ({ guesses, answer, dead }) {
 Enemy.propTypes = {
   answer: PropTypes.string,
   guesses: PropTypes.arrayOf(PropTypes.string),
-  dead: PropTypes.boolean
+  dead: PropTypes.bool,
+  type: PropTypes.string
 }

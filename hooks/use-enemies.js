@@ -9,7 +9,8 @@ export default function useEnemies (enemyTypes, guesses, hurtPlayer) {
   const now = Date.now()
   const enemyTypesRef = useRef(enemyTypes)
   const answersRef = useRef()
-  const enemyConfigs = enemyTypes.split(' ').map(type => enemyDict[type])
+  const types = enemyTypes.split(' ')
+  const enemyConfigs = types.map(type => enemyDict[type])
   const [lastAttackTimes, setLastAttackTimes] = useState(() => enemyConfigs.map(() => now))
   const getAnswers = () => {
     return enemyConfigs.map((config, i) => {
@@ -62,6 +63,7 @@ export default function useEnemies (enemyTypes, guesses, hurtPlayer) {
       isGuessValid,
       guesses: _guesses,
       dead: _guesses.includes(answer),
+      type: types[i],
       index: i
     }
   })

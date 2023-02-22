@@ -1,3 +1,5 @@
+@import "./enemies/index.scss";
+
 $green1: #A1E8AF;
 $green2: #94C595;
 $greengrey: #84A194;
@@ -15,7 +17,6 @@ $shadow-raised: 0px 2px 3px grey;
 $shadow-hover: inset 1px 1px 2px grey;
 $shadow-active: inset 2px 2px 3px grey;
 $shadow-inset: inset 1px 1px 5px grey;
-$shadow-inset-black: inset 1px 1px 5px black;
 
 body {
   margin: 0;
@@ -122,44 +123,6 @@ body {
   transition: background-color 1s;
 }
 
-.enemy--monster {
-  margin: 20px;
-  border: solid #698620;
-  border-width: 2.6em 1.3em 1.3em;
-  box-shadow: $shadow-inset-black;
-  background-color: #7d1a1a;
-  position: relative;
-  align-self: center;
-
-  &:not(.enemy--dead) {
-    animation: monster-idle 4s infinite;
-  }
-
-  &::before {
-    font-size: 2.5em;
-    font-weight: bold;
-    content: '|';
-    position: absolute;
-    background-color: white;
-    padding: 2px;
-    top: -1.2em;
-    left: 10%;
-    transform: rotate(94deg);
-  }
-
-  &::after {
-    font-size: 2.5em;
-    font-weight: bold;
-    content: '|';
-    position: absolute;
-    background-color: white;
-    padding: 2px;
-    top: -1.2em;
-    right: 10%;
-    transform: rotate(57deg);
-  }
-}
-
 .enemy--solved {
   background-color: $pink;
 }
@@ -218,14 +181,21 @@ body {
 }
 
 .shop__close-button {
-  height: 30px;
-  width: 30px;
   position: absolute;
   right: 10px;
   top: 10px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.item {
+  width: 200px;
+  margin: 20px;
+}
+
+.item__description {
+  font-size: .7em;
 }
 
 .results {
@@ -639,17 +609,17 @@ body {
 
 @font-face {
   font-family: 'kenia-regular';
-  src: url('./assets/kenia-regular.ttf');
+  src: url('../assets/kenia-regular.ttf');
 }
 
 @font-face {
   font-family: 'abril-fatface-regular';
-  src: url('./assets/abril-fatface-regular.ttf');
+  src: url('../assets/abril-fatface-regular.ttf');
 }
 
 @font-face {
   font-family: 'libre-baskerville';
-  src: url('./assets/libre-baskerville.ttf');
+  src: url('../assets/libre-baskerville.ttf');
 }
 
 @keyframes yellow-green {
@@ -663,22 +633,5 @@ body {
 
   100% {
     background: $green1;
-  }
-}
-
-@keyframes monster-idle {
-  0% {
-    transform-origin: 50% 100%;
-    transform: rotate(-15deg);
-  }
-
-  50% {
-    transform-origin: 50% 100%;
-    transform: rotate(15deg);
-  }
-
-  100% {
-    transform-origin: 50% 100%;
-    transform: rotate(-15deg);
   }
 }
