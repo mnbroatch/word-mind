@@ -1,6 +1,6 @@
 {
-  "name": "react-webpack-template",
-  "version": "1.0.0",
+  "name": "wordlegend",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {

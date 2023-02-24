@@ -47,7 +47,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".dialogue-tree .chat-scroller{height:1
 
 /***/ }),
 
-/***/ 6460:
+/***/ 2204:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -72,7 +72,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_g
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{margin:0;font-family:system-ui}.root{display:flex;flex-direction:column;height:100vh}.main-content{display:flex;flex-direction:column;flex:1;margin-top:5px;position:relative}.main-game,.results,.modal__inner{flex:1;display:flex;flex-direction:column;height:100%}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.enemies{flex:1;flex-basis:0px;overflow-y:scroll;display:flex;flex-wrap:wrap;justify-content:center;align-items:center}.enemy-container{padding:.5em}.enemy-container--selected{border:1px solid #000}.enemy{margin:5px;box-shadow:inset 1px 1px 5px gray;background-color:#fff;transition:background-color 1s}.enemy--monster{margin:20px;border:solid #698620;border-width:2.6em 1.3em 1.3em;box-shadow:inset 1px 1px 5px #000;background-color:#7d1a1a;position:relative;align-self:center}.enemy--monster:not(.enemy--dead){animation:monster-idle 4s infinite}.enemy--monster::before{font-size:2.5em;font-weight:bold;content:\"|\";position:absolute;background-color:#fff;padding:2px;top:-1.2em;left:10%;transform:rotate(94deg)}.enemy--monster::after{font-size:2.5em;font-weight:bold;content:\"|\";position:absolute;background-color:#fff;padding:2px;top:-1.2em;right:10%;transform:rotate(57deg)}.enemy--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.controls{margin:20px 0 20px 0;text-align:center;overflow-y:scroll}.controls .guess{padding:5px;display:inline-flex;box-shadow:1px 1px 3px #000}.guess__letter{display:flex;justify-content:center;align-items:center;height:1.5em;width:1.5em;margin:4px;border:1px solid #000;text-transform:uppercase;background-color:#fff;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop__close-button{height:30px;width:30px;position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.results{text-align:center}.results-title{margin:45px;font-family:\"libre-baskerville\";font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;margin:0 auto 50px auto;transform:rotate(-5deg);width:300px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.skills-list{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.skill{position:relative;box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:12px;padding:16px 0 16px 0;text-align:center}.skill-spacer{width:175px;margin:0 12px 0 12px;height:0}.skill__description{background-color:brown;color:#fff;left:0;padding:6px;position:absolute;text-align:center;top:-17px;left:-3px;transform:rotate(-2deg);white-space:nowrap;width:175px}.option{display:inline-block}.option__meter{position:relative;display:inline-block;height:40px;width:6px;background-color:#84a194}.option__meter__inner{position:absolute;width:100%;bottom:0;background:#a1e8af}.option__meter__inner--complete{animation:yellow-green 1s infinite}.option-button{border:0;border-radius:3px;margin:2px;height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option-button--selected{background-color:green;color:#fff}.option-button--unlocked{background-color:#add8e6}.option-button--unlockable{animation:yellow-green 1s infinite}.option-button--locked{background-color:#ff0}.option-button__inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.option-button--random{width:120px}.keyboard{margin-top:5px;padding:10px;box-sizing:border-box;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.hp{padding:8px 35px;box-sizing:border-box;flex:1;display:flex;height:100%}.hp__label{position:absolute;left:5px}.hp__meter{flex:1;position:relative;background-color:#84a194}.hp__meter__inner{position:absolute;height:100%;left:0;background:#a1e8af;transition:width .3s}.hp__meter__inner--complete{animation:green-green 1s infinite}.xp{display:flex;height:100%;align-items:center;justify-content:center;color:#fff;font-family:libre-baskerville;position:relative;border-radius:9999999px;border:1px dotted #fff;background-image:linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));padding:0 10px 0 10px;box-sizing:border-box}.xp__background-squiggle{top:-0.15em;position:absolute;transform:scale(4.5, 3);height:100%;display:flex;justify-content:center;align-items:center;color:#f5b0cb;font-size:1.2em;opacity:.3}.xp__background-squiggle~.xp__background-squiggle{transform:scale(-4.5, 3);color:#372772}.xp__label{font-variant-numeric:tabular-nums}.xp__digit{display:inline-block;width:.65em;vertical-align:middle;text-align:center}.results .xp{font-size:3em}.results .xp__background-squiggle{font-size:2em}.money{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.money__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.money__label{color:#f6bd60;font-family:abril-fatface-regular}.money__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;display:flex;align-items:center;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}.call-shot-button{margin:10px;padding:5px}.call-shot-button--active{background-color:#a1e8af}.inventory{border:1px solid #000;margin:15px;padding:15px}.inventory__item{display:inline-block;margin:5px;border:1px solid #000;padding:5px}.equipment-inventory{border:1px solid #000;margin:15px;padding:15px}.equipment-inventory__piece{display:inline-block;margin:5px;border:1px solid #000;padding:5px}.results .dialogue-tree{position:relative;margin:50px;flex:1;height:0;max-height:330px}.results .dialogue-tree .chat-scroller{border-radius:50px 0 0 50px}.results .dialogue-tree .dialogue-tree__node-spacer{padding:15px}.results .dialogue-tree .dialogue-tree__node-wrapper{border-radius:25px}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}@font-face{font-family:\"libre-baskerville\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ")}@keyframes yellow-green{0%{background:#a1e8af}50%{background:#f6bd60}100%{background:#a1e8af}}@keyframes green-green{0%{background:#a1e8af}50%{background:#94c595}100%{background:#a1e8af}}@keyframes monster-idle{0%{transform-origin:50% 100%;transform:rotate(-15deg)}50%{transform-origin:50% 100%;transform:rotate(15deg)}100%{transform-origin:50% 100%;transform:rotate(-15deg)}}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".enemy--monster{margin:20px;border:solid #698620;border-width:2.6em 1.3em 1.3em;box-shadow:inset 1px 1px 5px #000;background-color:#7d1a1a;position:relative;align-self:center}.enemy--monster:not(.enemy--dead){animation:monster-idle 4s infinite}.enemy--monster.enemy--dead{transform:rotate(-140deg)}.enemy--monster::before{font-size:2.5em;font-weight:bold;content:\"|\";position:absolute;background-color:#fff;padding:2px;top:-1.2em;left:10%;transform:rotate(94deg)}.enemy--monster::after{font-size:2.5em;font-weight:bold;content:\"|\";position:absolute;background-color:#fff;padding:2px;top:-1.2em;right:10%;transform:rotate(57deg)}@keyframes monster-idle{0%{transform-origin:50% 100%;transform:rotate(-15deg)}50%{transform-origin:50% 100%;transform:rotate(15deg)}100%{transform-origin:50% 100%;transform:rotate(-15deg)}}.enemy--smallMonster{margin:20px;border:solid #698620;border-width:2.6em 1.3em 1.3em;box-shadow:inset 1px 1px 5px #000;background-color:#7d1a1a;position:relative;align-self:center}.enemy--smallMonster:not(.enemy--dead){animation:smallMonster-idle 4s infinite}.enemy--smallMonster.enemy--dead{transform:rotate(-140deg)}.enemy--smallMonster::before{font-size:2.5em;font-weight:bold;content:\"|\";position:absolute;background-color:#fff;padding:2px;top:-1.2em;left:10%;transform:rotate(94deg)}.enemy--smallMonster::after{font-size:2.5em;font-weight:bold;content:\"|\";position:absolute;background-color:#fff;padding:2px;top:-1.2em;right:10%;transform:rotate(57deg)}@keyframes smallMonster-idle{0%{transform-origin:50% 100%;transform:rotate(-15deg)}50%{transform-origin:50% 100%;transform:rotate(15deg)}100%{transform-origin:50% 100%;transform:rotate(-15deg)}}.enemy--bigMonster{margin:20px;border:solid #698620;border-width:2.6em 1.3em 1.3em;box-shadow:inset 1px 1px 5px #000;background-color:#7d1a1a;position:relative;align-self:center}.enemy--bigMonster:not(.enemy--dead){animation:bigMonster-idle 4s infinite}.enemy--bigMonster.enemy--dead{transform:rotate(-140deg)}.enemy--bigMonster::before{font-size:2.5em;font-weight:bold;content:\"|\";position:absolute;background-color:#fff;padding:2px;top:-1.2em;left:10%;transform:rotate(94deg)}.enemy--bigMonster::after{font-size:2.5em;font-weight:bold;content:\"|\";position:absolute;background-color:#fff;padding:2px;top:-1.2em;right:10%;transform:rotate(57deg)}@keyframes bigMonster-idle{0%{transform-origin:50% 100%;transform:rotate(-15deg)}50%{transform-origin:50% 100%;transform:rotate(15deg)}100%{transform-origin:50% 100%;transform:rotate(-15deg)}}.enemy--bossMonster{margin:20px;border-style:solid;border-width:2.6em 1.3em 1.3em;border-color:#de0909;box-shadow:inset 1px 1px 5px #000;background-color:#7d1a1a;position:relative;align-self:center}.enemy--bossMonster:not(.enemy--dead){animation:bossMonster-idle 2s infinite}.enemy--bossMonster.enemy--dead{transform:rotate(-140deg)}.enemy--bossMonster::before{font-size:2.5em;font-weight:bold;content:\"|\";position:absolute;background-color:#fff;padding:2px;top:-1.2em;left:10%;transform:rotate(94deg)}.enemy--bossMonster::after{font-size:2.5em;font-weight:bold;content:\"|\";position:absolute;background-color:#fff;padding:2px;top:-1.2em;right:10%;transform:rotate(57deg)}@keyframes bossMonster-idle{0%{transform-origin:50% 100%;transform:rotate(-15deg);border:rotate(-15deg);border-color:#de0909}50%{transform-origin:50% 100%;transform:rotate(15deg);border-color:#ff8b8b}100%{transform-origin:50% 100%;transform:rotate(-15deg);border-color:#de0909}}body{margin:0;font-family:system-ui}.root{display:flex;flex-direction:column;height:100vh}.main-content{display:flex;flex-direction:column;flex:1;margin-top:5px;position:relative}.main-game,.results,.modal__inner{flex:1;display:flex;flex-direction:column;height:100%}.modals{position:absolute;overflow-x:hidden;overflow-y:visible;width:100%;height:100%;top:0;left:0;pointer-events:none}.modals__background{background-color:rgba(0,0,0,0);transition:background-color .3s;position:absolute;width:100%;height:100%}.modals__background--active{background-color:rgba(0,0,0,.7);pointer-events:auto}.modal{display:flex;position:absolute;left:0;top:0;transform:translateX(100%);width:100%;height:100%;transition:transform .2s;align-items:stretch;background-color:#fff}.modal__inner{width:100%;position:relative;overflow:auto;pointer-events:auto}.modal__close-button{position:absolute;right:10px;top:10px}.modal--open{transform:translateX(0)}.enemies{flex:1;flex-basis:0px;overflow-y:scroll;display:flex;flex-wrap:wrap;justify-content:center;align-items:center}.enemy-container{padding:.5em}.enemy-container--selected{border:1px solid #000}.enemy{margin:5px;box-shadow:inset 1px 1px 5px gray;background-color:#fff;transition:background-color 1s}.enemy--solved{background-color:#f5b0cb}.guess{margin-top:3px;display:flex}.controls{margin:20px 0 20px 0;text-align:center;overflow-y:scroll}.controls .guess{padding:5px;display:inline-flex;box-shadow:1px 1px 3px #000}.guess__letter{display:flex;justify-content:center;align-items:center;height:1.5em;width:1.5em;margin:4px;border:1px solid #000;text-transform:uppercase;background-color:#fff;box-shadow:1px 1px 3px #000}.guess__letter--correct{background-color:#a1e8af}.guess__letter--present{background-color:#f6bd60}.current-guess--placeholder{visibility:hidden}.rules{flex:1;overflow:auto}.shop{box-sizing:border-box;padding:25px;min-width:100%}.shop .item{width:200px;margin:20px}.item{margin:5px}.shop__close-button{position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;justify-content:center}.item__description{font-size:.7em}.results{text-align:center}.results-title{margin:45px;font-family:\"libre-baskerville\";font-size:1.25em}.results-title--lost{color:red}.results__close-button{font-family:kenia-regular;font-size:2em;align-items:center;background-color:brown;border:none;color:#652121;display:inline-flex;height:60px;justify-content:center;margin:0 auto 50px auto;transform:rotate(-5deg);width:300px;box-shadow:1px 1px 3px #000}.results__close-button:hover{box-shadow:inset 1px 1px 2px #652121}.results__close-button:active{box-shadow:inset 2px 2px 3px #652121}.results__close-button-inner{color:#fff}.skills-list{display:flex;flex-wrap:wrap;justify-content:center;margin:30px 0 30px 0}.skill{position:relative;box-shadow:0px 2px 3px gray;border-radius:4px;box-sizing:border-box;width:175px;margin:12px;padding:16px 0 16px 0;text-align:center}.skill-spacer{width:175px;margin:0 12px 0 12px;height:0}.skill__description{background-color:brown;color:#fff;left:0;padding:6px;position:absolute;text-align:center;top:-17px;left:-3px;transform:rotate(-2deg);white-space:nowrap;width:175px}.option{display:inline-block}.option__meter{position:relative;display:inline-block;height:40px;width:6px;background-color:#84a194}.option__meter__inner{position:absolute;width:100%;bottom:0;background:#a1e8af}.option__meter__inner--complete{animation:yellow-green 1s infinite}.option-button{border:0;border-radius:3px;margin:2px;height:30px;width:30px;flex-shrink:0;position:relative;padding:0}.option-button--selected{background-color:green;color:#fff}.option-button--unlocked{background-color:#add8e6}.option-button--unlockable{animation:yellow-green 1s infinite}.option-button--locked{background-color:#ff0}.option-button__inner{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.option-button--random{width:120px}.keyboard{margin-top:5px;padding:10px;box-sizing:border-box;text-align:center}.keyboard-row{margin:4px 0 4px 0;text-align:center}.keyboard-button{border:0;background-color:#fff}.keyboard-letter,.delete-button{height:30px;width:30px;text-transform:uppercase;margin:2px;position:relative;padding:0;vertical-align:middle}.keyboard-letter__letter{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%)}.keyboard-letter--complete:not(.keyboard-letter--untouched){background-color:#747c92}.keyboard-letter__background{width:100%;height:100%;display:flex}.keyboard-letter__background-section{flex:1}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--solved{background-color:#f5b0cb}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--correct{background-color:#a1e8af}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--present{background-color:#f6bd60}.keyboard-letter:not(.keyboard-letter--complete):not(.keyboard-letter--untouched) .keyboard-letter__background-section--absent{background-color:#747c92}.delete-button{font-size:.7em;background-color:#f03}.guess-button{width:100%;max-width:400px;height:35px;text-transform:uppercase;margin:20px 0 3px 0;padding:0;position:relative;vertical-align:middle;font-size:1.2em;background-color:#a1e8af}.hp{padding:8px 35px;box-sizing:border-box;flex:1;display:flex;height:100%}.hp__label{position:absolute;left:5px}.hp__meter{flex:1;position:relative;background-color:#84a194}.hp__meter__inner{position:absolute;height:100%;left:0;background:#a1e8af;transition:width .3s}.hp__meter__inner--low{animation:yellow-green 1s infinite}.xp{display:flex;align-items:center;justify-content:center;color:#fff;font-family:libre-baskerville;position:relative;border-radius:9999999px;border:1px dotted #fff;background-image:linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));padding:0 10px 0 10px;box-sizing:border-box}.xp__background-squiggle{top:-0.15em;position:absolute;transform:scale(4.5, 3);height:100%;display:flex;justify-content:center;align-items:center;color:#f5b0cb;font-size:1.2em;opacity:.3}.xp__background-squiggle~.xp__background-squiggle{transform:scale(-4.5, 3);color:#372772}.xp__label{font-variant-numeric:tabular-nums}.xp__digit{display:inline-block;width:.65em;vertical-align:middle;text-align:center}.results .xp{margin:30px 0;font-size:1.5em}.results .xp__background-squiggle{font-size:2em}.money{border:1px solid #000;border-radius:10px;display:inline-block;padding:2px 3px 2px 3px;background-color:#f6bd60}.money__inner{border-radius:9999px;background-color:#000;padding:5px 10px 5px 10px}.money__label{color:#f6bd60;font-family:abril-fatface-regular}.money__digit{display:inline-block;width:.65em;text-align:center}.top-bar{padding:5px;display:flex;align-items:center;background-color:#e2e2e2;box-shadow:0px 2px 3px gray}.button{box-shadow:1px 1px 3px #000}.button:hover{box-shadow:inset 1px 1px 2px gray}.button:active{box-shadow:inset 2px 2px 3px gray}.call-shot-button{margin:10px;padding:5px}.call-shot-button--active{background-color:#a1e8af}.inventory{border:1px solid #000;margin:5px}.inventory__item{display:inline-block;margin:5px;border:1px solid #000;padding:5px}.equipment-inventory{border:1px solid #000;margin:15px;padding:15px}.equipment-inventory__piece{display:inline-block;margin:5px;border:1px solid #000;padding:5px}.results .dialogue-tree{position:relative;margin:0 25px;flex:1;height:0;max-height:330px}.results .dialogue-tree .chat-scroller{border-radius:50px 0 0 50px}.results .dialogue-tree .dialogue-tree__node-spacer{padding:15px}.results .dialogue-tree .dialogue-tree__node-wrapper{border-radius:25px}@font-face{font-family:\"kenia-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}@font-face{font-family:\"abril-fatface-regular\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ")}@font-face{font-family:\"libre-baskerville\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ")}@keyframes yellow-green{0%{background:#a1e8af}50%{background:#f6bd60}100%{background:#a1e8af}}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8257,7 +8257,7 @@ function useInterval(callback, delay) {
 var yarn_bound = __webpack_require__(8440);
 var yarn_bound_default = /*#__PURE__*/__webpack_require__.n(yarn_bound);
 ;// CONCATENATED MODULE: ./story.js
-/* harmony default export */ const story = ("\ntitle: level_1\nenemies: monster\n---\nYou happen upon a hideous monster!\n<<setUiState game>>\n<<pause>>\n<<if $wonLastGame>>\n  You valiantly slay the creature.\n  <<set $currentLevel = \"level_2\">>\n  <<jump hub>>\n<<else>>\n  You are chomped by the fell beast.\n  <<jump continue>>\n<<endif>>\n===\n\ntitle: level_2\nenemies: monster bigMonster\n---\nYou happen upon two hideous monsters!\nHave at ye!\n<<setUiState game>>\n<<pause>>\n<<if $wonLastGame>>\n  The second set of monsters went down as hard as the first\n  <<set $currentLevel = \"level_x\">>\n  <<jump hub>>\n<<else>>\n  You are defeated in shame\n  <<jump continue>>\n<<endif>>\n===\n\ntitle: level_x\nenemies: monster bigMonster smallMonster\n---\nYou happen upon...\nYou know what? You're pretty sure you're just in a time loop now.\nForever fighting the same monsters.\nMeh, could be worse!\n<<setUiState game>>\n<<pause>>\n<<if $wonLastGame>>\n  Let the bodies hit the floor\n  <<jump hub>>\n<<else>>\n  Let the bodies hit the floor\n  Your body, that is\n  <<jump continue>>\n<<endif>>\n===\n\ntitle: continue\n---\nContinue?\n  -> Yes\n    <<jump {$currentLevel}>>\n  -> I want to prepare first\n    <<jump hub>>\n===\n\ntitle: hub\n---\n<<setUiState hub>>\n<<declare $currentLevel = \"level_1\">>\n<<pause>>\n<<jump {$currentLevel}>>\n===\n");
+/* harmony default export */ const story = ("\ntitle: level_1\nenemies: monster\n---\nYou happen upon a hideous monster!\n<<setUiState game>>\n<<pause>>\n<<setUiState results>>\n<<if $wonLastGame>>\n  You valiantly slay the creature.\n  <<set $currentLevel = \"level_2\">>\n  <<jump hub>>\n<<else>>\n  You are chomped by the fell beast.\n  <<jump continue>>\n<<endif>>\n===\n\ntitle: level_2\nenemies: monster bigMonster\n---\nYou happen upon two hideous monsters!\nHave at ye!\n<<setUiState game>>\n<<pause>>\n<<setUiState results>>\n<<if $wonLastGame>>\n  The second set of monsters went down as hard as the first\n  <<set $currentLevel = \"level_3\">>\n  <<jump hub>>\n<<else>>\n  You are defeated in shame\n  <<jump continue>>\n<<endif>>\n===\n\ntitle: level_3\nenemies: monster bigMonster smallMonster\n---\nYou happen upon a bunch of monsters!\n<<setUiState game>>\n<<pause>>\n<<setUiState results>>\n<<if $wonLastGame>>\n  Let the bodies hit the floor\n  <<set $currentLevel = \"level_4\">>\n  <<jump hub>>\n<<else>>\n  Let the bodies hit the floor\n  Your body, that is\n  <<jump continue>>\n<<endif>>\n===\n\ntitle: level_4\nenemies: bossMonster\n---\nYou happen upon the biggest monster you've ever seen!\n<<setUiState game>>\n<<pause>>\n<<setUiState results>>\n<<if $wonLastGame>>\n  With one last keystroke, you fell the fell fella\n  Well, well, well... Hella swell!\n  <<set $currentLevel = \"level_5\">>\n  <<jump hub>>\n<<else>>\n  Let the bodies hit the floor\n  Your body, that is\n  <<jump continue>>\n<<endif>>\n===\n\ntitle: level_4\nenemies: bossMonster bossMonster\n---\nYour stomach drops as you lay eyes on what comes before you.\nYou get the feeling like there isn't enough content implemented yet to keep this from being a grindfest.\n<<setUiState game>>\n<<pause>>\n<<setUiState results>>\n<<if $wonLastGame>>\n  With one last keystroke, you fell the fell fella\n  Well, well, well... Hella swell!\n  <<set $currentLevel = \"level_6\">>\n  <<jump hub>>\n<<else>>\n  Let the bodies hit the floor\n  Your body, that is\n  <<jump continue>>\n<<endif>>\n===\n\ntitle: level_5\nenemies: bossMonster bossMonster\n---\nYou get the feeling like there isn't enough content implemented yet to keep this from being a grindfest.\n<<setUiState game>>\n<<pause>>\n<<setUiState results>>\n<<if $wonLastGame>>\n  Your investments paid off.\n  You continue forward, toward your final challenge.\n  <<set $currentLevel = \"level_6\">>\n  <<jump hub>>\n<<else>>\n  Yea, that was kinda ridiculous.\n  No shame in bailing at this point.\n  <<jump continue>>\n<<endif>>\n===\n\ntitle: level_6\nenemies: smallMonster bigBossMonster smallMonster\n---\nYou kinda don't want to continue.\nBut then again, this is the final boss.\n<<setUiState game>>\n<<pause>>\n<<setUiState results>>\n<<if $wonLastGame>>\n  YOU ARE GREAT.\n  YOU HAVE AN AMAZING WISDOM AND POWER.\n  END OF WORDLEGEND 0.0.1\n  <<set $currentLevel = \"level_6\">>\n  <<jump hub>>\n<<else>>\n  Let the bodies hit the floor\n  Your body, that is\n  <<jump continue>>\n<<endif>>\n===\n\ntitle: continue\n---\nThere's a few coins forgotten in the dirt you land in.\nContinue?\n  -> Yes\n    <<setUiState pre-game>>\n    <<jump {$currentLevel}>>\n  -> I want to prepare first\n    <<jump hub>>\n===\n\ntitle: hub\n---\n<<setUiState hub>>\n<<declare $currentLevel = \"level_1\">>\n<<pause>>\n<<setUiState pre-game>>\n<<jump {$currentLevel}>>\n===\n\n\n\n\n");
 ;// CONCATENATED MODULE: ./hooks/use-yarn-bound.js
 
 
@@ -8275,13 +8275,12 @@ function useYarnBound(uiState, setUiState, handleGameStart) {
         var match = command.match(/^setUiState (.+)/);
         if (uiStateRef.current !== match[1]) {
           switch (match[1]) {
-            case 'hub':
-              setUiState('hub');
-              break;
             case 'game':
               handleGameStart();
               break;
           }
+          if (runnerRef.current) runnerRef.current.history = [];
+          setUiState(match[1]);
         }
       }
     });
@@ -8499,29 +8498,24 @@ function skillsReducer(prev, _ref) {
   }
 }
 ;// CONCATENATED MODULE: ./default-items.js
-// const later = Date.now() * 2
-
 /* harmony default export */ const default_items = ({
-  reverse: {
-    description: 'All Words are Backwards',
+  potion: {
+    name: 'Potion of Potionness',
+    description: 'Heals 50% of your max HP, as a good potion should',
     ownedCount: 0,
-    activeUntil: 0,
-    duration: 1000 * 60,
-    cost: 1
-  },
-  showPossibleWords: {
-    description: 'Show Possible Words',
-    ownedCount: 0,
-    activeUntil: 0,
-    duration: 1000 * 60,
     cost: 10
   },
-  revealAnswers: {
-    description: 'Reveal Answers',
+  bigPotion: {
+    name: 'Two Potion of Potionnesses',
+    description: 'There\'s only one thing better than a Potion of Potionness.',
     ownedCount: 0,
-    activeUntil: 0,
-    duration: 1000 * 60,
-    cost: 10
+    cost: 16
+  },
+  veryBigPotion: {
+    name: 'Grand Double Potion of Potionness',
+    description: 'The bottle is always a little empty, no matter how much potion you pour in',
+    ownedCount: 0,
+    cost: 20
   }
 });
 ;// CONCATENATED MODULE: ./items-reducer.js
@@ -8536,17 +8530,15 @@ function itemsReducer(prev, _ref) {
   var type = _ref.type,
     itemId = _ref.itemId;
   if (type === 'USE') {
-    var x = Date.now() < prev[itemId].activeUntil ? prev[itemId].activeUntil + prev[itemId].duration : Date.now() + prev[itemId].duration;
-    console.log('x', x);
     if (prev[itemId].ownedCount > 0) {
       return items_reducer_objectSpread(items_reducer_objectSpread({}, prev), {}, items_reducer_defineProperty({}, itemId, items_reducer_objectSpread(items_reducer_objectSpread({}, prev[itemId]), {}, {
-        ownedCount: prev[itemId].ownedCount - 1,
-        activeUntil: x
+        ownedCount: prev[itemId].ownedCount - 1
       })));
     } else {
       return prev;
     }
   } else if (type === 'BUY') {
+    console.log('prev[itemId]', prev[itemId]);
     return items_reducer_objectSpread(items_reducer_objectSpread({}, prev), {}, items_reducer_defineProperty({}, itemId, items_reducer_objectSpread(items_reducer_objectSpread({}, prev[itemId]), {}, {
       ownedCount: prev[itemId].ownedCount + 1
     })));
@@ -8845,7 +8837,7 @@ const game_words_namespaceObject = JSON.parse('["the","be","and","a","of","to","
 ;// CONCATENATED MODULE: ./data/curse-words.json
 const curse_words_namespaceObject = JSON.parse('["4r5e","5h1t","5hit","a55","anal","anus","ar5e","arrse","arse","ass","ass-fucker","asses","assfucker","assfukka","asshole","assholes","asswhole","a_s_s","b!tch","b00bs","b17ch","b1tch","ballbag","balls","ballsack","bastard","beastial","beastiality","bellend","bestial","bestiality","bi+ch","biatch","bitch","bitcher","bitchers","bitches","bitchin","bitching","bloody","blow job","blowjob","blowjobs","boiolas","bollock","bollok","boner","boob","boobs","booobs","boooobs","booooobs","booooooobs","breasts","buceta","bugger","bum","bunny fucker","butt","butthole","buttmunch","buttplug","c0ck","c0cksucker","carpet muncher","cawk","chink","cipa","cl1t","clit","clitoris","clits","cnut","cock","cock-sucker","cockface","cockhead","cockmunch","cockmuncher","cocks","cocksuck ","cocksucked ","cocksucker","cocksucking","cocksucks ","cocksuka","cocksukka","cok","cokmuncher","coksucka","coon","cox","crap","cum","cummer","cumming","cums","cumshot","cunilingus","cunillingus","cunnilingus","cunt","cuntlick ","cuntlicker ","cuntlicking ","cunts","cyalis","cyberfuc","cyberfuck ","cyberfucked ","cyberfucker","cyberfuckers","cyberfucking ","d1ck","damn","dick","dickhead","dildo","dildos","dink","dinks","dirsa","dlck","dog-fucker","doggin","dogging","donkeyribber","doosh","duche","dyke","ejaculate","ejaculated","ejaculates ","ejaculating ","ejaculatings","ejaculation","ejakulate","f u c k","f u c k e r","f4nny","fag","fagging","faggitt","faggot","faggs","fagot","fagots","faggy","fags","fanny","fannyflaps","fannyfucker","fanyy","fatass","fcuk","fcuker","fcuking","feck","fecker","felching","fellate","fellatio","fingerfuck ","fingerfucked ","fingerfucker ","fingerfuckers","fingerfucking ","fingerfucks ","fistfuck","fistfucked ","fistfucker ","fistfuckers ","fistfucking ","fistfuckings ","fistfucks ","flange","fook","fooker","fuck","fucka","fucked","fucker","fuckers","fuckhead","fuckheads","fuckin","fucking","fuckings","fuckingshitmotherfucker","fuckme ","fucks","fuckwhit","fuckwit","fudge packer","fudgepacker","fuk","fuker","fukker","fukkin","fuks","fukwhit","fukwit","fux","fux0r","f_u_c_k","gangbang","gangbanged ","gangbangs ","gaylord","gaysex","goatse","god-dam","god-damned","goddamn","goddamned","hardcoresex ","hell","heshe","hoar","hoare","hoer","homo","hore","horniest","horny","hotsex","jack-off ","jackoff","jap","jerk-off ","jism","jiz ","jizm ","jizz","kawk","knob","knobead","knobed","knobend","knobhead","knobjocky","knobjokey","kock","kondum","kondums","kum","kummer","kumming","kums","kunilingus","kiunt","l3i+ch","l3itch","labia","lmfao","lust","lusting","m0f0","m0fo","m45terbate","ma5terb8","ma5terbate","masochist","master-bate","masterb8","masterbat*","masterbat3","masterbate","masterbation","masterbations","masturbate","mo-fo","mof0","mofo","mothafuck","mothafucka","mothafuckas","mothafuckaz","mothafucked ","mothafucker","mothafuckers","mothafuckin","mothafucking ","mothafuckings","mothafucks","mother fucker","motherfuck","motherfucked","motherfucker","motherfuckers","motherfuckin","motherfucking","motherfuckings","motherfuckka","motherfucks","muff","mutha","muthafecker","muthafuckker","muther","mutherfucker","n1gga","n1gger","nazi","nigg3r","nigg4h","nigga","niggah","niggas","niggaz","nigger","niggers ","nob","nob jokey","nobhead","nobjocky","nobjokey","numbnuts","nutsack","orgasim ","orgasims ","orgasm","orgasms ","p0rn","pawn","pecker","penis","penisfucker","phonesex","phuck","phuk","phuked","phuking","phukked","phukking","phuks","phuq","pigfucker","pimpis","piss","pissed","pisser","pissers","pisses ","pissflaps","pissin ","pissing","pissoff ","poop","porn","porno","pornography","pornos","prick","pricks ","pron","pube","pusse","pussi","pussies","pussy","pussys ","rectum","retard","rimjaw","rimming","s hit","s.o.b.","sadist","schlong","screwing","scroat","scrote","scrotum","semen","sex","sh!+","sh!t","sh1t","shag","shagger","shaggin","shagging","shemale","shi+","shit","shitdick","shite","shited","shitey","shitfuck","shitfull","shithead","shiting","shitings","shits","shitted","shitter","shitters ","shitting","shittings","shitty ","skank","slut","sluts","smegma","smut","snatch","son-of-a-bitch","spac","spunk","s_h_i_t","t1tt1e5","t1tties","teets","teez","testical","testicle","tit","titfuck","tits","titt","tittie5","tittiefucker","titties","tittyfuck","tittywank","titwank","tosser","turd","tw4t","twat","twathead","twatty","twunt","twunter","v14gra","v1gra","vagina","viagra","vulva","w00se","wang","wank","wanker","wanky","whoar","whore","willies","willy","xrated","xxx"]');
 ;// CONCATENATED MODULE: ./data/enemy-dict.json
-const enemy_dict_namespaceObject = JSON.parse('{"monster":{"description":"A monster","wordLength":4,"attacks":[{"name":"punch","startup":10000,"damage":1}]},"smallMonster":{"description":"A little monsterette","wordLength":3,"attacks":[{"name":"punch","startup":10000,"damage":1}]},"bigMonster":{"description":"A big monster","wordLength":5,"attacks":[{"name":"punch","startup":10000,"damage":1}]}}');
+const enemy_dict_namespaceObject = JSON.parse('{"monster":{"description":"A monster","wordLength":4,"attacks":[{"name":"punch","startup":10000,"damage":1}]},"smallMonster":{"description":"A little monsterette","wordLength":3,"attacks":[{"name":"punch","startup":10000,"damage":1}]},"bigMonster":{"description":"A big monster","wordLength":5,"attacks":[{"name":"punch","startup":10000,"damage":1}]},"bossMonster":{"description":"A monster king","wordLength":5,"attacks":[{"name":"boss punch","startup":1000,"damage":1}]}}');
 ;// CONCATENATED MODULE: ./utils/get-letter-states.js
 function get_letter_states_toConsumableArray(arr) { return get_letter_states_arrayWithoutHoles(arr) || get_letter_states_iterableToArray(arr) || get_letter_states_unsupportedIterableToArray(arr) || get_letter_states_nonIterableSpread(); }
 function get_letter_states_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -8966,7 +8958,8 @@ function useEnemies(enemyTypes, guesses, hurtPlayer) {
   var now = Date.now();
   var enemyTypesRef = (0,react.useRef)(enemyTypes);
   var answersRef = (0,react.useRef)();
-  var enemyConfigs = enemyTypes.split(' ').map(function (type) {
+  var types = enemyTypes.split(' ');
+  var enemyConfigs = types.map(function (type) {
     return enemy_dict_namespaceObject[type];
   });
   var _useState = (0,react.useState)(function () {
@@ -9020,6 +9013,7 @@ function useEnemies(enemyTypes, guesses, hurtPlayer) {
       isGuessValid: isGuessValid,
       guesses: _guesses,
       dead: _guesses.includes(answer),
+      type: types[i],
       index: i
     };
   });
@@ -9027,6 +9021,115 @@ function useEnemies(enemyTypes, guesses, hurtPlayer) {
 // EXTERNAL MODULE: ./node_modules/prop-types/index.js
 var prop_types = __webpack_require__(5697);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
+;// CONCATENATED MODULE: ./components/inventory-item.js
+
+
+function InventoryItem(_ref) {
+  var name = _ref.name,
+    description = _ref.description,
+    ownedCount = _ref.ownedCount,
+    handleUseItem = _ref.handleUseItem;
+  return /*#__PURE__*/react.createElement("button", {
+    onClick: handleUseItem,
+    className: "item"
+  }, /*#__PURE__*/react.createElement("div", {
+    className: "item__name"
+  }, name), /*#__PURE__*/react.createElement("div", {
+    className: "item__owned-count"
+  }, "Owned: ", ownedCount));
+}
+InventoryItem.propTypes = {
+  name: (prop_types_default()).string,
+  description: (prop_types_default()).string,
+  ownedCount: (prop_types_default()).number,
+  handleUseItem: (prop_types_default()).func
+};
+;// CONCATENATED MODULE: ./components/item.js
+
+
+function Item(_ref) {
+  var name = _ref.name,
+    description = _ref.description,
+    cost = _ref.cost,
+    ownedCount = _ref.ownedCount,
+    handleBuyItem = _ref.handleBuyItem;
+  return /*#__PURE__*/react.createElement("button", {
+    onClick: handleBuyItem,
+    className: "item"
+  }, /*#__PURE__*/react.createElement("div", {
+    className: "item__name"
+  }, name), /*#__PURE__*/react.createElement("div", {
+    className: "item__cost"
+  }, "$", cost), /*#__PURE__*/react.createElement("div", {
+    className: "item__description"
+  }, description), /*#__PURE__*/react.createElement("div", {
+    className: "item__owned-count"
+  }, "Owned: ", ownedCount));
+}
+Item.propTypes = {
+  name: (prop_types_default()).string,
+  description: (prop_types_default()).string,
+  cost: (prop_types_default()).number,
+  ownedCount: (prop_types_default()).number,
+  handleBuyItem: (prop_types_default()).func
+};
+;// CONCATENATED MODULE: ./components/shop.js
+function shop_slicedToArray(arr, i) { return shop_arrayWithHoles(arr) || shop_iterableToArrayLimit(arr, i) || shop_unsupportedIterableToArray(arr, i) || shop_nonIterableRest(); }
+function shop_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function shop_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return shop_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return shop_arrayLikeToArray(o, minLen); }
+function shop_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function shop_iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function shop_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+function Shop(_ref) {
+  var items = _ref.items,
+    _handleBuyItem = _ref.handleBuyItem,
+    handleClose = _ref.handleClose;
+  return /*#__PURE__*/react.createElement("div", {
+    className: "shop"
+  }, /*#__PURE__*/react.createElement("button", {
+    className: "shop__close-button",
+    onClick: handleClose
+  }, "Leave Shop"), /*#__PURE__*/react.createElement("div", {
+    className: "items-list"
+  }, Object.entries(items).filter(function (_ref2) {
+    var _ref3 = shop_slicedToArray(_ref2, 1),
+      key = _ref3[0];
+    return key in default_items;
+  }).map(function (_ref4) {
+    var _ref5 = shop_slicedToArray(_ref4, 2),
+      key = _ref5[0],
+      _ref5$ = _ref5[1],
+      name = _ref5$.name,
+      description = _ref5$.description,
+      ownedCount = _ref5$.ownedCount,
+      cost = _ref5$.cost;
+    return /*#__PURE__*/react.createElement(Item, {
+      key: key,
+      id: key,
+      name: name,
+      description: description,
+      ownedCount: ownedCount,
+      cost: cost,
+      handleBuyItem: function handleBuyItem() {
+        return _handleBuyItem(key);
+      }
+    });
+  }), Object.keys(items).slice(1).map(function (key) {
+    return /*#__PURE__*/react.createElement("div", {
+      key: key,
+      className: "skill-spacer"
+    });
+  })));
+}
+Shop.propTypes = {
+  items: (prop_types_default()).object,
+  handleBuyItem: (prop_types_default()).func,
+  handleClose: (prop_types_default()).func
+};
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
 var injectStylesIntoStyleTag = __webpack_require__(3379);
 var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
@@ -11794,22 +11897,15 @@ function Results(_ref) {
     runner = _ref.runner;
   return /*#__PURE__*/react.createElement("div", {
     className: "results"
-  }, wonLastGame && /*#__PURE__*/react.createElement("div", {
-    className: "results-title results-title--won"
-  }, "+ ", lastXpEarned, " XP"), !wonLastGame && /*#__PURE__*/react.createElement("div", {
+  }, !wonLastGame && /*#__PURE__*/react.createElement("div", {
     className: "results-title results-title--lost"
   }, "FAILED"), !wonLastGame && /*#__PURE__*/react.createElement("div", {
     className: "results-answers"
-  }, answers), /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement(XpDisplay, {
+  }, answers), /*#__PURE__*/react.createElement(XpDisplay, {
     amount: xp
-  })), /*#__PURE__*/react.createElement(DialogueTreeContainer, {
+  }), /*#__PURE__*/react.createElement(DialogueTreeContainer, {
     runner: runner
-  }), /*#__PURE__*/react.createElement("button", {
-    className: "results__close-button",
-    onClick: handleClose
-  }, /*#__PURE__*/react.createElement("span", {
-    className: "results__close-button-inner"
-  }, "Continue")));
+  }));
 }
 Results.propTypes = {
   options: (prop_types_default()).object,
@@ -11824,18 +11920,25 @@ Results.propTypes = {
 
 
 function Hub(_ref) {
-  var handleGoToGame = _ref.handleGoToGame;
+  var goToGame = _ref.goToGame,
+    goToShop = _ref.goToShop;
   return /*#__PURE__*/react.createElement("div", {
     className: "hub"
   }, /*#__PURE__*/react.createElement("button", {
     className: "hub__continue-button",
-    onClick: handleGoToGame
+    onClick: goToGame
   }, /*#__PURE__*/react.createElement("span", {
     className: "hub__continue-button"
-  }, "Start")));
+  }, "Start")), /*#__PURE__*/react.createElement("button", {
+    className: "hub__shop-button",
+    onClick: goToShop
+  }, /*#__PURE__*/react.createElement("span", {
+    className: "hub__shop-button"
+  }, "Shop")));
 }
 Hub.propTypes = {
-  handleGoToGame: (prop_types_default()).func
+  goToGame: (prop_types_default()).func,
+  goToShop: (prop_types_default()).func
 };
 ;// CONCATENATED MODULE: ./components/modal.js
 
@@ -11883,11 +11986,12 @@ Guess.propTypes = {
 
 
 function Enemy(_ref) {
-  var guesses = _ref.guesses,
+  var type = _ref.type,
+    guesses = _ref.guesses,
     answer = _ref.answer,
     dead = _ref.dead;
   return /*#__PURE__*/react.createElement("div", {
-    className: ['enemy', 'enemy--monster', dead && 'enemy--dead'].filter(Boolean).join(' ')
+    className: ['enemy', "enemy--".concat(type), dead && 'enemy--dead'].filter(Boolean).join(' ')
   }, /*#__PURE__*/react.createElement("div", {
     className: "guesses"
   }, guesses.length ? guesses.map(function (guess, i) {
@@ -11904,7 +12008,8 @@ function Enemy(_ref) {
 Enemy.propTypes = {
   answer: (prop_types_default()).string,
   guesses: prop_types_default().arrayOf((prop_types_default()).string),
-  dead: (prop_types_default()).boolean
+  dead: (prop_types_default()).bool,
+  type: (prop_types_default()).string
 };
 ;// CONCATENATED MODULE: ./components/pre-game.js
 
@@ -12121,7 +12226,7 @@ function HpDisplay(_ref) {
     style: {
       width: "".concat(percentDone, "%")
     },
-    className: ['hp__meter__inner', percentDone >= 100 && 'hp__meter__inner--complete'].filter(Boolean).join(' ')
+    className: ['hp__meter__inner', percentDone < 25 && 'hp__meter__inner--low'].filter(Boolean).join(' ')
   }), /*#__PURE__*/react.createElement("div", {
     className: "hp__label"
   }, hpToDisplay, " HP")));
@@ -12184,13 +12289,18 @@ function app_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
+
+
 function App() {
   var rerender = useRerender();
   useInterval(rerender, 1000);
   var _useGameState = useGameState(),
     xp = _useGameState.xp,
     money = _useGameState.money,
+    items = _useGameState.items,
     setXp = _useGameState.setXp,
+    itemsDispatch = _useGameState.itemsDispatch,
     setMoney = _useGameState.setMoney;
   var maxHp = 15;
   var _useState = (0,react.useState)('hub'),
@@ -12217,16 +12327,13 @@ function App() {
   var handleGameStart = function handleGameStart() {
     setGuesses([]);
     setHp(maxHp);
-    setUiState('game');
   };
   var runner = useYarnBound(uiState, setUiState, handleGameStart);
   var hurtPlayer = function hurtPlayer(damage) {
     if (uiState === 'game') {
-      console.log('hp1', hp);
       setHp(function (prev) {
         return prev - damage;
       });
-      console.log('hp2', hp);
       if (hp - damage <= 0) {
         handleGameEnd(false);
       }
@@ -12241,7 +12348,7 @@ function App() {
     setSelectedEnemyIndex(firstAliveEnemyIndex);
     selectedEnemy = enemies[firstAliveEnemyIndex];
   }
-  var handleGoToHub = function handleGoToHub() {
+  var goToHub = function goToHub() {
     setUiState('hub');
     runner.jump('hub'); // In case we back out of a level intro
   };
@@ -12276,8 +12383,8 @@ function App() {
     return isValidGuess;
   };
   function handleGameEnd(didWin) {
-    var xpEarned = 10;
-    var moneyEarned = 10;
+    var xpEarned = didWin ? 10 : 0;
+    var moneyEarned = didWin ? 0 : 5;
     runner.runner.variables.set('wonLastGame', didWin);
     runner.advance();
     setWonLastGame(didWin);
@@ -12285,13 +12392,55 @@ function App() {
     setMoney(money + moneyEarned);
     setHp(maxHp);
     setGuesses([]);
-    runner.history = [];
-    setUiState('results');
   }
+  var handleBuyItem = function handleBuyItem(itemId) {
+    if (money >= items[itemId].cost) {
+      itemsDispatch({
+        type: 'BUY',
+        itemId: itemId
+      });
+      setMoney(money - items[itemId].cost);
+    }
+  };
+  var _handleUseItem = function handleUseItem(itemId) {
+    var canUse = false;
+    if (items[itemId].ownedCount > 0) {
+      switch (itemId) {
+        case 'potion':
+          {
+            if (hp < maxHp) {
+              canUse = true;
+              setHp(Math.min(Math.round(hp + maxHp / 2), maxHp));
+            }
+            break;
+          }
+        case 'bigPotion':
+          {
+            if (hp < maxHp) {
+              canUse = true;
+              setHp(Math.min(hp + maxHp, maxHp));
+            }
+            break;
+          }
+        case 'veryBigPotion':
+          {
+            canUse = true;
+            setHp(hp + maxHp);
+            break;
+          }
+      }
+    }
+    if (canUse) {
+      itemsDispatch({
+        type: 'USE',
+        itemId: itemId
+      });
+    }
+  };
   (0,react.useEffect)(function () {
     var addKey = function addKey(e) {
       if (e.keyCode === 27 && uiState !== 'game') {
-        handleGoToHub();
+        goToHub();
       }
     };
     document.addEventListener('keydown', addKey);
@@ -12313,6 +12462,28 @@ function App() {
     max: maxHp
   }), /*#__PURE__*/react.createElement(MoneyDisplay, {
     amount: money
+  })), /*#__PURE__*/react.createElement("div", {
+    className: "inventory"
+  }, Object.entries(items).filter(function (_ref2) {
+    var _ref3 = app_slicedToArray(_ref2, 1),
+      key = _ref3[0];
+    return key in default_items;
+  }).map(function (_ref4) {
+    var _ref5 = app_slicedToArray(_ref4, 2),
+      id = _ref5[0],
+      _ref5$ = _ref5[1],
+      name = _ref5$.name,
+      description = _ref5$.description,
+      ownedCount = _ref5$.ownedCount;
+    return /*#__PURE__*/react.createElement(InventoryItem, {
+      key: id,
+      handleUseItem: function handleUseItem() {
+        return _handleUseItem(id);
+      },
+      name: name,
+      description: description,
+      ownedCount: ownedCount
+    });
   })), /*#__PURE__*/react.createElement("div", {
     className: "main-content"
   }, /*#__PURE__*/react.createElement("div", {
@@ -12340,10 +12511,12 @@ function App() {
   }), /*#__PURE__*/react.createElement(Modal, {
     open: uiState === 'hub'
   }, /*#__PURE__*/react.createElement(Hub, {
-    handleGoToGame: function handleGoToGame() {
+    goToGame: function goToGame() {
       runner.advance(); // runner is "paused" on hub
-      runner.history = [];
-      setUiState('pre-game');
+    },
+
+    goToShop: function goToShop() {
+      setUiState('shop');
     }
   })), /*#__PURE__*/react.createElement(Modal, {
     open: uiState === 'results'
@@ -12358,13 +12531,19 @@ function App() {
     open: uiState === 'pre-game'
   }, /*#__PURE__*/react.createElement(PreGame, {
     startGame: handleGameStart,
-    handleClose: handleGoToHub,
+    handleClose: goToHub,
     runner: runner
+  })), /*#__PURE__*/react.createElement(Modal, {
+    open: uiState === 'shop'
+  }, /*#__PURE__*/react.createElement(Shop, {
+    items: items,
+    handleBuyItem: handleBuyItem,
+    handleClose: goToHub
   })))));
 }
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./styles.scss
-var cjs_js_styles = __webpack_require__(6460);
-;// CONCATENATED MODULE: ./styles.scss
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./styles/index.scss
+var cjs_js_styles = __webpack_require__(2204);
+;// CONCATENATED MODULE: ./styles/index.scss
 
       
       

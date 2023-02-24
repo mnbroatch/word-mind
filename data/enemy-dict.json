@@ -5,7 +5,7 @@
     "attacks": [
       {
         "name": "punch",
-        "startup": 1000,
+        "startup": 10000,
         "damage": 1
       }
     ]
@@ -28,6 +28,17 @@
       {
         "name": "punch",
         "startup": 10000,
+        "damage": 1
+      }
+    ]
+  },
+  "bossMonster": {
+    "description": "A monster king",
+    "wordLength": 5,
+    "attacks": [
+      {
+        "name": "boss punch",
+        "startup": 1000,
         "damage": 1
       }
     ]

@@ -1,0 +1,65 @@
+$shadow-inset-black: inset 1px 1px 5px black;
+
+.enemy--bossMonster {
+  margin: 20px;
+  border-style: solid;
+  border-width: 2.6em 1.3em 1.3em;
+  border-color: #de0909;
+  box-shadow: $shadow-inset-black;
+  background-color: #7d1a1a;
+  position: relative;
+  align-self: center;
+
+  &:not(.enemy--dead) {
+    animation: bossMonster-idle 2s infinite;
+  }
+
+  &.enemy--dead {
+    transform: rotate(-140deg);
+  }
+
+  &::before {
+    font-size: 2.5em;
+    font-weight: bold;
+    content: '|';
+    position: absolute;
+    background-color: white;
+    padding: 2px;
+    top: -1.2em;
+    left: 10%;
+    transform: rotate(94deg);
+  }
+
+  &::after {
+    font-size: 2.5em;
+    font-weight: bold;
+    content: '|';
+    position: absolute;
+    background-color: white;
+    padding: 2px;
+    top: -1.2em;
+    right: 10%;
+    transform: rotate(57deg);
+  }
+}
+
+@keyframes bossMonster-idle {
+  0% {
+    transform-origin: 50% 100%;
+    transform: rotate(-15deg);
+    border: rotate(-15deg);
+    border-color: #de0909;
+  }
+
+  50% {
+    transform-origin: 50% 100%;
+    transform: rotate(15deg);
+    border-color: #ff8b8b;
+  }
+
+  100% {
+    transform-origin: 50% 100%;
+    transform: rotate(-15deg);
+    border-color: #de0909;
+  }
+}
