@@ -31,7 +31,7 @@ export default function App () {
     itemsDispatch,
     setMoney
   } = useGameState()
-  const maxHp = 15
+  const maxHp = 30
   const [uiState, setUiState] = useState('hub')
   const [wonLastGame, setWonLastGame] = useState(false)
   const [guesses, setGuesses] = useState([])
@@ -165,10 +165,12 @@ export default function App () {
     }
 
     if (canUse) {
-      itemsDispatch({
-        type: 'USE',
-        itemId
-      })
+      if (uiState === 'game') {
+        itemsDispatch({
+          type: 'USE',
+          itemId
+        })
+      }
     }
   }
 
@@ -184,6 +186,8 @@ export default function App () {
 
   console.log(enemies.map(e => e.answer))
 
+  const inventoryItems = Object.entries(items).filter(([key, value]) => key in defaultItems && value.ownedCount > 0)
+
   return (
     <div className='root'>
       { typeof new URL(window.location.href).searchParams.get('showAnswers') === 'string' && enemies}
@@ -192,15 +196,17 @@ export default function App () {
         <HpDisplay amount={hp} max={maxHp} />
         <MoneyDisplay amount={money} />
       </div>
-      <div className="inventory">
-        {Object.entries(items).filter(([key]) => key in defaultItems).map(([id, { name, description, ownedCount }]) => <InventoryItem
-          key={id}
-          handleUseItem={() => handleUseItem(id)}
-          name={name}
-          description={description}
-          ownedCount={ownedCount}
-        />)}
-      </div>
+      {uiState === 'game' && inventoryItems.length > 0 && (
+        <div className="inventory">
+          {inventoryItems.map(([id, { name, description, ownedCount }]) => <InventoryItem
+            key={id}
+            handleUseItem={() => handleUseItem(id)}
+            name={name}
+            description={description}
+            ownedCount={ownedCount}
+          />)}
+        </div>
+      )}
       <div className="main-content">
         <div className='main-game'>
           <div ref={enemiesRef} className='enemies'>

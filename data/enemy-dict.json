@@ -42,5 +42,16 @@
         "damage": 1
       }
     ]
+  },
+  "bigBossMonster": {
+    "description": "A monster god",
+    "wordLength": 7,
+    "attacks": [
+      {
+        "name": "big boss punch",
+        "startup": 1000,
+        "damage": 2
+      }
+    ]
   }
 }

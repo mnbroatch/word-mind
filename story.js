@@ -65,28 +65,7 @@ You happen upon the biggest monster you've ever seen!
   <<set $currentLevel = "level_5">>
   <<jump hub>>
 <<else>>
-  Let the bodies hit the floor
-  Your body, that is
-  <<jump continue>>
-<<endif>>
-===
-
-title: level_4
-enemies: bossMonster bossMonster
----
-Your stomach drops as you lay eyes on what comes before you.
-You get the feeling like there isn't enough content implemented yet to keep this from being a grindfest.
-<<setUiState game>>
-<<pause>>
-<<setUiState results>>
-<<if $wonLastGame>>
-  With one last keystroke, you fell the fell fella
-  Well, well, well... Hella swell!
-  <<set $currentLevel = "level_6">>
-  <<jump hub>>
-<<else>>
-  Let the bodies hit the floor
-  Your body, that is
+  The powerful
   <<jump continue>>
 <<endif>>
 ===
@@ -94,14 +73,31 @@ You get the feeling like there isn't enough content implemented yet to keep this
 title: level_5
 enemies: bossMonster bossMonster
 ---
-You get the feeling like there isn't enough content implemented yet to keep this from being a grindfest.
+Your stomach drops as you lay eyes on what comes before you.
 <<setUiState game>>
 <<pause>>
 <<setUiState results>>
 <<if $wonLastGame>>
   Your investments paid off.
-  You continue forward, toward your final challenge.
   <<set $currentLevel = "level_6">>
+  <<jump hub>>
+<<else>>
+  Gonna need supplies for this one.
+  <<jump continue>>
+<<endif>>
+===
+
+title: level_6
+enemies: bossMonster bossMonster
+---
+You get the feeling like there isn't enough content implemented yet to keep this from being a grindfest.
+<<setUiState game>>
+<<pause>>
+<<setUiState results>>
+<<if $wonLastGame>>
+  A bloody, hard-fought battle. But you are victorious
+  You continue forward, toward your final challenge.
+  <<set $currentLevel = "level_7">>
   <<jump hub>>
 <<else>>
   Yea, that was kinda ridiculous.
@@ -110,7 +106,7 @@ You get the feeling like there isn't enough content implemented yet to keep this
 <<endif>>
 ===
 
-title: level_6
+title: level_7
 enemies: smallMonster bigBossMonster smallMonster
 ---
 You kinda don't want to continue.
@@ -121,19 +117,18 @@ But then again, this is the final boss.
 <<if $wonLastGame>>
   YOU ARE GREAT.
   YOU HAVE AN AMAZING WISDOM AND POWER.
-  END OF WORDLEGEND 0.0.1
-  <<set $currentLevel = "level_6">>
-  <<jump hub>>
+  END OF WORDLEGEND 0.0.2
 <<else>>
-  Let the bodies hit the floor
-  Your body, that is
+  I'd say you should quit...
+  But this IS the last level...
+  ¯\\\\_(ツ)_/¯
   <<jump continue>>
 <<endif>>
 ===
 
 title: continue
 ---
-There's a few coins forgotten in the dirt you land in.
+At least there's a few coins forgotten in the dirt you land in.
 Continue?
   -> Yes
     <<setUiState pre-game>>
@@ -150,9 +145,5 @@ title: hub
 <<setUiState pre-game>>
 <<jump {$currentLevel}>>
 ===
-
-
-
-
 `
 
