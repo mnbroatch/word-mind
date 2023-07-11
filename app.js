@@ -118,7 +118,7 @@ export default function App () {
 
   function handleGameEnd (didWin) {
     const xpEarned = didWin ? 10 : 0
-    const moneyEarned = didWin ? 0 : 5
+    const moneyEarned = didWin ? 0 : 20
     runner.runner.variables.set('wonLastGame', didWin)
     runner.advance()
     setWonLastGame(didWin)

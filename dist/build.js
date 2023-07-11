@@ -11719,7 +11719,7 @@ function DialogueNode(_ref) {
     });
   }
   return /*#__PURE__*/react.createElement("div", {
-    className: ['dialogue-node', isHistory && 'dialogue-node--history'].filter(Boolean)
+    className: ['dialogue-node', isHistory && 'dialogue-node--history'].filter(Boolean).join(' ')
   }, text, options && /*#__PURE__*/react.createElement("ul", {
     className: "dialogue-node__options"
   }, options.map(function (_ref3, index) {
@@ -12384,7 +12384,7 @@ function App() {
   };
   function handleGameEnd(didWin) {
     var xpEarned = didWin ? 10 : 0;
-    var moneyEarned = didWin ? 0 : 5;
+    var moneyEarned = didWin ? 0 : 20;
     runner.runner.variables.set('wonLastGame', didWin);
     runner.advance();
     setWonLastGame(didWin);
