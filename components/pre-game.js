@@ -8,7 +8,7 @@ export default function PreGame ({
 }) {
   return (
     <div className='pre-game'>
-      <DialogueTree runner={runner} stopAtCommand />
+      <DialogueTree runner={runner} />
     </div>
   )
 }

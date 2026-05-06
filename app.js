@@ -158,7 +158,7 @@ export default function App () {
         }
         case 'veryBigPotion': {
           canUse = true
-          setHp(hp + maxHp)
+          setHp(hp + maxHp - 1)
           break
         }
       }
